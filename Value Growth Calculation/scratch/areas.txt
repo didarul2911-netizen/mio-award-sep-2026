@@ -1,0 +1,2957 @@
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R2302	Bogura-11
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R2845	Bogura-13
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R0229	Bogura-3
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R583	Bogura-8
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R452	Bogura-9
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R1224	Gabtoly
+A	Bogura (GEN-A)	R011	Bogura GEN-A-1	R1597	Shariakandi-1
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R464	Bogura-10
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R1222	Bogura-12
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R0228	Bogura-2
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R0230	Bogura-4
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R988	Shibgonj-1 (Bogura)
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R1910	Shibgonj-2 (Bogura)
+A	Bogura (GEN-A)	R076	Bogura GEN-A-2	R2896	Shibgonj-3 (Bogura)
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R0227	Bogura-1
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R841	Bogura-5
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R357	Bogura-6
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R0231	Bogura-7
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R1226	Dhunot
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R2793	Shajahanpur-1
+A	Bogura (GEN-A)	R238	Bogura GEN-A-3	R581	Sonatola
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R584	Akkelpur
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R355	Dhupchachia-1
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R1223	Dhupchachia-2
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R2078	Dhupchachia-3
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R1598	Kahalu-1
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R1653	Kalai-1
+A	Bogura (GEN-A)	R380	Dupchachia GEN-A-1	R2350	Khetlal -1
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R2934	Badolgachi
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R0223	Mohadevpur-1
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R1231	Mohadevpur-2
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R2033	Mohadevpur-3
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R0221	Naogaon-2
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R724	Naogaon-4
+A	Bogura (GEN-A)	R404	Naogoan GEN-A-2	R3018	Naogaon-6
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R2794	Adamdighi-1
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R1462	Atrai
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R0220	Naogaon-1
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R0222	Naogaon-3
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R1646	Naogaon-5
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R855	Raninagor
+A	Bogura (GEN-A)	R024	Noagaon GEN-A-1	R2846	Raninagor-2
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R1225	Chandaikona
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R725	Kazipur-1
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R2306	Kazipur-2
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R2897	Salanga-1
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R0233	Sherpur-1 (Bog)
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R582	Sherpur-2 (Bog)
+A	Bogura (GEN-A)	R149	Sherpur (BOG) GEN-A-1	R2017	Sherpur-3 (Bog)
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R0237	Belkuchi
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R1908	Enayetpur-1
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R2844	Kamarkhanda-1
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R0234	Sirajgonj-1
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R347	Sirajgonj-2
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R0235	Sirajgonj-3
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R1227	Sirajgonj-4
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R0236	Ullapara-1
+A	Bogura (GEN-A)	R047	Sirajgonj GEN-A-1	R1471	Ullapara-2
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R1236	Chirirbonder
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R0247	Dinajpur-1
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R0248	Dinajpur-2
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R711	Dinajpur-5
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R1234	Dinajpur-6
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R2120	Kaharole-1
+A	Dinajpur (GEN-A)	R025	Dinajpur GEN-A-1	R2940	Khansama
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R591	Birampur-1
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R2252	Birampur-2
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R842	Dinajpur-3
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R0249	Dinajpur-4
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R2273	Dinajpur-7
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R0250	Phulbari-1
+A	Dinajpur (GEN-A)	R155	Dinajpur GEN-A-2	R1235	Phulbari-2
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R1252	Bonarpara
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R1811	Ghoraghat-1
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R0246	Gobindagonj-1 
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R1229	Gobindagonj-2
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R2295	Gobindagonj-3
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R585	Polashbari-1
+A	Dinajpur (GEN-A)	R246	Gobindagonj GEN-A-1	R1251	Polashbari-2
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R2285	Hili-1
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R0232	Joypurhat-1
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R856	Joypurhat-2
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R799	Joypurhat-3
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R1984	Joypurhat-4
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R1230	Pachbibi-1
+A	Dinajpur (GEN-A)	R099	Joypurhat GEN-A	R2810	Pachbibi-2
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R1606	Dimla-1
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R2937	Dimla-2
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R0060	Jaldhaka-1
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R1970	Jaldhaka-2
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R2872	Kishoreganj (Nilphamari)
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R0253	Nilphamary-1
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R1237	Nilphamary-2
+A	Dinajpur (GEN-A)	R305	Nilphamary GEN-A-1	R1457	Nilphamary-3
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R593	Boda-1
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R1443	Boda-2
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R2205	Debigonj-1
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R589	Domar-1
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R2371	Domar-2
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R0252	Panchagorh-1
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R1240	Panchagorh-2
+A	Dinajpur (GEN-A)	R265	Panchagarh GEN-A-1	R2092	Tetulia-1
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R1239	Baliadangi-1
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R2370	Baliadangi-2
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R863	Pirganj
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R887	Ranisankail-1
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R2065	Ranisankail-2
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R730	Setabgonj
+A	Dinajpur (GEN-A)	R421	Ranisankail GEN-A-1	R2871	Setabgonj-2
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R590	Parbotipur-1
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R2301	Parbotipur-2
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R0254	Sayedpur-1
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R588	Sayedpur-2
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R1238	Sayedpur-3
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R2756	Sayedpur-4
+A	Dinajpur (GEN-A)	R109	Sayedpur GEN-A-1	R1248	Taragonj
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R2308	Atwari-1
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R592	Birganj-1
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R1860	Birgonj-2
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R2835	Goriya (Thakurgaon)
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R353	Thakurgaon-1
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R0251	Thakurgaon-2
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R727	Thakurgaon-3
+A	Dinajpur (GEN-A)	R101	Thakurgoan GEN-A-1	R1833	Thakurgaon-4
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R2283	Allardarga
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R0281	Bheramara-1
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R605	Bheramara-2
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R2862	Bheramara-3
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R2307	Dasuria-1
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R603	Daulatpur-1
+A	Kushtia (GEN-A)	R406	Bheramara GEN-A-1	R1601	Daulatpur-2
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R1834	Atgharia-1
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R0219	Bonpara
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R1602	Bonpara-2
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R2801	Bonpara-3
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R344	Chatmohor
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R2197	Chatmohor-2
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R713	Vangura
+A	Kushtia (GEN-A)	R374	Bonpara GEN-A-1	R3012	Vangura-2
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R1259	Doyarampur
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R0289	Ishwardi-1
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R375	Ishwardi-2
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R1261	Ishwardi-3
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R2911	Ishwardi-4
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R354	Lalpur-1
+A	Kushtia (GEN-A)	R147	Ishwardi GEN-A-1	R2802	Lalpur-2
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R0278	Kushtia-1
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R0285	Kushtia-3
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R602	Kushtia-5
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R1982	Kushtia-6
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R2965	Kushtia-8
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R1262	Mirpur-Kushtia-1
+A	Kushtia (GEN-A)	R020	Kushtia GEN-A-1	R2827	Mirpur-Kushtia-2
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R1804	Horinarayonpur-1
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R1650	Khoksa-1
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R881	Kumarkhali
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R2361	Kumarkhali-2
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R2910	Kushtia -7
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R0279	Kushtia-2
+A	Kushtia (GEN-A)	R104	Kushtia GEN-A-2	R404	Kushtia-4
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R2198	Ataikula-1
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R1701	Faridpur-Pabna
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R0287	Pabna-1
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R0286	Pabna-2
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R847	Pabna-4
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R792	Santhia-1
+A	Kushtia (GEN-A)	R026	Pabna GEN-A-1	R2783	Santhia-2
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R0288	Pabna-3
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R633	Pabna-5
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R1260	Pabna-6
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R1480	Pabna-7
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R2803	Pabna-8
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R361	Sujanagar-1
+A	Kushtia (GEN-A)	R098	Pabna GEN-A-2	R1858	Sujanagar-2
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R0290	Bera-1
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R1723	Bera-2
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R579	Kashinathpur-1
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R1429	Kashinathpur-2
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R1228	Shahazadpur-2
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R387	Shahzadpur-1
+A	Kushtia (GEN-A)	R221	Shahzadpur GEN-A-1	R1700	Shahzadpur-3
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R853	Bagmara (Rajshahi)-1
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R1828	Bagmara (Rajshahi)-2 
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R2907	Bagmara (Rajshahi)-3
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R1256	Durgapur
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R574	Manda
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R2090	Taherpur (Rajshahi)-1
+A	Rajshahi (GEN-A)	R420	Bagmara GEN-A-1	R3005	Taherpur (Rajshahi)-2
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R2830	Bholahat-1
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R0224	C.Nawabganj-1
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R726	C.Nawabganj-3
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R1945	C.Nawabganj-4
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R575	Kanshat
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R0226	Shibgonj-1 (Rajshahi)
+A	Rajshahi (GEN-A)	R102	Chapainwabgonj GEN-A-1	R1472	Shibgonj-2 (Rajshahi)
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R0225	C.Nawabganj-2
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R2304	C.Nawabganj-5
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R2931	C.Nawabganj-6
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R2144	Nachole-1
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R576	Rohonpur
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R1254	Tanore-1
+A	Rajshahi (GEN-A)	R384	Chapainwabgonj GEN-A-2	R2368	Tanore-2
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R1990	Naldanga-1
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R689	Nandigram
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R2938	Nandigram-2
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R0218	Natore-3
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R1258	Natore-4
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R578	Singra-1
+A	Rajshahi (GEN-A)	R058	Natore GEN-A-1	R2203	Singra-2
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R577	Gurudaspur-1
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R1459	Gurudaspur-2
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R2945	Gurudaspur-3
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R0217	Natore-1
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R869	Natore-2
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R854	Puthia
+A	Rajshahi (GEN-A)	R419	Natore GEN-A-2	R586	Tarash
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R1849	Niamatpur-1
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R874	Patnitola-1
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R1232	Patnitola-2
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R1843	Patnitola-3
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R3014	Porsha-1
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R580	Sapahar-1
+A	Rajshahi (GEN-A)	R184	Patnitola GEN-A-1	R2119	Sapahar-2
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R629	Godagari
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R0216	Rajshahi-1
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R1253	Rajshahi-10 (RMCH)
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R1460	Rajshahi-13
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R2992	Rajshahi-16 (RMCH-Popular)
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R0212	Rajshahi-5
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R838	Rajshahi-6
+A	Rajshahi (GEN-A)	R008	Rajshahi GEN-A-1	R451	Rajshahi-7
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R1257	Charghat
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R573	Noahata
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R1255	Rajshahi-11
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R2367	Rajshahi-14
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R0215	Rajshahi-4
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R987	Rajshahi-8
+A	Rajshahi (GEN-A)	R077	Rajshahi GEN-A-2	R1007	Rajshahi-9
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R1729	Bagha-1
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R1616	Mohonpur-1
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R2908	Mohonpur-2
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R1458	Rajshahi-12
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R2966	Rajshahi-15 (RMCH-Popular)
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R0213	Rajshahi-2
+A	Rajshahi (GEN-A)	R186	Rajshahi GEN-A-3	R0214	Rajshahi-3
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R0243	Gaibandha-1
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R480	Gaibandha-2
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R1428	Gaibandha-3
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R2942	Gaibandha-4
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R2303	Laxmipur Gaibandha-1
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R1859	Sadullapur-1
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R731	Sundarganj-1
+A	Rangpur (GEN-A)	R151	Gaibandha GEN-A-1	R2046	Sundarganj-2
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R0245	Kurigram-1
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R857	Kurigram-2
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R1126	Kurigram-3
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R2068	Rajarhat-1
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R1605	Rawmari-1
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R3023	Rawmari-2
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R482	Ulipur-1
+A	Rangpur (GEN-A)	R100	Kurigram GEN-A-1	R2373	Ulipur-2
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R1250	Hatibandha
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R986	Kaligonj (Rangpur)-1
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R2275	Kaligonj (Rangpur)-2
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R0244	Lalmonirhat-1
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R765	Lalmonirhat-2
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R1991	Lalmonirhat-3
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R481	Patgram-1
+A	Rangpur (GEN-A)	R143	Lalmonirhat GEN-A-1	R1829	Patgram-2
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R728	Bodorgonj-1
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R1830	Bodorgonj-2
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R859	Mithapukur-1
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R1633	Mithapukur-2
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R2374	Mithapukur-3
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R729	Pirganj (Gaibandha)
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R1732	Pirganj-2 (Gaibandha)
+A	Rangpur (GEN-A)	R391	Mithapukur GEN-A-1	R2943	Pirganj-3 (Gaibandha)
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R675	Bhurungamari-1
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R1831	Bhurungamari-2
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R2757	Bhurungamari-3
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R376	Nageshwari-1
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R1249	Nageshwari-2
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R2805	Nageshwari-3
+A	Rangpur (GEN-A)	R385	Nageshwari GEN-A-1	R1652	Phulbari-1 (Kurigram)
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R587	Pirgacha-1
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R2751	Pirgacha-2
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R1241	Rangpur-11
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R1244	Rangpur-16
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R2993	Rangpur-18 (RpMCH-Community Medical-3)
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R2380	Rangpur-2
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R0240	Rangpur-3
+A	Rangpur (GEN-A)	R007	Rangpur GEN-A-1	R358	Rangpur-6
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R1632	Gangachora-1
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R1245	Kawnia
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R870	Rangpur-10
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R1243	Rangpur-13
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R2274	Rangpur-17
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R0241	Rangpur-4
+A	Rangpur (GEN-A)	R064	Rangpur GEN-A-2	R0242	Rangpur-5
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R0238	Rangpur-1
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R1246	Rangpur-12
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R2202	Rangpur-14
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R1247	Rangpur-15
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R0239	Rangpur-7
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R763	Rangpur-8
+A	Rangpur (GEN-A)	R185	Rangpur GEN-A-3	R453	Rangpur-9
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R0168	Baraiyerhat-1
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R458	Baraiyerhat-2
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R1076	Baraiyerhat-3
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R2847	Baraiyerhat-4
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R2024	Jorargonj-1
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R1446	Ramgarh-1
+A	Chattogram-A (GEN-A)	R092	Baraiyerhat GEN-A-1	R2084	Ramgarh-2
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R0161	CTG (Agrabad)-1
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R1467	CTG (Agrabad)-2
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R2898	CTG (Agrabad)-3
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R0159	CTG (Bandartila)-1
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R1625	CTG (Bandartila)-2
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R709	CTG (Maa O Shishu)-3
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R1058	CTG (Maa O Shishu)-4
+A	Chattogram-A (GEN-A)	R377	Chattogram GEN-A-12	R2023	CTG (Maa O Shishu)-5
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R0162	CTG (DT Road)
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R0160	CTG (Halishahar)-1
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R2332	CTG (Halishahar)-2
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R1623	CTG (IBH)-1
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R2983	CTG (IBH)-2
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R554	CTG (Maa O Shishu)-1
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R784	CTG (Maa O Shishu)-2
+A	Chattogram-A (GEN-A)	R044	Chattogram GEN-A-3	R2267	CTG (Maa O Shishu)-6
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R1067	Bhatiary-1
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R1587	CTG (Alongker)-1
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R785	CTG (Colonel Hat)-1
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R1861	CTG (Colonel Hat)-2
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R556	CTG (Diabetic)-1
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R2271	CTG (Diabetic)-2
+A	Chattogram-A (GEN-A)	R167	Chattogram GEN-A-8	R0163	CTG (USTC)-1
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R497	CTG (EPZ-1)
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R664	CTG (EPZ-2)
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R2289	CTG (EPZ-3)
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R2117	CTG (Katgor)-1
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R807	CTG (Navy Gate)-1
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R1059	CTG (Navy Gate)-2
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R1695	CTG (Navy Gate)-3
+A	Chattogram-A (GEN-A)	R208	Chattogram GEN-A-9	R2939	CTG (Navy Gate)-4
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R2047	Kumira-1
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R0167	Sandwip-1
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R498	Sandwip-2
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R752	Sandwip-3
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R1456	Sandwip-4
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R2069	Sandwip-5
+A	Chattogram-A (GEN-A)	R242	Sandwip GEN-A-1	R3013	Sandwip-6
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R405	Mirsorai-1
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R1444	Mirsorai-2
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R2995	Mirsorai-3
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R1657	Mithachora-1
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R824	Sitakundu-1
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R754	Sitakundu-2
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R2294	Sitakundu-3
+A	Chattogram-A (GEN-A)	R414	Sitakundu GEN-A-1	R2848	Sitakundu-4
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R0172	Chandraghona-1
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R630	Chandraghona-2
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R1985	Chandraghona-3
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R753	Pahartoli-1
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R408	Rangunia-1
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R1807	Rangunia-2
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R2189	Rangunia-3
+A	Chattogram-B (GEN-A)	R120	Chandraghona GEN-A-1	R2838	Rangunia-4
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R0147	CTG (Bahadderhat)
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R756	CTG (Chandgoan)
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R1806	CTG (CIMCH)-1
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R2814	CTG (CIMCH)-2
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R337	CTG (Noapara)-1
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R1805	CTG (Noapara)-2
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R557	Nazumiarhat
+A	Chattogram-B (GEN-A)	R415	Chattogram GEN-A-13	R2985	Nazumiarhat-2
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R0164	CTG (Ashkerdighi)
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R2248	CTG (Feringee Bazar)-1
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R555	CTG (General Hospital)-1
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R0165	CTG (Jamal Khan)-1
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R1660	CTG (Jamal Khan)-2
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R1047	CTG (Kotwali)
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R0166	CTG (Sadar Ghat)
+A	Chattogram-B (GEN-A)	R057	Chattogram GEN-A-4	R2941	CTG (Sadar Ghat)-2
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R1060	Chowdhury Hat-1
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R2013	Chowdhury Hat-2
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R0146	CTG (Aturar Depot)-1
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R2122	CTG (Aturar Depot)-2
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R665	CTG (Baizid)
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R440	CTG (Cantonment G. Hosp)
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R2929	CTG (Cantonment G. Hosp)-2
+A	Chattogram-B (GEN-A)	R069	Chattogram GEN-A-5	R1624	CTG (Oxygen)-1
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R2935	Fatehpur-1 
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R477	Hathazari-1
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R813	Hathazari-2
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R0170	Hathazari-3
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R708	Hathazari-4
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R1733	Hathazari-5
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R2103	Hathazari-6
+A	Chattogram-B (GEN-A)	R021	Hathazari GEN-A-1	R2355	Sarkerhat-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R1626	Azadibazar-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R1061	Gohira-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R558	Rangamati-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R1064	Rangamati-2
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R2265	Ranirhat-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R0171	Rawjan-1
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R476	Rawjan-2
+A	Chattogram-B (GEN-A)	R275	Rawjan GEN-A-1	R2110	Rawjan-3
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R823	Anowara-1
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R642	Anowara-2
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R1071	Anowara-3
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R1628	Anowara-4
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R1865	Anowara-5
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R2186	Anowara-6
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R2933	KEPZ Trust Hospital
+A	Chattogram-C (GEN-A)	R153	Anowara GEN-A-1	R1986	Pukuria-1
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R0173	Banshkhali-1
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R478	Banshkhali-2
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R989	Banshkhali-3
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R1691	Banshkhali-4
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R2061	Banshkhali-5
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R2140	Banshkhali-6
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R2287	Chambal Bazar
+A	Chattogram-C (GEN-A)	R277	Banshkhali GEN-A-1	R2994	Chambal Bazar-2
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R1866	CTG (2 No. Gate)-1
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R0155	CTG (Lab Aid)-1
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R2837	CTG (Marine City)-1
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R0157	CTG (Medical Center)
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R0158	CTG (Metropolitan Hosp.)-1
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R1054	CTG (Metropolitan Hosp.)-2
+A	Chattogram-C (GEN-A)	R002	Chattogram GEN-A-1	R0156	CTG (Royal Hosp.)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R797	CTG (Bakulia)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R1845	CTG (CMCH-4)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R2353	CTG (CMCH-5)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R0151	CTG (Holy Health)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R1682	CTG (Khaza Road)
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R0154	CTG (National)-1
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R1065	CTG (National)-2
+A	Chattogram-C (GEN-A)	R243	Chattogram GEN-A-10	R2264	CTG (National)-3
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R2331	CTG (Belle Vue)-1
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R0152	CTG (Chevron)-1
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R548	CTG (Chevron)-2
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R1693	CTG (Chevron)-3
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R1057	CTG (CMCH-1)
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R692	CTG (Lalkhan Bazar)
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R783	CTG (MAX Hospital)-1
+A	Chattogram-C (GEN-A)	R094	Chattogram GEN-A-6	R1055	CTG (MAX Hospital)-2
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R2354	Anowara Road
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R889	College Bazar-1
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R549	Potiya-3
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R1813	Potiya-5
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R2060	Potiya-6
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R2850	Potiya-7
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R1068	Shantirhat-1
+A	Chattogram-C (GEN-A)	R022	Potiya GEN-A-1	R1627	Shantirhat-2
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R1069	Chandanaish-1
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R1455	Chandanaish-2
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R1904	Chandanaish-3
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R338	Dohajari-1
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R2839	Dohajari-2
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R786	Potiya-1
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R369	Potiya-2
+A	Chattogram-C (GEN-A)	R372	Potiya GEN-A-2	R0174	Potiya-4
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R365	Boalkhali-1
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R1056	Boalkhali-2
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R1692	Boalkhali-3
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R2088	Boalkhali-4
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R2984	Boalkhali-5
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R808	CTG (Kalurghat)-1
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R1814	CTG (Kalurghat)-2
+A	Chattogram-D (GEN-A)	R276	Boalkhali GEN-A-1	R2188	CTG (Rashtarmatha)
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R1812	CTG (CMCH-3)
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R2823	CTG (Ibn Sina)-1
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R806	CTG (Lancet)
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R0150	CTG (Life Care)
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R0149	CTG (Peoples Hosp.)
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R439	CTG (Popular)-1
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R319	CTG (Popular)-2
+A	Chattogram-D (GEN-A)	R381	Chattogram GEN-A-11	R2185	CTG (Popular)-3
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R0148	CTG (Chawk Bazar)-1
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R1066	CTG (Delta Hospital)
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R2352	CTG (Dewan Bazar)
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R1588	CTG (Park View)-1
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R1844	CTG (Park View)-2
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R2246	CTG (Park View)-3
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R1046	CTG (Red Crescent)
+A	Chattogram-D (GEN-A)	R066	Chattogram GEN-A-2	R864	CTG (Surgiscope)
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R1048	CTG (CMCH-2)
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R0153	CTG (CSCR)-1
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R438	CTG (CSCR)-2
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R888	CTG (EPIC)-1
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R707	CTG (EPIC)-2
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R2247	CTG (EPIC)-3
+A	Chattogram-D (GEN-A)	R144	Chattogram GEN-A-7	R2922	CTG (EPIC)-4
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R2379	Kazirhat-1
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R1473	Nanupur-1
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R2849	Narayanhat-1
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R0169	Nazirhat-1
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R345	Nazirhat-2
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R641	Nazirhat-3
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R1062	Nazirhat-4
+A	Chattogram-D (GEN-A)	R096	Fatikchari GEN-A-1	R1864	Nazirhat-5
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R336	Bibirhat-1
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R499	Bibirhat-2
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R1664	Bibirhat-3
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R2753	Dighinala-1
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R1063	Khagrachari-1
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R1690	Khagrachari-2
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R2187	Manikchari-1
+A	Chattogram-D (GEN-A)	R303	Fatikchari GEN-A-2	R2944	Matiranga-1
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R631	Amirabad-1
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R500	Amirabad-2
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R339	Amirabad-3
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R1070	Amirabad-4
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R1817	Amirabad-5
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R2089	Amirabad-6
+A	Cox Bazar (GEN-A)	R113	Amirabad GEN-A-1	R2842	Padua-1
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R0180	Chakaria-1
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R833	Chakaria-2
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R773	Chakaria-3
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R1052	Chakaria-4
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R1658	Chakaria-5
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R552	Eidgaon-1
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R1684	Eidgaon-2
+A	Cox Bazar (GEN-A)	R095	Chakaria GEN-A-1	R2868	Eidgaon-3
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R0176	Coxs Bazar (Fuad Al Khateeb)-1
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R2309	Coxs Bazar (Fuad Al Khateeb)-2
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R1050	Coxs Bazar (General Hosp)
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R0179	Coxs Bazar (Old Cevron)
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R2052	Coxs Bazar (Sea Side Hospital)
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R340	Ramu-1
+A	Cox Bazar (GEN-A)	R023	Cox Bazar GEN-A-1	R1818	Ramu-2
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R0177	Coxs Bazar (CIC)-1
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R1051	Coxs Bazar (Digital Hosp )
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R0178	Coxs Bazar (Pan Bazar)
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R1727	Coxs Bazar (Sadar Hospital)
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R2109	Coxs Bazar (Union Hospital)
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R2932	Lama-1 
+A	Cox Bazar (GEN-A)	R166	Cox Bazar GEN-A-2	R2867	Link Road-Bangla Bazar
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R757	Bandarban-1
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R2062	Bandarban-2
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R407	Keranihat-1
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R550	Keranihat-2
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R1863	Keranihat-3
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R2833	Keranihat-4
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R0175	Satkania-1
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R1430	Satkania-2
+A	Cox Bazar (GEN-A)	R217	Keranirhat GEN-A-1	R2266	Satkania-3
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R1053	Kutubdia-1
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R2066	Kutubdia-2
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R2926	Matarbari-1
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R553	Moheshkhali-1
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R1445	Moheshkhali-2
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R2114	Moheshkhali-3
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R551	Pekuya-1
+A	Cox Bazar (GEN-A)	R408	Moheshkhali GEN-A-1	R1819	Pekuya-2
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R2288	Hnilla-Teknaf
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R2968	Kutupalong -2
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R682	Kutupalong-1
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R370	Teknaf-1
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R1049	Teknaf-2
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R1659	Ukhia-1
+A	Cox Bazar (GEN-A)	R304	Ukhia GEN-A-1	R2102	Ukhia-2
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R350	Chandpur (Diabetic Hosp.)-1
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R0122	Chandpur (Medinova)-1
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R0123	Chandpur (Sadar Hosp.)-1
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R2339	Chandpur (Stadium Road)-1
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R0124	Faridgonj-1
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R501	Faridgonj-2
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R688	Faridgonj-3
+A	Chandpur (GEN-A)	R048	Chandpur GEN-A-1	R2874	Faridgonj-4
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R770	Chandpur (Comfort)-1
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R383	Chandpur (Matrichaya)-1
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R2099	Chandpur (New Life)-1
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R1085	Chandpur (Nova Aid)-1
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R1836	Chandpur (Puran Bazar)-1
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R442	Chandpur (Sadar Hosp.)-2
+A	Chandpur (GEN-A)	R125	Chandpur GEN-A-2	R693	Haimchar
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R0134	Chatkhil-1
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R391	Chatkhil-2
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R543	Chatkhil-3
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R1103	Chatkhil-4
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R1661	Joyag-1
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R1081	Monohorgonj-1
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R1662	Monohorgonj-2
+A	Chandpur (GEN-A)	R091	Chatkhil GEN-A-1	R2337	Monohorgonj-3
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R1086	Chandra
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R0125	Hazigonj-1
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R851	Hazigonj-2
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R394	Hazigonj-3
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R1082	Hazigonj-4
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R1797	Hazigonj-5
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R1993	Hazigonj-6
+A	Chandpur (GEN-A)	R050	Hazigonj GEN-A-1	R2873	Hazigonj-7
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R1087	Baburhat
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R1399	Matlab Uttar-1
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R2086	Matlab Uttar-2
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R332	Motlob-1
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R769	Motlob-2
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R2270	Motlob-3
+A	Chandpur (GEN-A)	R379	Motlab GEN-A-1	R1620	Narayanpur-1
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R0139	Raipur-1
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R479	Raipur-2
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R1084	Raipur-3
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R2207	Raipur-4
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R0138	Ramgonj-1
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R790	Ramgonj-2
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R1452	Ramgonj-3
+A	Chandpur (GEN-A)	R169	Ramganj GEN-A-1	R2059	Ramgonj-4
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R825	Kachua-1
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R1095	Kachua-2
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R743	RahimNagar
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R1665	Sachar-1
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R2340	Sachar-2
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R0126	Sharastee-1
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R1083	Sharastee-2
+A	Chandpur (GEN-A)	R273	Sharastee GEN-A-1	R1619	Sharastee-3
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R321	Barura-1
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R772	Barura-2
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R1096	Barura-3
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R1091	Bizra
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R2269	Chitoishi-1
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R1973	Modafforgonj-2
+A	Cumilla (GEN-A)	R171	Barura GEN-A-1	R539	Moddaforgonj
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R1079	Brahman Para-1
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R1899	Brahman Para-2
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R356	Buriarchong-1
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R687	Buriarchong-2
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R826	Cumilla (Cantonment)-1
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R535	Cumilla (Cantonment)-2
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R2079	Cumilla (Cantonment)-3
+A	Cumilla (GEN-A)	R274	Cumilla Cantonment GEN-A-1	R1976	Kongshonagar
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R1469	Central Medical (Paduar Bazar)
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R1090	Cumilla (Paduar Bazar)
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R0111	Cumilla (Racecourse)
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R0114	Cumilla Diabetic Hosp-1
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R0112	Cumilla Tomson Bridge
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R793	Munshirhat-1
+A	Cumilla (GEN-A)	R004	Cumilla GEN-A-1	R2250	Munshirhat-2
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R473	Cumilla (C.D. Path)-1
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R0115	Cumilla (C.D. Path)-2
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R0116	Cumilla (Cumilla Tower)
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R2085	Cumilla (Labaid)
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R1656	Cumilla Diabetic Hosp-2
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R474	Cumilla Laksham Road
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R2184	Kashinagar-1
+A	Cumilla (GEN-A)	R089	Cumilla GEN-A-3	R1078	Suagazi
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R2292	Bhangora
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R0117	Debidwar-1
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R816	Debidwar-2
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R534	Debidwar-3
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R990	Debidwar-4
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R1094	Debidwar-5
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R395	Muradnagar-1
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R694	Muradnagar-2
+A	Cumilla (GEN-A)	R070	Debidwar GEN-A-1	R1870	Ramchandrapur-1
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R0119	Laksham-1
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R322	Laksham-2
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R372	Laksham-3
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R538	Laksham-4
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R1080	Laksham-5
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R2123	Laksham-6
+A	Cumilla (GEN-A)	R065	Laksham GEN-A-1	R2916	Laksham-7
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R0120	Chandina-1
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R2362	Chandina-5
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R2975	Chandina-6
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R771	Eliotgonj-1
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R1685	Eliotgonj-2
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R2853	Madhaiya
+A	Cumilla-B (GEN-A)	R170	Chandina GEN-A-1	R2290	Maligaon-1
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R2016	Adda-Jhalam-1
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R393	Chandina-2
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R1092	Chandina-3
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R1900	Chandina-4
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R1093	Nawabpur-1
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R2183	Nawabpur-2
+A	Cumilla-B (GEN-A)	R430	Chandina GEN-A-2	R2964	Rammohan-1
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R1088	Chawakbazar-2
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R537	Cumilla (Jhautola)
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R0110	Cumilla Gomoti Hosp.
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R1089	Cumilla Medical Centre
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R441	Cumilla Moon Hospital
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R443	Cumilla Truma Center
+A	Cumilla-B (GEN-A)	R040	Cumilla GEN-A-2	R2776	Cumilla Truma Center-2
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R0113	Chawakbazar-1
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R371	COMCH-1
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R875	COMCH-2
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R2788	COMCH-3
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R2924	COMCH-4
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R547	Mianbazar-1
+A	Cumilla-B (GEN-A)	R371	Cumilla GEN-A-4	R2243	Mianbazar-2
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R1097	Gouripur-4
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R1476	Gouripur-5
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R827	Homna-1
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R1689	Homna-2
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R2963	Homna-3
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R733	Titas-1
+A	Cumilla-B (GEN-A)	R090	Gouripur GEN-A-1	R2334	Titas-2
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R536	Daudkandi-1
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R1098	Daudkandi-2
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R2998	Daudkandi-3
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R0121	Gouripur-1
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R349	Gouripur-2
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R382	Gouripur-3
+A	Cumilla-B (GEN-A)	R376	Gouripur GEN-A-2	R1835	Meghna-1
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R0144	Chagolnaiya-1
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R639	Chagolniaya-2
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R1075	Chagolniaya-3
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R1072	Fulgazi-1
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R2291	Fulgazi-2
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R545	Porsuram-1
+A	Feni (GEN-A)	R431	Chagolnaiya GEN-A-1	R2055	Porsuram-2
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R2754	Bangodda-1
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R0118	Chowddagram-1
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R392	Chowddagram-2
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R805	Chowddagram-3
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R2268	Chowddagram-4
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R2930	Chowddagram-5
+A	Feni (GEN-A)	R093	Chowddagram GEN-A-1	R2021	Dhorkora Bazar-1
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R475	Basurhat-1
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R0145	Basurhat-2
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R1077	Basurhat-3
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R2880	Basurhat-4
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R318	Daganbhuiyan-1
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R828	Daganbhuiyan-2
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R712	Daganbhuiyan-3
+A	Feni (GEN-A)	R152	Daganbhuiyan GEN-A-1	R2042	Shebarhat-1
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R436	Feni (Diabetic)-1
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R0142	Feni (Diabetic)-2
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R546	Feni (Ultrapath)
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R0140	Feni (Z. U. Hospital)
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R390	Sonagazi-1
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R791	Sonagazi-2
+A	Feni (GEN-A)	R018	Feni GEN-A-1	R1721	Sonagazi-3
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R437	Feni (Al-Kemy)
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R681	Feni (Apollo)
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R2967	Feni (General Hospital)-1
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R1074	Feni (Medinova)
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R0141	Feni (Uposhamo)
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R758	Gonoboti
+A	Feni (GEN-A)	R071	Feni GEN-A-2	R1683	Laskarhat-1
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R0143	Feni (Concept)
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R1073	Feni (Ibn Sina)
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R1800	Feni (Max)
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R373	Feni (Square Lab)
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R2928	Feni (Star-Line Hosp.)
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R2927	Lemua-1
+A	Feni (GEN-A)	R168	Feni GEN-A-3	R2834	Silonia Bazar-1
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R732	Bagmara
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R2879	Bokshagonj-1
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R1618	Buschi-1
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R331	Nangolkot-1
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R640	Nangolkot-2
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R1688	Nangolkot-3
+A	Feni (GEN-A)	R429	Nangolkot GEN-A-1	R2115	Nangolkot-4
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R0132	Chowmuhoni-1
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R0133	Chowmuhoni-2
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R435	Chowmuhoni-3
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R710	Chowmuhoni-4
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R1102	Chowmuhoni-5
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R2029	Chowmuhoni-6
+A	Maizdee (GEN-A)	R039	Chowmuhoni GEN-A-1	R1663	Zamiderhat-1
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R544	Komol Nagar-1
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R1629	Komol Nagar-2
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R2338	Komol Nagar-3
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R1449	Ramgati-1
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R2051	Ramgati-2
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R2791	Ramgati-3
+A	Maizdee (GEN-A)	R370	Komol Nagar-A-1	R2146	Udoy Sadhur Hat
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R2752	Dalal Bazar-1
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R0135	Laxmipur-1
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R0136	Laxmipur-2
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R866	Laxmipur-3
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R744	Laxmipur-4
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R1105	Laxmipur-5
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R680	Mandari-1
+A	Maizdee (GEN-A)	R051	Laxmipur GEN-A-1	R2864	Mandari-2
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R541	Kobirhat-1
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R1801	Kobirhat-2
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R1481	Maizdee (General Hospital)
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R2832	Maizdee (Ibn Sina)
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R1100	Maizdee (Ma O Shishu Hosp.)
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R3004	Maizdee (Popular)
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R433	Maizdee Bazar
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R334	Maizdee-Niramoy Hosp
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R1630	Sonapur-1
+A	Maizdee (GEN-A)	R013	Maizdee GEN-A-1	R2030	Sonapur-2
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R0137	Chondrogonj-1
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R637	Chondrogonj-2
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R679	Maizdee (Central Hospital)
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R819	Maizdee (DDC)
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R0131	Maizdee (Goodheal)
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R0130	Maizdee (Prime Hospital)
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R2990	Maizdee (Prime Hospital)-2
+A	Maizdee (GEN-A)	R121	Maizdee GEN-A-2	R1099	Maizdee (Trust One Hosp.)
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R1846	Amishapara-1
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R2778	Chhatarpaia-1
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R803	Senbag-1
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R1465	Senbag-2
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R2865	Senbag-3
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R335	Sonaimuri-1
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R638	Sonaimuri-2
+A	Maizdee (GEN-A)	R215	Sonaimuri GEN-A-1	R1104	Sonaimuri-3
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R542	Hatiya-1
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R1101	Hatiya-2
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R1669	Hatiya-3
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R540	Subornochor-1
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R1450	Subornochor-2
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R1694	Subornochor-3
+A	Maizdee (GEN-A)	R272	Subornachar GEN-A-1	R2792	Subornochor-4
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R2986	BRB-Samorita
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R0025	BSMMU-Green Life
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R0026	BSMMU-Green-Super-Rajabazar
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R1193	BSMMU-Health & Hope
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R822	Comfort Hospital
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R622	Green Life
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R1197	Samorita-Square-1
+A	Dhaka-B (GEN-A)	R079	Dhaka GEN-A-11	R0027	Samorita-Square-2
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R1192	BSMMU-4
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R470	BSMMU-Central Hospital-1
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R0023	BSMMU-Central Hospital-2
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R0017	BSMMU-Elephant Road
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R419	BSMMU-Modern Hospital-1
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R0024	BSMMU-Modern Hospital-2
+A	Dhaka-B (GEN-A)	R115	Dhaka GEN-A-15	R719	BSMMU-Modern Hospital-3
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R2359	BIRDEM-Aurora
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R2025	BIRDEM-Segunbagicha
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R0011	BIRDEM-Shantinagar
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R1130	IBCH
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R684	IBCH-Fakirapool-1
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R2795	IBCH-Fakirapool-2
+A	Dhaka-B (GEN-A)	R118	Dhaka GEN-A-16	R0012	IBCH-Paltan
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R1008	BIRDEM
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R1131	BIRDEM-1
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R1132	BIRDEM-2
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R0009	BIRDEM-Eskaton
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R320	BIRDEM-Mogbazar-1
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R1798	BIRDEM-Mogbazar-2
+A	Dhaka-B (GEN-A)	R031	Dhaka GEN-A-2	R886	Holy Family-Siddheswari
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R1187	BSMMU-1
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R718	BSMMU-3
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R0021	BSMMU-Lab Aid-1
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R0019	BSMMU-Lab Aid-2
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R0018	BSMMU-Lab Aid-3
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R0020	BSMMU-Lab Aid-4
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R809	BSMMU-Lab Aid-5
+A	Dhaka-B (GEN-A)	R035	Dhaka GEN-A-5	R415	BSMMU-Lab Aid-6
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R1983	Baligaon-1
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R0065	Munshigonj-1
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R0066	Munshigonj-2
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R517	Munshigonj-3
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R1725	Munshigonj-4
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R2750	Munshigonj-5
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R409	Tongibari-1
+A	Dhaka-B (GEN-A)	R078	Munshigonj GEN-A-1	R696	Tongibari-2
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R2909	Chattogram Road-10
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R329	Chattogram Road-2
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R686	Chattogram Road-4
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R1142	Chattogram Road-5
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R1673	Chattogram Road-7
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R367	Konapara-1
+A	Dhaka-C (GEN-A)	R060	Chattogram Road GEN-A-1	R788	Konapara-2
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R366	English Road
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R0005	Mitford-1 
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R801	Mitford-2
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R891	Mitford-3
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R2193	Mitford-4
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R508	Sumana Hospital
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R399	Sutrapur
+A	Dhaka-C (GEN-A)	R074	Dhaka GEN-A-10	R0007	Wari-Tipu Sultan Road
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R2277	ICMH-Ibn Sina
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R1129	ICMH-Rayerbag
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R890	Jatrabari
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R515	Rayerbag
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R0063	Sonir Akhra-1
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R787	Sonir Akhra-2
+A	Dhaka-C (GEN-A)	R154	Dhaka GEN-A-18	R1887	Sonir Akhra-3
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R0004	Dayagonj-2
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R840	Juraine-1
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R2826	Juraine-2
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R490	NMCH-Suprime
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R0003	Postagola
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R2082	Postagola-2
+A	Dhaka-C (GEN-A)	R373	Dhaka GEN-A-25	R1799	Sayedabad-1
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R0008	Dayagonj-1
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R626	Golapbag
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R1392	NMCH-IBN Sina-1
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R2786	NMCH-IBN Sina-2
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R2970	NMCH-IBN Sina-3
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R461	Tikatuli-1
+A	Dhaka-C (GEN-A)	R036	Dhaka GEN-A-6	R0006	Tikatuli-2
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R2191	Abdullahpur-Nimtola
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R0002	Keranigonj-1
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R884	Keranigonj-2
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R1975	Keranigonj-3
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R1668	Louhajang-1
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R410	Sreenagar
+A	Dhaka-C (GEN-A)	R262	Keranigonj GEN-A-1	R1138	Sreenagar-1
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R504	Apollo-1
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R1194	Apollo-2
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R993	Apollo-3
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R2798	Apollo-4
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R1195	NIDCH-Badda
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R720	Shahjadpur-Natun Bazar
+A	Dhaka-I (GEN-A)	R081	Dhaka GEN-A-12	R2997	Shahjadpur-Popular-1
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R0048	Badda-1
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R324	Badda-3
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R2054	Badda-4
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R2780	Badda-5
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R815	Rampura-Banasree-1
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R1454	Rampura-Banasree-3
+A	Dhaka-I (GEN-A)	R181	Dhaka GEN-A-19	R2358	Rampura-Banasree-4
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R1189	DMCH-1
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R1190	DMCH-2
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R2796	DMCH-3
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R2258	DMCH-Chawkbazar
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R400	DMCH-Taltola
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R0015	Khidmah Hospital
+A	Dhaka-I (GEN-A)	R180	Dhaka GEN-A-20	R2972	Khidmah Hospital-2
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R0067	Ashiyan-Khilkhet
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R1896	Ashiyan-Khilkhet-2
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R777	Ashiyan-Nikunja
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R2797	Kurmitola-bashundhara-1
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R814	Kurmitola-Kuril-1
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R413	Kurmitola-Kuril-2
+A	Dhaka-I (GEN-A)	R261	Dhaka GEN-A-23	R1676	Kurmitola-Kuril-3
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R2781	Aftabnagar-1
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R414	Badda-2
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R0046	Farmgate-Tejgaon
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R503	Nakhal Para
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R1644	Nakhal Para-2
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R1196	Rampura-Banasree-2
+A	Dhaka-I (GEN-A)	R386	Dhaka GEN-A-26	R505	Rampura-DIT
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R489	BIRDEM-Malibag
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R0014	IBH-Arambag
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R506	IBH-Baraka
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R0010	Medinova-Malibagh
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R0016	Mugda-1
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R764	Mugda-2
+A	Dhaka-I (GEN-A)	R422	Dhaka GEN-A-28	R2987	Mugda-3
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R0013	DMCH-Basabo
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R683	DMCH-Goran
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R412	DMCH-Kadamtola
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R839	DMCH-Mathertake-Nondipara
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R1191	MMCH-Mathertake
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R2971	MMCH-Mathertake-2
+A	Dhaka-I (GEN-A)	R033	Dhaka GEN-A-3	R1681	MMCH-Nandipara
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R0096	Bhaluka-Digital Hospital
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R1162	Bhaluka-Mahir Lab Hospital
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R531	Bhaluka-Mohammadia Model Hospital
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R796	Seed Store-Masterbari-1
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R1642	Seed Store-Masterbari-2
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R2915	Seedstore
+A	Gazipur (GEN-A)	R087	Bhaluka GEN-A-1	R1868	Uthura-1
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R1826	Barmi-1
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R3022	Gafargaon Health Complex
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R1163	Gafargaon-Diabetic Center
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R363	Gafargaon-General Hospital
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R1824	Jaina-1
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R1842	Kawraid-1
+A	Gazipur (GEN-A)	R424	Gafargaon GEN-A-1	R2836	Kawraid-2
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R1156	Gazipur-Alfa Diagnostic
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R430	Gazipur-Diabetic Somitee
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R2063	Gazipur-Popular Diagnostic Center
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R429	Gazipur-Radium Diagnostic
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R323	Gazipur-Sadar Hospital-1
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R1850	Gazipur-Sadar Hospital-2
+A	Gazipur (GEN-A)	R042	Gazipur GEN-A-1	R0075	Gazipur-Shimultoli
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R402	Gazipur-City MC&H
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R1158	Gazipur-Doctors Foundation Hospital
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R0074	Gazipur-Medipath
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R1589	Manipur
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R1157	Rajendrapur
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R690	Vawal-Mirzapur-1
+A	Gazipur (GEN-A)	R177	Gazipur-Chowrasta GEN-A-1	R1827	Vawal-Mirzapur-2
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R1641	Chandra-1
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R0083	Kaliakoir-1
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R635	Kaliakoir-2
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R1608	Shafipur General Hospital-1
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R1159	Shafipur Tanha Health Care
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R379	Shafipur-Mordern Hospital
+A	Gazipur (GEN-A)	R260	Kaliakoir GEN-A-1	R2804	Shafipur-Mordern Hospital-2
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R2876	Amraid-2
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R760	Kapasia Bazar
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R1680	Kapasia Health Complex
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R524	Kapasia-Amraid General Hospital
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R0078	Kapasia-Diabetic Somitee
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R2064	Kapasia-Radium Diagnostic Center
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R495	Sreepur-1
+A	Gazipur (GEN-A)	R257	Kapasia GEN-A-1	R2875	Sreepur-2
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R1989	Konabari Central Hospital
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R1160	Konabari Clinic
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R1889	Konabari Lab Aid Hospital
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R2195	Konabari Shorif Hospital
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R0077	Konabari-Kashimpur
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R459	Konabari-Mouchak
+A	Gazipur (GEN-A)	R086	Konabari GEN-A-1	R699	Konabari-Popular Hospital
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R2196	Bagher Bazar-1
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R779	Mawna-Al Hera Hospital
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R3007	Mawna-Al Hera Hospital-2
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R835	Mawna-Al Hera Medical
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R1161	Mawna-Bagher Bazar
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R0076	Mawna-Fulbaria
+A	Gazipur (GEN-A)	R178	Mawna GEN-A-1	R1825	Mawna-Padma Digital Hospital
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R520	Arihajar-1
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R673	Arihajar-2
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R1145	Arihajar-3
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R1436	Arihajar-4
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R2249	Arihajar-5
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R2799	Arihajar-6 (Taltola)
+A	Uttara (GEN-A)	R219	Arihajar GEN-A-1	R1838	Gopaldi Bazar-1
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R3010	Kaligonj (Divine Mercy Hospital)
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R1671	Kaligonj Awrakhali (Tongi)
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R2106	Kaligonj-Dolonbazar (Tongi)
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R326	Kaligonj-Jamalpur (Tongi)
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R778	Kaligonj-Nagori (Tongi)
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R2048	TMMCH
+A	Uttara (GEN-A)	R423	Kaliganj GEN-A-1	R1154	Tongi-Catharsis
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R2857	Kanchan-1
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R634	Rupgonj-1
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R0056	Rupgonj-2
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R1144	Rupgonj-3
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R1426	Rupgonj-4
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R1610	Rupgonj-5
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R1611	Rupgonj-6
+A	Uttara (GEN-A)	R124	Rupgonj GEN-A-1	R2034	Rupgonj-7
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R522	Japan East-West MCH
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R0072	Tongi Bazar
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R831	Tongi-BSCIC & TNT
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R1634	Tongi-Cherag Ali
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R860	Tongi-Collegegate
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R431	Tongi-Station Road-1
+A	Uttara (GEN-A)	R049	Tongi GEN-A-1	R2856	Tongi-Station Road-2
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R759	Boardbazar-Konia
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R1594	Boardbazar-Maleker Bari
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R496	Boardbazar-Signboard
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R2904	Boardbazar-Tairunnessa
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R0073	Boardbazar-TMMCH
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R1155	TIMCH (Sataish)
+A	Uttara (GEN-A)	R148	Tongi GEN-A-2	R460	Tongi-Hossain Market
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R523	Aichi Hospital-Ati Para
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R0071	Lubana General Hospital
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R2070	Lubana General Hospital-2
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R2280	Shin Shin JH-Monsur Ali MCH
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R1897	Uttara Ahsania MCH
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R3009	Uttara East-West MCH-1
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R1793	Uttara Mohila O Shishu-Atipara-AASTER
+A	Uttara (GEN-A)	R017	Uttara GEN-A-1	R832	Uttara Monsur Ali MCH
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R0068	Dokkhin Khan-KC Hospital
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R0069	Uttara Lab Aid-1-Kuwait Maitree Hospital
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R428	Uttara NHN-Kuwait Maitree Hospital
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R1750	Uttara NHN-Lab Aid-1
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R1794	Uttara Popular-AR Raha Hospital
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R818	Uttara Popular-Ashkona
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R1153	Uttara Popular-Kasaibari
+A	Uttara (GEN-A)	R073	Uttara GEN-A-2	R427	Uttara Popular-Womens Hospital
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R2855	Uttara Adhunik & Popular
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R401	Uttara Adhunik Lab Aid-2
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R1152	Uttara Adhunik-Hi Care
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R3015	Uttara Adhunik-Ibn Sina
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R426	Uttara Adhunik-Ibn Sina (Extension)
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R521	Uttara Adhunik-Ibn Sina (Main)
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R0070	Uttara Crescent Hospital
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R2081	Uttara Crescent Hospital-Comfort
+A	Uttara (GEN-A)	R176	Uttara GEN-A-3	R1151	Uttara Crescent-RMC Hospital
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R750	Azmol Hosp-Kidney Foundation
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R0043	ICH-Mirpur
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R3002	NHF-Aalok Healthcare
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R512	NHF-Indoor
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R0044	NHF-Mirpur 
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R2259	NINS-Aalok Healthcare
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R377	NITOR-Aalok Healthcare
+A	Dhaka-A (GEN-A)	R150	Dhaka GEN-A-17	R2357	Popular-Mirpur-6
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R1852	Delta-DG Lab-1
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R861	IBH-DSH-1
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R1182	IBH-DSH-2
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R2901	IBH-Mirpur-12
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R2787	IBH-Rupnagar
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R411	Popular-Mirpur-12
+A	Dhaka-A (GEN-A)	R218	Dhaka GEN-A-21	R398	Rupnagar-Medinet
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R2080	NIO-IMCH
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R1183	NITOR
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R2976	NITOR-2
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R0041	NITOR-IMCH
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R2851	NITOR-IMCH-2
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R1885	NITOR-Shewrapara
+A	Dhaka-A (GEN-A)	R390	Dhaka GEN-A-24	R751	NITOR-Taltola
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R1180	BSH-IMCH
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R1678	BSH-Kallyanpur
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R2824	BSH-NITOR
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R2988	DSH-BSH-2
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R2257	NHF-NHN
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R3000	NINS-2
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R2895	NINS-Popular-2
+A	Dhaka-A (GEN-A)	R425	Dhaka GEN-A-27	R0045	NITOR-Kazi Para
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R1181	BIHS-Delta
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R2774	BIHS-Labaid
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R417	BIHS-Mirpur
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R1179	Delta-Labaid
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R0042	Delta-Mazar Road
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R858	Delta-Mirpur
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R1637	IBN-Sina-Zoo Road
+A	Dhaka-A (GEN-A)	R034	Dhaka GEN-A-4	R2999	Maa O Shishu-Mirpur-1
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R2356	CRP-Dental College
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R0047	CRP-Kochukhet
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R782	Hitech-Ibrahimpur
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R3001	Hitech-kochukhet
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R1396	Matikata-Manikdee
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R0040	NINS-DG Lab
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R837	NINS-Kachukhet
+A	Dhaka-A (GEN-A)	R037	Dhaka GEN-A-7	R1886	NINS-Popular-1
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R0050	Banani
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R703	Metropolitan-UMCH
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R0051	Mohakhali
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R1185	UMCH-Niketon
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R0049	United Hosp-Lab Aid-1
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R1184	United Hosp-Lab Aid-2
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R2272	United Hosp-Lab Aid-3
+A	Dhaka-A (GEN-A)	R055	Dhaka GEN-A-9	R1980	United Hospital Banani
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R2978	BMCH-JMI Hospital
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R1974	BMCH-Jouchor
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R1137	BMCH-Satmasjid Road
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R0032	BMCH-Shankar Road
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R418	Ibn-Sina D lab-Hazaribag
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R0036	JBFH-Rayer Bazar
+A	Dhaka-D (GEN-A)	R001	Dhaka GEN-A-1	R0033	NIMCH-Medinova
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R0031	Azimpur-1
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R2902	Azimpur-2
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R625	BDR Gate-1
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R1451	BDR Gate-2
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R507	DMCH-Lalbag
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R804	Kamrangirchar-1
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R2015	Kamrangirchar-2
+A	Dhaka-D (GEN-A)	R082	Dhaka GEN-A-13	R3003	Kamrangirchar-3
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R1133	Al-Manar Hospital-Lalmatia-1
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R2989	Al-Manar-Chaduddan
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R2278	MFSTC-Nabodoy
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R1675	NIKDU-Adabar-1
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R1672	Rohitpur-1
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R509	ShSMCH-Krishi Market
+A	Dhaka-D (GEN-A)	R116	Dhaka GEN-A-14	R811	ShSMCH-Mohammadpur
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R666	NIKDU-Trauma
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R2192	NIKDU-Trauma-2
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R0039	ShSMCH-Adabar
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R0038	ShSMCH-BDM Hosp.
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R1134	ShSMCH-DCIMCH
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R2979	ShSMCH-Krishi Market-2
+A	Dhaka-D (GEN-A)	R263	Dhaka GEN-A-22	R416	ShSMCH-Shyamoly
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R510	Atibazar-1
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R3019	Atibazar-2
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R511	BMCH-Ibn Sina
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R1853	City Hospital-Bosila-1
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R1136	IBN Sina Hospital
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R0035	Ibn-sina Hosp. Sankar
+A	Dhaka-D (GEN-A)	R426	Dhaka GEN-A-29	R1635	Kalatia-1
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R0037	NICVD-ENT Hospital
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R0028	NICVD-Popular-1
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R0029	NICVD-Popular-2
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R0030	NICVD-Popular-3
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R465	NICVD-Popular-4
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R1135	NICVD-Popular-5
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R702	NICVD-Popular-6
+A	Dhaka-D (GEN-A)	R038	Dhaka GEN-A-8	R2825	NICVD-Popular-7
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R3020	Bandura-1
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R762	Dohar-1
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R328	Dohar-2
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R1888	Dohar-3
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R0001	Nowabgonj-1
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R516	Nowabgonj-2
+A	Dhaka-D (GEN-A)	R112	Nowabgonj GEN-A-1	R695	Nowabgonj-3
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R424	Chattogram Road-3
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R1143	Chattogram Road-6
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R1855	Chattogram Road-8
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R2342	Chattogram Road-9
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R844	Madanpur-1
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R492	Madanpur-2
+A	Narayangonj (GEN-A)	R301	Madanpur GEN-A-1	R1677	Madanpur-3
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R1890	Deobhog-1
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R1424	N.Gonj (Shibu Market)
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R469	Narayangonj-1
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R2755	Narayangonj-12
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R0062	Narayangonj-4
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R471	Narayangonj-6
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R0059	Narayangonj-9
+A	Narayangonj (GEN-A)	R016	Narayangonj GEN-A-1	R674	Panchaboti
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R780	Adamji-1
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R1808	Adamji-2
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R0058	Chattogram Road-1
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R1393	N.Gonj (Medinova)
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R2100	Narayangonj-11
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R420	Narayangonj-7
+A	Narayangonj (GEN-A)	R053	Narayangonj GEN-A-2	R456	Narayangonj-8
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R0064	Fatullah-1
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R1141	Fatullah-2
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R1640	Fatullah-3
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R1809	Jalkuri-1
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R883	Pagla
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R1638	Shirajdikhan-2
+A	Narayangonj (GEN-A)	R206	Narayangonj GEN-A-3	R518	Sirajdikhan
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R330	Bondor
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R1639	Bondor-2
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R1140	N.Gonj (Lab Aid)
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R421	N.Gonj (Modern-1)
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R1139	N.Gonj (Modern-2)
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R2056	Narayangonj-10
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R0061	Narayangonj-3
+A	Narayangonj (GEN-A)	R392	Narayangonj GEN-A-4	R817	Narayangonj-5
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R519	Bobharchar
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R1856	Bobharchar-2
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R0057	Sonargaon-1
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R425	Sonargaon-2
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R723	Sonargaon-3
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R1468	Sonargaon-4
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R2026	Sonargaon-5
+A	Narayangonj (GEN-A)	R084	Sonargoan GEN-A-1	R2861	Sonargaon-6
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R325	Ashulia-2
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R668	Ashulia-3
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R1432	Ashulia-4
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R2363	Ashulia-6
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R1200	Zirani (KPJ,EPZ)
+A	Savar (GEN-A)	R114	Ashulia GEN-A-1	R2035	Zirani (KPJ,EPZ)-2
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R0082	Dahmrai-1
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R1199	Dahmrai-2
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R2014	Dhamrai-3
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R2364	Dhamrai-4
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R885	Kalampur
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R397	Nabinagar
+A	Savar (GEN-A)	R240	Dhamrai GEN-A-1	R1607	Nabinagar-2
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R794	Harirampur-1
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R2251	Harirampur-2
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R0034	Manikganj-3
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R1201	Manikganj-4
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R1895	Manikganj-5
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R513	Saturia
+A	Savar (GEN-A)	R383	Manikganj GEN-A-2	R1894	Saturia-2
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R3021	Doulatpur-1
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R1395	Ghior-Doulatpur 
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R0084	Manikganj-1
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R0085	Manikganj-2
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R798	Nagarpur
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R2936	Nagarpur-2
+A	Savar (GEN-A)	R075	Manikgonj GEN-A-1	R488	Sebaloy
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R2111	Barachowna-1
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R768	Mirzapur-1
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R0107	Mirzapur-2
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R1731	Mirzapur-3
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R403	Shakipur-1
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R789	Shakipur-2
+A	Savar (GEN-A)	R083	Mirzapur GEN-A-1	R1994	Shakipur-3
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R1956	Savar-10
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R0080	Savar-2
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R0022	Savar-6
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R1198	Savar-8
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R514	Singair-1
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R667	Singair-2
+A	Savar (GEN-A)	R032	Savar GEN-A-1	R2036	Singair-3
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R378	Hemayetpur-1
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R315	Hemayetpur-2
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R2037	Hemayetpur-3
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R0079	Savar-1
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R877	Savar-4
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R985	Savar-7
+A	Savar (GEN-A)	R146	Savar GEN-A-2	R1679	Savar-9
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R704	Ashulia-1
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R1730	Ashulia-5
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R0081	Savar-3
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R487	Savar-5
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R0185	Zirani-1
+A	Savar (GEN-A)	R427	Savar GEN-A-3	R2276	Zirani-2
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R0106	Ghatail-1
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R1166	Ghatail-2
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R836	Kalihati
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R1707	Kalihati-1
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R2253	Kalihati-2
+A	Tangail (GEN-A)	R428	Ghatail GEN-A-1	R2281	Sagardighi-1
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R0108	Jamalpur-1
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R685	Jamalpur-4
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R1168	Jamalpur-5
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R1394	Madergonj
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R2104	Madergonj-2
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R494	Melandah
+A	Tangail (GEN-A)	R062	Jamalpur GEN-A-1	R1654	Melandah-2
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R624	Jamalpur-2
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R802	Jamalpur-3
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R761	Nandina
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R1869	Nandina-2
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R389	Sarishabari-1
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R1171	Sarishabari-2
+A	Tangail (GEN-A)	R241	Jamalpur GEN-A-2	R2206	Sarishabari-3
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R745	Dhanbari
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R2147	Dhanbari-2
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R1615	Gopalpur-1
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R0092	Modhupur-1 
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R526	Modhupur-2
+A	Tangail (GEN-A)	R085	Modhupur GEN-A-1	R1837	Modhupur-3
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R2279	Jhenaigati-1
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R1470	Nakla (Sherpur)-1
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R2878	Nakla (Sherpur)-2
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R705	Nalitabari
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R1832	Nalitabari-2
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R0095	Sherpur-1
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R1170	Sherpur-3
+A	Tangail (GEN-A)	R122	Sherpur GEN-A-1	R1992	Sreebordhi-1
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R700	Boxigonj
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R1169	Dewangonj
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R0109	Islampur
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R1909	Islampur-2
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R364	Sherpur-2
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R1655	Sherpur-4
+A	Tangail (GEN-A)	R264	Sherpur GEN-A-2	R2811	Sherpur-5
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R1475	Basail-1
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R2254	Delduar-1
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R1165	Jamurki
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R0103	Tangail-1
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R0104	Tangail-2
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R525	Tangail-4
+A	Tangail (GEN-A)	R019	Tangail GEN-A-1	R669	Tangail-6
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R1167	Alenga 
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R527	Bhuapur
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R2148	Bhuapur-2
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R0105	Tangail-3
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R457	Tangail-5
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R1164	Tangail-7
+A	Tangail (GEN-A)	R207	Tangail GEN-A-2	R2877	Tangail-8
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R301	Amtali-1
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R747	Amtali-2
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R0300	Borguna-1
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R384	Borguna-2
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R1208	Mirzaganj
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R360	Patharghata-1
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R1705	Patharghata-2
+A	Barishal-A (GEN-A)	R106	Barguna GEN-A-1	R1816	Taltoli-1
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R0293	Barishal-3
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R848	Barishal-4
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R0292	Barishal-5
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R0295	Jhalokathi-1
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R2112	Jhalokathi-2
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R609	Ujirpur-1
+A	Barishal-A (GEN-A)	R105	Barishal GEN-A-2	R2204	Ujirpur-2
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R0291	Barishal-1
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R2806	Barishal-8
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R1815	Hizla
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R1205	Muladi
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R608	SBMCH-1
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R1202	SBMCH-2
+A	Barishal-A (GEN-A)	R306	Barishal GEN-A-3	R1203	SBMCH-3
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R1204	Agailjahara-1
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R2869	Agailjahara-2
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R388	Gaurnadi-1
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R1667	Gaurnadi-2
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R2376	Gaurnadi-3
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R621	Kalkini-1
+A	Barishal-A (GEN-A)	R182	Gournadi GEN-A-1	R1699	Kalkini-2
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R302	Mothbaria-1
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R485	Mothbaria-2
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R1631	Mothbaria-3
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R610	Rajapur-1
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R2058	Rajapur-2
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R1213	Vandaria-1
+A	Barishal-A (GEN-A)	R267	Mothbaria GEN-A-1	R2101	Vandaria-2
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R1848	Dumki-1
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R359	Galachipa-1
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R1596	Galachipa-2
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R613	Kalapara-1
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R1207	Kalapara-2
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R0298	Patuakhali-1
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R0299	Patuakhali-2
+A	Barishal-A (GEN-A)	R027	Patuakhali GEN-A-1	R2807	Rangabali-1 
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R607	Bakergonj-1
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R2784	Bakergonj-2
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R612	Bawfal-1
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R1907	Bawfal-2
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R1398	Dashmina
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R849	Patuakhali-3
+A	Barishal-A (GEN-A)	R268	Patuakhali GEN-A-2	R1987	Patuakhali-4
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R1440	Banaripara
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R873	Barishal-2
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R0294	Barishal-6
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R455	Barishal-7
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R2245	Nalcity-1
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R867	Swarupkathi-1
+A	Barishal-B (GEN-A)	R005	Barishal GEN-A-1	R1704	Swarupkathi-2
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R2057	Bangla Bazar-1
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R0296	Bhola-1
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R871	Bhola-2
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R714	Bhola-3
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R1702	Bhola-4
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R1477	Daulatkhan-1
+A	Barishal-B (GEN-A)	R059	Bhola GEN-A-1	R1206	Mehendiganj
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R0297	Charfashion-1
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R611	Charfashion-2
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R1466	Charfashion-3
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R1728	Charfashion-4
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R2808	Charfashion-5
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R1810	Monpura-1
+A	Barishal-B (GEN-A)	R216	Charfashion GEN-A-1	R2028	South Aicha-1
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R486	Burhanuddin
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R1651	Burhanuddin-2
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R2809	Burhanuddin-3
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R868	Lalmohan-1
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R1439	Lalmohan-2
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R1706	Lalmohan-3
+A	Barishal-B (GEN-A)	R245	Lalmohon GEN-A-1	R1703	Tozumuddin-1
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R311	Madaripur-1
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R312	Madaripur-2
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R698	Madaripur-3
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R2091	Madaripur-4
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R2914	Madaripur-5
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R618	Rajoir-1
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R749	Rajoir-2
+A	Barishal-B (GEN-A)	R043	Madaripur GEN-A-1	R2118	Rajoir-3
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R850	Bhedorgonj
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R2223	Bhedorgonj-2
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R1220	Goshairhat-1
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R2785	Goshairhat-2
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R313	Shariatpur-1
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R623	Shariatpur-2
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R1802	Shariatpur-3
+A	Barishal-B (GEN-A)	R119	Shariatpur GEN-A-1	R2870	Shariatpur-4
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R1722	Alfadanga-1
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R309	Bhanga-1
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R1214	Bhanga-2
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R2050	Bhanga-3
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R748	Nogorkanda
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R385	Sadarpur-1
+A	Faridpur (GEN-A)	R222	Bhanga GEN-A-1	R1453	Sadarpur-2
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R307	Boalmari-1
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R304	Boalmari-2
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R449	Faridpur-1
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R306	Faridpur-3
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R305	Faridpur-6
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R1478	Faridpur-7
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R2903	Faridpur-9
+A	Faridpur (GEN-A)	R012	Faridpur GEN-A-1	R2360	Saltha
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R2991	Faridpur-10
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R462	Faridpur-2
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R450	Faridpur-4
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R614	Faridpur-5
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R1948	Faridpur-8
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R615	Goalondo
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R617	Modhukhali-1
+A	Faridpur (GEN-A)	R068	Faridpur GEN-A-2	R1981	Modhukhali-2
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R671	Gopalgonj-3
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R2053	Gopalgonj-4
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R620	Kotalipara-1
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R1649	Kotalipara-2
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R2782	Kotalipara-3
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R2108	Mollahat-1
+A	Faridpur (GEN-A)	R107	Gopalgonj GEN-A-1	R1599	Tungipara-1
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R310	Gopalgonj-1
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R878	Gopalgonj-2
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R1219	Kashiani-1
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R2375	Kashiani-2
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R619	Moksedpur-1
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R1698	Moksedpur-2
+A	Faridpur (GEN-A)	R357	Gopalgonj GEN-A-2	R2282	Moksedpur-3
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R1215	Baliakandi
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R2194	Kalukhali-1
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R616	Pangsha-1
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R1218	Pangsha-2
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R308	Rajbari-1 
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R346	Rajbari-2
+A	Faridpur (GEN-A)	R145	Rajbari GEN-A-1	R1666	Rajbari-3
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R314	Damuddia
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R484	Naria-1
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R1803	Naria-2
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R1872	Panchar-1
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R812	Shibchar-1
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R1221	Shibchar-2
+A	Faridpur (GEN-A)	R269	Shibchar GEN-A-1	R1433	Zanjira
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R0282	Chuadanga-1
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R0283	Chuadanga-2
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R303	Chuadanga-3
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R1266	Dorshona
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R879	JibonNagar-1
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R2012	JibonNagar-2
+A	Jashore (GEN-A)	R056	Chuadanga GEN-A-1	R1857	Sarojgonj-1
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R2831	Benapole-1
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R0270	Jashore-1
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R463	Jashore-2
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R2244	Jashore-9
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R0273	Jhikorgacha-1
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R1796	Jhikorgacha-2
+A	Jashore (GEN-A)	R010	Jashore GEN-A-1	R601	Navaron
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R845	Jashore-5
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R448	Jashore-7
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R1645	Jashore-8
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R810	Keshobpur-1
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R1972	Keshobpur-2
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R717	Monirumpur
+A	Jashore (GEN-A)	R103	Jashore GEN-A-2	R2863	Monirumpur-2
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R1264	Chowgasa
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R0272	Jashore-3
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R316	Jashore-4
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R600	Jashore-6
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R0275	Kaliganj-1 (Jhenidah)
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R677	Kaliganj-2 (Jhenidah)
+A	Jashore (GEN-A)	R416	Jashore GEN-A-3	R1474	Moheshpur-1
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R2018	Harinakundu-1
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R0274	Jhenidah-1
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R872	Jhenidah-2
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R882	Jhenidah-3
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R1696	Jhenidah-4
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R2980	Jhenidah-5
+A	Jashore (GEN-A)	R067	Jhenidah GEN-A-1	R821	Kotchandpur
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R2019	Arpara-1
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R0276	Magura-1
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R880	Magura-2
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R1442	Magura-3
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R1263	Soilakupa
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R1906	Soilakupa-2
+A	Jashore (GEN-A)	R187	Magura GEN-A-1	R1595	Sreepur (Magura)-1
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R0280	Alamdanga-1
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R1441	Alamdanga-2
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R604	Gangni-1
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R2800	Gangni-2
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R0284	Meherpur-1
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R606	Meherpur-2
+A	Jashore (GEN-A)	R266	Meherpur GEN-A-1	R2260	Mujibnagar-1
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R2377	Bagharpara
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R2284	Kalia-1
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R599	Lohagara-1
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R1905	Lohagara-2
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R1265	Mohammadpur
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R0277	Narail-1
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R0271	Narail-2
+A	Jashore (GEN-A)	R369	Narail GEN-A-1	R3006	Narail-3
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R0261	Bagerhat-1
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R483	Bagerhat-2
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R715	Bagerhat-3
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R1600	Kachua (Bagerhat)-1
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R1212	Morolganj
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R0263	Pirojpur-1
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R595	Pirojpur-2
+A	Khulna (GEN-A)	R117	Bagerhat GEN-A-1	R2852	Sharankhola
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R0255	Khulna-1
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R446	Khulna-2
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R0258	Khulna-4
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R632	Khulna-7
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R0259	Noapara-1
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R676	Noapara-2
+A	Khulna (GEN-A)	R006	Khulna GEN-A-1	R1210	Phultola
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R3017	Chalna-1
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R2349	Khulna-10
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R0257	Khulna-8
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R0256	Khulna-9
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R0262	Mongla
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R596	Rampal-1
+A	Khulna (GEN-A)	R054	Khulna GEN-A-2	R1397	Rampal-2
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R597	Daulatpur (Khulna)
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R1847	Dumuria-1
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R1211	Fakirhat
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R0260	Khalishpur
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R447	Khulna-3
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R594	Khulna-6 (KMCH)
+A	Khulna (GEN-A)	R237	Khulna GEN-A-3	R1209	KMCH-1
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R2961	Koyra-1
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R0267	Paikgacha
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R598	Patkelghata
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R0264	Satkhira-1
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R343	Satkhira-3
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R2366	Satkhira-6
+A	Khulna (GEN-A)	R028	Satkhira GEN-A-1	R1479	Tala-1
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R1216	Bagachra
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R0269	Kolaroa-1
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R1648	Kolaroa-2
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R3016	Kolaroa-3
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R0265	Satkhira-2
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R746	Satkhira-4
+A	Khulna (GEN-A)	R183	Satkhira GEN-A-2	R2020	Satkhira-5
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R1647	Assasuni-1
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R2962	Assasuni-2
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R0268	Nolta
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R1217	Satkhira-Kaliganj
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R0266	Shyamnagor
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R1697	Shyamnagor-2
+A	Khulna (GEN-A)	R407	Shyamnagor GEN-A-1	R2969	Shyamnagor-3
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R2905	B.Baria (Diabetics Hospital)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R865	B.Baria (Jamuna)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R0128	B.Baria (Life Care)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R1106	B.Baria (The Bangladesh)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R741	B.Baria (The Lab Aid)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R2261	B.Baria (The National)
+A	B. Baria (GEN-A)	R052	B.Baria GEN-A-1	R2341	Tantur Bazar-1
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R571	B.Baria (Central)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R1107	B.Baria (Hope)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R0127	B.Baria (Naz Medical)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R739	B.Baria (New Lab Aid)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R317	B.Baria (New Square)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R2107	B.Baria (Patient Care)
+A	B. Baria (GEN-A)	R108	B.Baria GEN-A-2	R775	B.Baria (The Albaraka)
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R1111	Baniachong-1
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R2032	Baniachong-2
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R0208	Habiganj-1
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R0210	Habiganj-3
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R834	Habiganj-5
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R3008	Olipur-1
+A	B. Baria (GEN-A)	R046	Habigonj GEN-A-1	R1113	Saestagonj
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R0209	Habiganj-2
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R569	Habiganj-4
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R2201	Habiganj-6
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R2981	Habiganj-7
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R2031	Lakhai-1
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R1114	Nasirnagor-1
+A	B. Baria (GEN-A)	R271	Habigonj GEN-A-2	R1903	Nasirnagor-2
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R820	Akhaura-1
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R1902	Akhaura-2
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R472	Kosba-1
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R0129	Kosba-2
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R1621	Kosba-3
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R1110	Kuti-1
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R2199	Kuti-2
+A	B. Baria (GEN-A)	R220	Kosba GEN-A-1	R1427	Shippur
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R1871	Bijoynagar-1
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R0211	Madhabpur-1
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R570	Madhabpur-2
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R1112	Madhabpur-3
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R1437	Madhabpur-4
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R2200	Noapara-Teliapara
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R572	Sarail-1
+A	B. Baria (GEN-A)	R172	Madhabpur GEN-A-1	R1988	Sarail-2
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R734	Bancharampur-1
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R1438	Bancharampur-2
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R1109	Bangura-1
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R2906	Bangura-2
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R333	Nobinogor-1
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R533	Nobinogor-2
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R1622	Nobinogor-3
+A	B. Baria (GEN-A)	R123	Nabinagar GEN-A-1	R1840	Solimganj-1
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R774	Bahubal-1
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R1820	Bahubal-2
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R1841	Innaetgonj-1
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R342	Nobigonj-1
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R740	Nobigonj-2
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R2841	Nobigonj-3
+A	B. Baria (GEN-A)	R418	Nobigonj GEN-A-1	R2775	Sherpur (MLV)-1
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R532	Durgapur (Netrokona)-1
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R1862	Durgapur (Netrokona)-2 
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R2859	Durgapur (Netrokona)-3
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R1670	Kalmakanda-1
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R2946	Kalmakanda-2
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R1431	Purbadhala-1
+A	Mymensingh (GEN-A)	R405	Durgapur GEN-A-1	R2286	Purbadhala-2
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R362	Fulbaria-1
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R1177	Fulbaria-2
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R1603	Fulbaria-3
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R2336	Fulbaria-4
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R636	Shamgonj
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R1448	Tarakanda-1
+A	Mymensingh (GEN-A)	R375	Fulbaria GEN-A-1	R2143	Tarakanda-2
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R1172	Dhobaura-1
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R2789	Dhobaura-2
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R0093	Fulpur-1
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R892	Fulpur-2
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R1726	Fulpur-3
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R0088	Haluaghat-1
+A	Mymensingh (GEN-A)	R214	Fulpur GEN-A-1	R1851	Haluaghat-2
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R1839	Barhatta-1
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R1636	Dharmapasha-1
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R1609	Kendua-1
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R1604	Madan-1
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R493	Mohonganj-1
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R1178	Mohonganj-2
+A	Mymensingh (GEN-A)	R259	Mohonganj GEN-A-1	R2858	Mohonganj-3
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R2027	Chachua-Kalibari-1
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R2777	Chachua-Kalibari-2
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R0097	Muktagacha-1
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R530	Muktagacha-2
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R1175	Muktagacha-3
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R528	Trisal-1
+A	Mymensingh (GEN-A)	R258	Muktagacha GEN-A-1	R2116	Trisal-2
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R0091	CBMCBH-1
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R1447	CBMCBH-2
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R2860	CBMCBH-3
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R0090	MYM(Baghmara)
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R876	MYM(Delta Hosp.)
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R0087	MYM(Swadesh Hosp.-1)
+A	Mymensingh (GEN-A)	R009	Mymensingh GEN-A-1	R445	MYM(Swadesh Hosp.-2)
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R529	Issorgonj-1
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R1674	Issorgonj-2
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R432	MYM(Memorial)
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R1423	MYM(Popular-2)
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R2829	MYM(Popular-4)
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R0086	MYM(Pranto Sp. Hosp.)
+A	Mymensingh (GEN-A)	R041	Mymensingh GEN-A-2	R1422	MYM(Pure-Digilab)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R1176	MYM(Al Chemi)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R670	MYM(New Medicare)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R846	MYM(Nexus Hosp.)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R0089	MYM(Popular-1)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R2335	MYM(Popular-3)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R466	MYM(Sayem Hosp.)
+A	Mymensingh (GEN-A)	R111	Mymensingh GEN-A-3	R1174	MYM(Station Road)
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R1173	MYM(Gouripur)
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R2049	MYM(Gouripur)-2
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R0094	Netrokona-1
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R0098	Netrokona-2
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R893	Netrokona-3
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R2083	Netrokona-4
+A	Mymensingh (GEN-A)	R088	Netrokona GEN-A-1	R2828	Netrokona-5
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R352	Bajitpur-1
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R1147	Bajitpur-2
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R1613	Bajitpur-3
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R348	Kotiadi-1
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R1854	Kotiadi-2
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R1150	Pakundia-1
+A	Narsingdi (GEN-A)	R239	Bajitpur GEN-A-1	R2913	Pakundia-2
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R1108	Ashuganj-1
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R1901	Ashuganj-2
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R0099	Bhairob-1
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R0100	Bhairob-2 
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R697	Bhairob-3
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R1891	Bhairob-4
+A	Narsingdi (GEN-A)	R072	Bhairab GEN-A-1	R3011	Bhairob-5
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R2866	Atharabari-1
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R0101	Kishoregonj-1
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R795	Kishoregonj-4
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R1643	Kishoregonj-6
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R2912	Kishoregonj-8
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R852	Nandail-1
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R800	Nandail-2
+A	Narsingdi (GEN-A)	R063	Kishoregonj GEN-A-1	R1892	Nandail-3
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R2067	Hossainpur-1
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R1149	Karimgonj
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R0102	Kishoregonj-2
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R862	Kishoregonj-3
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R1148	Kishoregonj-5
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R2256	Kishoregonj-7
+A	Narsingdi (GEN-A)	R175	Kishoregonj GEN-A-2	R1614	Tarail-1
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R781	Ghorashal
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R2145	Ghorashal-2
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R423	Madhobdi-1
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R0054	Madhobdi-2
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R721	Madhobdi-3
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R2255	Madhobdi-4
+A	Narsingdi (GEN-A)	R417	Madhobdi GEN-A-1	R3024	Madhobdi-5
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R327	Monohordi-1
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R722	Monohordi-2
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R2121	Monohordi-3
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R0055	Palash-1
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R1893	Palash-2
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R491	Shibpur
+A	Narsingdi (GEN-A)	R378	Monohordi GEN-A-1	R1823	Shibpur-2
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R1612	Belabo-1
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R422	NSD (DistricHospital-1)
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R0053	NSD (DistricHospital-2)
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R1425	NSD (DistricHospital-3)
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R2378	NSD (DistricHospital-4)
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R2982	NSD (District Hospital-5)
+A	Narsingdi (GEN-A)	R030	Narsingdi GEN-A-1	R2779	Panchdona-1
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R0052	NSD (Sador Hospital-1)
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R368	NSD (Sador Hospital-2)
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R672	NSD (Sador Hospital-3)
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R1822	NSD (Sador Hospital-4)
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R843	Raipura-1
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R1146	Raipura-2
+A	Narsingdi (GEN-A)	R209	Narsingdi GEN-A-2	R2087	Raipura-3
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R380	Beanibazar-1
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R0197	Beanibazar-2
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R0198	Beanibazar-3
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R2011	Beanibazar-4
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R1115	Charkhai
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R0196	Jokigonj
+A	Sylhet-A (GEN-A)	R061	Beanibazar GEN-A-1	R742	Kaligonj
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R381	Fenchugonj-1
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R1117	Fenchugonj-2
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R2351	Fenchugonj-3
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R0194	Goalabazar-1
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R560	Goalabazar-2
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R2262	Goalabazar-3
+A	Sylhet-A (GEN-A)	R382	Goalabazar GEN-A-1	R2973	Goalabazar-4
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R829	DhakaDhakin-1
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R1686	DhakaDhakin-2
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R0195	Golapganj-1
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R628	Golapganj-2
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R566	Khanaighat-1
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R1734	Khanaighat-2
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R691	Sylhet Shahporan-1
+A	Sylhet-A (GEN-A)	R270	Golapgonj GEN-A-1	R2190	Sylhet Shahporan-2
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R678	Derai-1
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R1617	Derai-2
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R2022	Jamalgonj-1
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R0199	Sunamganj-1
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R0200	Sunamganj-2
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R502	Sunamganj-3
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R2840	Sunamganj-4
+A	Sylhet-A (GEN-A)	R080	Sunamgonj GEN-A-1	R1391	Tahirpur
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R0201	Chattak-1
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R1116	Chattak-2
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R2843	SOMCH-2
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R0191	Sylhet (Chowhatta)
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R468	Sylhet (Medinova)
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R0187	Sylhet (W/M)-1
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R627	Sylhet (W/M)-2
+A	Sylhet-A (GEN-A)	R003	Sylhet GEN-A-1	R1898	Sylhet (W/M)-3
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R562	Jointa 
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R0184	Sylhet Ibnsina-1
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R0188	Sylhet Ibnsina-2
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R2317	Sylhet Ibnsina-3  
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R561	Sylhet Stadium-1
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R0190	Sylhet Stadium-2
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R0189	Sylhet Stadium-3
+A	Sylhet-A (GEN-A)	R045	Sylhet GEN-A-3	R351	Sylhet Stadium-4
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R1584	Gobindogonj
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R564	Jowa Bazar
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R2141	Jowa Bazar-2
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R1120	Oasis Hospital
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R0186	Sylhet (Lamabazar)
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R2333	Sylhet (Ma O Shishu Hosp.)-1
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R0183	Sylhet (Trust Medical)
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R467	Sylhet Popular-1
+A	Sylhet-A (GEN-A)	R173	Sylhet GEN-A-5	R1119	Sylhet Popular-2
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R0193	Bishanath-1
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R563	Bishanath-2
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R1687	Bishanath-3
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R2996	Bishanath-4
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R386	Jagannathpur-1
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R1004	Jagannathpur-2
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R1977	Jagannathpur-3
+A	Sylhet-B (GEN-A)	R126	Bishwanath GEN-A-1	R2790	Jagannathpur-4
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R0205	Borolekha-1
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R565	Borolekha-2
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R1421	Borolekha-3
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R830	Juri-1
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R2923	Juri-2
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R0206	Kulaura-1
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R567	Kulaura-2
+A	Sylhet-B (GEN-A)	R110	Kulaura GEN-A-1	R1795	Kulaura-3
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R0202	Moulvibazar-1
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R0203	Moulvibazar-2
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R0204	Moulvibazar-3
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R341	Moulvibazar-4
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R2263	Moulvibazar-5
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R1125	Rajnagor
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R1128	Shomshernagor-1
+A	Sylhet-B (GEN-A)	R014	Moulovibazar GEN-A-1	R2854	Shomshernagor-2
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R396	Chunarughat-1
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R1821	Chunarughat-2
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R434	Kamolganj
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R0207	Sreemongal-1
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R568	Sreemongal-2
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R1127	Sreemongal-3
+A	Sylhet-B (GEN-A)	R174	Sreemongal GEN-A-1	R2974	Sreemongal-4
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R1123	SOMCH-1
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R1122	Sylhet (Lab Aid)
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R2310	Sylhet (Mount Adora)-1
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R2813	Sylhet (Mount Adora)-2
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R0192	Sylhet (Ragib Rabyea)-1
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R776	Sylhet (Ragib Rabyea)-2
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R559	Sylhet (Ragib Rabyea)-3
+A	Sylhet-B (GEN-A)	R029	Sylhet GEN-A-2	R2142	Sylhet (Ragib Rabyea)-4
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R1583	Companigonj-Goainghat
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R1121	Noorjahan Hospital
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R406	Sylhet N/E-1
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R444	Sylhet N/E-2
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R1124	Sylhet N/E-3
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R1978	Sylhet N/E-4
+A	Sylhet-B (GEN-A)	R097	Sylhet GEN-A-4	R0182	Sylhet Stadium-6
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R925	Bogura GEN-B-1
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R926	Bogura GEN-B-2
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R2466	Bogura GEN-B-5
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R2467	Bogura GEN-B-6
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R1267	Sherpur (BOG) GEN-B-1
+B	Bogura (GEN-B)	R141	Bogura GEN-B-1	R2710	Sherpur (BOG) GEN-B-2
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R1011	Bogura GEN-B-3
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R1349	Bogura GEN-B-4
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R2468	Bogura GEN-B-7
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R1971	Dupchachiya GEN-B-1
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R2539	Gabtoli-Shariakandi GEN-B-1
+B	Bogura (GEN-B)	R333	Bogura GEN-B-2	R2713	Shibgonj GEN-B-1 (Bogura)
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R1012	Gaibandha GEN-B-1
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R1752	Gaibandha GEN-B-2
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R1338	Gobindaganj GEN-B-1
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R2547	Gobindaganj GEN-B-2
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R1927	Palashbari GEN-B-1
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R2666	Pirganj (Gaibandha) GEN-B-1
+B	Bogura (GEN-B)	R252	Gaibandha GEN-B-1	R2322	Sundarganj GEN-B-1
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R2421	Akkelpur GEN-B-1
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R1316	Birampur GEN-B-1
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R995	Joypurhat GEN-B-1
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R1928	Joypurhat GEN-B-2
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R2570	Joypurhat GEN-B-3
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R2658	Pachbibi GEN-B-1
+B	Bogura (GEN-B)	R339	Joypurhat GEN-B-1	R2665	Phulbari GEN-B-1
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R1967	Mohadevpur GEN-B-1
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R2623	Mohadevpur GEN-B-2
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R924	Noagoan GEN-B-1
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R1359	Noagoan GEN-B-2
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R2654	Noagoan GEN-B-3
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R1403	Patnitola GEN-B-1
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R2305	Raninagar GEN-B-1
+B	Bogura (GEN-B)	R244	Naogaon GEN-B-1	R2709	Shapahar GEN-B-1
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R2447	Belkuchi GEN-B-1
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R2579	Kazipur GEN-B-1
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R1360	Shahzadpur GEN-B-1
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R927	Sirajgonj GEN-B-1
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R1749	Sirajgonj GEN-B-2
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R2718	Sirajgonj GEN-B-3
+B	Bogura (GEN-B)	R343	Sirajgonj GEN-B-1	R2219	Ullapara GEN-B-1
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R922	C.Nawabgonj GEN-B-1
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R1924	C.Nawabgonj GEN-B-2
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R2473	C.Nawabgonj GEN-B-3
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R2577	Kanshat GEN-B 1
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R2670	Rahanpur GEN-B-1
+B	Rajshahi (GEN-B)	R334	Chapainawabganj GEN-B-1	R2712	Shibganj GEN-B-1
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R1378	Bheramara GEN-B-1
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R2524	Doulatpur GEN-B-1
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R2590	Kumarkhali GEN-B-1
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R766	Kushtia GEN-B-1
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R1026	Kushtia GEN-B-2
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R1317	Kushtia GEN-B-3
+B	Rajshahi (GEN-B)	R200	Kushtia GEN-B-1	R2593	Kushtia GEN-B-4
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R2010	Bonpara GEN-B-1
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R2553	Gurudaspur-GEN-B-1
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R921	Natore GEN-B-1
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R1386	Natore GEN-B-2
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R2648	Natore GEN-B-3
+B	Rajshahi (GEN-B)	R341	Natore GEN-B-1	R2717	Singra GEN-B-1
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R2485	Chatmohor GEN-B-1
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R2947	Ishwardi (Healthcare Diagnostic) GEN-B-1
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R1024	Ishwardi GEN-B-1
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R1754	Ishwardi GEN-B-2
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R1290	Pabna GEN-B-2
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R1374	Pabna GEN-B-3
+B	Rajshahi (GEN-B)	R202	Pabna GEN-B-1	R2657	Pabna GEN-B-5
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R2448	Bera GEN-B-1
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R1883	Kashinathpur GEN-B-1
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R923	Pabna GEN-B-1
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R2232	Pabna GEN-B-4
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R2699	Santhia GEN-B-1
+B	Rajshahi (GEN-B)	R342	Pabna GEN-B-2	R2728	Sujanagar GEN-B-1
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R2323	Bagha GEN-B-1
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R1877	Bagmara GEN-B-1
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R2669	Puthia GEN-B-1
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R920	Rajshahi GEN-B-2
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R1350	Rajshahi GEN-B-4
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R1420	Rajshahi GEN-B-5
+B	Rajshahi (GEN-B)	R140	Rajshahi GEN-B-1	R2676	Rajshahi GEN-B-6
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R2626	Mohonpur GEN-B-1
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R2642	Naohata GEN-B-1
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R919	Rajshahi GEN-B-1
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R1013	Rajshahi GEN-B-3
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R2677	Rajshahi GEN-B-7
+B	Rajshahi (GEN-B)	R298	Rajshahi GEN-B-2	R2218	Tanore GEN-B-1
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R2460	Birgonj-Setabgonj GEN-B-1
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R2429	Bodorgonj-Parbotipur GEN-B-1
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R930	Dinajpur GEN-B-1
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R1315	Dinajpur GEN-B-2
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R1929	Dinajpur GEN-B-3
+B	Rangpur (GEN-B)	R195	Dinajpur GEN-B-1	R2521	Dinajpur GEN-B-4
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R2454	Bhurungamari GEN-B-1
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R996	Kurigram GEN-B-1
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R1387	Kurigram GEN-B-2
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R1341	Lalmonirhat GEN-B-1
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R2599	Lalmonirhat GEN-B-2
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R2138	Nageshwari GEN-B-1
+B	Rangpur (GEN-B)	R340	Kurigram GEN-B-1	R2744	Ulipur GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R1736	Domar GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R2523	Domar-Debigonj GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R2561	Jaldhaka GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R1373	Nilphamary GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R2237	Nilphamary GEN-B-2
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R1005	Sayedpur GEN-B-1
+B	Rangpur (GEN-B)	R412	Nilphamari GEN-B-1	R2703	Sayedpur-Taragonj GEN-B-1
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R2208	Hatibandha GEN-B-1
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R2618	Mithapukur GEN-B-1
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R2661	Patgram GEN-B-1
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R928	Rangpur GEN-B-1
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R701	Rangpur GEN-B-3
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R1348	Rangpur GEN-B-5
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R2687	Rangpur GEN-B-8
+B	Rangpur (GEN-B)	R159	Rangpur GEN-B-1	R2688	Rangpur GEN-B-9
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R2541	Gangachora-Kaligonj (Rangpur) GEN-B-1
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R2684	Rangpur GEN-B-10
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R2685	Rangpur GEN-B-11
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R2686	Rangpur GEN-B-12 (Pirgacha)
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R929	Rangpur GEN-B-2
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R1268	Rangpur GEN-B-4
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R1375	Rangpur GEN-B-6
+B	Rangpur (GEN-B)	R299	Rangpur GEN-B-2	R1867	Rangpur GEN-B-7
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R2433	Baliadangi GEN-B-1
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R2465	Boda-Atwari GEN-B-1
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R1882	Panchagarh GEN-B-1
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R2690	Ranisankail-Pirganj GEN-B-1
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R1006	Thakurgaon GEN-B-1
+B	Rangpur (GEN-B)	R344	Thakurgaon GEN-B-1	R1336	Thakurgaon GEN-B-2
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R2520	Dhanbari GEN-B-1
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R965	Jamalpur GEN-B-1
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R1358	Jamalpur GEN-B-2
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R2562	Jamalpur GEN-B-3
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R2602	Madergang GEN-B-1
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R2614	Melandaha GEN-B-1
+B	Tangail (GEN-B)	R251	Jamalpur GEN-B-1	R2005	Sharishabari GEN-B-1
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R1401	Dhamrai GEN-B-1
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R2958	Ghior GEN-B-1
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R2573	Kalampur GEN-B-1
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R984	Manikgonj GEN-B-1
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R2608	Manikgonj GEN-B-2
+B	Tangail (GEN-B)	R410	Manikganj GEN-B-1	R2716	Singair GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R2445	Boxigonj GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R2519	Dewanganj GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R1737	Islampur GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R2639	Nandina GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R1021	Sherpur GEN-B-1
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R1385	Sherpur GEN-B-2
+B	Tangail (GEN-B)	R324	Sherpur GEN-B-1	R2711	Sherpur GEN-B-3
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R2453	Bhuapur GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R1402	Ghatail GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R2545	Ghatail GEN-B-2
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R2097	Kalihati GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R1020	Modhupur GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R2622	Modhupur GEN-B-2
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R2954	Tangail (Rajdhani) GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R963	Tangail GEN-B-1
+B	Tangail (GEN-B)	R160	Tangail GEN-B-1	R1372	Tangail GEN-B-3
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2442	Bashail GEN-B-1
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R1019	Mirzapur GEN-B-1
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2617	Mirzapur GEN-B-2
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2637	Nagorpur GEN-B-1
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2044	Shakipur GEN-B-1
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2706	Shakipur GEN-B-2
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R964	Tangail GEN-B-2
+B	Tangail (GEN-B)	R326	Tangail GEN-B-2	R2736	Tangail GEN-B-4
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R1041	Amirabad GEN-B-1
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R1950	Amirabad GEN-B-2
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R2423	Amirabad GEN-B-3
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R2436	Bandarban GEN-B-1
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R2522	Dohajari GEN-B-1
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R1281	Keranihat GEN-B-1
+B	Chattogram-A (GEN-B)	R286	Amirabad GEN-B-1	R2581	Keranihat GEN-B-2
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R1313	Anwara GEN-B-1
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R2424	Anwara GEN-B-2
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R2211	Banshkhali GEN-B-2
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R2439	Banshkhali GEN-B-3
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R1873	Banskhali GEN-B-1
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R2212	Satkania GEN-B-1
+B	Chattogram-A (GEN-B)	R349	Banshkhali GEN-B-1	R2700	Satkania GEN-B-2
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R2113	Boalkhali GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R2463	Boalkhali GEN-B-2
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R941	CTG (Bahaddarhat) GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R938	CTG (CSCR) GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R2501	CTG (Delta) GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R1003	CTG (Epic) GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R2502	CTG (Ibne Sina) GEN-B-1
+B	Chattogram-A (GEN-B)	R196	Chattogram GEN-B-3	R1280	CTG (Parkview) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2495	CTG (Aturar Depot) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2496	CTG (Bakulia) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2497	CTG (Biozid) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R658	CTG (Chevron) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2498	CTG (Chevron) GEN-B-2
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R1381	CTG (Oxygen) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2506	CTG (Peoples Hosp.) GEN-B-1
+B	Chattogram-A (GEN-B)	R355	Chattogram GEN-B-5	R2708	Shantirhat GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2499	CTG (Chowdhury Hat) GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2548	Gohira GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R942	Hathazari GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R1380	Hathazari GEN-B-2
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2557	Hathazari GEN-B-3
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2683	Rangamati GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2136	Rawjan GEN-B-1
+B	Chattogram-A (GEN-B)	R256	Hathazari GEN-B-1	R2691	Rawjan GEN-B-2
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R1884	Bibirhat GEN-B-1
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R2455	Bibirhat GEN-B-2
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R2582	Khagrachari GEN-B-1
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R2641	Nanupur GEN-B-1
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R1037	Nazirhat-Fatikchori GEN-B-1
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R2652	Nazirhat-Fatikchori GEN-B-2
+B	Chattogram-A (GEN-B)	R364	Nazirhat GEN-B-1	R2679	Ramgarh GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R1306	Chandraghona GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R2482	Chandraghona GEN-B-2
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R1419	CTG (Kalurghat) GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R1949	CTG (Noapara) GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R2659	Pahartoli GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R2226	Rangunia GEN-B-1
+B	Chattogram-B (GEN-B)	R353	Chandraghona GEN-B-1	R2689	Rangunia GEN-B-2
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R2500	CTG (Colonelhat) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R1312	CTG (Diabetic Hosp) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R940	CTG (Diabetic Hosp) GEN-B-2
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R1036	CTG (Max Hosp) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R659	CTG (Medical Center) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R2955	CTG (Metropolitan Hosp.) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R2225	CTG (National) GEN-B-1
+B	Chattogram-B (GEN-B)	R129	Chattogram GEN-B-1	R2504	CTG (National) GEN-B-2
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R939	CTG (Jamal Khan) GEN-B-1
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R2210	CTG (Popular) GEN-B-1
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R937	CTG (Popular) GEN-B-2
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R2507	CTG (Red Crescent) GEN-B-1
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R1342	CTG (Sadarghat) GEN-B-1
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R944	Potiya GEN-B-1
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R1947	Potiya GEN-B-2
+B	Chattogram-B (GEN-B)	R134	Chattogram GEN-B-2	R2668	Potiya GEN-B-3
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R2227	CTG (Agrabad) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R660	CTG (Bondartila) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R1951	CTG (EPZ) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R1038	CTG (Halishahar) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R2508	CTG (Katgor) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R2503	CTG (Maa O Shishu Hosp.) GEN-B-1
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R2960	CTG (Maa O Shishu Hosp.) GEN-B-2
+B	Chattogram-B (GEN-B)	R354	Chattogram GEN-B-4	R2505	CTG (Navy Gate) GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2492	Coxs Bazar (Chevron) GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R943	Coxs Bazar (Fuad Al Khatib) GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2493	Coxs Bazar (General Hosp.) GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2596	Kutupalong GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2624	Moheshkhali GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2682	Ramu GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R2738	Teknaf GEN-B-1
+B	Chattogram-B (GEN-B)	R164	Cox Bazar GEN-B-1	R1912	Ukhia GEN-B-1
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R1040	Chakaria GEN-B-1
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R1913	Chakaria GEN-B-2
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R2477	Chakaria GEN-B-3
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R1039	Coxs Bazar (CIC) GEN-B-1
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R2240	Coxs Bazar (Union Hosp) GEN-B-1
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R2527	Eidgah GEN-B-1
+B	Chattogram-B (GEN-B)	R358	Cox Bazar GEN-B-2	R2664	Pekua GEN-B-1
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R936	Chowddagram GEN-B-1
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R1379	Chowddagram GEN-B-2
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R2488	Chowddagram GEN-B-3
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R2615	Mianbazar GEN-B-1
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R1305	Nangolkot GEN-B-1
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R1997	Nangolkot GEN-B-2
+B	Feni (GEN-B)	R356	Chowddagram GEN-B-1	R2640	Nangolkot GEN-B-3
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R1409	Basurhat GEN-B-1
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R2443	Basurhat GEN-B-2
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R1043	Daganbhuiya GEN-B-1
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R2513	Daganbhuiya GEN-B-2
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R2533	Feni (Al-Kemi) GEN-B-1
+B	Feni (GEN-B)	R137	Feni GEN-B-1	R662	Feni GEN-B-2
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R2534	Feni (Diabetic)GEN-B-1
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R898	Feni GEN-B-1
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R1279	Feni GEN-B-3
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R2552	Gunoboti GEN-B-1
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R1410	Sonagazi GEN-B-1
+B	Feni (GEN-B)	R205	Feni GEN-B-2	R2721	Sonagazi GEN-B-2
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R1369	Chagolniaya GEN-B-1
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R2476	Chagolniaya GEN-B-2
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R2535	Feni (Medinova) GEN-B-1
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R1333	Feni GEN-B-4
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R1962	Feni GEN-B-5
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R2537	Fulgazi GEN-B-1
+B	Feni (GEN-B)	R360	Feni GEN-B-3	R1741	Parshuram GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R1042	Baryerhat GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2441	Baryerhat GEN-B-2
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2591	Bhatiary GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2616	Mirsarai GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2239	Sandwip GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2698	Sandwip GEN-B-2
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R1911	Sitakundu GEN-B-1
+B	Feni (GEN-B)	R365	Sitakundu GEN-B-1	R2719	Sitakundu GEN-B-2
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R2489	Chowmuhoni (Prime) GEN-B-1
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R2490	Chowmuhoni (Rabeya Hosp.) GEN-B-1
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R896	Chowmuhoni GEN-B-1
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R1044	Chowmuhoni GEN-B-2
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R2704	Senbag GEN-B-1
+B	Maizdee (GEN-B)	R255	Chowmuhoni GEN-B-1	R2748	Zamiderhat GEN-B-1
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R2431	Bagmara (Laksham) GEN-B-1
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R949	Laksham GEN-B-1
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R1032	Laksham GEN-B-2
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R2597	Laksham GEN-B-3
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R2630	Natherpetua GEN-B-1
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R1376	Sonaimuri GEN-B-1
+B	Maizdee (GEN-B)	R362	Laksham GEN-B-1	R2722	Sonaimuri GEN-B-2
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R663	Chatkhil GEN-B-1
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R2484	Chatkhil GEN-B-2
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R1742	Komol Nagar GEN-B-1
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R897	Laxmipur GEN-B-1
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R1343	Laxmipur GEN-B-2
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R1925	Laxmipur GEN-B-3
+B	Maizdee (GEN-B)	R203	Laxmipur GEN-B-1	R2607	Mandari GEN-B-1
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R1406	Chondrogonj GEN-B-1
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R2605	Maizdee (Ibn-Sina) GEN-B-1
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R2606	Maizdee (Popular) GEN-B-1
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R895	Maizdee GEN-B-1
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R1002	Maizdee GEN-B-2
+B	Maizdee (GEN-B)	R165	Maizdee GEN-B-1	R2727	Subornochor GEN-B-1
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R1880	Hatiya GEN-B-1
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R2572	Kabirhat GEN-B-1
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R1334	Maizdee GEN-B-3
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R1753	Maizdee GEN-B-4
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R2680	Ramgati GEN-B-1
+B	Maizdee (GEN-B)	R363	Maizdee GEN-B-2	R2723	Sonapur GEN-B-1
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R1363	Bajitpur GEN-B-1
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R2432	Bajitpur GEN-B-2
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R2450	Bhairab GEN-B-3
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R999	Bhairob GEN-B-1
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R2300	Bhairob GEN-B-2
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R1388	Monohordi GEN-B-1
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R2692	Raypura GEN-B-1
+B	B.Baria (GEN-B)	R319	Bhairab GEN-B-1	R2693	Roypura GEN-B-2
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R2426	Ashugonj GEN-B-1
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R2959	B.Baria (Central Hosp.) GEN-B-1
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R957	B.Baria GEN-B-1
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R1034	B.Baria GEN-B-2
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R1412	B.Baria GEN-B-3
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R1758	B.Baria GEN-B-4
+B	B.Baria (GEN-B)	R163	Bramanbaria GEN-B-1	R2428	B.Baria GEN-B-5
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R2434	Bancharampur GEN-B-1
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R2469	Brahman Para GEN-B-1
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R1745	Buriarchong GEN-B-1
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R951	Debidwar GEN-B-1
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R1276	Debidwar GEN-B-2
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R2516	Debidwar GEN-B-3
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R1874	Muradnagar GEN-B-1
+B	B.Baria (GEN-B)	R359	Debidwar GEN-B-1	R2678	Ramchandrapur GEN-B-1
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R2215	Bahubal GEN-B-1
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R2438	Baniachong GEN-B-1
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R956	Hobigonj GEN-B-1
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R1035	Hobigonj GEN-B-2
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R2007	Hobigonj GEN-B-3
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R1743	Nobigonj GEN-B-1
+B	B.Baria (GEN-B)	R254	Habigonj GEN-B-1	R2656	Nobigonj GEN-B-2
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R2420	Akhura-GEN-B-1
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R2437	Bangura GEN-B-1
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R1299	Kosba GEN-B-1
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R1931	Kosba GEN-B-2
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R2594	Kuti GEN-B-1
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R2320	Nabinagar GEN-B-2
+B	B.Baria (GEN-B)	R361	Kosba GEN-B-1	R1389	Nobinogor GEN-B-1
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R2457	Bijoynagor GEN-B-1
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R1744	Chunarughat GEN-B-1
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R2491	Chunarughat GEN-B-2
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R1298	Madhabpur GEN-B-1
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R2604	Madhabpur GEN-B-2
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R2130	Nasirnagor GEN-B-1
+B	B.Baria (GEN-B)	R367	Madhabpur GEN-B-1	R2697	Saestagonj GEN-B-1
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R1362	Barura GEN-B-1
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R1999	Barura GEN-B-2
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R1030	Chandina GEN-B-1
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R2479	Chandina GEN-B-2
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R2480	Chandina GEN-B-3
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R1746	Eliotgonj GEN-B-1
+B	Cumilla (GEN-B)	R351	Chandina GEN-B-1	R2651	Nawabpur GEN-B-1
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R947	Chandpur GEN-B-1
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R1031	Chandpur GEN-B-2
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R2481	Chandpur GEN-B-5
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R2610	Matlab Uttar GEN-B-1
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R1405	Motlob GEN-B-1
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R2631	Motlob GEN-B-2
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R1361	Ramgonj GEN-B-1
+B	Cumilla (GEN-B)	R162	Chandpur GEN-B-1	R2681	Ramgonj GEN-B-2
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R1332	Chandpur GEN-B-3
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R2214	Chandpur GEN-B-4
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R1377	Faridgonj GEN-B-1
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R2529	Faridgonj GEN-B-2
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R2554	Haimchar GEN-B-1
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R1045	Raipur GEN-B-1
+B	Cumilla (GEN-B)	R352	Chandpur GEN-B-2	R2672	Raipur GEN-B-2
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R1340	Cantonment GEN-B-1
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R945	Cumilla (C.D Path) Gen-B-1
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R2509	Cumilla (C.D Path) GEN-B-2
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R2511	Cumilla (MMCH) GEN-B-1
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R1291	Cumilla (Moon Hosp.) Gen-B-1
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R948	Cumilla (Racecourse) Gen-B-1
+B	Cumilla (GEN-B)	R136	Cumilla GEN-B-1	R2620	Modafforgonj GEN-B-1
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R2510	Cumilla (Central Medical) GEN-B-1
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R1998	Cumilla (COMCH) GEN-B-1
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R1275	Cumilla (Tomson Bridge) GEN-B-1
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R661	Cumilla (Tower) GEN-B-1
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R2512	Cumilla (Tower) GEN-B-2
+B	Cumilla (GEN-B)	R197	Cumilla GEN-B-2	R1331	Cumilla (Trauma Center) GEN-B-1
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R2043	Daudkandi GEN-B-1
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R2515	Daudkandi GEN-B-2
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R950	Gouripur GEN-B-1
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R1739	Gouripur GEN-B-2
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R2551	Gouripur GEN-B-3
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R1404	Homna GEN-B-1
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R2956	Sachar GEN-B-1
+B	Cumilla (GEN-B)	R338	Gouripur GEN-B-1	R2739	Titas GEN-B-1
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R946	Hazigonj GEN-B-1
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R1292	Hazigonj GEN-B-2
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R2558	Hazigonj GEN-B-3
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R1740	Kachua GEN-B-1
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R2671	Rahima Nagar GEN-B-1
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R1930	Shahrasti GEN-B-1
+B	Cumilla (GEN-B)	R287	Hazigonj GEN-B-1	R2705	Shahrasti GEN-B-2
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R2525	Dubaura GEN-B-1
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R1371	Fulpur GEN-B-1
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R2538	Fulpur GEN-B-2
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R2098	Haluaghat GEN-B-1
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R2234	Nalitabari GEN-B-1
+B	Mymensingh (GEN-B)	R336	Fulpur GEN-B-1	R2737	Tarakanda GEN-B-1
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R2580	Kendua GEN-B-1
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R977	Kishoregonj GEN-B-1
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R1346	Kishoregonj GEN-B-2
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R1414	Kishoregonj GEN-B-3
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R2586	Kishoregonj GEN-B-4
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R2588	Kotiadi GEN-B-1
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R1738	Nandail GEN-B-1
+B	Mymensingh (GEN-B)	R289	Kishoregonj GEN-B-1	R2660	Pakundia GEN-B-1
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R2041	Fulbaria GEN-B-1
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R2536	Fulbaria GEN-B-2
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R1879	Iswargonj GEN-B-1
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R1791	Mymensingh (Nirapad) GEN-B-1
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R2213	Mymensingh (Serum) GEN-B-1
+B	Mymensingh (GEN-B)	R133	Mymensingh GEN-B-1	R968	Mymensingh (Union) GEN-B-1
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R2550	Gouripur (MYM) GEN-B-1
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R1415	Muktagacha GEN-B-1
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R2228	Muktagacha GEN-B-2
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R1022	Mymensingh (Lab Aid) GEN-B-1
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R966	Mymensingh (Memorial) GEN-B-1
+B	Mymensingh (GEN-B)	R211	Mymensingh GEN-B-2	R1586	Mymensingh (Popular) GEN-B-1
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R2475	CBMCB GENB-1
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R2517	Delta Hospital GEN-B-1
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R2635	Mym (Swadesh) GEN-B-2
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R2636	Mymensingh (Station Road) GEN-B-1
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R967	Mymensingh (Swadesh) GEN-B-1
+B	Mymensingh (GEN-B)	R330	Mymensingh GEN-B-3	R2321	Purbadhala GEN-B-1
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R2094	Durgapur GEN-B-1
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R2576	Kalmakandha GEN-B-1
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R2040	Mohongonj GEN-B-1
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R2625	Mohongonj GEN-B-2
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R1023	Netrokona GEN-B-1
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R1748	Netrokona GEN-B-2
+B	Mymensingh (GEN-B)	R288	Netrokona GEN-B-1	R2653	Netrokona GEN-B-3
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R954	Beanibazar GEN-B-1
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R1330	Beanibazar GEN-B-2
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R2446	Beanibazar GEN-B-3
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R1339	Borolekha GEN-B-1
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R2571	Juri GEN-B-1
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R1295	Kulaura GEN-B-1
+B	Sylhet (GEN-B)	R350	Beanibazar GEN-B-1	R2589	Kulaura GEN-B-2
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R2326	Goalabazar GEN-B-1
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R955	Moulovibazar GEN-B-1
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R1297	Moulovibazar GEN-B-2
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R2632	Moulovibazar GEN-B-3
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R2229	Shamshernagar GEN-B-1
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R1314	Sreemangal GEN-B-1
+B	Sylhet (GEN-B)	R198	Moulovibazar GEN-B-1	R2725	Sreemangal GEN-B-2
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R1876	Chattak GEN-B-1
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R2518	Derai GEN-B-1
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R1919	Jagannathpur GEN-B-1
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R2560	Jagannathpur GEN-B-2
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R2569	Jowa Bazar GEN-B-1
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R1033	Sunamgonj GEN-B-1
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R1345	Sunamgonj GEN-B-2
+B	Sylhet (GEN-B)	R368	Sunamgonj GEN-B-1	R2729	Sunamgonj GEN-B-3
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R2532	Fenchugonj GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R2568	Jokigonj GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R2583	Khanaighat GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R656	Sylhet (Mount Adora) GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R1344	Sylhet (Popular) GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R2731	Sylhet (Popular) GEN-B-2
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R2732	Sylhet (Ragib Rabeya) GEN-B-1
+B	Sylhet (GEN-B)	R135	Sylhet GEN-B-1	R1294	Sylhet (Trust Medical) GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R1920	Dhaka Dakhin GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R2948	Golapgonj (Road) GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R1321	Golapgonj GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R657	Sylhet (Ibnsina) GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R2327	Sylhet (Ibnsina) GEN-B-2
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R2951	Sylhet (Ibnsina) GEN-B-3
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R1329	Sylhet (North East) GEN-B-1
+B	Sylhet (GEN-B)	R201	Sylhet GEN-B-2	R1320	Sylhet (Oasis) GEN-B-1
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R1296	Bishawnath GEN-B-1
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R2461	Bishawnath GEN-B-2
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R953	Sylhet (Medinova) GEN-B-1
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R2733	Sylhet (Shahporan) GEN-B-1
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R1293	Sylhet (Stadium) GEN-B-1
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R2734	Sylhet (Stadium) GEN-B-2
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R2735	Sylhet (Women’s) GEN-B-2
+B	Sylhet (GEN-B)	R366	Sylhet GEN-B-3	R952	Sylhet (Womens) GEN-B-1
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R918	Ashulia GEN-B-1
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R1357	Ashulia GEN-B-2
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R2224	Ashulia GEN-B-3
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R2472	Bypail GEN-B-1
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R1955	Nabinagar GEN-B-1
+B	Dhaka-A (GEN-B)	R318	Ashulia GEN-B-1	R2749	Zirani GEN-B-1
+B	Dhaka-A (GEN-B)	R321	Delta-Mirpur GEN-B-1	R2456	BIHS-Ibn Sina GEN-B-1
+B	Dhaka-A (GEN-B)	R321	Delta-Mirpur GEN-B-1	R1310	BIHS-Mirpur GEN-B-1
+B	Dhaka-A (GEN-B)	R321	Delta-Mirpur GEN-B-1	R2125	Delta-Mazar Road GEN-B-1
+B	Dhaka-A (GEN-B)	R321	Delta-Mirpur GEN-B-1	R914	Delta-Mirpur GEN-B-1
+B	Dhaka-A (GEN-B)	R321	Delta-Mirpur GEN-B-1	R1323	Rupnagar GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R903	Badda-Apollo GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R1918	Badda-Apollo GEN-B-3
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R651	Gulshan-2-United GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R1324	Kurmitola-Kuril GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R2592	Kurmitola-Kuril GEN-B-2
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R904	Mohakhali-Banani GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R1287	NIDCH-Badda GEN-B-1
+B	Dhaka-A (GEN-B)	R156	Gulshan-Badda GEN-B-1	R2137	NIDCH-Badda GEN-B-2
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R2494	CRP-Matikata GEN-B-1
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R644	NINS-Kochukhet GEN-B-1
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R1319	NINS-Matikata GEN-B-1
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R915	NITOR-Mirpur 10 GEN-B-1
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R916	NITOR-Mirpur 11 & 12 GEN-B-1
+B	Dhaka-A (GEN-B)	R128	Mirpur GEN-B-1	R1914	TB Hospital-Mirpur 10 GEN-B-1
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R1434	Badda-Apollo GEN-B-2
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R643	NHF-Mirpur-2 GEN-B-1
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R998	NHF-Monipur GEN-B-1
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R1953	NHN-Mirpur GEN-B-1
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R1282	NITOR-Kazipara-S.para GEN-B-1
+B	Dhaka-A (GEN-B)	R188	NHF-Mirpur GEN-B-1	R1952	Sishu-Shewrapara GEN-B-1
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R1878	Hemayetpur GEN-B-1
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R2559	Hemayetpur GEN-B-2
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R917	Savar GEN-B-1
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R1269	Savar GEN-B-2
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R1311	Savar GEN-B-3
+B	Dhaka-A (GEN-B)	R191	Savar GEN-B-1	R2238	Savar GEN-B-4
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R1014	BMCH-Ibn Sina D Lab GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R2462	BMCH-Ibn Sina D Lab GEN-B-2
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R1326	BMCH-Ibn Sina Imaging GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R978	BMCH-JBFH GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R2126	City Hospital GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R653	Ibn Sina Hosp. GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R2209	Kalatia-Atibazar GEN-B-1
+B	Dhaka-B (GEN-B)	R189	BMCH-Sathmoshjid Road GEN-B-1	R1272	NICVD-Lalmatia GEN-B-1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R1284	Maniknagor GEN-B -1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R2609	Maniknagor GEN-B-2
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R1322	MMCH-Basabo GEN-B-1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R906	MMCH-Khilgaon GEN-B-1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R1969	MMCH-Mothertak GEN-B-1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R907	MMCH-Mugda GEN-B-1
+B	Dhaka-B (GEN-B)	R328	Mugda GEN-B-1	R981	Tikatuli GEN-B-1
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R1327	Dohar GEN-B-1
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R1318	Keranigonj GEN-B-1
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R1585	Keranigonj GEN-B-2
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R983	Nawabganj GEN-B-1
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R2650	Nawabgonj GEN-B-2
+B	Dhaka-B (GEN-B)	R409	Nawabganj GEN B-1	R2006	Sreenagar GEN-B-1
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R1384	ISMCH-BSH GEN-B-1
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R979	NICVD-Popular GEN-B-1
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R652	NICVD-Popular GEN-B-2
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R1015	NICVD-Popular GEN-B-3
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R2124	NICVD-Popular GEN-B-4
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R913	ShSMCH-Mohammadpur GEN-B-1
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R649	ShSMCH-Shyamoly GEN-B-1
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R2216	ShSMCH-Shyamoly GEN-B-2
+B	Dhaka-B (GEN-B)	R127	NICVD-Popular GEN-B-1	R2715	ShSMCH-Shyamoly GEN-B-3
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R1922	Dayagonj GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R654	DMCH-English Road GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R1270	Jatrabari GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R982	Mitford-Wari GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R650	Postagola GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R2667	Postagola GEN-B-2
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R1016	SSMCH-Mitford GEN-B-1
+B	Dhaka-B (GEN-B)	R157	Old Dhaka GEN-B-1	R2726	SSMCH-Mitford GEN-B-2
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R994	BIRDEM GEN-B-1
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R905	BIRDEM-IBCH GEN-B-1
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R2458	BIRDEM-IBCH GEN-B-2
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R648	BIRDEM-Malibag GEN-B-1
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R991	BIRDEM-Shantinagar GEN-B-1
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R2459	BIRDEM-Shantinagar GEN-B-2
+B	Dhaka-C (GEN-B)	R212	BIRDEM-IBH GEN-B-1	R1307	MMCH-IBH GEN-B-1
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R647	BIRDEM-Eskaton GEN-B-1
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R899	BIRDEM-Mogbazar GEN-B-1
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R1009	MMCH-Bonosree GEN-B-1
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R2325	MMCH-Bonosree GEN-B-2
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R902	MMCH-Rampura-GEN-B-1
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R2619	MMCH-Rampura-GEN-B-2
+B	Dhaka-C (GEN-B)	R130	BIRDEM-Malibag GEN-B-1	R2241	Tejgoan GEN-B-1
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R909	Azimpur-Lalbag GEN-B-1
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R646	BSMMU-Central GEN-B-1
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R910	BSMMU-Lab Aid GEN-B-2
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R911	BSMMU-Lab Aid GEN-B-3
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R1308	BSMMU-Lab Aid GEN-B-4
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R908	DMCH-BGB Gate GEN-B-1
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R1961	DMCH-Lalbagh GEN-B-1
+B	Dhaka-C (GEN-B)	R131	BSMMU-Lab Aid GEN-B-1	R2953	DMCH-Metadoor GEN-B-1 
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R1355	BSMMU-Comfort GEN-B-1
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R901	BSMMU-Green Life GEN-B-1
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R2230	BSMMU-Green Life GEN-B-2
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R912	BSMMU-Modern GEN-B-1
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R1273	BSMMU-Modern GEN-B-2
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R900	BSMMU-Panthapath GEN-B-1
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R1354	Ibrahim Cardiac GEN-B-1
+B	Dhaka-C (GEN-B)	R158	BSMMU-Modern GEN-B-1	R992	Nakhalpara-UMCH-GEN-B-1
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2546	Ghorashal GEN-B-1
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R975	Narsingdi GEN-B-1
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R976	Narsingdi GEN-B-2
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2221	Narsingdi GEN-B-3
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2329	Narsingdi GEN-B-4
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2003	Palash GEN-B-1
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2139	Shibpur GEN-B-1
+B	Dhaka-C (GEN-B)	R190	Narsingdi GEN-B-1	R2714	Shibpur GEN-B-2
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R1416	Arihajar GEN-B-1
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R2231	Arihajar GEN-B-2
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R2425	Arihazar GEN-B-3
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R1335	Madhabdi GEN-B-1
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R2603	Madhabdi GEN-B-2
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R1018	Rupgonj GEN-B-1
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R2004	Rupgonj GEN-B-2
+B	Dhaka-C (GEN-B)	R322	Rupgonj GEN-B-1	R2694	Rupgonj GEN-B-3
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R969	Bhaluka GEN-B-1
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R2451	Bhaluka GEN-B-2
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R2095	Bhaluka Seed Store GEN-B-1
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R2540	Gafargoun GEN-B-2
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R1915	Gofargaon GEN-B-1
+B	Uttara (GEN-B)	R320	Bhaluka GEN-B-1	R1411	Trisal GEN-B-1
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R1289	Gazipur Chowrasta GEN-B-1
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R2542	Gazipur Chowrasta GEN-B-2
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R962	Gazipur GEN-B-1
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R1274	Gazipur GEN-B-2
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R2543	Gazipur GEN-B-3
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R2544	Gazipur GEN-B-4
+B	Uttara (GEN-B)	R194	Gazipur GEN-B-1	R2747	Vawal-Mirzapur GEN-B-1
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R1370	Kapasia GEN-B-1
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R2578	Kapasia GEN-B-2
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R1286	Mawna GEN-B-1
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R1413	Mawna GEN-B-2
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R2612	Mawna GEN-B-3
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R2628	Monipur-Rajendrapur GEN-B-1
+B	Uttara (GEN-B)	R293	Mawna GEN-B-1	R2008	Sreepur GEN-B-1
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R2001	Kaliakoir GEN-B-1
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R2574	Kaliakoir GEN-B-2
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R961	Konabari GEN-B-1
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R2220	Konabari GEN-B-2
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R2611	Mawchack GEN-B-1
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R1356	Shafipur GEN-B-1
+B	Uttara (GEN-B)	R323	Shafipur GEN-B-1	R2328	Shafipur GEN-B-2
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R2464	Board Bazar GEN-B-2
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R997	Boardbazar GEN-B-1
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R958	Uttara GEN-B-2
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R1010	Uttara GEN-B-4
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R1288	Uttara GEN-B-5
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R1400	Uttara GEN-B-7
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R1482	Uttara GEN-B-8
+B	Uttara (GEN-B)	R132	Uttara GEN-B-1	R2233	Uttara Popular GEN-B-1
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R655	Uttara GEN-B-1
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R959	Uttara GEN-B-3
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R1328	Uttara GEN-B-6
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R1751	Uttara GEN-B-9
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R2000	Uttara Ibn Sina GEN-B-1
+B	Uttara (GEN-B)	R278	Uttara GEN-B-2	R2745	Uttara Monsur Ali MCH GEN-B-1
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R2131	Gazipura Sataish GEN-B-1
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R1968	Kaligonj GEN-B-1 (Uttara)
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R2575	Kaligonj GEN-B-2
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R2740	Tongi Station Road GEN-B-2
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R960	Tongi-Collegegate GEN-B-1
+B	Uttara (GEN-B)	R327	Uttara GEN-B-3	R1351	Tongi-Station Road GEN-B-1
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R2952	Barishal (Medinova) GEN-B-1
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R737	Barishal GEN-B-2
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R1365	Barishal GEN-B-4
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R1418	Jhalokathi GEN-B-1
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R1366	Mothbaria GEN-B-1
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R2662	Patharghata GEN-B-1
+B	Barishal (GEN-B)	R161	Barishal GEN-B-1	R2673	Rajapur GEN-B-1
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R767	Barishal GEN-B-1
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R1028	Barishal GEN-B-3
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R2440	Barishal GEN-B-5
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R1979	Gournadi GEN-B-1
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R2633	Muladi GEN-B-1
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R2093	Swarupkathi GEN-B-1
+B	Barishal (GEN-B)	R345	Barishal GEN-B-2	R2743	Ujirpur GEN-B-1
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R1001	Bhola GEN-B-1
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R1747	Bhola GEN-B-2
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R2452	Bhola GEN-B-3
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R1724	Burhanuddin GEN-B-1
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R1390	Charfashion GEN-B-1
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R2483	Charfashion GEN-B-2
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R1408	Lalmohan GEN-B-1
+B	Barishal (GEN-B)	R297	Bhola GEN-B-1	R2598	Lalmohan GEN-B-2
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R2514	Damudya GEN-B-1
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R894	Madaripur GEN-B-1
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R1592	Madaripur GEN-B-2
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R1881	Noria GEN-B-1
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R2675	Rajoir GEN-B-1
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R1278	Shariatpur GEN-B-1
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R2222	Shariatpur GEN-B-2
+B	Barishal (GEN-B)	R300	Madaripur GEN-B-1	R2045	Shibchar GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R1407	Amtali GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R1029	Barguna GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R2444	Bawfal-Dashmina GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R1960	Galachipa GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R1304	Kalapara GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R738	Patuakhali GEN-B-1
+B	Barishal (GEN-B)	R204	Patuakhali GEN-B-1	R1303	Patuakhali GEN-B-2
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R2422	Alamdanga GEN-B-1
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R1000	Chuadanga GEN-B-1
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R2002	Chuadanga GEN-B-2
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R2567	Jibannagar GEN-B-1
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R2236	Kotchandpur GEN-B-1
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R1735	Meherpur GEN-B-1
+B	Jashore (GEN-B)	R335	Chuadanga GEN-B-1	R2613	Meherpur GEN-B-2
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R2096	Bhanga GEN-B-1
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R1959	Boalmari GEN-B-1
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R1364	Faridpur GEN-B-3
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R2235	Faridpur GEN-B-4
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R2530	Faridpur GEN-B-6
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R2696	Sadarpur GEN-B-1
+B	Jashore (GEN-B)	R138	Faridpur GEN-B-1	R2707	Shaltha-Nagarkanda GEN-B-1
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R735	Faridpur GEN-B-1
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R736	Faridpur GEN-B-2
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R2330	Faridpur GEN-B-5
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R2621	Modhukhali GEN-B-1
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R1926	Pangsha GEN-B-1
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R1337	Rajbari GEN-B-1
+B	Jashore (GEN-B)	R346	Faridpur GEN-B-2	R2674	Rajbari GEN-B-2
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R934	Jashore GEN-B-1
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R935	Jashore GEN-B-2
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R1755	Jashore GEN-B-4
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R2563	Jashore GEN-B-5
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R2815	Jashore GEN-B-8
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R2242	Keshobpur GEN-B-1
+B	Jashore (GEN-B)	R139	Jashore GEN-B-1	R2629	Monirampur GEN-B-1
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R2324	Chaugachha GEN-B-1
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R1301	Jashore GEN-B-3
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R2564	Jashore GEN-B-6
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R2565	Jashore GEN-B-7
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R2816	Jashore GEN-B-9
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R1957	Jhikorgacha GEN-B-1
+B	Jashore (GEN-B)	R347	Jashore GEN-B-2	R2649	Navaron GEN-B-1
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R2556	Harinakunda GEN-B-1
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R2566	Jhenaidah GEN-B-3
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R706	Jhenidah GEN-B-1
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R1756	Jhenidah GEN-B-2
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R1417	Kaligonj GEN-B-1 (Jashore)
+B	Jashore (GEN-B)	R296	Jhinaidah GEN-B-1	R2720	Soilakupa GEN-B-1
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R2127	Lohagara GEN-B-1
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R1277	Magura GEN-B-1
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R1757	Magura GEN-B-2
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R2135	Magura GEN-B-3
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R1352	Narail GEN-B-1
+B	Jashore (GEN-B)	R400	Magura GEN-B-1	R2643	Narail GEN-B-2
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R1027	Gopalgonj GEN-B-1
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R1591	Gopalgonj GEN-B-2
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R2549	Gopalgonj GEN-B-3
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R2129	Kotalipara GEN-B-1
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R2627	Moksedpur GEN-B-1
+B	Khulna (GEN-B)	R337	Gopalgonj GEN-B-1	R2742	Tungipara GEN-B-1
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R1025	Bagerhat GEN-B-1
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R2949	Khulna (Sadar Hospital) GEN-B-1
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R932	Khulna GEN-B-2
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R2584	Khulna GEN-B-6
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R1996	Morolganj GEN B-1
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R1368	Pirojpur GEN-B-1
+B	Khulna (GEN-B)	R199	Khulna GEN-B-1	R1464	Rampal GEN-B-1
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R2957	Chuknagar GEN-B-1
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R931	Khulna GEN-B-1
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R1300	Khulna GEN-B-3
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R1367	Khulna GEN-B-4
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R1917	Khulna GEN-B-5
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R2585	Khulna GEN-B-7
+B	Khulna (GEN-B)	R213	Khulna GEN-B-2	R2655	Noapara GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R2430	Bagachra GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R1946	Kolaroa GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R2009	Paikgacha GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R2663	Patkelghata GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R933	Satkhira GEN-B-1
+B	Khulna (GEN-B)	R253	Satkhira GEN-B-1	R1302	Satkhira GEN-B-2
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R2427	Assasuni GEN-B-1
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R1720	Nalta GEN-B-1
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R1916	Satkhira GEN-B-3
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R2701	Satkhira GEN-B-4
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R2702	Satkhira GEN-B-5
+B	Khulna (GEN-B)	R348	Satkhira GEN-B-2	R2128	Shyamnagar GEN-B-1
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R2950	Chattogram Road (Saroliya) GEN-B-1
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R972	Chattogram Road GEN-B-1
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R1382	Chattogram Road GEN-B-2
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R1923	Chattogram Road GEN-B-3
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R2486	Chattogram Road GEN-B-4
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R1353	Konapara GEN-B-1
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R2587	Konapara GEN-B-2
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R1271	Shonir Akhara GEN-B-1
+B	Narayangonj (GEN-B)	R210	Chattogram Road GEN-B-1	R1995	Shonir Akhara GEN-B-2
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R2600	Louhajang GEN-B-1
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R973	Munshigonj GEN-B-1
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R2217	Munshigonj GEN-B-2
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R2634	Munshigonj GEN-B-3
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R1383	Sirajdikhan GEN-B–1 
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R1954	Tongibari GEN-B-1
+B	Narayangonj (GEN-B)	R329	Munshiganj GEN-B-1	R2741	Tongibari GEN-B-2
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R2419	Adamjee GEN-B-1
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R2435	Bondor GEN-B-1
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R970	Narayangonj GEN-B-1
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R971	Narayangonj GEN-B-2
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R1017	Narayangonj GEN-B-3
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R2644	Narayangonj GEN-B-6
+B	Narayangonj (GEN-B)	R142	Narayangonj GEN-B-1	R2645	Narayangonj GEN-B-7
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R1921	Fatullah GEN-B-1
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R2531	Fatullah GEN-B-2
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R1347	Narayangonj GEN-B-4
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R1283	Narayangonj GEN-B-5
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R2646	Narayangonj GEN-B-8
+B	Narayangonj (GEN-B)	R331	Narayangonj GEN-B-2	R2647	Narayangonj GEN-B-9
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R2449	Bobharchar GEN-B-1
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R1285	Madanpur GEN-B-1
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R2601	Madanpur GEN-B-2
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R2724	Sonargaon GEN-B-3
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R974	Sonargoan GEN-B-1
+B	Narayangonj (GEN-B)	R332	Sonargaon GEN-B-1	R1963	Sonargoan GEN-B-2
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R1508	CTG (CSCR) GEN-C-1
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R1710	CTG (Epic) GEN-C-1
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R2296	CTG (Lancet) GEN-C-1
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R2132	CTG (Popular) GEN-C-1
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R1514	Fatikchari GEN-C-1
+C	Chattogram (GEN-C)	R226	Chattogram GEN-C-1	R2039	Hathazari GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R1761	CTG (Cantonment GEN. Hosp.) GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R1512	CTG (Diabetic Hosp) GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R1509	CTG (Jamalkhan) GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R2076	CTG (National Hosp) GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R2297	CTG (USTC) GEN-C-1
+C	Chattogram (GEN-C)	R280	Chattogram GEN-C-2	R2418	Sitakundu GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R2311	Chandraghona GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R1510	CTG (Chevron) GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R2162	CTG (Labaid) GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R2298	CTG (MAX Hospital) GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R1507	CTG (Metropoliton) GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R1506	CTG (Parkview) GEN-C-1
+C	Chattogram (GEN-C)	R290	Chattogram GEN-C-3	R2169	Potiya GEN-C-1
+C	Chattogram (GEN-C)	R403	Chattogram GEN-C-4	R2417	Anowara GEN-C-1
+C	Chattogram (GEN-C)	R403	Chattogram GEN-C-4	R2168	Banshkhali GEN-C-1
+C	Chattogram (GEN-C)	R403	Chattogram GEN-C-4	R1511	CTG (Bondortilla) GEN-C-1
+C	Chattogram (GEN-C)	R403	Chattogram GEN-C-4	R2167	CTG (EPZ) GEN-C-1
+C	Chattogram (GEN-C)	R403	Chattogram GEN-C-4	R1709	CTG (Maa O Shishu) GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R1762	Amirabad GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R2163	Chakaria GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R1513	Coxs Bazar (Chevron) GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R2166	Coxs Bazar (Fuad Al Khatib) GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R1936	Coxs Bazar (Union Hosp) GEN-C-1
+C	Chattogram (GEN-C)	R282	Cox Bazar GEN-C-1	R2164	Keranihat GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1495	Chowmuhoni GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1496	Laxmipur GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1497	Laxmipur GEN-C-2
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1934	Maizdee (Good Heal) GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R2416	Maizdee (Niramoy) GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1772	Maizdee (Popular) GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1494	Maizdee (Prime Hosp.) GEN-C-1
+C	Chattogram (GEN-C)	R279	Maizdee GEN-C-1	R1773	Sonaimouri GEN-C-1
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R1489	Chandpur GEN-C-1
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R1759	Chandpur GEN-C-2
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R2171	Chandpur GEN-C-3
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R1488	Hazigonj GEN-C-1
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R2072	Hazigonj GEN-C-2
+C	Cumilla (GEN-C)	R281	Chandpur GEN-C-1	R2173	Ramgonj GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R1485	Chandina GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R1486	Cumilla (C.D. Path) GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R2071	Cumilla (Diabetic Hosp.) GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R2170	Cumilla (Moon Hosp.) GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R1483	Gouripur GEN-C-1
+C	Cumilla (GEN-C)	R223	Cumilla GEN-C-1	R1932	Gouripur GEN-C-2
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R1760	Cumilla (Tomson Bridge) GEN-C-1
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R1487	Cumilla (Tower) GEN-C-1
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R2921	Cumilla Medical GEN-C- 1
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R1484	Debidwar GEN-C-1
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R2411	Debidwar GEN-C-2
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R1708	Laksham GEN-C-1
+C	Cumilla (GEN-C)	R315	Cumilla GEN-C-2	R2149	Laksham GEN-C-2
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R2165	Baraiyerhat GEN-C-1
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R1493	Chowddagram GEN-C-1
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R1490	Feni (Chevron) GEN-C-1
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R1713	Feni (Esquire Lab) GEN-C-1
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R1491	Feni (Z. U. Hosp.) GEN-C-1
+C	Cumilla (GEN-C)	R224	Feni GEN-C-1	R1774	Nangolkot GEN-C-1
+C	Cumilla (GEN-C)	R313	Feni GEN-C-2	R2314	Basurhat GEN-C-1
+C	Cumilla (GEN-C)	R313	Feni GEN-C-2	R1492	Daganbhuiya GEN-C-1
+C	Cumilla (GEN-C)	R313	Feni GEN-C-2	R2343	Feni (Concept) GEN-C-1
+C	Cumilla (GEN-C)	R313	Feni GEN-C-2	R1714	Feni (Diabetic Hosp.) GEN-C-1
+C	Cumilla (GEN-C)	R313	Feni GEN-C-2	R1933	Feni (Mission Hosp.) GEN-C-1
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R1579	Evercare-Badda GEN-C-1
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R2157	Evercare-Badda GEN-C-2
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R1577	Gulshan GEN-C-1
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R2393	Gulshan GEN-C-2
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R2817	Gulshan GEN-C-3
+C	Dhaka-A (GEN-C)	R292	Gulshan GEN-C-1	R2892	IBN Sina-Badda GEN-C-1
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R1937	Kidney Foundation-Mirpur GEN-C-1
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R1567	NHF GEN-C-1
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R2154	NHF GEN-C-2
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R2893	NHF-Mirpur GEN-C-1
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R1568	NHN-Mirpur-10 GEN-C-1
+C	Dhaka-A (GEN-C)	R283	NHF GEN-C-1	R1569	NICVD-Kochukhet GEN-C-1
+C	Dhaka-A (GEN-C)	R311	NINS-BSH GEN-C-1	R2155	BIHS-Mirpur GEN-C-1
+C	Dhaka-A (GEN-C)	R311	NINS-BSH GEN-C-1	R1570	NICVD-Mirpur-1 GEN-C-1
+C	Dhaka-A (GEN-C)	R311	NINS-BSH GEN-C-1	R2391	NINS-BSH GEN-C-1
+C	Dhaka-A (GEN-C)	R311	NINS-BSH GEN-C-1	R2894	NINS-BSH GEN-C-2
+C	Dhaka-A (GEN-C)	R311	NINS-BSH GEN-C-1	R1575	ShSMCH-Mohammadpur GEN-C-1
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R2395	Ashulia GEN-C-1
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R1542	Konabari GEN-C-1
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R1941	Manikganj GEN-C-1
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R1543	Savar GEN-C-1
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R1544	Savar GEN-C-2
+C	Dhaka-A (GEN-C)	R312	Savar GEN-C-1	R2394	Shafipur GEN-C-1
+C	Dhaka-A (GEN-C)	R285	Tangail GEN-C-1	R2396	Madhupur GEN-C-1
+C	Dhaka-A (GEN-C)	R285	Tangail GEN-C-1	R2397	Mirzapur GEN-C-1
+C	Dhaka-A (GEN-C)	R285	Tangail GEN-C-1	R1564	Tangail GEN-C-1
+C	Dhaka-A (GEN-C)	R285	Tangail GEN-C-1	R1769	Tangail GEN-C-2
+C	Dhaka-A (GEN-C)	R285	Tangail GEN-C-1	R2161	Tangail-GEN-C-3
+C	Dhaka-C (GEN-C)	R413	DMCH-Azimpur GEN-C-1	R1573	DMCH-Azimpur GEN-C-1
+C	Dhaka-C (GEN-C)	R413	DMCH-Azimpur GEN-C-1	R2156	DMCH-Lalbag GEN-C-1
+C	Dhaka-C (GEN-C)	R413	DMCH-Azimpur GEN-C-1	R2819	Lalbag-Ibn Sina GEN-C-1
+C	Dhaka-C (GEN-C)	R413	DMCH-Azimpur GEN-C-1	R2818	Mitford-GEN-C-1
+C	Dhaka-C (GEN-C)	R413	DMCH-Azimpur GEN-C-1	R2160	Mitford-Sumona Hospital GEN-C-1
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R2077	Bhanga GEN-C-1
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R1532	Faridpur GEN-C-1
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R1718	Faridpur GEN-C-2
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R2181	Faridpur GEN-C-3
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R1771	Magura GEN-C-1
+C	Dhaka-C (GEN-C)	R249	Faridpur GEN-C-1	R1966	Rajbari GEN-C-1
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R2409	Gopalganj GEN-C-2
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R1792	Gopalgong GEN-C-1
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R1533	Madaripur GEN-C-1
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R2407	Madaripur GEN-C-2
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R1766	Shariatpur GEN-C-1
+C	Dhaka-C (GEN-C)	R314	Madaripur GEN-C-1	R2408	Shibchar GEN-C-1
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R2153	Keranigonj GEN-C-1
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R2890	Keranigonj GEN-C-2
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R1571	NICVD-Popular GEN-C-1
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R2150	NICVD-Popular GEN-C-2
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R2151	NICVD-Popular GEN-C-3
+C	Dhaka-C (GEN-C)	R235	NICVD GEN-C-1	R2883	NICVD-Popular GEN-C-4
+C	Dhaka-C (GEN-C)	R401	NICVD-Satmosjid Road GEN-C-1	R2392	Dohar-Nawabganj GEN-C-1
+C	Dhaka-C (GEN-C)	R401	NICVD-Satmosjid Road GEN-C-1	R1764	NICVD-Lalmatia GEN-C 1
+C	Dhaka-C (GEN-C)	R401	NICVD-Satmosjid Road GEN-C-1	R1572	NICVD-Satmosjid Road GEN-C-1
+C	Dhaka-C (GEN-C)	R401	NICVD-Satmosjid Road GEN-C-1	R2152	NICVD-Satmosjid Road GEN-C-2
+C	Dhaka-C (GEN-C)	R401	NICVD-Satmosjid Road GEN-C-1	R2884	NICVD-Satmosjid Road GEN-C-3
+C	Dhaka-C (GEN-C)	R302	Old Dhaka GEN-C-1	R1939	BIRDEM-Lab Aid GEN-C-1
+C	Dhaka-C (GEN-C)	R302	Old Dhaka GEN-C-1	R1938	DMCH-English Road GEN-C-1
+C	Dhaka-C (GEN-C)	R302	Old Dhaka GEN-C-1	R1516	Jatrabari GEN-C-1
+C	Dhaka-C (GEN-C)	R302	Old Dhaka GEN-C-1	R2888	Jatrabari GEN-C-2
+C	Dhaka-C (GEN-C)	R302	Old Dhaka GEN-C-1	R1515	Wari GEN-C-1
+C	Jashore (GEN-C)	R229	Barishal GEN-C-1	R1529	Barishal GEN-C-2
+C	Jashore (GEN-C)	R229	Barishal GEN-C-1	R2315	Barishal GEN-C-3
+C	Jashore (GEN-C)	R229	Barishal GEN-C-1	R1790	Borguna GEN-C-1
+C	Jashore (GEN-C)	R229	Barishal GEN-C-1	R2074	Mothbaria GEN-C-1
+C	Jashore (GEN-C)	R229	Barishal GEN-C-1	R1531	Patuakhali GEN-C-1
+C	Jashore (GEN-C)	R308	Barishal GEN-C-2	R1528	Barishal GEN-C-1
+C	Jashore (GEN-C)	R308	Barishal GEN-C-2	R2405	Barishal GEN-C-4
+C	Jashore (GEN-C)	R308	Barishal GEN-C-2	R1530	Bhola GEN-C-1
+C	Jashore (GEN-C)	R308	Barishal GEN-C-2	R2406	Gaurnadi GEN-C-1
+C	Jashore (GEN-C)	R308	Barishal GEN-C-2	R2404	Lalmohan-Charfashion GEN-C-1
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R1525	Jashore GEN-C-1
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R1526	Jashore GEN-C-2
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R2179	Jashore GEN-C-3
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R1527	Jhenidah GEN-C-1
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R1965	Jhenidah GEN-C-2
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R2410	Kaliganj (Jhenidah) GEN-C-1
+C	Jashore (GEN-C)	R250	Jashore GEN-C-1	R1770	Narail GEN-C-1
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R1523	Bagerhat GEN-C-1
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R1521	Khulna GEN-C-1
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R1522	Khulna GEN-C-2
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R1944	Khulna GEN-C-3
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R2180	Khulna GEN-C-4
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R1524	Satkhira GEN-C-1
+C	Jashore (GEN-C)	R228	Khulna GEN-C-1	R2075	Satkhira GEN-C-2
+C	Jashore (GEN-C)	R248	Kushtia GEN-C-1	R2402	Bheramara GEN-C-1
+C	Jashore (GEN-C)	R248	Kushtia GEN-C-1	R1780	Chuadanga GEN-C-1
+C	Jashore (GEN-C)	R248	Kushtia GEN-C-1	R1559	Kushtia GEN-C-1
+C	Jashore (GEN-C)	R248	Kushtia GEN-C-1	R1558	Kushtia GEN-C-2
+C	Jashore (GEN-C)	R248	Kushtia GEN-C-1	R2401	Meherpur GEN-C-1
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R2382	BIRDEM GEN-C-4
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R2886	BIRDEM GEN-C-5
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R1765	BIRDEM-GEN-C-1
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R1763	BIRDEM-GEN-C-2
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R2158	BIRDEM-GEN-C-3
+C	Dhaka-B (GEN-C)	R236	BSMMU-BIRDEM GEN-C-1	R1580	BIRDEM-Malibag GEN-C-1
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R2383	Araihazar GEN-C-1
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R1517	Chattogram Road GEN-C-1
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R2312	Chattogram Road GEN-C-2
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R1784	Rupgonj GEN-C-1
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R1779	Shonir Akhara GEN-C-1
+C	Dhaka-B (GEN-C)	R310	Chattogram Road GEN-C-1	R1719	Sonargaon GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R1578	BIRDEM-Ibrahim Cardiac GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R2881	BSMMU GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R1574	BSMMU Labaid GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R2159	BSMMU Labaid GEN-C-2
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R2882	BSMMU UNICO GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R1576	BSMMU-Greenlife GEN-C-1
+C	Dhaka-B (GEN-C)	R291	DMCH GEN-C-1	R2381	BSMMU-Modern GEN-C-1
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R1581	Ibrahim Cardiac Mogbazar GEN-C-1
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R2038	MMCH-Bashabo GEN-C-1
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R2887	MMCH-Bashabo GEN-C-2
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R1582	MMCH-Khilgaon GEN-C-1
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R1712	Rampura Banasree GEN-C-1
+C	Dhaka-B (GEN-C)	R402	Mugda Bashabo GEN-C-1	R2889	Rampura GEN C-1
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R1520	Munshigonj GEN-C-1
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R2384	Munshigonj GEN-C-2
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R1518	Narayangonj GEN-C-1
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R1519	Narayangonj GEN-C-2
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R1778	Narayangonj GEN-C-3
+C	Dhaka-B (GEN-C)	R227	Narayangonj GEN-C-1	R2344	Narayangonj GEN-C-4
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1548	Bogura GEN-C-1
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1549	Bogura GEN-C-2
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1943	Bogura GEN-C-3
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1551	Gaibandha GEN-C-1
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1787	Joypurhat GEN-C 1
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R1788	Polashbari GEN-C-1
+C	Rajshahi (GEN-C)	R247	Bogura GEN-C-1	R2398	Sherpur (Bogura) GEN-C-1
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R1550	Dinajpur GEN-C-1
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R2176	Dinajpur GEN-C-2
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R2891	Dinajpur GEN-C-3
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R1717	Nilphamari GEN-C-1
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R2313	Panchagarh GEN-C-1
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R1789	Sayedpur GEN-C-1
+C	Rajshahi (GEN-C)	R295	Dinajpur GEN-C-1	R1552	Thakurgaon GEN-C-1
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R2399	Ishwardi GEN-C-1
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R1556	Natore GEN-C-1
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R1557	Pabna GEN-C-1
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R1964	Pabna GEN-C-2
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R2400	Shahzadpur GEN-C-1
+C	Rajshahi (GEN-C)	R307	Pabna GEN-C-1	R1555	Sirajgonj GEN-C-1
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R1781	C.Nawabgonj GEN-C-1
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R1782	Naogaon GEN-C-1
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R2403	Naogaon GEN-C-2
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R1553	Rajshahi GEN-C-1
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R1554	Rajshahi GEN-C-2
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R2073	Rajshahi GEN-C-3
+C	Rajshahi (GEN-C)	R233	Rajshahi GEN-C-1	R2917	Rajshahi GEN-C-4
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R1786	Kurigram GEN-C-1
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R1942	Lalmonirhat GEN-C-1
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R1545	Rangpur GEN-C-1
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R1546	Rangpur GEN-C-2
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R1547	Rangpur GEN-C-3
+C	Rajshahi (GEN-C)	R232	Rangpur GEN-C-1	R2177	Rangpur GEN-C-4
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R1505	B.Baria GEN-C-1
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R1716	B.Baria GEN-C-2
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R2175	B.Baria GEN-C-3
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R1504	Habigonj GEN-C-1
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R1775	Habigonj GEN-C-2
+C	Sylhet (GEN-C)	R284	B.Baria GEN-C-1	R2412	Nabinagar GEN-C-1
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R2413	Barlekha GEN-C-1
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R1502	Beanibazar GEN-C-1
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R2812	Kulaura GEN-C-1
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R1503	Moulovibazar GEN-C-1
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R1935	Moulovibazar GEN-C-2
+C	Sylhet (GEN-C)	R393	Moulvibazar GEN-C-1	R2918	Sreemangal GEN-C-1
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R1776	Bishwanath GEN-C-1
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R2415	Golapganj GEN-C-1
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R1498	Sylhet (Ibn Sina) GEN-C-1
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R2172	Sylhet (Ibn Sina) GEN-C-2
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R1500	Sylhet (Stadium) GEN-C-1
+C	Sylhet (GEN-C)	R225	Sylhet GEN-C-1	R1715	Sylhet (W/M) GEN-C-1
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R2414	Sunamganj GEN-C-2
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R1501	Sunamgonj GEN-C-1
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R1777	Sylhet (Medinova) GEN-C-1
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R2316	Sylhet (Mount Adora Hospital) GEN-C-1
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R2347	Sylhet (Mount Adora Hospital) GEN-C-2
+C	Sylhet (GEN-C)	R316	Sylhet GEN-C-2	R1499	Sylhet (Popular) GEN-C-1
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R1768	Bhaluka GEN-C-1
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R2821	Gafargaon GEN-C-1
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R1540	Gazipur GEN-C-1
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R1541	Gazipur GEN-C-2
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R2919	Kapasia GEN-C-1
+C	Uttara (GEN-C)	R231	Gazipur GEN-C-1	R1785	Mawna GEN-C-1
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R1565	Jamalpur GEN-C-1
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R1940	Jamalpur GEN-C-2
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R2387	Jamalpur GEN-C-3
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R2390	Phulpur GEN-C-1
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R1566	Sherpur GEN-C-1
+C	Uttara (GEN-C)	R309	Jamalpur GEN-C-1	R2388	Sherpur GEN-C-2
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R2389	Muktagacha GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R2822	MYM (Labaid Hosp.) GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R1562	MYM (Memorial) GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R2174	MYM (Nexus Hosp.) GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R1767	MYM (Popular) GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R1560	MYM (Swadesh Hosp.) GEN-C-1
+C	Uttara (GEN-C)	R234	Mymensingh GEN-C-1	R1711	Netrokona GEN-C-1
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R2385	Bhairab GEN-C-1
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R1563	Kishoregonj GEN-C-1
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R2293	Kishoregonj GEN-C-2
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R1538	Narsingdi GEN-C-1
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R1539	Narsingdi GEN-C-2
+C	Uttara (GEN-C)	R294	Narsingdi GEN-C1	R2920	Narsingdi GEN-C-3
+C	Uttara (GEN-C)	R230	Uttara GEN-C-1	R1783	Tongi GEN-C-2
+C	Uttara (GEN-C)	R230	Uttara GEN-C-1	R1535	Uttara GEN-C-2
+C	Uttara (GEN-C)	R230	Uttara GEN-C-1	R1536	Uttara GEN-C-3
+C	Uttara (GEN-C)	R230	Uttara GEN-C-1	R2133	Uttara GEN-C-4
+C	Uttara (GEN-C)	R230	Uttara GEN-C-1	R2885	Uttara GEN-C-6
+C	Uttara (GEN-C)	R411	Uttara GEN-C-2	R2386	Boardbazar GEN-C-1
+C	Uttara (GEN-C)	R411	Uttara GEN-C-2	R1537	Tongi GEN-C-1
+C	Uttara (GEN-C)	R411	Uttara GEN-C-2	R1534	Uttara GEN-C-1
+C	Uttara (GEN-C)	R411	Uttara GEN-C-2	R2182	Uttara GEN-C-5
+C	Uttara (GEN-C)	R411	Uttara GEN-C-2	R2820	Uttara GEN-C-7
