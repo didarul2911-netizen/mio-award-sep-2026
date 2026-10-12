@@ -272,10 +272,12 @@ def build_portal():
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {{
+        html, body {{
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #f1f5f9;
             color: #0f172a;
+            overflow-x: hidden;
+            max-width: 100vw;
         }}
         .brand-card {{
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -305,54 +307,57 @@ def build_portal():
         }}
     </style>
 </head>
-<body class="min-h-screen flex flex-col bg-slate-100">
+<body class="min-h-screen flex flex-col bg-slate-100 overflow-x-hidden">
 
-    <!-- Top Header Bar (No Exium MUPS Logo, Clean & Rational Proportions) -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-15 py-2 flex items-center justify-between gap-2">
-            <div class="flex items-center space-x-2.5">
-                <div class="w-9 h-9 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center shadow-inner border border-orange-200 flex-shrink-0">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Top Header Bar (Mobile-First: Single-Line Heading on Top, Options Row Below on Mobile) -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs w-full">
+        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <!-- Row 1: Icon + Single-Line Heading + Brand Badges -->
+            <div class="flex items-center gap-2 min-w-0 w-full sm:w-auto">
+                <div class="w-8 h-8 sm:w-9 sm:h-9 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center shadow-inner border border-orange-200 flex-shrink-0">
+                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                     </svg>
                 </div>
-                <div>
-                    <span class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight block leading-tight">
+                <div class="min-w-0 flex-1">
+                    <span class="text-[13px] sm:text-base font-extrabold text-slate-900 tracking-tight block leading-tight whitespace-nowrap truncate">
                         Award for Sr. / MIO — September 2026
                     </span>
-                    <div class="flex flex-wrap items-center gap-1.5 mt-0.5">
-                        <span class="px-1.5 py-0.2 rounded text-[10px] font-extrabold bg-blue-600 text-white">
+                    <div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+                        <span class="px-1.5 py-0.2 rounded text-[10px] font-extrabold bg-blue-600 text-white whitespace-nowrap">
                             Exium MUPS Award
                         </span>
-                        <span class="px-1.5 py-0.2 rounded text-[10px] font-extrabold bg-purple-700 text-white">
+                        <span class="px-1.5 py-0.2 rounded text-[10px] font-extrabold bg-purple-700 text-white whitespace-nowrap">
                             Coralcal-D/DX/Vita Award
                         </span>
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center space-x-1.5 sm:space-x-2">
-                <!-- Live Cloud Sync Status Indicator (Desktop & Mobile) -->
-                <button id="header-sync-btn" onclick="onHeaderCloudSyncClick()" title="Click to Sync Now" class="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[11px] font-bold text-slate-700 transition cursor-pointer">
-                    <span id="header-sync-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span id="header-sync-status" class="hidden sm:inline">Ready</span>
-                    <svg id="sync-icon-desktop" class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            <!-- Row 2 on Mobile (Right Side on Desktop): Action Options -->
+            <div class="grid grid-cols-4 sm:flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto pt-1.5 sm:pt-0 border-t border-slate-100 sm:border-t-0">
+                <!-- Live Cloud Sync Status Indicator -->
+                <button id="header-sync-btn" onclick="onHeaderCloudSyncClick()" title="Click to Sync Now" class="flex items-center justify-center space-x-1 px-2 sm:px-2.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-[11px] font-bold text-slate-700 transition cursor-pointer whitespace-nowrap">
+                    <span id="header-sync-dot" class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"></span>
+                    <span id="header-sync-status" class="truncate">Ready</span>
+                    <svg id="sync-icon-desktop" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-500 flex-shrink-0 hidden sm:inline" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                 </button>
 
                 <!-- Award Criteria Button -->
-                <button onclick="openAwardCriteriaModal('exium')" class="bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-700 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1 shadow-2xs">
+                <button onclick="openAwardCriteriaModal('exium')" class="bg-blue-50 hover:bg-blue-100 border border-blue-200 text-blue-700 px-2 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold transition flex items-center justify-center space-x-1 shadow-2xs whitespace-nowrap">
                     <span>📋</span>
-                    <span>Award Criteria</span>
+                    <span class="sm:hidden">Criteria</span>
+                    <span class="hidden sm:inline">Award Criteria</span>
                 </button>
 
                 <!-- Zonal Head Portal Button -->
-                <button onclick="openZonalModal()" class="bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1">
+                <button onclick="openZonalModal()" class="bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 px-2 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold transition flex items-center justify-center space-x-1 whitespace-nowrap">
                     <span>🌐</span>
                     <span>Zonal View</span>
                 </button>
 
                 <!-- Admin Button -->
-                <button onclick="openAdminModal()" class="bg-orange-50 hover:bg-orange-100 border border-orange-200 text-orange-700 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center space-x-1">
+                <button onclick="openAdminModal()" class="bg-orange-50 hover:bg-orange-100 border border-orange-200 text-orange-700 px-2 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold transition flex items-center justify-center space-x-1 whitespace-nowrap">
                     <span>🛡️</span>
                     <span>Admin</span>
                 </button>
@@ -361,32 +366,32 @@ def build_portal():
     </header>
 
     <!-- Main Container -->
-    <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-5">
+    <main class="flex-1 max-w-7xl w-full mx-auto px-2.5 sm:px-6 lg:px-8 py-3 sm:py-5 overflow-x-hidden">
 
         <!-- ============================================== -->
         <!-- VIEW 1: LOGIN & ROLE SELECTION SCREEN          -->
         <!-- ============================================== -->
-        <section id="login-view" class="max-w-lg mx-auto my-4 sm:my-8">
+        <section id="login-view" class="max-w-lg w-full mx-auto my-2 sm:my-8">
             <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
                 
                 <!-- Card Top Banner -->
-                <div class="bg-gradient-to-r from-slate-50 via-white to-slate-50 p-5 sm:p-7 border-b border-slate-200 text-center">
-                    <div class="w-13 h-13 bg-orange-50 text-orange-600 rounded-2xl mx-auto flex items-center justify-center mb-2.5 shadow-inner border border-orange-200">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div class="bg-gradient-to-r from-slate-50 via-white to-slate-50 p-4 sm:p-7 border-b border-slate-200 text-center">
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 bg-orange-50 text-orange-600 rounded-2xl mx-auto flex items-center justify-center mb-2 shadow-inner border border-orange-200">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                         </svg>
                     </div>
-                    <h1 class="text-xl sm:text-2xl font-extrabold text-slate-900 tracking-tight">
+                    <h1 class="text-base sm:text-2xl font-extrabold text-slate-900 tracking-tight whitespace-nowrap truncate">
                         Sr. / MIO Award Choice Portal
                     </h1>
-                    <p class="text-xs sm:text-sm font-medium text-slate-500 mt-1">
+                    <p class="text-[11px] sm:text-sm font-medium text-slate-500 mt-1">
                         Select Gift Vouchers for Eligible Medical Information Officers
                     </p>
-                    <div class="flex items-center justify-center gap-2 mt-2.5 flex-wrap">
-                        <span class="px-2.5 py-0.5 rounded-md text-xs font-extrabold bg-blue-600 text-white shadow-2xs">
+                    <div class="flex items-center justify-center gap-1.5 sm:gap-2 mt-2.5 flex-wrap">
+                        <span class="px-2 sm:px-2.5 py-0.5 rounded-md text-[11px] sm:text-xs font-extrabold bg-blue-600 text-white shadow-2xs whitespace-nowrap">
                             🟦 Exium MUPS Award
                         </span>
-                        <span class="px-2.5 py-0.5 rounded-md text-xs font-extrabold bg-purple-700 text-white shadow-2xs">
+                        <span class="px-2 sm:px-2.5 py-0.5 rounded-md text-[11px] sm:text-xs font-extrabold bg-purple-700 text-white shadow-2xs whitespace-nowrap">
                             🟪 Coralcal-D/DX/Vita Award
                         </span>
                     </div>
@@ -403,12 +408,12 @@ def build_portal():
                 </div>
 
                 <!-- Tab 1: Regional Head Form -->
-                <form id="form-regional" autocomplete="off" onsubmit="handleRegionalLogin(event)" class="p-5 sm:p-7 space-y-4">
+                <form id="form-regional" autocomplete="off" onsubmit="handleRegionalLogin(event)" class="p-4 sm:p-7 space-y-4">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                             1. Select Zone
                         </label>
-                        <select id="reg-zone-select" onchange="onRegionalZoneChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none cursor-pointer">
+                        <select id="reg-zone-select" onchange="onRegionalZoneChange()" class="w-full max-w-full truncate bg-slate-50 border border-slate-300 rounded-xl px-3 sm:px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none cursor-pointer">
                             <option value="">-- Choose Zone --</option>
                         </select>
                     </div>
@@ -417,22 +422,22 @@ def build_portal():
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">
                             2. Select Region
                         </label>
-                        <select id="reg-region-select" onchange="onRegionalRegionChange()" disabled class="w-full bg-slate-100 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none cursor-pointer">
+                        <select id="reg-region-select" onchange="onRegionalRegionChange()" disabled class="w-full max-w-full truncate bg-slate-100 border border-slate-300 rounded-xl px-3 sm:px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none cursor-pointer">
                             <option value="">-- Select Zone First --</option>
                         </select>
                     </div>
 
                     <!-- Auto-populated Region Details Box -->
-                    <div id="reg-details-box" class="hidden bg-orange-50/70 border border-orange-200 rounded-2xl p-3.5 text-xs space-y-2">
-                        <div class="flex justify-between items-center">
+                    <div id="reg-details-box" class="hidden bg-orange-50/70 border border-orange-200 rounded-2xl p-3 sm:p-3.5 text-xs space-y-2">
+                        <div class="flex justify-between items-center gap-2 flex-wrap">
                             <span class="text-slate-500 font-semibold">Regional Head:</span>
                             <span id="disp-reg-head" class="font-bold text-slate-900">-</span>
                         </div>
-                        <div class="flex justify-between items-center border-t border-orange-200/60 pt-1.5">
+                        <div class="flex justify-between items-center gap-2 flex-wrap border-t border-orange-200/60 pt-1.5">
                             <span class="text-blue-700 font-bold">🟦 Exium MUPS Achievers:</span>
                             <span id="disp-reg-exium" class="font-black text-blue-800 bg-blue-50 px-2 py-0.5 rounded border border-blue-200">-</span>
                         </div>
-                        <div class="flex justify-between items-center">
+                        <div class="flex justify-between items-center gap-2 flex-wrap">
                             <span class="text-purple-700 font-bold">🟪 Coralcal-D/DX/Vita Achievers:</span>
                             <span id="disp-reg-coral" class="font-black text-purple-800 bg-purple-50 px-2 py-0.5 rounded border border-purple-200">-</span>
                         </div>
@@ -457,13 +462,13 @@ def build_portal():
                 </form>
 
                 <!-- Tab 2: MIO Quick Check Form -->
-                <div id="form-mio-search" class="hidden p-5 sm:p-7 space-y-4">
+                <div id="form-mio-search" class="hidden p-4 sm:p-7 space-y-4">
                     <div class="bg-blue-50 border border-blue-200 rounded-2xl p-3.5 text-xs text-blue-900">
                         Enter your <strong>SAP MIO Code</strong>, <strong>Territory Code</strong>, or <strong>Name</strong> to check your <strong>Exium MUPS Award</strong> and <strong>Coralcal-D/DX/Vita Award</strong> status & selected gift vouchers.
                     </div>
                     <div class="flex gap-2">
-                        <input type="text" id="mio-quick-query" onkeydown="if(event.key==='Enter') searchMioDirect(event)" placeholder="e.g. 52126 or DHK11 or Name..." class="flex-1 bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 outline-none">
-                        <button type="button" onclick="searchMioDirect(event)" class="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs sm:text-sm transition">
+                        <input type="text" id="mio-quick-query" onkeydown="if(event.key==='Enter') searchMioDirect(event)" placeholder="e.g. 52126 or DHK11 or Name..." class="flex-1 min-w-0 bg-slate-50 border border-slate-300 rounded-xl px-3 sm:px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 outline-none">
+                        <button type="button" onclick="searchMioDirect(event)" class="px-4 sm:px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs sm:text-sm transition flex-shrink-0">
                             Search
                         </button>
                     </div>
@@ -476,35 +481,35 @@ def build_portal():
         <!-- ============================================== -->
         <!-- VIEW 2: REGIONAL HEAD SELECTION PORTAL         -->
         <!-- ============================================== -->
-        <section id="regional-view" class="hidden space-y-4 pb-24">
+        <section id="regional-view" class="hidden space-y-3.5 sm:space-y-4 pb-28 sm:pb-24">
 
             <!-- Region Info & Progress Card -->
-            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200">
-                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3.5 pb-3.5 border-b border-slate-100">
-                    <div>
+            <div class="bg-white rounded-2xl p-3.5 sm:p-5 shadow-xs border border-slate-200">
+                <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 pb-3.5 border-b border-slate-100">
+                    <div class="min-w-0">
                         <div class="flex flex-wrap items-center gap-1.5 mb-1">
                             <span id="regview-zone" class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-orange-100 text-orange-800 border border-orange-200 uppercase tracking-wider">Zone</span>
                             <span id="regview-sap" class="px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold bg-slate-100 text-slate-700 border border-slate-200">SAP: -</span>
                         </div>
-                        <h2 id="regview-name" class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">Region Name</h2>
-                        <div class="flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-slate-600 mt-0.5">
+                        <h2 id="regview-name" class="text-base sm:text-xl font-black text-slate-900 tracking-tight truncate">Region Name</h2>
+                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-xs text-slate-600 mt-0.5">
                             <span id="regview-rh">Regional Head: <strong class="text-slate-900 font-bold">-</strong></span>
-                            <span class="text-slate-300">•</span>
+                            <span class="text-slate-300 hidden sm:inline">•</span>
                             <span id="regview-zh">Zonal Head: <strong class="text-orange-700 font-bold">-</strong></span>
                         </div>
                     </div>
 
-                    <!-- Separate Brand Progress + Overall Progress -->
-                    <div class="flex flex-wrap items-center gap-2">
-                        <div class="bg-blue-600 text-white rounded-xl px-3 py-2 border border-blue-500 min-w-[140px] shadow-2xs">
-                            <div class="text-[10px] font-extrabold uppercase tracking-wide text-blue-100">🟦 Exium MUPS Award</div>
+                    <!-- Separate Brand Progress + Overall Progress (Mobile Grid -> Desktop Flex) -->
+                    <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-stretch sm:items-center gap-2 w-full lg:w-auto">
+                        <div class="bg-blue-600 text-white rounded-xl px-2.5 sm:px-3 py-2 border border-blue-500 sm:min-w-[140px] shadow-2xs">
+                            <div class="text-[10px] font-extrabold uppercase tracking-wide text-blue-100 truncate">🟦 Exium MUPS Award</div>
                             <div id="regview-exium-stat" class="text-xs sm:text-sm font-black text-white mt-0.5">0 / 0 Done</div>
                         </div>
-                        <div class="bg-purple-700 text-white rounded-xl px-3 py-2 border border-purple-600 min-w-[150px] shadow-2xs">
-                            <div class="text-[10px] font-extrabold uppercase tracking-wide text-purple-100">🟪 Coralcal-D/DX/Vita</div>
+                        <div class="bg-purple-700 text-white rounded-xl px-2.5 sm:px-3 py-2 border border-purple-600 sm:min-w-[150px] shadow-2xs">
+                            <div class="text-[10px] font-extrabold uppercase tracking-wide text-purple-100 truncate">🟪 Coralcal-D/DX/Vita</div>
                             <div id="regview-coral-stat" class="text-xs sm:text-sm font-black text-white mt-0.5">0 / 0 Done</div>
                         </div>
-                        <div class="bg-slate-50 rounded-xl px-3 py-2 border border-slate-200 min-w-[190px]">
+                        <div class="col-span-2 sm:col-span-1 bg-slate-50 rounded-xl px-3 py-2 border border-slate-200 sm:min-w-[190px]">
                             <div class="flex justify-between items-center text-[11px] mb-1">
                                 <span class="font-bold text-slate-600">Overall Progress</span>
                                 <span id="regview-progress-pct" class="font-black text-emerald-600">0%</span>
@@ -513,7 +518,7 @@ def build_portal():
                                 <div id="regview-progress-bar" class="bg-emerald-500 h-1.5 rounded-full transition-all duration-300" style="width: 0%"></div>
                             </div>
                             <div class="flex justify-between items-center text-[10px] font-semibold text-slate-500 mt-1">
-                                <span id="regview-progress-count">0 of 0 Completed</span>
+                                <span id="regview-progress-count" class="truncate">0 of 0 Completed</span>
                             </div>
                         </div>
                     </div>
@@ -521,31 +526,33 @@ def build_portal():
 
                 <!-- Separate Brand Filter Tabs + Search + Separate Brand Excel Exports -->
                 <div class="pt-3 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
-                    <!-- Brand Filter Buttons (Separate Exium / Coralcal View in Region) -->
-                    <div class="flex items-center gap-1.5 flex-wrap">
-                        <button type="button" id="reg-brand-tab-all" onclick="setRegionalBrandFilter('all')" class="px-3 py-1.5 rounded-xl text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition">
+                    <!-- Brand Filter Buttons (Separate Exium MUPS / Coralcal View in Region) -->
+                    <div class="flex items-center gap-1.5 flex-wrap w-full md:w-auto">
+                        <button type="button" id="reg-brand-tab-all" onclick="setRegionalBrandFilter('all')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition">
                             All Brands
                         </button>
-                        <button type="button" id="reg-brand-tab-exium" onclick="setRegionalBrandFilter('exium')" class="px-3 py-1.5 rounded-xl text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition">
+                        <button type="button" id="reg-brand-tab-exium" onclick="setRegionalBrandFilter('exium')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition">
                             🟦 Exium MUPS Award
                         </button>
-                        <button type="button" id="reg-brand-tab-coral" onclick="setRegionalBrandFilter('coral')" class="px-3 py-1.5 rounded-xl text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition">
+                        <button type="button" id="reg-brand-tab-coral" onclick="setRegionalBrandFilter('coral')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition">
                             🟪 Coralcal-D/DX/Vita Award
                         </button>
                     </div>
 
                     <!-- Search & Separate Brand Exports -->
-                    <div class="flex flex-wrap items-center gap-2 flex-1 max-w-2xl justify-end">
-                        <div class="relative flex-1 min-w-[200px]">
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 flex-1 max-w-2xl justify-end w-full">
+                        <div class="relative flex-1 min-w-0">
                             <svg class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                             <input type="text" id="reg-mio-filter-input" oninput="renderAchievers()" placeholder="Filter by MIO Name, SAP ID, or Territory Code..." class="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 outline-none">
                         </div>
-                        <button onclick="exportBrandExcel('region', 'exium')" class="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Exium MUPS Data for this Region">
-                            <span>📥 Exium MUPS (.xlsx)</span>
-                        </button>
-                        <button onclick="exportBrandExcel('region', 'coral')" class="px-2.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Coralcal-D/DX/Vita Data for this Region">
-                            <span>📥 Coralcal (.xlsx)</span>
-                        </button>
+                        <div class="grid grid-cols-2 sm:flex items-center gap-1.5">
+                            <button onclick="exportBrandExcel('region', 'exium')" class="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center justify-center gap-1 whitespace-nowrap" title="Download Only Exium MUPS Data for this Region">
+                                <span>📥 Exium MUPS (.xlsx)</span>
+                            </button>
+                            <button onclick="exportBrandExcel('region', 'coral')" class="px-2.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center justify-center gap-1 whitespace-nowrap" title="Download Only Coralcal-D/DX/Vita Data for this Region">
+                                <span>📥 Coralcal (.xlsx)</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -574,7 +581,7 @@ def build_portal():
         <!-- ============================================== -->
         <section id="zonal-view" class="hidden space-y-5">
 
-            <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <div class="flex items-center gap-2 mb-1">
                         <span class="bg-orange-500 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full">Zonal Dashboard</span>
@@ -656,7 +663,7 @@ def build_portal():
 
             <!-- Regions Breakdown Table -->
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
-                <div class="p-3.5 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
+                <div class="p-3.5 bg-slate-50 border-b border-slate-200 flex justify-between items-center flex-wrap gap-1">
                     <h3 class="font-black text-xs uppercase tracking-wider text-slate-800">Regions in this Zone (Separate Exium MUPS & Coralcal Breakdown)</h3>
                     <span class="text-[11px] text-slate-500">Click "Manage / Recommend →" to select vouchers or cancel awards</span>
                 </div>
@@ -689,28 +696,28 @@ def build_portal():
 
     </main>
 
-    <!-- Bottom Sticky Action Bar (For Regional View) -->
-    <div id="sticky-bar" class="hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-xl py-2.5 sm:py-3 z-30">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-4">
-            <div class="flex items-center space-x-2.5">
-                <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-                <div class="text-xs">
+    <!-- Bottom Sticky Action Bar (For Regional View - Mobile Responsive) -->
+    <div id="sticky-bar" class="hidden fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-md border-t border-slate-200 shadow-xl py-2 sm:py-3 z-30">
+        <div class="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8 flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4">
+            <div class="flex items-center space-x-2 min-w-0">
+                <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500 animate-pulse flex-shrink-0"></div>
+                <div class="text-[11px] sm:text-xs truncate">
                     <span class="font-black text-slate-900" id="sticky-completed-text">0 Completed</span>
                     <span class="text-slate-400 mx-1">•</span>
                     <span class="text-slate-500 font-medium" id="sticky-region-text">Region</span>
                 </div>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1.5 sm:gap-2 w-full sm:w-auto">
                 <button onclick="exportBrandExcel('region', 'exium')" class="hidden sm:flex px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-300 rounded-xl text-xs font-bold transition items-center gap-1 shadow-xs">
                     <span>📥 Exium MUPS Excel</span>
                 </button>
                 <button onclick="exportBrandExcel('region', 'coral')" class="hidden sm:flex px-3 py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-300 rounded-xl text-xs font-bold transition items-center gap-1 shadow-xs">
                     <span>📥 Coralcal Excel</span>
                 </button>
-                <button onclick="exitToLogin()" class="px-3 py-1.5 border border-slate-300 text-slate-700 hover:bg-slate-100 rounded-xl text-xs font-bold transition">
+                <button onclick="exitToLogin()" class="flex-1 sm:flex-initial justify-center px-3 py-1.5 border border-slate-300 text-slate-700 hover:bg-slate-100 rounded-xl text-xs font-bold transition flex items-center">
                     Back to Login
                 </button>
-                <button onclick="manualSaveSync()" id="btn-save-sync" class="px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5">
+                <button onclick="manualSaveSync()" id="btn-save-sync" class="flex-1 sm:flex-initial justify-center px-4 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-xl text-xs font-bold shadow transition flex items-center gap-1.5">
                     <svg class="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/></svg>
                     <span>Save</span>
                 </button>
@@ -1694,14 +1701,14 @@ def build_portal():
             const btnCo = document.getElementById('reg-brand-tab-coral');
 
             btnAll.className = mode === 'all'
-                ? 'px-3 py-1.5 rounded-xl text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition'
-                : 'px-3 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition';
+                ? 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition'
+                : 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition';
             btnEx.className = mode === 'exium'
-                ? 'px-3 py-1.5 rounded-xl text-xs font-extrabold bg-blue-600 text-white shadow-sm ring-2 ring-blue-200 transition'
-                : 'px-3 py-1.5 rounded-xl text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition';
+                ? 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-blue-600 text-white shadow-sm ring-2 ring-blue-200 transition'
+                : 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition';
             btnCo.className = mode === 'coral'
-                ? 'px-3 py-1.5 rounded-xl text-xs font-extrabold bg-purple-700 text-white shadow-sm ring-2 ring-purple-200 transition'
-                : 'px-3 py-1.5 rounded-xl text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition';
+                ? 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-purple-700 text-white shadow-sm ring-2 ring-purple-200 transition'
+                : 'px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition';
 
             renderAchievers();
         }}
@@ -1835,8 +1842,8 @@ def build_portal():
             let selectionStatusHtml = '';
             if (isCancelled) {{
                 selectionStatusHtml = `
-                    <div class="flex items-center gap-1.5 flex-wrap">
-                        <span class="text-xs font-extrabold text-rose-800 bg-rose-100 border border-rose-300 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+                    <div class="flex items-center gap-1.5 flex-wrap w-full sm:w-auto">
+                        <span class="text-[11px] sm:text-xs font-extrabold text-rose-800 bg-rose-100 border border-rose-300 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-2xs">
                             <span>🚫</span>
                             <span>Cancelled by ${{choiceObj.cancelled_by || 'RH/ZH'}}</span>
                         </span>
@@ -1849,11 +1856,11 @@ def build_portal():
                 `;
             }} else if (isCompleted) {{
                 selectionStatusHtml = `
-                    <div class="flex items-center gap-1.5 flex-wrap sm:flex-nowrap">
-                        <span class="text-xs font-extrabold text-emerald-800 bg-emerald-100/90 border border-emerald-300 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-2xs">
+                    <div class="flex items-center gap-1.5 flex-wrap w-full sm:w-auto">
+                        <span class="text-[11px] sm:text-xs font-extrabold text-emerald-800 bg-emerald-100/90 border border-emerald-300 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-2xs max-w-full">
                             <span>✓</span>
-                            <span>Selected: <strong>${{chosenVoucher}}</strong></span>
-                            ${{tsFormatted ? `<span class="text-[10px] font-medium text-emerald-700 font-mono ml-0.5">(${{tsFormatted}})</span>` : ''}}
+                            <span class="truncate">Selected: <strong>${{chosenVoucher}}</strong></span>
+                            ${{tsFormatted ? `<span class="text-[10px] font-medium text-emerald-700 font-mono ml-0.5 hidden sm:inline">(${{tsFormatted}})</span>` : ''}}
                         </span>
                         ${{!isSubmissionsLocked ? `
                             <button onclick="removeVoucher('${{ach.id}}')" title="Remove / Clear this voucher choice" class="text-[11px] font-bold text-rose-700 hover:text-white bg-rose-50 hover:bg-rose-600 border border-rose-200 hover:border-rose-600 px-2 py-1 rounded-lg transition flex items-center gap-1 shadow-2xs">
@@ -1867,8 +1874,8 @@ def build_portal():
                 `;
             }} else {{
                 selectionStatusHtml = `
-                    <div class="flex items-center gap-1.5 flex-wrap">
-                        <span class="text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-lg flex items-center gap-1">
+                    <div class="flex items-center gap-1.5 flex-wrap w-full sm:w-auto">
+                        <span class="text-[11px] sm:text-xs font-bold text-amber-800 bg-amber-50 border border-amber-200 px-2.5 py-1 rounded-lg flex items-center gap-1">
                             <span>⏳</span>
                             <span>Selection Pending</span>
                         </span>
@@ -1901,14 +1908,14 @@ def build_portal():
             const brandDisplayTitle = isExium ? 'Exium MUPS' : 'Coralcal-D/DX/Vita';
 
             const metricsHtml = `
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 bg-white p-2.5 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-2.5 bg-white p-2 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
                     <!-- 1. Seen Rx -->
-                    <div class="rounded-lg border border-emerald-200 bg-emerald-50/50 p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1.5">
-                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight">1. Seen Rx (Sep'26)</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300">✓ &ge;200 Rx</span>
+                    <div class="min-w-0 overflow-hidden rounded-lg border border-emerald-200 bg-emerald-50/50 p-2 sm:p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap">1. Seen Rx (Sep'26)</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300 whitespace-nowrap">✓ &ge;200 Rx</span>
                         </div>
-                        <div class="mt-1.5 flex items-baseline gap-1.5">
+                        <div class="mt-1 sm:mt-1.5 flex items-baseline gap-1.5 flex-wrap">
                             <span class="text-sm sm:text-base font-black text-emerald-700">${{Number(ach.rx || 0).toLocaleString()}} Seen Rx</span>
                             <span class="text-[11px] font-bold text-slate-600">(Req: 200 Rx)</span>
                         </div>
@@ -1918,34 +1925,34 @@ def build_portal():
                     </div>
 
                     <!-- 2. Territory Sales Growth -->
-                    <div class="rounded-lg border ${{ach.terr_pos ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1.5">
-                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight">2. Territory Sales Growth</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${{ach.terr_pos ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                    <div class="min-w-0 overflow-hidden rounded-lg border ${{ach.terr_pos ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2 sm:p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap truncate">2. Territory Sales Growth</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{ach.terr_pos ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
                                 ${{ach.terr_pos ? '✓ Positive' : '✗ Negative'}}
                             </span>
                         </div>
-                        <div class="mt-1.5">
+                        <div class="mt-1 sm:mt-1.5">
                             <span class="text-sm sm:text-base font-black ${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">
                                 ${{ach.terr_pos ? '✓' : '✗'}} Growth: ${{terrSign}}${{terrGrowthVal.toLocaleString()}} <span class="text-[11px] font-bold text-slate-600">(Val)</span>
                             </span>
                         </div>
                         <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border border-slate-200 flex items-center justify-between gap-1 flex-wrap">
-                            <span>Aug'26 Val: <strong class="text-slate-900 font-mono">${{terrAugVal.toLocaleString()}}</strong></span>
+                            <span>Aug'26: <strong class="text-slate-900 font-mono">${{terrAugVal.toLocaleString()}}</strong></span>
                             <span class="text-slate-400">➔</span>
-                            <span>Sep'26 Val: <strong class="text-slate-900 font-mono">${{terrSepVal.toLocaleString()}}</strong></span>
+                            <span>Sep'26: <strong class="text-slate-900 font-mono">${{terrSepVal.toLocaleString()}}</strong></span>
                         </div>
                     </div>
 
                     <!-- 3. Brand Growth (Exium MUPS / Coralcal-D/DX/Vita) -->
-                    <div class="rounded-lg border ${{isExium ? 'border-blue-200 bg-blue-50/50' : 'border-purple-200 bg-purple-50/50'}} p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1.5">
-                            <span class="${{isExium ? 'text-blue-950' : 'text-purple-950'}} font-black uppercase text-[11px] sm:text-xs tracking-tight">3. ${{brandDisplayTitle}} Growth</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${{ach.brand_growth_ok ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}}">
+                    <div class="min-w-0 overflow-hidden rounded-lg border ${{isExium ? 'border-blue-200 bg-blue-50/50' : 'border-purple-200 bg-purple-50/50'}} p-2 sm:p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1">
+                            <span class="${{isExium ? 'text-blue-950' : 'text-purple-950'}} font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap truncate">3. ${{brandDisplayTitle}} Growth</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{ach.brand_growth_ok ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}}">
                                 Req: +${{reqBox}} Boxes
                             </span>
                         </div>
-                        <div class="mt-1.5 flex items-baseline justify-between gap-1 flex-wrap">
+                        <div class="mt-1 sm:mt-1.5 flex items-baseline justify-between gap-1 flex-wrap">
                             <span class="text-sm sm:text-base font-black ${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">
                                 ${{ach.brand_growth_ok ? '✓' : '✗'}} ${{boxSign}}${{boxGrowth.toLocaleString()}} Boxes
                             </span>
@@ -1954,12 +1961,12 @@ def build_portal():
                             </span>
                         </div>
                         <div class="mt-1 space-y-0.5 text-[11px] font-bold text-slate-700 bg-white/95 px-2 py-1 rounded border ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}}">
-                            <div class="flex items-center justify-between gap-1">
+                            <div class="flex items-center justify-between gap-1 flex-wrap">
                                 <span>Qty: Aug <strong class="text-slate-900 font-mono">${{brandAugBox.toLocaleString()}}</strong> Box</span>
                                 <span class="text-slate-400">➔</span>
                                 <span>Sep <strong class="text-slate-900 font-mono">${{brandSepBox.toLocaleString()}}</strong> Box</span>
                             </div>
-                            <div class="flex items-center justify-between gap-1 text-[10px] text-slate-600 border-t border-slate-100 pt-0.5">
+                            <div class="flex items-center justify-between gap-1 flex-wrap text-[10px] text-slate-600 border-t border-slate-100 pt-0.5">
                                 <span>Val: Aug <strong class="text-slate-800 font-mono">${{brandAugVal.toLocaleString()}}</strong></span>
                                 <span class="text-slate-400">➔</span>
                                 <span>Sep <strong class="text-slate-800 font-mono">${{brandSepVal.toLocaleString()}}</strong></span>
@@ -1971,25 +1978,25 @@ def build_portal():
 
             if (isCancelled) {{
                 return `
-                    <div class="rounded-xl border-2 ${{themeBorder}} p-3 sm:p-3.5 space-y-2.5">
+                    <div class="rounded-xl border-2 ${{themeBorder}} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-rose-200/80 pb-2">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <span class="px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} opacity-75">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                                <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} opacity-75 whitespace-nowrap">
                                     ${{brandIcon}} ${{brandTitle}}
                                 </span>
-                                <span class="px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black border bg-rose-100 text-rose-900 border-rose-300 line-through">
+                                <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black border bg-rose-100 text-rose-900 border-rose-300 line-through whitespace-nowrap">
                                     🏆 Award: ${{Number(ach.award).toLocaleString()}}
                                 </span>
-                                <span class="text-[11px] font-black text-rose-700 uppercase bg-rose-100 px-2 py-0.5 rounded border border-rose-200">AWARD CANCELLED</span>
+                                <span class="text-[10px] sm:text-[11px] font-black text-rose-700 uppercase bg-rose-100 px-2 py-0.5 rounded border border-rose-200 whitespace-nowrap">AWARD CANCELLED</span>
                             </div>
                             ${{selectionStatusHtml}}
                         </div>
                         ${{metricsHtml}}
                         <div class="bg-rose-100/80 border border-rose-300 rounded-xl p-2.5 text-xs text-rose-950 flex items-start gap-2">
                             <span class="text-sm">📝</span>
-                            <div>
+                            <div class="min-w-0">
                                 <div class="font-black">Cancellation Reason (${{choiceObj.cancelled_by || 'Regional/Zonal Head'}}):</div>
-                                <div class="text-rose-900 font-semibold mt-0.5">"${{choiceObj.cancel_reason || 'Not Recommended'}}"</div>
+                                <div class="text-rose-900 font-semibold mt-0.5 break-words">"${{choiceObj.cancel_reason || 'Not Recommended'}}"</div>
                                 ${{tsFormatted ? `<div class="text-[10px] text-rose-700 font-mono mt-0.5">Recorded: ${{tsFormatted}}</div>` : ''}}
                             </div>
                         </div>
@@ -2003,11 +2010,11 @@ def build_portal():
                 return `
                     <div onclick="selectVoucher('${{ach.id}}', '${{b.name}}')" 
                          title="${{clickTooltip}}"
-                         class="brand-card ${{isSubmissionsLocked ? 'cursor-not-allowed opacity-90' : 'cursor-pointer'}} rounded-xl border-2 p-2 sm:p-2.5 flex flex-col justify-between relative transition-all ${{
+                         class="brand-card min-w-0 overflow-hidden ${{isSubmissionsLocked ? 'cursor-not-allowed opacity-90' : 'cursor-pointer'}} rounded-xl border-2 p-2 sm:p-2.5 flex flex-col justify-between relative transition-all ${{
                              isSelected ? 'selected ring-2 ring-emerald-500 ring-offset-1 bg-white shadow-xs' : 'border-slate-200 hover:border-slate-300 bg-white'
                          }}">
-                        <div class="flex items-center justify-between mb-1.5">
-                            <div class="h-7 sm:h-8 w-20 sm:w-24 flex items-center">
+                        <div class="flex items-center justify-between mb-1.5 gap-1">
+                            <div class="h-7 sm:h-8 w-20 sm:w-24 flex items-center min-w-0">
                                 <img src="${{b.logo}}" alt="${{b.name}}" class="max-h-7 sm:max-h-8 max-w-full object-contain">
                             </div>
                             <div class="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${{
@@ -2016,7 +2023,7 @@ def build_portal():
                                 ${{isSelected ? '<svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>' : ''}}
                             </div>
                         </div>
-                        <div>
+                        <div class="min-w-0">
                             <div class="text-xs font-extrabold text-slate-900 tracking-tight leading-tight truncate">${{b.name.replace(' Gift Voucher', '')}}</div>
                             <div class="text-[10px] text-slate-500 font-medium truncate mt-0.5">${{b.subtitle}}</div>
                         </div>
@@ -2031,16 +2038,17 @@ def build_portal():
             }}).join('');
 
             return `
-                <div class="rounded-xl border-2 ${{themeBorder}} p-3 sm:p-3.5 space-y-2.5">
+                <div class="rounded-xl border-2 ${{themeBorder}} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
+                    <!-- Brand Heading on 1st Line, Selection/Cancel Options Below on Mobile -->
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}} pb-2">
-                        <div class="flex items-center gap-2 flex-wrap">
-                            <span class="px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}}">
+                        <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
+                            <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} whitespace-nowrap">
                                 ${{brandIcon}} ${{brandTitle}}
                             </span>
-                            <span class="px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black ${{badgeValue}}">
+                            <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black ${{badgeValue}} whitespace-nowrap">
                                 🏆 Award: ${{Number(ach.award).toLocaleString()}}
                             </span>
-                            <span class="text-[11px] text-slate-600 font-semibold">
+                            <span class="text-[11px] text-slate-600 font-semibold truncate">
                                 (${{ach.tier}})
                             </span>
                         </div>
@@ -2103,7 +2111,7 @@ def build_portal():
 
                 const card = document.createElement('div');
                 card.id = `mio-card-${{mio.key}}`;
-                card.className = `bg-white rounded-2xl shadow-xs border transition-all p-3.5 sm:p-4 space-y-3 ${{
+                card.className = `bg-white rounded-2xl shadow-xs border transition-all p-2.5 sm:p-4 space-y-3 overflow-hidden ${{
                     status.isComplete 
                         ? 'border-emerald-400 ring-1 ring-emerald-400/20 bg-emerald-50/5' 
                         : (status.completedBrands > 0 ? 'border-amber-300 ring-1 ring-amber-300/20' : 'border-slate-200')
@@ -2112,21 +2120,21 @@ def build_portal():
                 let statusBadgeHtml = '';
                 if (status.isComplete) {{
                     statusBadgeHtml = `
-                        <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1 shadow-2xs">
+                        <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1 shadow-2xs whitespace-nowrap">
                             <span>✓</span>
                             <span>Complete (${{status.completedBrands}}/${{status.eligibleBrands}})</span>
                         </span>
                     `;
                 }} else if (status.completedBrands > 0) {{
                     statusBadgeHtml = `
-                        <span class="px-3 py-1 rounded-full text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1 shadow-2xs">
+                        <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-extrabold bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1 shadow-2xs whitespace-nowrap">
                             <span>⏳</span>
                             <span>${{status.completedBrands}}/${{status.eligibleBrands}} Complete</span>
                         </span>
                     `;
                 }} else {{
                     statusBadgeHtml = `
-                        <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-slate-700 border border-slate-300 flex items-center gap-1 shadow-2xs">
+                        <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-white/95 text-slate-700 border border-slate-300 flex items-center gap-1 shadow-2xs whitespace-nowrap">
                             <span>⚪</span>
                             <span>Pending (0/${{status.eligibleBrands}})</span>
                         </span>
@@ -2138,35 +2146,34 @@ def build_portal():
                 if (showExium) {{
                     const exCancelled = isAwardCancelled(mio.exium_award.id);
                     brandBadgesHtml += `
-                        <div class="px-2.5 py-1 rounded-lg bg-blue-600 text-white border border-blue-500 shadow-2xs flex items-center gap-1">
-                            <span class="text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
-                            <span class="text-xs font-black ${{exCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.exium_award.award).toLocaleString()}}</span>
+                        <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-blue-600 text-white border border-blue-500 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                            <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
+                            <span class="text-[11px] sm:text-xs font-black ${{exCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.exium_award.award).toLocaleString()}}</span>
                         </div>
                     `;
                 }}
                 if (showCoral) {{
                     const coCancelled = isAwardCancelled(mio.coral_award.id);
                     brandBadgesHtml += `
-                        <div class="px-2.5 py-1 rounded-lg bg-purple-700 text-white border border-purple-600 shadow-2xs flex items-center gap-1">
-                            <span class="text-[11px] font-extrabold uppercase">🟪 Coralcal:</span>
-                            <span class="text-xs font-black ${{coCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.coral_award.award).toLocaleString()}}</span>
+                        <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-purple-700 text-white border border-purple-600 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                            <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟪 Coralcal:</span>
+                            <span class="text-[11px] sm:text-xs font-black ${{coCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.coral_award.award).toLocaleString()}}</span>
                         </div>
                     `;
                 }}
 
                 let headerHtml = `
-                    <div class="rounded-xl border p-3 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 ${{theme.bg}} ${{theme.border}}">
-                        <div class="space-y-1">
-                            <div class="flex items-center gap-2 flex-wrap">
-                                <span class="bg-orange-500 text-white text-xs font-extrabold px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-2xs">
+                    <div class="rounded-xl border p-2.5 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${{theme.bg}} ${{theme.border}}">
+                        <div class="space-y-1 min-w-0">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                                <span class="bg-orange-500 text-white text-[11px] sm:text-xs font-extrabold px-2 sm:px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-2xs whitespace-nowrap">
                                     <span>📍</span>
                                     <span>${{mio.area_name}} (${{mio.area_code}})</span>
                                 </span>
-                                <span class="text-slate-400">•</span>
-                                <h3 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight">
+                                <h3 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight truncate max-w-full">
                                     ${{mio.mio_name}}
                                 </h3>
-                                <span class="bg-white text-blue-700 font-mono text-[11px] font-extrabold px-2 py-0.5 rounded border border-blue-200 shadow-2xs">
+                                <span class="bg-white text-blue-700 font-mono text-[11px] font-extrabold px-2 py-0.5 rounded border border-blue-200 shadow-2xs whitespace-nowrap">
                                     MIO: ${{mio.mio_code}}
                                 </span>
                             </div>
@@ -2176,7 +2183,7 @@ def build_portal():
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-1.5 flex-shrink-0 self-start sm:self-center flex-wrap">
+                        <div class="flex items-center gap-1.5 flex-shrink-0 self-start sm:self-center flex-wrap w-full sm:w-auto pt-1 sm:pt-0 border-t border-slate-200/50 sm:border-t-0">
                             ${{brandBadgesHtml}}
                             ${{statusBadgeHtml}}
                         </div>
