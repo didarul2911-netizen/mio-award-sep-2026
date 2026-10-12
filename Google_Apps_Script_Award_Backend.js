@@ -1,17 +1,3 @@
-/**
- * ============================================================================
- * EXIUM MUPS & CORALCAL-D/DX/VITA - SEPTEMBER 2026 AWARD PORTAL BACKEND
- * ============================================================================
- * Works automatically with:
- * - A brand new blank Google Sheet (automatically creates tabs & headers), OR
- * - An uploaded Master Excel Sheet ('Exium_Award_Choice_Master_Sep_2026.xlsx')
- *
- * Separate Tabs Maintained Automatically:
- * 1. 'Exium_Achievers_Sep_2026'    (Exium MUPS Award)
- * 2. 'Coralcal_Achievers_Sep_2026' (Coralcal-D/DX/Vita Award)
- * ============================================================================
- */
-
 const SHEET_EXIUM = "Exium_Achievers_Sep_2026";
 const SHEET_CORALCAL = "Coralcal_Achievers_Sep_2026";
 
@@ -30,7 +16,7 @@ const HEADERS = [
   "Sr. / MIO Name",
   "Designation",
   "Mobile Number",
-  "Seen Rx (Sep'26)",
+  "Seen Rx (Sep 26)",
   "Territory Sales Positive?",
   "Required Growth (Box Qty)",
   "Actual Growth (Box Qty)",
@@ -57,7 +43,8 @@ function normalizeToBDTimestamp(val) {
   }
   const str = String(val).trim();
   if (!str) return "";
-  if (/^\d{2}-[A-Za-z]{3}-\d{4}\s+\d{1,2}:\d{2}:\d{2}\s+(AM|PM)/i.test(str)) {
+  const upper = str.toUpperCase();
+  if ((upper.indexOf(" AM") !== -1 || upper.indexOf(" PM") !== -1) && str.indexOf("-") !== -1) {
     return str;
   }
   const parsed = new Date(str);
@@ -113,16 +100,16 @@ function getSheetColMap(sheet) {
     const h = String(headerRow[i] || "").trim().toLowerCase();
     const c = i + 1;
     if (h === "region name" || h === "region") map.colRegion = c;
-    else if (h.includes("area code")) map.colArea = c;
-    else if (h.includes("mio code") || h === "mio sap id") map.colMio = c;
+    else if (h.indexOf("area code") !== -1) map.colArea = c;
+    else if (h.indexOf("mio code") !== -1 || h === "mio sap id") map.colMio = c;
     else if (h === "calculated award" || h === "award amount") map.colAward = c;
     else if (h === "active payable award") map.colActiveAward = c;
-    else if (h.includes("voucher")) map.colVoucher = c;
+    else if (h.indexOf("voucher") !== -1) map.colVoucher = c;
     else if (h === "status" || h === "submission status") map.colStatus = c;
-    else if (h.includes("recommendation")) map.colRec = c;
+    else if (h.indexOf("recommendation") !== -1) map.colRec = c;
     else if (h === "cancelled by") map.colCancBy = c;
-    else if (h.includes("cancel reason") || h.includes("cancellation reason")) map.colReason = c;
-    else if (h.includes("timestamp")) map.colTimestamp = c;
+    else if (h.indexOf("cancel reason") !== -1 || h.indexOf("cancellation reason") !== -1) map.colReason = c;
+    else if (h.indexOf("timestamp") !== -1) map.colTimestamp = c;
   }
   return map;
 }
@@ -136,7 +123,7 @@ function doGet(e) {
     const exiumMap = {};
     const coralMap = {};
 
-    const readSheetIntoMap = (isExium, targetObj) => {
+    const readSheetIntoMap = function(isExium, targetObj) {
       const primaryName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
       const fallbackName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
       const sheet = ss.getSheetByName(primaryName) || ss.getSheetByName(fallbackName);
@@ -161,7 +148,7 @@ function doGet(e) {
         const isCancelled = (
           status === "Cancelled" ||
           voucher === "CANCELLED" ||
-          rec.toLowerCase().includes("not recommended")
+          rec.toLowerCase().indexOf("not recommended") !== -1
         );
 
         if (voucher || isCancelled || timestamp || status === "Pending") {
@@ -217,7 +204,7 @@ function doPost(e) {
     }
 
     if (payload.action === "delete_all_data") {
-      [true, false].forEach(isExium => {
+      [true, false].forEach(function(isExium) {
         const sheet = getOrCreateBrandSheet(ss, isExium);
         const lastRow = sheet.getLastRow();
         if (lastRow < 2) return;
@@ -237,7 +224,7 @@ function doPost(e) {
 
     if (payload.action === "delete_region_data" && payload.region) {
       const targetReg = String(payload.region).trim().toLowerCase();
-      [true, false].forEach(isExium => {
+      [true, false].forEach(function(isExium) {
         const sheet = getOrCreateBrandSheet(ss, isExium);
         const lastRow = sheet.getLastRow();
         if (lastRow < 2) return;
@@ -264,11 +251,11 @@ function doPost(e) {
     if (payload.action === "save_choices" && Array.isArray(payload.choices)) {
       let updatedCount = 0;
 
-      payload.choices.forEach(item => {
+      payload.choices.forEach(function(item) {
         const brandKey = String(item.brand || item.month || "");
         const isExium = (
-          brandKey.toLowerCase().includes("exium") ||
-          String(item.id || "").startsWith("EXIUM_")
+          brandKey.toLowerCase().indexOf("exium") !== -1 ||
+          String(item.id || "").indexOf("EXIUM_") === 0
         );
         const sheet = getOrCreateBrandSheet(ss, isExium);
         const lastRow = sheet.getLastRow();
