@@ -1,6 +1,7 @@
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
+from decimal import Decimal, ROUND_HALF_UP
 import os
 import sys
 import json
@@ -9,6 +10,15 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 SEP_DIR = r"G:\Exium\2026\Award\September"
 CALC_DIR = os.path.join(SEP_DIR, "Calculation")
+
+EXIUM_TP = 659.67
+CORALCAL_TP = 637.18
+REQ_GROWTH_BOX = 30
+
+def round_half_up(val):
+    if val is None:
+        return None
+    return int(Decimal(str(val)).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
 
 def load_all_september_data():
     # 1. Load FF list (G:\Exium\2026\Award\September\FF list.xlsx)
@@ -147,20 +157,26 @@ def load_all_september_data():
         tot_growth_val = sep_tot - aug_tot
         tot_sales_positive = (aug_tot > 0) and (sep_tot > aug_tot)
 
-        # Criterion 2(c): Brand Sales Value Growth (Sep'26 Actual >= Sep'26 Required from Value Growth file)
+        # Criterion 2(c): Brand Growth in Equivalent Box Quantity (Dividing Value Growth by TP, rounded half-up >= 30 Boxes)
         ex_aug_val = rpl_d['aug_exium']
         ex_sep_val = rpl_d['sep_exium'] or 0.0
         ex_req_val = vg_e['req_sales_vg']
-        ex_growth_met = (ex_req_val is not None) and (ex_sep_val >= ex_req_val)
+        ex_growth_val_raw = (ex_sep_val - ex_aug_val) if ex_aug_val is not None else None
+        ex_growth_box = round_half_up(ex_growth_val_raw / EXIUM_TP) if ex_growth_val_raw is not None else None
+        ex_req_box = REQ_GROWTH_BOX if ex_req_val is not None else None
+        ex_growth_met = (ex_req_val is not None) and (ex_growth_box is not None) and (ex_growth_box >= REQ_GROWTH_BOX)
 
         cc_aug_val = rpl_d['aug_coralcal']
         cc_sep_val = rpl_d['sep_coralcal'] or 0.0
         cc_req_val = vg_c['req_sales_vg']
-        cc_growth_met = (cc_req_val is not None) and (cc_sep_val >= cc_req_val)
+        cc_growth_val_raw = (cc_sep_val - cc_aug_val) if cc_aug_val is not None else None
+        cc_growth_box = round_half_up(cc_growth_val_raw / CORALCAL_TP) if cc_growth_val_raw is not None else None
+        cc_req_box = REQ_GROWTH_BOX if cc_req_val is not None else None
+        cc_growth_met = (cc_req_val is not None) and (cc_growth_box is not None) and (cc_growth_box >= REQ_GROWTH_BOX)
 
         # Final Award Determination per Brand:
-        # - If all 3 met (Rx >= 200 AND Total Sales Positive AND Brand Growth Met) -> 3000 Tk
-        # - Else if Rx >= 200 -> 1000 Tk
+        # - If all 3 met (Rx >= 200 AND Total Sales Positive AND Brand Growth >= 30 Boxes) -> 3000
+        # - Else if Rx >= 200 -> 1000
         # - Else -> 0 (No Award)
         ex_all3 = (ex_c1_rx and tot_sales_positive and ex_growth_met)
         ex_award = 3000 if ex_all3 else (1000 if ex_c1_rx else 0)
@@ -186,6 +202,8 @@ def load_all_september_data():
             'ex_req': int(round(ex_req_val)) if ex_req_val is not None else None,
             'ex_sep': round(ex_sep_val, 2),
             'ex_growth_val': round(ex_sep_val - ex_aug_val, 2) if ex_aug_val is not None else None,
+            'ex_req_box': ex_req_box,
+            'ex_growth_box': ex_growth_box,
             'ex_growth_met': ex_growth_met,
             'ex_all3': ex_all3,
             'ex_award': ex_award,
@@ -195,6 +213,8 @@ def load_all_september_data():
             'cc_req': int(round(cc_req_val)) if cc_req_val is not None else None,
             'cc_sep': round(cc_sep_val, 2),
             'cc_growth_val': round(cc_sep_val - cc_aug_val, 2) if cc_aug_val is not None else None,
+            'cc_req_box': cc_req_box,
+            'cc_growth_box': cc_growth_box,
             'cc_growth_met': cc_growth_met,
             'cc_all3': cc_all3,
             'cc_award': cc_award,
