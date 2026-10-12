@@ -162,7 +162,9 @@ def load_all_september_data():
         ex_sep_val = rpl_d['sep_exium'] or 0.0
         ex_req_val = vg_e['req_sales_vg']
         ex_growth_val_raw = (ex_sep_val - ex_aug_val) if ex_aug_val is not None else None
+        ex_aug_box = round_half_up(ex_aug_val / EXIUM_TP) if ex_aug_val is not None else None
         ex_growth_box = round_half_up(ex_growth_val_raw / EXIUM_TP) if ex_growth_val_raw is not None else None
+        ex_sep_box = (ex_aug_box + ex_growth_box) if (ex_aug_box is not None and ex_growth_box is not None) else round_half_up(ex_sep_val / EXIUM_TP)
         ex_req_box = REQ_GROWTH_BOX if ex_req_val is not None else None
         ex_growth_met = (ex_req_val is not None) and (ex_growth_box is not None) and (ex_growth_box >= REQ_GROWTH_BOX)
 
@@ -170,7 +172,9 @@ def load_all_september_data():
         cc_sep_val = rpl_d['sep_coralcal'] or 0.0
         cc_req_val = vg_c['req_sales_vg']
         cc_growth_val_raw = (cc_sep_val - cc_aug_val) if cc_aug_val is not None else None
+        cc_aug_box = round_half_up(cc_aug_val / CORALCAL_TP) if cc_aug_val is not None else None
         cc_growth_box = round_half_up(cc_growth_val_raw / CORALCAL_TP) if cc_growth_val_raw is not None else None
+        cc_sep_box = (cc_aug_box + cc_growth_box) if (cc_aug_box is not None and cc_growth_box is not None) else round_half_up(cc_sep_val / CORALCAL_TP)
         cc_req_box = REQ_GROWTH_BOX if cc_req_val is not None else None
         cc_growth_met = (cc_req_val is not None) and (cc_growth_box is not None) and (cc_growth_box >= REQ_GROWTH_BOX)
 
@@ -202,6 +206,8 @@ def load_all_september_data():
             'ex_req': int(round(ex_req_val)) if ex_req_val is not None else None,
             'ex_sep': round(ex_sep_val, 2),
             'ex_growth_val': round(ex_sep_val - ex_aug_val, 2) if ex_aug_val is not None else None,
+            'ex_aug_box': ex_aug_box,
+            'ex_sep_box': ex_sep_box,
             'ex_req_box': ex_req_box,
             'ex_growth_box': ex_growth_box,
             'ex_growth_met': ex_growth_met,
@@ -213,6 +219,8 @@ def load_all_september_data():
             'cc_req': int(round(cc_req_val)) if cc_req_val is not None else None,
             'cc_sep': round(cc_sep_val, 2),
             'cc_growth_val': round(cc_sep_val - cc_aug_val, 2) if cc_aug_val is not None else None,
+            'cc_aug_box': cc_aug_box,
+            'cc_sep_box': cc_sep_box,
             'cc_req_box': cc_req_box,
             'cc_growth_box': cc_growth_box,
             'cc_growth_met': cc_growth_met,

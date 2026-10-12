@@ -210,11 +210,13 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         "Region Name", "SAP Region Code", "Regional Head",
         "SAP Area Code (TTY)", "Territory (Area Name)", "SAP MIO Code", "MIO / Sr. MIO Name", "Designation",
         f"Sep'26 Seen Rx ({brand_title})", "Criteria 1: Seen Rx >= 200?",
-        "Aug'26 Total Territory Sales", "Sep'26 Total Territory Sales", "Total Territory Sales Diff",
-        "Criteria 2(b): Total Territory Sales Positive?",
-        f"Aug'26 {brand_title} Sales", f"Sep'26 {brand_title} Required Sales (30-Box Growth)",
-        f"Sep'26 {brand_title} Actual Sales", f"{brand_title} Value Growth (Sep - Aug)",
-        f"{brand_title} TP Price", f"Required Growth (Box Qty)", f"Actual Growth (Equivalent Box Qty)",
+        "Aug'26 Total Territory Sales", "Sep'26 Total Territory Sales", "Total Territory Sales Growth",
+        "Criteria 2(b): Territory Sales Growth Positive?",
+        f"Aug'26 {brand_title} Sales Value", f"Sep'26 {brand_title} Required Sales Value",
+        f"Sep'26 {brand_title} Actual Sales Value", f"{brand_title} Value Growth (Sep - Aug)",
+        f"{brand_title} TP Price",
+        f"Aug'26 {brand_title} Qty (Boxes)", f"Sep'26 {brand_title} Qty (Boxes)",
+        f"Required Growth (Box Qty)", f"Actual Growth (Equivalent Box Qty)",
         f"Criteria 2(c): {brand_title} Growth >= 30 Boxes?",
         "All 3 Criteria Met (for 3,000)?",
         f"Eligible {brand_title} Award Tier", f"Award Amount ({brand_title})",
@@ -242,6 +244,8 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         b_req = r[f"{prefix}_req"]
         b_sep = r[f"{prefix}_sep"]
         b_growth_val = r[f"{prefix}_growth_val"]
+        b_aug_box = r.get(f"{prefix}_aug_box")
+        b_sep_box = r.get(f"{prefix}_sep_box")
         b_req_box = r.get(f"{prefix}_req_box")
         b_growth_box = r.get(f"{prefix}_growth_box")
         c2c_ok = r[f"{prefix}_growth_met"]
@@ -261,6 +265,8 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             b_sep,
             b_growth_val if b_growth_val is not None else "N/A",
             tp_val,
+            b_aug_box if b_aug_box is not None else "N/A",
+            b_sep_box if b_sep_box is not None else "N/A",
             b_req_box if b_req_box is not None else "N/A",
             b_growth_box if b_growth_box is not None else "N/A",
             "Yes" if c2c_ok else ("N/A (New TTY)" if b_req is None else "No"),
@@ -274,7 +280,7 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             cell = ws_calc.cell(idx, c_i, v)
             cell.border = border_all
             cell.font = font_data
-            if c_i in (2, 4, 5, 7, 9, 11, 12, 28):
+            if c_i in (2, 4, 5, 7, 9, 11, 12, 30):
                 cell.alignment = align_l
             elif c_i in (15, 16, 17, 19, 20, 21, 22):
                 cell.alignment = align_r if isinstance(v, (int, float)) else align_c
@@ -285,10 +291,10 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
                 cell.number_format = "0.00"
             else:
                 cell.alignment = align_c
-                if c_i in (13, 24, 25, 29) and isinstance(v, (int, float)):
+                if c_i in (13, 24, 25, 26, 27, 31) and isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
 
-            if c_i in (28, 29):
+            if c_i in (30, 31):
                 if aw_amt == 3000:
                     cell.fill = fill_green
                     cell.font = font_green
@@ -301,7 +307,7 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
 
     calc_widths = [
         6, 18, 13, 24, 20, 14, 24, 14, 22, 13, 25, 24,
-        15, 15, 18, 18, 18, 18, 18, 22, 18, 18, 14, 16, 18, 18, 16,
+        15, 15, 18, 18, 18, 18, 18, 22, 18, 18, 14, 16, 16, 16, 18, 18, 16,
         24, 16, 18, 22, 18, 22, 22, 16, 22
     ]
     for c_i, w in enumerate(calc_widths, start=1):
@@ -319,8 +325,9 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         "SL", "Zone Name", "SAP Zone Code", "Zonal Head",
         "Region Name", "SAP Region Code", "Regional Head",
         "SAP Area Code", "Area Name", "SAP MIO Code", "MIO Name", "Designation",
-        "Seen Rx (Sep'26)", "Aug'26 Total Sales", "Sep'26 Total Sales", "Total Sales Positive?",
-        f"Aug'26 {brand_title} Sales", f"Sep'26 {brand_title} Required", f"Sep'26 {brand_title} Actual",
+        "Seen Rx (Sep'26)", "Aug'26 Total Sales", "Sep'26 Total Sales", "Territory Sales Growth", "Total Sales Positive?",
+        f"Aug'26 {brand_title} Sales", f"Sep'26 {brand_title} Required", f"Sep'26 {brand_title} Actual", f"{brand_title} Value Growth",
+        f"Aug'26 {brand_title} Qty (Boxes)", f"Sep'26 {brand_title} Qty (Boxes)",
         f"Required Growth (Boxes)", f"Actual Growth (Boxes)",
         f"{brand_title} Growth >= 30 Boxes?", "Award Tier", "Award Amount",
         "RH Recommendation", "RH Cancel Reason",
@@ -343,10 +350,13 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             idx - 1, r["zone_name"], r["sap_zone_code"], r["zm_name"],
             r["region_name"], r["sap_region_code"], r["rm_name"],
             r["tty"], r["area_name"], r["mio_code"], r["mio_name"], r["designation"],
-            r[f"{prefix}_rx"], r["aug_total"], r["sep_total"], "Yes" if r["tot_sales_positive"] else "No",
+            r[f"{prefix}_rx"], r["aug_total"], r["sep_total"], r["tot_growth_val"], "Yes" if r["tot_sales_positive"] else "No",
             r[f"{prefix}_aug"] if r[f"{prefix}_aug"] is not None else "New TTY",
             r[f"{prefix}_req"] if r[f"{prefix}_req"] is not None else "New TTY",
             r[f"{prefix}_sep"],
+            r[f"{prefix}_growth_val"] if r[f"{prefix}_growth_val"] is not None else "New TTY",
+            r.get(f"{prefix}_aug_box") if r.get(f"{prefix}_aug_box") is not None else "New TTY",
+            r.get(f"{prefix}_sep_box") if r.get(f"{prefix}_sep_box") is not None else "New TTY",
             r.get(f"{prefix}_req_box") if r.get(f"{prefix}_req_box") is not None else "New TTY",
             r.get(f"{prefix}_growth_box") if r.get(f"{prefix}_growth_box") is not None else "New TTY",
             "Yes" if r[f"{prefix}_growth_met"] else "No",
@@ -357,24 +367,24 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             cell = ws_ach.cell(idx, c_i, v)
             cell.border = border_all
             cell.font = font_data
-            if c_i in (2, 4, 5, 7, 9, 11, 12, 23):
+            if c_i in (2, 4, 5, 7, 9, 11, 12, 27):
                 cell.alignment = align_l
-            elif c_i in (14, 15, 17, 18, 19):
+            elif c_i in (14, 15, 16, 18, 19, 20, 21):
                 cell.alignment = align_r if isinstance(v, (int, float)) else align_c
                 if isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
             else:
                 cell.alignment = align_c
-                if c_i in (13, 20, 21, 24) and isinstance(v, (int, float)):
+                if c_i in (13, 22, 23, 24, 25, 28) and isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
 
-            if c_i in (23, 24):
+            if c_i in (27, 28):
                 cell.fill = fill_green if aw_amt == 3000 else fill_blue_soft
                 cell.font = font_green if aw_amt == 3000 else font_blue
 
     ach_widths = [
         6, 18, 13, 24, 20, 14, 24, 14, 22, 13, 25, 24,
-        15, 18, 18, 16, 18, 20, 18, 16, 16, 16, 24, 15, 18, 22, 18, 22, 22, 14, 22
+        15, 18, 18, 18, 16, 18, 20, 18, 18, 16, 16, 16, 16, 16, 24, 15, 18, 22, 18, 22, 22, 14, 22
     ]
     for c_i, w in enumerate(ach_widths, start=1):
         ws_ach.column_dimensions[get_column_letter(c_i)].width = w
@@ -390,8 +400,8 @@ def main():
     ex_calc_path = os.path.join(CALC_DIR, "Exium_Award_Calculation_Sep_2026.xlsx")
     cc_calc_path = os.path.join(CALC_DIR, "Coralcal_Award_Calculation_Sep_2026.xlsx")
 
-    build_single_brand_workbook(records, "Exium", "ex", "1E40AF", "DBEAFE", ex_calc_path)
-    build_single_brand_workbook(records, "Coralcal", "cc", "6D28D9", "EDE9FE", cc_calc_path)
+    build_single_brand_workbook(records, "Exium MUPS", "ex", "1E40AF", "DBEAFE", ex_calc_path)
+    build_single_brand_workbook(records, "Coralcal-D/DX/Vita", "cc", "6D28D9", "EDE9FE", cc_calc_path)
 
     for src, dst_name in [
         (ex_calc_path, "Exium_Award_Calculation_Sep_2026.xlsx"),

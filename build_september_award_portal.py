@@ -65,7 +65,9 @@ def build_portal():
         ex_req_growth = round(ex_req - ex_aug, 2) if r.get("ex_req") is not None else 0.0
         ex_actual_growth = round(ex_sep - ex_aug, 2)
         ex_req_box = REQ_GROWTH_BOX if r.get("ex_req") is not None else 0
+        ex_aug_box = round_half_up(ex_aug / EXIUM_TP) if r.get("ex_aug") is not None else 0
         ex_growth_box = round_half_up((ex_sep - ex_aug) / EXIUM_TP) if r.get("ex_aug") is not None else 0
+        ex_sep_box = (ex_aug_box + ex_growth_box) if r.get("ex_aug") is not None else round_half_up(ex_sep / EXIUM_TP)
 
         cc_aug = float(r.get("cc_aug") or 0.0)
         cc_req = float(r.get("cc_req") or 0.0)
@@ -73,7 +75,9 @@ def build_portal():
         cc_req_growth = round(cc_req - cc_aug, 2) if r.get("cc_req") is not None else 0.0
         cc_actual_growth = round(cc_sep - cc_aug, 2)
         cc_req_box = REQ_GROWTH_BOX if r.get("cc_req") is not None else 0
+        cc_aug_box = round_half_up(cc_aug / CORALCAL_TP) if r.get("cc_aug") is not None else 0
         cc_growth_box = round_half_up((cc_sep - cc_aug) / CORALCAL_TP) if r.get("cc_aug") is not None else 0
+        cc_sep_box = (cc_aug_box + cc_growth_box) if r.get("cc_aug") is not None else round_half_up(cc_sep / CORALCAL_TP)
 
         norm = {
             "zone_name": str(r.get("zone_name") or ""),
@@ -99,6 +103,8 @@ def build_portal():
             "exium_req_target": ex_req,
             "exium_sep_val": ex_sep,
             "exium_actual_growth": ex_actual_growth,
+            "exium_aug_box": ex_aug_box,
+            "exium_sep_box": ex_sep_box,
             "exium_req_box": ex_req_box,
             "exium_growth_box": ex_growth_box,
             "exium_growth_ok": bool(r.get("ex_growth_met")),
@@ -112,6 +118,8 @@ def build_portal():
             "coral_req_target": cc_req,
             "coral_sep_val": cc_sep,
             "coral_actual_growth": cc_actual_growth,
+            "coral_aug_box": cc_aug_box,
+            "coral_sep_box": cc_sep_box,
             "coral_req_box": cc_req_box,
             "coral_growth_box": cc_growth_box,
             "coral_growth_ok": bool(r.get("cc_growth_met")),
@@ -152,7 +160,7 @@ def build_portal():
             achievers_exium.append({
                 "id": f"EXIUM_{norm['area_code']}_{norm['mio_id']}",
                 "brand": "Exium_2026",
-                "brand_short": "Exium",
+                "brand_short": "Exium MUPS",
                 "brand_label": "Exium MUPS",
                 "brand_tp": EXIUM_TP,
                 "zone": norm["zone_name"],
@@ -178,6 +186,8 @@ def build_portal():
                 "brand_req_target": norm["exium_req_target"],
                 "brand_sep": norm["exium_sep_val"],
                 "brand_actual_growth": norm["exium_actual_growth"],
+                "brand_aug_box": norm["exium_aug_box"],
+                "brand_sep_box": norm["exium_sep_box"],
                 "brand_req_box": norm["exium_req_box"],
                 "brand_growth_box": norm["exium_growth_box"],
                 "brand_growth_ok": norm["exium_growth_ok"],
@@ -192,7 +202,7 @@ def build_portal():
             achievers_coral.append({
                 "id": f"CORAL_{norm['area_code']}_{norm['mio_id']}",
                 "brand": "Coralcal_2026",
-                "brand_short": "Coralcal",
+                "brand_short": "Coralcal-D/DX/Vita",
                 "brand_label": "Coralcal-D/DX/Vita",
                 "brand_tp": CORALCAL_TP,
                 "zone": norm["zone_name"],
@@ -218,6 +228,8 @@ def build_portal():
                 "brand_req_target": norm["coral_req_target"],
                 "brand_sep": norm["coral_sep_val"],
                 "brand_actual_growth": norm["coral_actual_growth"],
+                "brand_aug_box": norm["coral_aug_box"],
+                "brand_sep_box": norm["coral_sep_box"],
                 "brand_req_box": norm["coral_req_box"],
                 "brand_growth_box": norm["coral_growth_box"],
                 "brand_growth_ok": norm["coral_growth_ok"],
@@ -528,10 +540,10 @@ def build_portal():
                             <svg class="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                             <input type="text" id="reg-mio-filter-input" oninput="renderAchievers()" placeholder="Filter by MIO Name, SAP ID, or Territory Code..." class="w-full pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-300 rounded-xl text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-orange-500 outline-none">
                         </div>
-                        <button onclick="exportBrandExcel('region', 'exium')" class="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Exium Data for this Region">
-                            <span>📥 Exium (.xlsx)</span>
+                        <button onclick="exportBrandExcel('region', 'exium')" class="px-2.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Exium MUPS Data for this Region">
+                            <span>📥 Exium MUPS (.xlsx)</span>
                         </button>
-                        <button onclick="exportBrandExcel('region', 'coral')" class="px-2.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Coralcal Data for this Region">
+                        <button onclick="exportBrandExcel('region', 'coral')" class="px-2.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-[11px] font-bold transition shadow-2xs flex items-center gap-1" title="Download Only Coralcal-D/DX/Vita Data for this Region">
                             <span>📥 Coralcal (.xlsx)</span>
                         </button>
                     </div>
@@ -573,7 +585,7 @@ def build_portal():
                 </div>
                 <div class="flex flex-wrap items-center gap-2">
                     <button onclick="exportBrandExcel('zone', 'exium')" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition">
-                        <span>📥 Exium Zone (.xlsx)</span>
+                        <span>📥 Exium MUPS Zone (.xlsx)</span>
                     </button>
                     <button onclick="exportBrandExcel('zone', 'coral')" class="px-3 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-xs font-bold flex items-center gap-1 shadow-sm transition">
                         <span>📥 Coralcal Zone (.xlsx)</span>
@@ -587,9 +599,9 @@ def build_portal():
                 </div>
             </div>
 
-            <!-- Separate Exium & Coralcal Zonal Summary Cards -->
+            <!-- Separate Exium MUPS & Coralcal Zonal Summary Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-                <!-- Exium Zonal Card -->
+                <!-- Exium MUPS Zonal Card -->
                 <div class="bg-white border-2 border-blue-200 rounded-2xl p-4 shadow-sm space-y-2.5">
                     <div class="flex items-center justify-between border-b border-blue-100 pb-2">
                         <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-blue-600 text-white">🟦 Exium MUPS Award</span>
@@ -645,7 +657,7 @@ def build_portal():
             <!-- Regions Breakdown Table -->
             <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
                 <div class="p-3.5 bg-slate-50 border-b border-slate-200 flex justify-between items-center">
-                    <h3 class="font-black text-xs uppercase tracking-wider text-slate-800">Regions in this Zone (Separate Exium & Coralcal Breakdown)</h3>
+                    <h3 class="font-black text-xs uppercase tracking-wider text-slate-800">Regions in this Zone (Separate Exium MUPS & Coralcal Breakdown)</h3>
                     <span class="text-[11px] text-slate-500">Click "Manage / Recommend →" to select vouchers or cancel awards</span>
                 </div>
                 <div class="overflow-x-auto">
@@ -655,8 +667,8 @@ def build_portal():
                                 <th class="py-2.5 px-3">Region Name</th>
                                 <th class="py-2.5 px-3">SAP Code</th>
                                 <th class="py-2.5 px-3">Regional Head</th>
-                                <th class="py-2.5 px-3 text-center text-blue-700">🟦 Exium (Done/Total)</th>
-                                <th class="py-2.5 px-3 text-center text-purple-700">🟪 Coralcal (Done/Total)</th>
+                                <th class="py-2.5 px-3 text-center text-blue-700">🟦 Exium MUPS (Done/Total)</th>
+                                <th class="py-2.5 px-3 text-center text-purple-700">🟪 Coralcal-D/DX/Vita (Done/Total)</th>
                                 <th class="py-2.5 px-3 text-center">Cancelled</th>
                                 <th class="py-2.5 px-3 text-center">Overall Progress</th>
                                 <th class="py-2.5 px-3 text-right">Action</th>
@@ -690,7 +702,7 @@ def build_portal():
             </div>
             <div class="flex items-center gap-2">
                 <button onclick="exportBrandExcel('region', 'exium')" class="hidden sm:flex px-3 py-1.5 bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-300 rounded-xl text-xs font-bold transition items-center gap-1 shadow-xs">
-                    <span>📥 Exium Excel</span>
+                    <span>📥 Exium MUPS Excel</span>
                 </button>
                 <button onclick="exportBrandExcel('region', 'coral')" class="hidden sm:flex px-3 py-1.5 bg-purple-50 hover:bg-purple-100 text-purple-800 border border-purple-300 rounded-xl text-xs font-bold transition items-center gap-1 shadow-xs">
                     <span>📥 Coralcal Excel</span>
@@ -740,23 +752,23 @@ def build_portal():
 
             <!-- Modal Body -->
             <div class="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-100/70 space-y-4">
-                <!-- Exium Criteria View -->
+                <!-- Exium MUPS Criteria View -->
                 <div id="crit-view-exium" class="space-y-4">
                     <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4 text-xs text-blue-950 flex items-center justify-between flex-wrap gap-2">
                         <div>
                             <strong class="text-sm">🟦 Exium MUPS — September 2026 Campaign</strong>
-                            <p class="text-[11px] text-blue-800 mt-0.5">National Qualified Achievers: <strong>1,753</strong> (456 × 3,000 + 1,297 × 1,000 = 2,665,000) • Exium TP: <strong>659.67</strong></p>
+                            <p class="text-[11px] text-blue-800 mt-0.5">National Qualified Achievers: <strong>1,753</strong> (456 × 3,000 + 1,297 × 1,000 = 2,665,000) • Exium MUPS TP: <strong>659.67</strong></p>
                         </div>
                         <span class="font-black bg-blue-600 text-white px-3 py-1 rounded-xl text-xs">Award: 1,000 / 3,000</span>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-2">
                             <div class="flex items-center justify-between">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-blue-100 text-blue-800">Criteria 1 • Rx Award</span>
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-blue-100 text-blue-800">Criteria 1 • Seen Rx Award</span>
                                 <span class="text-sm font-black text-blue-700">Award: 1,000</span>
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                • Minimum <strong>200 Seen Rx</strong> of Exium in full month of September 2026.<br>
+                                • Minimum <strong>200 Seen Rx</strong> of <strong>Exium MUPS</strong> in full month of September 2026.<br>
                                 • If Seen Rx is <strong>less than 200</strong>, <strong>No Award (0)</strong> is given.
                             </p>
                         </div>
@@ -767,9 +779,9 @@ def build_portal():
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Must meet <strong>ALL 3 conditions</strong> serially:<br>
-                                <strong>(a)</strong> Exium Seen Rx <strong>&ge; 200</strong> in Sep'26<br>
-                                <strong>(b)</strong> <strong>Total Territory Sales Growth &gt; 0</strong> (Sep'26 &gt; Aug'26)<br>
-                                <strong>(c)</strong> <strong>Exium Equivalent Growth &ge; +30 Boxes</strong> (Value Growth &divide; 659.67 TP, rounded to whole number)
+                                <strong>(a)</strong> <strong>Exium MUPS Seen Rx &ge; 200</strong> in Sep'26<br>
+                                <strong>(b)</strong> <strong>Territory Sales Growth &gt; 0</strong> (Sep'26 Sales &gt; Aug'26 Sales)<br>
+                                <strong>(c)</strong> <strong>Exium MUPS Growth &ge; +30 Boxes</strong> (Value Growth &divide; 659.67 TP, rounded to whole number)
                             </p>
                         </div>
                     </div>
@@ -780,18 +792,18 @@ def build_portal():
                     <div class="bg-purple-50 border border-purple-200 rounded-2xl p-4 text-xs text-purple-950 flex items-center justify-between flex-wrap gap-2">
                         <div>
                             <strong class="text-sm">🟪 Coralcal-D/DX/Vita — September 2026 Campaign</strong>
-                            <p class="text-[11px] text-purple-800 mt-0.5">National Qualified Achievers: <strong>1,649</strong> (465 × 3,000 + 1,184 × 1,000 = 2,579,000) • Coralcal TP: <strong>637.18</strong></p>
+                            <p class="text-[11px] text-purple-800 mt-0.5">National Qualified Achievers: <strong>1,649</strong> (465 × 3,000 + 1,184 × 1,000 = 2,579,000) • Coralcal-D/DX/Vita TP: <strong>637.18</strong></p>
                         </div>
                         <span class="font-black bg-purple-700 text-white px-3 py-1 rounded-xl text-xs">Award: 1,000 / 3,000</span>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-white rounded-2xl p-4 border border-slate-200 shadow-xs space-y-2">
                             <div class="flex items-center justify-between">
-                                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-purple-100 text-purple-800">Criteria 1 • Rx Award</span>
+                                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-purple-100 text-purple-800">Criteria 1 • Seen Rx Award</span>
                                 <span class="text-sm font-black text-purple-700">Award: 1,000</span>
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
-                                • Minimum <strong>200 Seen Rx</strong> of Coralcal in full month of September 2026.<br>
+                                • Minimum <strong>200 Seen Rx</strong> of <strong>Coralcal-D/DX/Vita</strong> in full month of September 2026.<br>
                                 • If Seen Rx is <strong>less than 200</strong>, <strong>No Award (0)</strong> is given.
                             </p>
                         </div>
@@ -802,9 +814,9 @@ def build_portal():
                             </div>
                             <p class="text-xs text-slate-600 leading-relaxed">
                                 Must meet <strong>ALL 3 conditions</strong> serially:<br>
-                                <strong>(a)</strong> Coralcal Seen Rx <strong>&ge; 200</strong> in Sep'26<br>
-                                <strong>(b)</strong> <strong>Total Territory Sales Growth &gt; 0</strong> (Sep'26 &gt; Aug'26)<br>
-                                <strong>(c)</strong> <strong>Coralcal Equivalent Growth &ge; +30 Boxes</strong> (Value Growth &divide; 637.18 TP, rounded to whole number)
+                                <strong>(a)</strong> <strong>Coralcal-D/DX/Vita Seen Rx &ge; 200</strong> in Sep'26<br>
+                                <strong>(b)</strong> <strong>Territory Sales Growth &gt; 0</strong> (Sep'26 Sales &gt; Aug'26 Sales)<br>
+                                <strong>(c)</strong> <strong>Coralcal-D/DX/Vita Growth &ge; +30 Boxes</strong> (Value Growth &divide; 637.18 TP, rounded to whole number)
                             </p>
                         </div>
                     </div>
@@ -814,7 +826,7 @@ def build_portal():
                 <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-950 space-y-1">
                     <div class="font-black text-amber-900">⚠️ Regional Head & Zonal Head Recommendation Option</div>
                     <p class="text-amber-800">
-                        Regional Head or Zonal Head can cancel/withhold any individual Exium or Coralcal award by clicking <strong>"Cancel Award (Not Recommended)"</strong> on the MIO's brand award card and specifying the mandatory reason.
+                        Regional Head or Zonal Head can cancel/withhold any individual Exium MUPS or Coralcal-D/DX/Vita award by clicking <strong>"Cancel Award (Not Recommended)"</strong> on the MIO's brand award card and specifying the mandatory reason.
                     </p>
                 </div>
             </div>
@@ -823,7 +835,7 @@ def build_portal():
             <div class="bg-slate-50 p-3 sm:p-4 border-t border-slate-200 flex justify-between items-center flex-shrink-0 flex-wrap gap-2">
                 <div class="flex items-center gap-2">
                     <button onclick="exportBrandExcel('admin', 'exium')" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold transition shadow-xs">
-                        📥 Exium Calculation (.xlsx)
+                        📥 Exium MUPS Calculation (.xlsx)
                     </button>
                     <button onclick="exportBrandExcel('admin', 'coral')" class="px-3 py-1.5 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-xs font-bold transition shadow-xs">
                         📥 Coralcal Calculation (.xlsx)
@@ -902,7 +914,7 @@ def build_portal():
                     </div>
                     <div>
                         <h3 class="text-sm sm:text-base font-black text-slate-900">Zonal Head Login</h3>
-                        <p class="text-[11px] text-slate-500">Zonal Award Dashboard (Exium & Coralcal)</p>
+                        <p class="text-[11px] text-slate-500">Zonal Award Dashboard (Exium MUPS & Coralcal-D/DX/Vita)</p>
                     </div>
                 </div>
                 <button onclick="closeZonalModal()" class="text-slate-400 hover:text-slate-600 p-1">
@@ -998,19 +1010,19 @@ def build_portal():
                                 <div>
                                     <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-blue-600 text-white">🟦 Exium MUPS Award</span>
                                     <div class="text-[11px] text-slate-600 font-semibold mt-1">
-                                        3,000 Tier: <strong>455</strong> • 1,000 Tier: <strong>1,298</strong> • Total: <strong>1,753</strong>
+                                        3,000 Tier: <strong>456</strong> • 1,000 Tier: <strong>1,297</strong> • Total: <strong>1,753</strong>
                                     </div>
                                 </div>
                                 <button onclick="exportBrandExcel('admin', 'exium')" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-black transition flex items-center gap-1.5 shadow-sm">
                                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                                    <span>Download Exium Data (.xlsx)</span>
+                                    <span>Download Exium MUPS Data (.xlsx)</span>
                                 </button>
                             </div>
                             <div class="grid grid-cols-4 gap-2 text-center">
                                 <div class="bg-white rounded-xl p-2.5 border border-blue-200">
                                     <div class="text-[10px] font-bold text-slate-500 uppercase">Achievers</div>
                                     <div id="admin-exium-total" class="text-lg font-black text-slate-900">1,753</div>
-                                    <div id="admin-exium-val" class="text-[9px] text-blue-700 font-bold">Val: 2,663,000</div>
+                                    <div id="admin-exium-val" class="text-[9px] text-blue-700 font-bold">Val: 2,665,000</div>
                                 </div>
                                 <div class="bg-white rounded-xl p-2.5 border border-emerald-200">
                                     <div class="text-[10px] font-bold text-emerald-700 uppercase">Completed</div>
@@ -1075,7 +1087,7 @@ def build_portal():
                     <div class="bg-slate-100 p-1.5 rounded-2xl border border-slate-200 flex flex-wrap items-center justify-between gap-2">
                         <div class="flex items-center gap-1.5 flex-wrap">
                             <button type="button" id="admin-brand-tab-exium" onclick="setAdminBrandMode('exium')" class="px-4 py-2 rounded-xl text-xs font-black transition bg-blue-600 text-white shadow-sm">
-                                🟦 View Exium Award Details (1,753)
+                                🟦 View Exium MUPS Award Details (1,753)
                             </button>
                             <button type="button" id="admin-brand-tab-coral" onclick="setAdminBrandMode('coral')" class="px-4 py-2 rounded-xl text-xs font-bold transition bg-white text-purple-800 hover:bg-purple-50 border border-purple-200">
                                 🟪 View Coralcal Award Details (1,649)
@@ -1339,12 +1351,12 @@ def build_portal():
 
             </div>
 
-            <!-- Admin Footer with Separate Exium & Coralcal Excel Export Buttons -->
+            <!-- Admin Footer with Separate Exium MUPS & Coralcal Excel Export Buttons -->
             <div class="bg-slate-50 p-3.5 border-t border-slate-200 flex flex-wrap justify-between items-center gap-2">
                 <div class="flex flex-wrap items-center gap-2">
                     <button onclick="exportBrandExcel('admin', 'exium')" class="px-3.5 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition shadow-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                        <span>Export Exium Data (.xlsx)</span>
+                        <span>Export Exium MUPS Data (.xlsx)</span>
                     </button>
                     <button onclick="exportBrandExcel('admin', 'coral')" class="px-3.5 py-2 bg-purple-700 hover:bg-purple-800 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 transition shadow-sm">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
@@ -1632,7 +1644,7 @@ def build_portal():
             zoneObj.regions.forEach(r => {{
                 const opt = document.createElement('option');
                 opt.value = r.region_name;
-                opt.textContent = `${{r.region_name}} (${{r.sap_region_code}}) - Exium: ${{r.exium_count}} | Coralcal: ${{r.coral_count}}`;
+                opt.textContent = `${{r.region_name}} (${{r.sap_region_code}}) - Exium MUPS: ${{r.exium_count}} | Coralcal: ${{r.coral_count}}`;
                 regSel.appendChild(opt);
             }});
         }}
@@ -1869,29 +1881,90 @@ def build_portal():
                 `;
             }}
 
-            // Exact Calculation Metrics Bar (Showing Equivalent Box Quantity for Exium & Coralcal Growth)
-            const terrSign = ach.terr_growth > 0 ? '+' : '';
-            const boxGrowth = Number(ach.brand_growth_box ?? Math.round((ach.brand_actual_growth || 0) / (ach.brand_tp || (isExium ? 659.67 : 637.18))));
+            // Clear & Visible Calculation Metrics Bar with Aug'26 and Sep'26 Sales Value & Box Qty
+            const tpVal = Number(ach.brand_tp || (isExium ? 659.67 : 637.18));
+            const terrAugVal = Math.round(Number(ach.terr_aug || 0));
+            const terrSepVal = Math.round(Number(ach.terr_sep || 0));
+            const terrGrowthVal = Math.round(Number(ach.terr_growth || 0));
+            const terrSign = terrGrowthVal > 0 ? '+' : '';
+
+            const brandAugVal = Math.round(Number(ach.brand_aug || 0));
+            const brandSepVal = Math.round(Number(ach.brand_sep || 0));
+            const brandValGrowth = Math.round(Number(ach.brand_actual_growth || 0));
+            const valSign = brandValGrowth >= 0 ? '+' : '';
+
+            const boxGrowth = Number(ach.brand_growth_box ?? Math.round((ach.brand_actual_growth || 0) / tpVal));
+            const brandAugBox = Number(ach.brand_aug_box ?? Math.round((ach.brand_aug || 0) / tpVal));
+            const brandSepBox = Number(ach.brand_sep_box ?? (brandAugBox + boxGrowth));
             const reqBox = Number(ach.brand_req_box || 30);
             const boxSign = boxGrowth >= 0 ? '+' : '';
+            const brandDisplayTitle = isExium ? 'Exium MUPS' : 'Coralcal-D/DX/Vita';
+
             const metricsHtml = `
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-white/95 py-2 px-3 rounded-xl border ${{isExium ? 'border-blue-200/90' : 'border-purple-200/90'}} text-xs">
-                    <div class="flex items-center justify-between sm:block">
-                        <span class="text-slate-400 font-bold uppercase text-[10px] block">1. Seen Rx (Sep'26)</span>
-                        <span class="font-extrabold text-emerald-700">✓ ${{ach.rx}} Rx <span class="text-[10px] font-medium text-slate-500">(&ge;200)</span></span>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 bg-white p-2.5 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
+                    <!-- 1. Seen Rx -->
+                    <div class="rounded-lg border border-emerald-200 bg-emerald-50/50 p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1.5">
+                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight">1. Seen Rx (Sep'26)</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300">✓ &ge;200 Rx</span>
+                        </div>
+                        <div class="mt-1.5 flex items-baseline gap-1.5">
+                            <span class="text-sm sm:text-base font-black text-emerald-700">${{Number(ach.rx || 0).toLocaleString()}} Seen Rx</span>
+                            <span class="text-[11px] font-bold text-slate-600">(Req: 200 Rx)</span>
+                        </div>
+                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border border-emerald-200/80">
+                            Sep'26 Full Month Rx: <strong class="text-slate-900">${{Number(ach.rx || 0).toLocaleString()}}</strong>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between sm:block border-t sm:border-t-0 sm:border-l border-slate-200 pt-1 sm:pt-0 sm:pl-2.5">
-                        <span class="text-slate-400 font-bold uppercase text-[10px] block">2. Territory Sales Growth</span>
-                        <span class="font-extrabold ${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">
-                            ${{ach.terr_pos ? '✓' : '✗'}} ${{terrSign}}${{Math.round(ach.terr_growth).toLocaleString()}}
-                        </span>
+
+                    <!-- 2. Territory Sales Growth -->
+                    <div class="rounded-lg border ${{ach.terr_pos ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1.5">
+                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight">2. Territory Sales Growth</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${{ach.terr_pos ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                                ${{ach.terr_pos ? '✓ Positive' : '✗ Negative'}}
+                            </span>
+                        </div>
+                        <div class="mt-1.5">
+                            <span class="text-sm sm:text-base font-black ${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">
+                                ${{ach.terr_pos ? '✓' : '✗'}} Growth: ${{terrSign}}${{terrGrowthVal.toLocaleString()}} <span class="text-[11px] font-bold text-slate-600">(Val)</span>
+                            </span>
+                        </div>
+                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border border-slate-200 flex items-center justify-between gap-1 flex-wrap">
+                            <span>Aug'26 Val: <strong class="text-slate-900 font-mono">${{terrAugVal.toLocaleString()}}</strong></span>
+                            <span class="text-slate-400">➔</span>
+                            <span>Sep'26 Val: <strong class="text-slate-900 font-mono">${{terrSepVal.toLocaleString()}}</strong></span>
+                        </div>
                     </div>
-                    <div class="flex items-center justify-between sm:block border-t sm:border-t-0 sm:border-l border-slate-200 pt-1 sm:pt-0 sm:pl-2.5">
-                        <span class="text-slate-400 font-bold uppercase text-[10px] block">3. ${{ach.brand_short}} Growth (Box Qty)</span>
-                        <span class="font-extrabold ${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">
-                            ${{ach.brand_growth_ok ? '✓' : '✗'}} ${{boxSign}}${{boxGrowth.toLocaleString()}} Boxes
-                            <span class="text-[10px] font-semibold text-slate-500">(Req: +${{reqBox}} Boxes)</span>
-                        </span>
+
+                    <!-- 3. Brand Growth (Exium MUPS / Coralcal-D/DX/Vita) -->
+                    <div class="rounded-lg border ${{isExium ? 'border-blue-200 bg-blue-50/50' : 'border-purple-200 bg-purple-50/50'}} p-2.5 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-1.5">
+                            <span class="${{isExium ? 'text-blue-950' : 'text-purple-950'}} font-black uppercase text-[11px] sm:text-xs tracking-tight">3. ${{brandDisplayTitle}} Growth</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${{ach.brand_growth_ok ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}}">
+                                Req: +${{reqBox}} Boxes
+                            </span>
+                        </div>
+                        <div class="mt-1.5 flex items-baseline justify-between gap-1 flex-wrap">
+                            <span class="text-sm sm:text-base font-black ${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">
+                                ${{ach.brand_growth_ok ? '✓' : '✗'}} ${{boxSign}}${{boxGrowth.toLocaleString()}} Boxes
+                            </span>
+                            <span class="text-[11px] font-extrabold text-slate-700 font-mono">
+                                (Val: ${{valSign}}${{brandValGrowth.toLocaleString()}})
+                            </span>
+                        </div>
+                        <div class="mt-1 space-y-0.5 text-[11px] font-bold text-slate-700 bg-white/95 px-2 py-1 rounded border ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}}">
+                            <div class="flex items-center justify-between gap-1">
+                                <span>Qty: Aug <strong class="text-slate-900 font-mono">${{brandAugBox.toLocaleString()}}</strong> Box</span>
+                                <span class="text-slate-400">➔</span>
+                                <span>Sep <strong class="text-slate-900 font-mono">${{brandSepBox.toLocaleString()}}</strong> Box</span>
+                            </div>
+                            <div class="flex items-center justify-between gap-1 text-[10px] text-slate-600 border-t border-slate-100 pt-0.5">
+                                <span>Val: Aug <strong class="text-slate-800 font-mono">${{brandAugVal.toLocaleString()}}</strong></span>
+                                <span class="text-slate-400">➔</span>
+                                <span>Sep <strong class="text-slate-800 font-mono">${{brandSepVal.toLocaleString()}}</strong></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             `;
@@ -1984,7 +2057,7 @@ def build_portal():
             `;
         }}
 
-        // RENDER ACHIEVERS WITH SEPARATE EXIUM & CORALCAL BADGES AND BOXES (RATIONAL PROPORTIONS)
+        // RENDER ACHIEVERS WITH SEPARATE EXIUM MUPS & CORALCAL BADGES AND BOXES (RATIONAL PROPORTIONS)
         function renderAchievers() {{
             const container = document.getElementById('regview-achievers-container');
             container.innerHTML = '';
@@ -2060,13 +2133,13 @@ def build_portal():
                     `;
                 }}
 
-                // Separate Brand Value Badges in Card Header (Exium & Coralcal shown distinctly)
+                // Separate Brand Value Badges in Card Header (Exium MUPS & Coralcal shown distinctly)
                 let brandBadgesHtml = '';
                 if (showExium) {{
                     const exCancelled = isAwardCancelled(mio.exium_award.id);
                     brandBadgesHtml += `
                         <div class="px-2.5 py-1 rounded-lg bg-blue-600 text-white border border-blue-500 shadow-2xs flex items-center gap-1">
-                            <span class="text-[11px] font-extrabold uppercase">🟦 Exium:</span>
+                            <span class="text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
                             <span class="text-xs font-black ${{exCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.exium_award.award).toLocaleString()}}</span>
                         </div>
                     `;
@@ -2308,12 +2381,12 @@ def build_portal():
 
             document.getElementById('regview-progress-pct').textContent = `${{pct}}%`;
             document.getElementById('regview-progress-bar').style.width = `${{pct}}%`;
-            document.getElementById('regview-progress-count').textContent = `Exium: ${{exDone}}/${{regExium.length}} • Coralcal: ${{coDone}}/${{regCoral.length}}`;
-            document.getElementById('sticky-completed-text').textContent = `Exium: ${{exDone}}/${{regExium.length}} | Coralcal: ${{coDone}}/${{regCoral.length}} (${{pct}}%)`;
+            document.getElementById('regview-progress-count').textContent = `Exium MUPS: ${{exDone}}/${{regExium.length}} • Coralcal: ${{coDone}}/${{regCoral.length}}`;
+            document.getElementById('sticky-completed-text').textContent = `Exium MUPS: ${{exDone}}/${{regExium.length}} | Coralcal: ${{coDone}}/${{regCoral.length}} (${{pct}}%)`;
         }}
 
         // ==============================================
-        // ZONAL VIEW FUNCTIONS (SEPARATE EXIUM & CORALCAL)
+        // ZONAL VIEW FUNCTIONS (SEPARATE EXIUM MUPS & CORALCAL)
         // ==============================================
         function openZonalModal() {{
             const passInput = document.getElementById('zonal-password-input');
@@ -2477,7 +2550,7 @@ def build_portal():
         }}
 
         // ==============================================
-        // MIO QUICK CHECK (SHOWS SEPARATE EXIUM & CORALCAL)
+        // MIO QUICK CHECK (SHOWS SEPARATE EXIUM MUPS & CORALCAL WITH AUG & SEP SALES VALUE / QTY)
         // ==============================================
         function searchMioDirect(e) {{
             if (e && e.preventDefault) e.preventDefault();
@@ -2505,14 +2578,36 @@ def build_portal():
                 const exCh = savedChoices[exId] || {{}};
                 const coCh = savedChoices[coId] || {{}};
 
-                const renderBrandStatus = (label, badgeClass, award, reason, rx, terrPos, growthBox, reqBox, ch) => {{
+                const renderBrandStatus = (label, brandShort, badgeClass, award, reason, rx, terrAug, terrSep, terrGrowth, terrPos, brandAugVal, brandSepVal, brandValGrowth, brandAugBox, brandSepBox, growthBox, reqBox, ch) => {{
                     const boxText = `${{growthBox >= 0 ? '+' : ''}}${{growthBox}} Boxes (Req: +${{reqBox || 30}} Boxes)`;
-                    const metricsLine = `<div class="text-[10px] font-bold text-slate-600">Rx: ${{rx}} | Terr Sales: ${{terrPos ? 'Positive' : 'Negative'}} | Brand Growth: <span class="${{growthBox >= (reqBox || 30) ? 'text-emerald-700' : 'text-amber-700'}}">${{boxText}}</span></div>`;
+                    const terrText = `${{terrGrowth > 0 ? '+' : ''}}${{Math.round(terrGrowth).toLocaleString()}}`;
+                    const metricsLine = `
+                        <div class="grid grid-cols-1 gap-1 pt-1 text-[11px] bg-slate-50/90 p-2 rounded-lg border border-slate-200">
+                            <div class="flex items-center justify-between">
+                                <span class="font-black text-slate-900">1. Seen Rx (Sep'26):</span>
+                                <span class="font-extrabold ${{rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{rx}} Rx (Req: &ge;200)</span>
+                            </div>
+                            <div class="flex items-center justify-between border-t border-slate-200/70 pt-1 flex-wrap gap-1">
+                                <span class="font-black text-slate-900">2. Territory Sales Growth:</span>
+                                <span class="font-bold text-slate-700">Aug: <strong>${{Math.round(terrAug).toLocaleString()}}</strong> ➔ Sep: <strong>${{Math.round(terrSep).toLocaleString()}}</strong> (<strong class="${{terrPos ? 'text-emerald-700' : 'text-rose-600'}}">${{terrText}}</strong>)</span>
+                            </div>
+                            <div class="border-t border-slate-200/70 pt-1 space-y-0.5">
+                                <div class="flex items-center justify-between flex-wrap gap-1">
+                                    <span class="font-black text-slate-900">3. ${{brandShort}} Growth:</span>
+                                    <span class="font-extrabold ${{growthBox >= (reqBox || 30) ? 'text-emerald-700' : 'text-amber-700'}}">${{boxText}}</span>
+                                </div>
+                                <div class="text-[10px] font-bold text-slate-600 flex items-center justify-between flex-wrap gap-1">
+                                    <span>Qty: Aug <strong>${{brandAugBox}}</strong> Box ➔ Sep <strong>${{brandSepBox}}</strong> Box</span>
+                                    <span>Val: Aug <strong>${{Math.round(brandAugVal).toLocaleString()}}</strong> ➔ Sep <strong>${{Math.round(brandSepVal).toLocaleString()}}</strong> (${{brandValGrowth >= 0 ? '+' : ''}}${{Math.round(brandValGrowth).toLocaleString()}})</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
                     if (award === 0) {{
                         return `
-                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 space-y-1">
+                            <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 space-y-1.5">
                                 <div class="flex justify-between items-center">
-                                    <span class="px-2 py-0.5 rounded text-[10px] font-black ${{badgeClass}}">${{label}}</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-black ${{badgeClass}}">${{label}}</span>
                                     <span class="text-[11px] font-bold text-slate-400">No Award (0)</span>
                                 </div>
                                 ${{metricsLine}}
@@ -2522,9 +2617,9 @@ def build_portal():
                     }}
                     if (ch.cancelled) {{
                         return `
-                            <div class="bg-rose-50 border border-rose-200 rounded-xl p-2.5 space-y-1">
+                            <div class="bg-rose-50 border border-rose-200 rounded-xl p-2.5 space-y-1.5">
                                 <div class="flex justify-between items-center">
-                                    <span class="px-2 py-0.5 rounded text-[10px] font-black ${{badgeClass}}">${{label}}</span>
+                                    <span class="px-2 py-0.5 rounded text-[11px] font-black ${{badgeClass}}">${{label}}</span>
                                     <span class="text-[11px] font-black text-rose-700">🚫 Cancelled (${{ch.cancelled_by || 'RH/ZH'}})</span>
                                 </div>
                                 ${{metricsLine}}
@@ -2533,14 +2628,14 @@ def build_portal():
                         `;
                     }}
                     return `
-                        <div class="bg-white border border-slate-200 rounded-xl p-2.5 space-y-1">
+                        <div class="bg-white border border-slate-200 rounded-xl p-2.5 space-y-1.5">
                             <div class="flex justify-between items-center">
-                                <span class="px-2 py-0.5 rounded text-[10px] font-black ${{badgeClass}}">${{label}}</span>
+                                <span class="px-2 py-0.5 rounded text-[11px] font-black ${{badgeClass}}">${{label}}</span>
                                 <span class="px-2 py-0.5 rounded font-black text-[11px] bg-emerald-50 text-emerald-800 border border-emerald-200">Award: ${{award.toLocaleString()}}</span>
                             </div>
                             ${{metricsLine}}
                             <div class="text-[10px] text-slate-500">${{reason}}</div>
-                            <div class="pt-1 text-[11px] font-bold ${{ch.voucher ? 'text-emerald-700' : 'text-amber-700'}}">
+                            <div class="pt-0.5 text-[11px] font-bold ${{ch.voucher ? 'text-emerald-700' : 'text-amber-700'}}">
                                 ${{ch.voucher ? `✓ Voucher: ${{ch.voucher}}` : '⏳ Pending Selection by Regional Head'}}
                             </div>
                         </div>
@@ -2561,8 +2656,8 @@ def build_portal():
                         </div>
                     </div>
                     <div class="space-y-2">
-                        ${{renderBrandStatus('🟦 Exium MUPS', 'bg-blue-600 text-white', r.exium_award, r.exium_reason, r.exium_rx, r.terr_pos, r.exium_growth_box, r.exium_req_box, exCh)}}
-                        ${{renderBrandStatus('🟪 Coralcal-D/DX/Vita', 'bg-purple-700 text-white', r.coral_award, r.coral_reason, r.coral_rx, r.terr_pos, r.coral_growth_box, r.coral_req_box, coCh)}}
+                        ${{renderBrandStatus('🟦 Exium MUPS', 'Exium MUPS', 'bg-blue-600 text-white', r.exium_award, r.exium_reason, r.exium_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.exium_aug_val, r.exium_sep_val, r.exium_actual_growth, r.exium_aug_box, r.exium_sep_box, r.exium_growth_box, r.exium_req_box, exCh)}}
+                        ${{renderBrandStatus('🟪 Coralcal-D/DX/Vita', 'Coralcal-D/DX/Vita', 'bg-purple-700 text-white', r.coral_award, r.coral_reason, r.coral_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.coral_aug_val, r.coral_sep_val, r.coral_actual_growth, r.coral_aug_box, r.coral_sep_box, r.coral_growth_box, r.coral_req_box, coCh)}}
                     </div>
                 `;
                 resBox.appendChild(card);
@@ -2601,7 +2696,7 @@ def build_portal():
         }}
 
         // ==============================================
-        // ADMIN PANEL (SEPARATE EXIUM & CORALCAL VIEWS & DATA)
+        // ADMIN PANEL (SEPARATE EXIUM MUPS & CORALCAL VIEWS & DATA)
         // ==============================================
         function openAdminModal() {{
             const passInput = document.getElementById('admin-password-input');
@@ -2667,8 +2762,8 @@ def build_portal():
                 document.getElementById('admin-cancel-table-title').textContent = '🚫 Coralcal-D/DX/Vita — Cancelled Awards Log (RH / ZH Recommendations)';
             }} else {{
                 ind.className = 'px-3 py-1 rounded-xl text-[11px] font-black bg-slate-200 text-slate-900';
-                ind.textContent = 'Showing: 📊 Combined Overview (Exium + Coralcal)';
-                document.getElementById('admin-reg-table-title').textContent = 'Region-wise Input & Submission Tracking (Combined Exium & Coralcal)';
+                ind.textContent = 'Showing: 📊 Combined Overview (Exium MUPS + Coralcal)';
+                document.getElementById('admin-reg-table-title').textContent = 'Region-wise Input & Submission Tracking (Combined Exium MUPS & Coralcal)';
                 document.getElementById('admin-voucher-table-title').textContent = 'Combined — National Voucher Brand Requirements (PO Planning)';
                 document.getElementById('admin-cancel-table-title').textContent = '🚫 Combined — Cancelled Awards Log (RH / ZH Recommendations)';
             }}
@@ -2683,7 +2778,7 @@ def build_portal():
         }}
 
         function refreshAdminStats() {{
-            // 1. Always update top standalone Exium & Coralcal summary cards
+            // 1. Always update top standalone Exium MUPS & Coralcal summary cards
             const computeBrandSummary = (list) => {{
                 let done = 0, canc = 0, activeVal = 0;
                 list.forEach(a => {{
@@ -2930,10 +3025,10 @@ def build_portal():
                     const pctFormatted = r.pct.toFixed(1);
                     const barColor = r.status === 'completed' ? 'bg-emerald-500' : (r.status === 'in_progress' ? 'bg-amber-500' : 'bg-slate-200');
                     const subBreakdown = currentAdminBrandMode === 'exium'
-                        ? `<div class="text-[10px] text-blue-600 font-normal">Exium: ${{r.total_exium}}</div>`
+                        ? `<div class="text-[10px] text-blue-600 font-normal">Exium MUPS: ${{r.total_exium}}</div>`
                         : (currentAdminBrandMode === 'coral'
                             ? `<div class="text-[10px] text-purple-600 font-normal">Coralcal: ${{r.total_coral}}</div>`
-                            : `<div class="text-[10px] text-slate-400 font-normal">Ex:${{r.total_exium}} | Cor:${{r.total_coral}}</div>`);
+                            : `<div class="text-[10px] text-slate-400 font-normal">Exium MUPS:${{r.total_exium}} | Cor:${{r.total_coral}}</div>`);
 
                     tr.innerHTML = `
                         <td class="py-2.5 px-3 text-center text-slate-400 font-mono text-[11px]">${{idx + 1}}</td>
@@ -3015,10 +3110,10 @@ def build_portal():
 
         function exportRegionSummaryToExcel() {{
             const list = getRegionCompletionStats();
-            const brandTag = currentAdminBrandMode === 'exium' ? 'Exium' : (currentAdminBrandMode === 'coral' ? 'Coralcal' : 'Combined');
+            const brandTag = currentAdminBrandMode === 'exium' ? 'Exium_MUPS' : (currentAdminBrandMode === 'coral' ? 'Coralcal' : 'Combined');
             const rows = list.map((r, i) => ({{
                 'SL': i + 1,
-                'Brand Filter': brandTag,
+                'Brand Filter': brandTag.replace('_', ' '),
                 'Zone Name': r.zone_name,
                 'SAP Zone Code': r.sap_zone_code,
                 'Zonal Head': r.zonal_head,
@@ -3037,12 +3132,12 @@ def build_portal():
                 const wb = XLSX.utils.book_new();
                 XLSX.utils.book_append_sheet(wb, ws, `${{brandTag}}_Region_Status`);
                 XLSX.writeFile(wb, `${{brandTag}}_Region_Submission_Status_Sep_2026.xlsx`);
-                showToast(`${{brandTag}} Region status exported! 📊`, '✅');
+                showToast(`${{brandTag.replace('_', ' ')}} Region status exported! 📊`, '✅');
             }}
         }}
 
         // ==============================================
-        // SEPARATE BRAND EXCEL EXPORTS (EXIUM / CORALCAL / BOTH)
+        // SEPARATE BRAND EXCEL EXPORTS (EXIUM MUPS / CORALCAL / BOTH)
         // ==============================================
         function exportBrandExcel(scope = 'admin', brandMode = 'exium') {{
             let exList = DB.achievers_exium;
@@ -3102,6 +3197,8 @@ def build_portal():
                     'Brand Required Target': Math.round(a.brand_req_target),
                     'Brand Sep 26 Sales': Math.round(a.brand_sep),
                     'Brand Actual Growth (Value)': Math.round(a.brand_actual_growth),
+                    'Brand Aug 26 Qty (Boxes)': a.brand_aug_box,
+                    'Brand Sep 26 Qty (Boxes)': a.brand_sep_box,
                     'Brand Required Growth (Box Qty)': a.brand_req_box || 30,
                     'Brand Actual Growth (Box Qty)': a.brand_growth_box,
                     'Brand Growth Met?': a.brand_growth_ok ? 'Yes' : 'No',
@@ -3122,7 +3219,7 @@ def build_portal():
             if (brandMode === 'exium' || brandMode === 'both') {{
                 const exRows = exList.map(formatBrandAchieverRow);
                 const wsEx = XLSX.utils.json_to_sheet(exRows);
-                XLSX.utils.book_append_sheet(wb, wsEx, 'Exium_Achievers_Choices');
+                XLSX.utils.book_append_sheet(wb, wsEx, 'Exium_MUPS_Achievers_Choices');
 
                 const exCalcRows = calcList.map((r, i) => ({{
                     'SL': i + 1,
@@ -3137,27 +3234,29 @@ def build_portal():
                     'MIO ID': r.mio_id,
                     'MIO Name': r.mio_name,
                     'Designation': r.desig,
-                    'Exium Seen Rx': r.exium_rx,
+                    'Exium MUPS Seen Rx': r.exium_rx,
                     'Rx >= 200?': r.exium_rx_ok ? 'Yes' : 'No',
                     'Territory Aug Sales': Math.round(r.terr_aug_val),
                     'Territory Sep Sales': Math.round(r.terr_sep_val),
                     'Territory Growth': Math.round(r.terr_growth_val),
                     'Territory Positive?': r.terr_pos ? 'Yes' : 'No',
-                    'Exium Aug Sales': Math.round(r.exium_aug_val),
-                    'Exium Req Growth (Value)': Math.round(r.exium_req_growth),
-                    'Exium Req Target': Math.round(r.exium_req_target),
-                    'Exium Sep Sales': Math.round(r.exium_sep_val),
-                    'Exium Actual Growth (Value)': Math.round(r.exium_actual_growth),
-                    'Exium TP Price': 659.67,
-                    'Exium Req Growth (Box Qty)': r.exium_req_box || 30,
-                    'Exium Actual Growth (Box Qty)': r.exium_growth_box,
-                    'Exium Growth Met?': r.exium_growth_ok ? 'Yes' : 'No',
-                    'Exium Award': r.exium_award,
-                    'Exium Award Tier': r.exium_tier,
+                    'Exium MUPS Aug Sales': Math.round(r.exium_aug_val),
+                    'Exium MUPS Req Growth (Value)': Math.round(r.exium_req_growth),
+                    'Exium MUPS Req Target': Math.round(r.exium_req_target),
+                    'Exium MUPS Sep Sales': Math.round(r.exium_sep_val),
+                    'Exium MUPS Actual Growth (Value)': Math.round(r.exium_actual_growth),
+                    'Exium MUPS TP Price': 659.67,
+                    'Exium MUPS Aug Qty (Boxes)': r.exium_aug_box,
+                    'Exium MUPS Sep Qty (Boxes)': r.exium_sep_box,
+                    'Exium MUPS Req Growth (Box Qty)': r.exium_req_box || 30,
+                    'Exium MUPS Actual Growth (Box Qty)': r.exium_growth_box,
+                    'Exium MUPS Growth Met?': r.exium_growth_ok ? 'Yes' : 'No',
+                    'Exium MUPS Award': r.exium_award,
+                    'Exium MUPS Award Tier': r.exium_tier,
                     'Qualification Remarks': r.exium_reason
                 }}));
                 const wsExCalc = XLSX.utils.json_to_sheet(exCalcRows);
-                XLSX.utils.book_append_sheet(wb, wsExCalc, 'Exium_Full_Calculation');
+                XLSX.utils.book_append_sheet(wb, wsExCalc, 'Exium_MUPS_Full_Calc');
             }}
 
             if (brandMode === 'coral' || brandMode === 'both') {{
@@ -3190,6 +3289,8 @@ def build_portal():
                     'Coralcal Sep Sales': Math.round(r.coral_sep_val),
                     'Coralcal Actual Growth (Value)': Math.round(r.coral_actual_growth),
                     'Coralcal TP Price': 637.18,
+                    'Coralcal Aug Qty (Boxes)': r.coral_aug_box,
+                    'Coralcal Sep Qty (Boxes)': r.coral_sep_box,
                     'Coralcal Req Growth (Box Qty)': r.coral_req_box || 30,
                     'Coralcal Actual Growth (Box Qty)': r.coral_growth_box,
                     'Coralcal Growth Met?': r.coral_growth_ok ? 'Yes' : 'No',
@@ -3201,9 +3302,9 @@ def build_portal():
                 XLSX.utils.book_append_sheet(wb, wsCoCalc, 'Coralcal_Full_Calculation');
             }}
 
-            const prefix = brandMode === 'exium' ? 'Exium_Award_Data' : (brandMode === 'coral' ? 'Coralcal_Award_Data' : 'Combined_Award_Data');
+            const prefix = brandMode === 'exium' ? 'Exium_MUPS_Award_Data' : (brandMode === 'coral' ? 'Coralcal_Award_Data' : 'Combined_Award_Data');
             XLSX.writeFile(wb, `${{prefix}}_${{scopeTag}}_Sep_2026_${{dateTag}}.xlsx`);
-            showToast(`Exported ${{prefix}} (.xlsx)!`, '📊');
+            showToast(`Exported ${{prefix.replace(/_/g, ' ')}} (.xlsx)!`, '📊');
         }}
 
         // ==============================================
