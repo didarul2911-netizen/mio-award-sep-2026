@@ -1444,6 +1444,8 @@ def build_portal():
 
         let savedChoices = JSON.parse(localStorage.getItem(STORAGE_KEY_CHOICES) || '{{}}');
 
+        const DEFAULT_CLOUD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwZnaiyLSlMSGEjgQa4hVWQ_GsR1hYKM1O95s_dYltG7yVeO1j7h4zFY8x11E7V9eu_/exec';
+
         let queryEndpoint = '';
         try {{
             const urlParams = new URLSearchParams(window.location.search);
@@ -1453,7 +1455,7 @@ def build_portal():
             }}
         }} catch (e) {{}}
 
-        let cloudEndpoint = queryEndpoint || localStorage.getItem(STORAGE_KEY_ENDPOINT) || '';
+        let cloudEndpoint = queryEndpoint || localStorage.getItem(STORAGE_KEY_ENDPOINT) || DEFAULT_CLOUD_ENDPOINT;
         let isAdminUnlocked = false;
         let isSubmissionsLocked = (localStorage.getItem(STORAGE_KEY_LOCKED) === 'true');
 
@@ -3343,7 +3345,7 @@ def build_portal():
                 timestamp,
                 action,
                 cancelled,
-                cancelled_by,
+                cancelled_by: cancelled ? `Not Recommended (${{cancelled_by || 'Regional Head'}})` : 'Recommended',
                 cancel_reason,
                 clientTime: Date.now()
             }};
@@ -3401,12 +3403,18 @@ def build_portal():
                                     const c = dict[k];
                                     if (c) {{
                                         if (c.voucher || c.cancelled) {{
+                                            let cleanCancBy = String(c.cancelled_by || '');
+                                            if (cleanCancBy.startsWith('Not Recommended (')) {{
+                                                cleanCancBy = cleanCancBy.replace('Not Recommended (', '').replace(/\\)$/, '');
+                                            }} else if (cleanCancBy === 'Recommended' || cleanCancBy === 'Not Recommended') {{
+                                                cleanCancBy = c.cancelled ? 'Regional Head' : '';
+                                            }}
                                             savedChoices[a.id] = {{
                                                 voucher: c.voucher || '',
                                                 timestamp: c.timestamp || '',
                                                 status: c.cancelled ? 'Cancelled' : 'Complete',
                                                 cancelled: Boolean(c.cancelled),
-                                                cancelled_by: c.cancelled_by || '',
+                                                cancelled_by: cleanCancBy,
                                                 cancel_reason: c.cancel_reason || ''
                                             }};
                                         }} else if (c.status === 'Pending') {{
