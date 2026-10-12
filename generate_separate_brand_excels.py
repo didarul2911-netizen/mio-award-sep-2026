@@ -197,12 +197,14 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         ws_sum.column_dimensions[get_column_letter(c_i)].width = w
 
     # =========================================================================
+    # =========================================================================
     # SHEET 2: Calculation_All_1856
     # =========================================================================
     ws_calc = wb.create_sheet(title=f"{prefix.upper()}_Calculation_All_1856")
     ws_calc.views.sheetView[0].showGridLines = True
     ws_calc.freeze_panes = "A2"
 
+    tp_val = 659.67 if prefix == "ex" else 637.18
     calc_headers = [
         "SL", "Zone Name", "SAP Zone Code", "Zonal Head",
         "Region Name", "SAP Region Code", "Regional Head",
@@ -211,8 +213,9 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         "Aug'26 Total Territory Sales", "Sep'26 Total Territory Sales", "Total Territory Sales Diff",
         "Criteria 2(b): Total Territory Sales Positive?",
         f"Aug'26 {brand_title} Sales", f"Sep'26 {brand_title} Required Sales (30-Box Growth)",
-        f"Sep'26 {brand_title} Actual Sales", f"{brand_title} Sales Diff (Actual - Req)",
-        f"Criteria 2(c): {brand_title} Growth Met?",
+        f"Sep'26 {brand_title} Actual Sales", f"{brand_title} Value Growth (Sep - Aug)",
+        f"{brand_title} TP Price", f"Required Growth (Box Qty)", f"Actual Growth (Equivalent Box Qty)",
+        f"Criteria 2(c): {brand_title} Growth >= 30 Boxes?",
         "All 3 Criteria Met (for 3,000)?",
         f"Eligible {brand_title} Award Tier", f"Award Amount ({brand_title})",
         "RH Recommendation", "RH Cancel Reason",
@@ -238,7 +241,9 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         b_aug = r[f"{prefix}_aug"]
         b_req = r[f"{prefix}_req"]
         b_sep = r[f"{prefix}_sep"]
-        b_diff = round(b_sep - b_req, 2) if b_req is not None else None
+        b_growth_val = r[f"{prefix}_growth_val"]
+        b_req_box = r.get(f"{prefix}_req_box")
+        b_growth_box = r.get(f"{prefix}_growth_box")
         c2c_ok = r[f"{prefix}_growth_met"]
         all3_ok = r[f"{prefix}_all3"]
         tier_str = r[f"{prefix}_tier"]
@@ -254,7 +259,10 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             b_aug if b_aug is not None else "N/A (New TTY)",
             b_req if b_req is not None else "N/A (New TTY)",
             b_sep,
-            b_diff if b_diff is not None else "N/A",
+            b_growth_val if b_growth_val is not None else "N/A",
+            tp_val,
+            b_req_box if b_req_box is not None else "N/A",
+            b_growth_box if b_growth_box is not None else "N/A",
             "Yes" if c2c_ok else ("N/A (New TTY)" if b_req is None else "No"),
             "Yes" if all3_ok else "No",
             tier_str, aw_amt,
@@ -266,18 +274,21 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             cell = ws_calc.cell(idx, c_i, v)
             cell.border = border_all
             cell.font = font_data
-            if c_i in (2, 4, 5, 7, 9, 11, 12, 25):
+            if c_i in (2, 4, 5, 7, 9, 11, 12, 28):
                 cell.alignment = align_l
             elif c_i in (15, 16, 17, 19, 20, 21, 22):
                 cell.alignment = align_r if isinstance(v, (int, float)) else align_c
                 if isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
+            elif c_i == 23:
+                cell.alignment = align_c
+                cell.number_format = "0.00"
             else:
                 cell.alignment = align_c
-                if c_i in (13, 26) and isinstance(v, (int, float)):
+                if c_i in (13, 24, 25, 29) and isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
 
-            if c_i in (25, 26):
+            if c_i in (28, 29):
                 if aw_amt == 3000:
                     cell.fill = fill_green
                     cell.font = font_green
@@ -290,7 +301,7 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
 
     calc_widths = [
         6, 18, 13, 24, 20, 14, 24, 14, 22, 13, 25, 24,
-        15, 15, 18, 18, 18, 18, 18, 22, 18, 18, 18, 16,
+        15, 15, 18, 18, 18, 18, 18, 22, 18, 18, 14, 16, 18, 18, 16,
         24, 16, 18, 22, 18, 22, 22, 16, 22
     ]
     for c_i, w in enumerate(calc_widths, start=1):
@@ -310,7 +321,8 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
         "SAP Area Code", "Area Name", "SAP MIO Code", "MIO Name", "Designation",
         "Seen Rx (Sep'26)", "Aug'26 Total Sales", "Sep'26 Total Sales", "Total Sales Positive?",
         f"Aug'26 {brand_title} Sales", f"Sep'26 {brand_title} Required", f"Sep'26 {brand_title} Actual",
-        f"{brand_title} Growth Met?", "Award Tier", "Award Amount",
+        f"Required Growth (Boxes)", f"Actual Growth (Boxes)",
+        f"{brand_title} Growth >= 30 Boxes?", "Award Tier", "Award Amount",
         "RH Recommendation", "RH Cancel Reason",
         "ZH Recommendation", "ZH Cancel Reason",
         "Selected Gift Voucher", "Status", "Timestamp (BDT)"
@@ -335,6 +347,8 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             r[f"{prefix}_aug"] if r[f"{prefix}_aug"] is not None else "New TTY",
             r[f"{prefix}_req"] if r[f"{prefix}_req"] is not None else "New TTY",
             r[f"{prefix}_sep"],
+            r.get(f"{prefix}_req_box") if r.get(f"{prefix}_req_box") is not None else "New TTY",
+            r.get(f"{prefix}_growth_box") if r.get(f"{prefix}_growth_box") is not None else "New TTY",
             "Yes" if r[f"{prefix}_growth_met"] else "No",
             r[f"{prefix}_tier"], aw_amt,
             "Recommended", "", "Recommended", "", "", "Pending", ""
@@ -343,7 +357,7 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
             cell = ws_ach.cell(idx, c_i, v)
             cell.border = border_all
             cell.font = font_data
-            if c_i in (2, 4, 5, 7, 9, 11, 12, 21):
+            if c_i in (2, 4, 5, 7, 9, 11, 12, 23):
                 cell.alignment = align_l
             elif c_i in (14, 15, 17, 18, 19):
                 cell.alignment = align_r if isinstance(v, (int, float)) else align_c
@@ -351,16 +365,16 @@ def build_single_brand_workbook(records, brand_title, prefix, primary_hex, soft_
                     cell.number_format = "#,##0"
             else:
                 cell.alignment = align_c
-                if c_i in (13, 22) and isinstance(v, (int, float)):
+                if c_i in (13, 20, 21, 24) and isinstance(v, (int, float)):
                     cell.number_format = "#,##0"
 
-            if c_i in (21, 22):
+            if c_i in (23, 24):
                 cell.fill = fill_green if aw_amt == 3000 else fill_blue_soft
                 cell.font = font_green if aw_amt == 3000 else font_blue
 
     ach_widths = [
         6, 18, 13, 24, 20, 14, 24, 14, 22, 13, 25, 24,
-        15, 18, 18, 16, 18, 20, 18, 16, 24, 15, 18, 22, 18, 22, 22, 14, 22
+        15, 18, 18, 16, 18, 20, 18, 16, 16, 16, 24, 15, 18, 22, 18, 22, 22, 14, 22
     ]
     for c_i, w in enumerate(ach_widths, start=1):
         ws_ach.column_dimensions[get_column_letter(c_i)].width = w
@@ -379,9 +393,16 @@ def main():
     build_single_brand_workbook(records, "Exium", "ex", "1E40AF", "DBEAFE", ex_calc_path)
     build_single_brand_workbook(records, "Coralcal", "cc", "6D28D9", "EDE9FE", cc_calc_path)
 
-    shutil.copy2(ex_calc_path, os.path.join(BASE_DIR, "Exium_Award_Calculation_Sep_2026.xlsx"))
-    shutil.copy2(cc_calc_path, os.path.join(BASE_DIR, "Coralcal_Award_Calculation_Sep_2026.xlsx"))
-    print("Copied separate brand workbooks to main September folder as well.")
+    for src, dst_name in [
+        (ex_calc_path, "Exium_Award_Calculation_Sep_2026.xlsx"),
+        (cc_calc_path, "Coralcal_Award_Calculation_Sep_2026.xlsx"),
+    ]:
+        dst = os.path.join(BASE_DIR, dst_name)
+        try:
+            shutil.copy2(src, dst)
+            print(f"Copied to {dst}")
+        except PermissionError:
+            print(f"Skipped copying to {dst} (file currently open in Excel); Calculation/ folder version is updated.")
 
 
 if __name__ == "__main__":
