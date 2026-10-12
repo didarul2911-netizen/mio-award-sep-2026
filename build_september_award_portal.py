@@ -58,17 +58,17 @@ def build_portal():
         cc_actual_growth = round(cc_sep - cc_aug, 2)
 
         norm = {
-            "zone_name": r["zone_name"],
-            "sap_zone_code": str(r["sap_zone_code"]),
-            "zonal_head": r["zm_name"],
-            "region_name": r["region_name"],
-            "sap_region_code": str(r["sap_region_code"]),
-            "regional_head": r["rm_name"],
-            "area_code": r["tty"],
-            "area_name": r["area_name"],
-            "mio_id": str(r["mio_code"]),
-            "mio_name": r["mio_name"],
-            "desig": r["designation"],
+            "zone_name": str(r.get("zone_name") or ""),
+            "sap_zone_code": str(r.get("sap_zone_code") or ""),
+            "zonal_head": str(r.get("zm_name") or ""),
+            "region_name": str(r.get("region_name") or ""),
+            "sap_region_code": str(r.get("sap_region_code") or ""),
+            "regional_head": str(r.get("rm_name") or ""),
+            "area_code": str(r.get("tty") or ""),
+            "area_name": str(r.get("area_name") or ""),
+            "mio_id": str(r.get("mio_code") or ""),
+            "mio_name": str(r.get("mio_name") or ""),
+            "desig": str(r.get("designation") or ""),
             "mobile": str(r.get("mobile") or ""),
             "terr_aug_val": float(r.get("aug_total") or 0.0),
             "terr_sep_val": float(r.get("sep_total") or 0.0),
@@ -1723,7 +1723,7 @@ def build_portal():
                 }}
             }});
 
-            return Array.from(miosMap.values()).sort((a, b) => (a.area_code || '').localeCompare(b.area_code || ''));
+            return Array.from(miosMap.values()).sort((a, b) => String(a.area_code || '').localeCompare(String(b.area_code || '')));
         }}
 
         function getMioStatus(mio) {{
@@ -1942,10 +1942,10 @@ def build_portal():
             const q = (filterInput ? filterInput.value : '').trim().toLowerCase();
             if (q) {{
                 mios = mios.filter(m => 
-                    (m.mio_name && m.mio_name.toLowerCase().includes(q)) ||
-                    (m.mio_code && m.mio_code.toLowerCase().includes(q)) ||
-                    (m.area_name && m.area_name.toLowerCase().includes(q)) ||
-                    (m.area_code && m.area_code.toLowerCase().includes(q))
+                    String(m.mio_name || '').toLowerCase().includes(q) ||
+                    String(m.mio_code || '').toLowerCase().includes(q) ||
+                    String(m.area_name || '').toLowerCase().includes(q) ||
+                    String(m.area_code || '').toLowerCase().includes(q)
                 );
             }}
 
@@ -2426,10 +2426,10 @@ def build_portal():
             if (!q) return;
 
             const matched = DB.all_territories.filter(r =>
-                (r.mio_id && r.mio_id.toLowerCase().includes(q)) ||
-                (r.area_code && r.area_code.toLowerCase().includes(q)) ||
-                (r.mio_name && r.mio_name.toLowerCase().includes(q)) ||
-                (r.area_name && r.area_name.toLowerCase().includes(q))
+                String(r.mio_id || '').toLowerCase().includes(q) ||
+                String(r.area_code || '').toLowerCase().includes(q) ||
+                String(r.mio_name || '').toLowerCase().includes(q) ||
+                String(r.area_name || '').toLowerCase().includes(q)
             );
 
             if (matched.length === 0) {{
