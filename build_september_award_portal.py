@@ -235,6 +235,9 @@ def build_portal():
             "regions": sorted(z["regions_dict"].values(), key=lambda r: r["region_name"])
         })
 
+    gs_path = BASE_DIR / "Google_Apps_Script_Award_Backend.js"
+    gs_code_str = gs_path.read_text(encoding="utf-8") if gs_path.exists() else ""
+
     db_payload = {
         "zones": zones_list,
         "regions_map": regions_map,
@@ -242,6 +245,7 @@ def build_portal():
         "achievers_coral": achievers_coral,
         "all_territories": records,
         "logos": logos,
+        "apps_script_code": gs_code_str,
     }
 
     json_db_str = json.dumps(db_payload, ensure_ascii=False)
@@ -1296,13 +1300,18 @@ def build_portal():
 
                     <!-- Google Apps Script URL Endpoint & Masked Link Banner -->
                     <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2.5">
-                        <div class="flex items-center justify-between">
-                            <label class="block text-xs font-bold text-slate-700">Google Apps Script Web App Endpoint URL</label>
-                            <span id="admin-endpoint-status" class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded border border-emerald-300 hidden">✓ Connected</span>
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <label class="block text-xs font-bold text-slate-700">Google Apps Script Web App Endpoint URL (Google Sheet Live Sync)</label>
+                            <div class="flex items-center gap-2">
+                                <button type="button" onclick="copyGoogleAppsScriptCode()" class="px-2.5 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-[11px] font-bold transition shadow-2xs">
+                                    📋 Copy Apps Script Code (.gs)
+                                </button>
+                                <span id="admin-endpoint-status" class="text-[10px] font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded border border-emerald-300 hidden">✓ Connected</span>
+                            </div>
                         </div>
                         <div class="flex flex-wrap gap-2">
                             <input type="text" id="admin-endpoint-input" placeholder="Paste deployed Google Apps Script URL (https://script.google.com/macros/s/.../exec)" class="flex-1 min-w-[260px] bg-white border border-slate-300 rounded-lg px-3 py-1.5 text-xs font-mono text-slate-800 outline-none focus:ring-2 focus:ring-orange-500">
-                            <button onclick="saveAdminEndpoint()" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-bold transition">Save</button>
+                            <button onclick="saveAdminEndpoint()" class="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-bold transition">Save URL</button>
                             <button onclick="syncFromCloud(false)" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition flex items-center gap-1 shadow-xs">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
                                 <span>Sync Now</span>
@@ -3234,10 +3243,20 @@ def build_portal():
             isSubmissionsLocked = targetState;
             localStorage.setItem(STORAGE_KEY_LOCKED, isSubmissionsLocked ? 'true' : 'false');
             updateSubmissionLockUI();
+            if (cloudEndpoint) {{
+                try {{
+                    await fetch(cloudEndpoint, {{
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                        body: JSON.stringify({{ action: 'set_submission_lock', locked: isSubmissionsLocked }})
+                    }});
+                }} catch (e) {{}}
+            }}
             showToast(isSubmissionsLocked ? 'Input Locked (Read-Only)' : 'Input Unlocked (Active)', isSubmissionsLocked ? '🔒' : '🔓');
         }}
 
-        function adminDeleteCurrentRegionData() {{
+        async function adminDeleteCurrentRegionData() {{
             let targetRegion = currentRegionName || prompt('Enter exact Region Name to reset:');
             if (!targetRegion || !DB.regions_map[targetRegion]) return;
             if (!confirm(`Reset all choices for Region "${{targetRegion}}" back to Pending?`)) return;
@@ -3245,6 +3264,16 @@ def build_portal():
             const allReg = DB.achievers_exium.filter(a => a.region === targetRegion).concat(DB.achievers_coral.filter(a => a.region === targetRegion));
             allReg.forEach(a => delete savedChoices[a.id]);
             localStorage.setItem(STORAGE_KEY_CHOICES, JSON.stringify(savedChoices));
+            if (cloudEndpoint) {{
+                try {{
+                    await fetch(cloudEndpoint, {{
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                        body: JSON.stringify({{ action: 'delete_region_data', region: targetRegion }})
+                    }});
+                }} catch (e) {{}}
+            }}
             if (currentRegionName === targetRegion) {{
                 renderAchievers();
                 updateRegionProgress();
@@ -3253,12 +3282,22 @@ def build_portal():
             showToast(`Region "${{targetRegion}}" reset!`, '🗑️');
         }}
 
-        function adminDeleteAllNationalData() {{
+        async function adminDeleteAllNationalData() {{
             const typed = prompt('To confirm permanent deletion of all choices, type "DELETE":');
             if (typed !== 'DELETE') return;
             savedChoices = {{}};
             localStorage.setItem(STORAGE_KEY_CHOICES, JSON.stringify(savedChoices));
             localStorage.setItem(STORAGE_KEY_QUEUE, '{{}}');
+            if (cloudEndpoint) {{
+                try {{
+                    await fetch(cloudEndpoint, {{
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                        body: JSON.stringify({{ action: 'delete_all_data' }})
+                    }});
+                }} catch (e) {{}}
+            }}
             if (currentRegionName) {{
                 renderAchievers();
                 updateRegionProgress();
@@ -3277,7 +3316,37 @@ def build_portal():
 
         function queueForUpload(achId, brand, area_code, mio_code, voucher, timestamp, action = 'save', cancelled = false, cancelled_by = '', cancel_reason = '') {{
             const q = getPendingQueue();
-            q[achId] = {{ id: achId, month: brand, brand, area_code, mio_code, voucher, timestamp, action, cancelled, cancelled_by, cancel_reason, clientTime: Date.now() }};
+            const a = findAchieverById(achId) || {{}};
+            q[achId] = {{
+                id: achId,
+                month: brand,
+                brand,
+                zone: a.zone || '',
+                sap_zone_code: a.sap_zone_code || '',
+                zonal_head: a.zonal_head || '',
+                region: a.region || '',
+                sap_region_code: a.sap_region_code || '',
+                regional_head: a.regional_head || '',
+                area_code,
+                area_name: a.area_name || '',
+                mio_code,
+                mio_name: a.mio_name || '',
+                desig: a.desig || '',
+                mobile: a.mobile || '',
+                rx: a.rx || 0,
+                terr_pos: Boolean(a.terr_pos),
+                brand_req_box: a.brand_req_box || 30,
+                brand_growth_box: a.brand_growth_box !== undefined ? a.brand_growth_box : '',
+                tier: a.tier || '',
+                award: a.award || 0,
+                voucher,
+                timestamp,
+                action,
+                cancelled,
+                cancelled_by,
+                cancel_reason,
+                clientTime: Date.now()
+            }};
             savePendingQueue(q);
         }}
 
@@ -3319,31 +3388,43 @@ def build_portal():
                 const res = await fetch(url);
                 if (res.ok) {{
                     const json = await res.json();
-                    if (json && json.status === 'success' && json.data) {{
-                        const mergeBrand = (list, dict) => {{
-                            list.forEach(a => {{
-                                const k = a.area_code + '_' + a.mio_code;
-                                const c = dict[k];
-                                if (c && (c.voucher || c.cancelled)) {{
-                                    savedChoices[a.id] = {{
-                                        voucher: c.voucher || '',
-                                        timestamp: c.timestamp || '',
-                                        status: c.cancelled ? 'Cancelled' : 'Complete',
-                                        cancelled: Boolean(c.cancelled),
-                                        cancelled_by: c.cancelled_by || '',
-                                        cancel_reason: c.cancel_reason || ''
-                                    }};
-                                }}
-                            }});
-                        }};
-                        mergeBrand(DB.achievers_exium, json.data.Exium_2026 || {{}});
-                        mergeBrand(DB.achievers_coral, json.data.Coralcal_2026 || {{}});
-                        localStorage.setItem(STORAGE_KEY_CHOICES, JSON.stringify(savedChoices));
-                        if (currentRegionName) {{ renderAchievers(); updateRegionProgress(); }}
-                        if (isAdminUnlocked) refreshAdminStats();
+                    if (json && json.status === 'success') {{
+                        if (typeof json.submissions_locked === 'boolean') {{
+                            isSubmissionsLocked = json.submissions_locked;
+                            localStorage.setItem(STORAGE_KEY_LOCKED, isSubmissionsLocked ? 'true' : 'false');
+                            updateSubmissionLockUI();
+                        }}
+                        if (json.data) {{
+                            const mergeBrand = (list, dict) => {{
+                                list.forEach(a => {{
+                                    const k = a.area_code + '_' + a.mio_code;
+                                    const c = dict[k];
+                                    if (c) {{
+                                        if (c.voucher || c.cancelled) {{
+                                            savedChoices[a.id] = {{
+                                                voucher: c.voucher || '',
+                                                timestamp: c.timestamp || '',
+                                                status: c.cancelled ? 'Cancelled' : 'Complete',
+                                                cancelled: Boolean(c.cancelled),
+                                                cancelled_by: c.cancelled_by || '',
+                                                cancel_reason: c.cancel_reason || ''
+                                            }};
+                                        }} else if (c.status === 'Pending') {{
+                                            delete savedChoices[a.id];
+                                        }}
+                                    }}
+                                }});
+                            }};
+                            mergeBrand(DB.achievers_exium, json.data.Exium_2026 || json.data.Exium_Sep_2026 || {{}});
+                            mergeBrand(DB.achievers_coral, json.data.Coralcal_2026 || json.data.Coralcal_Sep_2026 || {{}});
+                            localStorage.setItem(STORAGE_KEY_CHOICES, JSON.stringify(savedChoices));
+                            if (currentRegionName) {{ renderAchievers(); updateRegionProgress(); }}
+                            if (isAdminUnlocked) refreshAdminStats();
+                        }}
                     }}
                 }}
                 updateSyncStatusBadge('synced');
+                if (!silent) showToast('Synced with Google Sheet!', '☁️');
             }} catch (e) {{
                 updateSyncStatusBadge('ready');
             }} finally {{
@@ -3376,7 +3457,23 @@ def build_portal():
             const val = document.getElementById('admin-endpoint-input').value.trim();
             cloudEndpoint = val;
             localStorage.setItem(STORAGE_KEY_ENDPOINT, val);
-            showToast(val ? 'Cloud Endpoint Saved!' : 'Endpoint Cleared', '⚙️');
+            const statusBadge = document.getElementById('admin-endpoint-status');
+            if (statusBadge) {{
+                if (val) statusBadge.classList.remove('hidden');
+                else statusBadge.classList.add('hidden');
+            }}
+            if (val) syncFromCloud(false);
+            showToast(val ? 'Google Sheet Endpoint Saved & Connected!' : 'Endpoint Cleared', '⚙️');
+        }}
+
+        function copyGoogleAppsScriptCode() {{
+            const code = DB.apps_script_code || '';
+            if (!code) return;
+            navigator.clipboard.writeText(code).then(() => {{
+                showToast('Google Apps Script code copied to clipboard! Paste into Extensions > Apps Script.', '📋');
+            }}).catch(() => {{
+                alert('Please open Google_Apps_Script_Award_Backend.js from the folder.');
+            }});
         }}
 
         async function manualSaveSync() {{
@@ -3386,10 +3483,13 @@ def build_portal():
         }}
 
         function copyShareableLink() {{
-            navigator.clipboard.writeText(MASKED_PORTAL_URL).then(() => {{
-                showToast('Masked Portal Link copied! Send to Regional Heads.', '📋');
+            const urlToShare = cloudEndpoint
+                ? ( window.location.origin + window.location.pathname + '?api=' + encodeURIComponent(cloudEndpoint) )
+                : MASKED_PORTAL_URL;
+            navigator.clipboard.writeText(urlToShare).then(() => {{
+                showToast('Shareable Link copied!', '📋');
             }}).catch(() => {{
-                prompt('Copy link:', MASKED_PORTAL_URL);
+                prompt('Copy link:', urlToShare);
             }});
         }}
 

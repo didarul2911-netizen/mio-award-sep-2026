@@ -2,17 +2,48 @@
  * ============================================================================
  * EXIUM MUPS & CORALCAL-D/DX/VITA - SEPTEMBER 2026 AWARD PORTAL BACKEND
  * ============================================================================
- * Supports:
- * 1. Dual-Brand Tabs: 'Award_Exium_Sep_2026' & 'Award_Coralcal_Sep_2026'
- * 2. Gift Voucher Selection & Deselection (with preserved BDT Timestamps)
- * 3. Regional Head (RH) & Zonal Head (ZH) Recommendation & Award Cancellation
- *    with Mandatory Reason logging
- * 4. Admin Submission Lock/Unlock & Region/National Reset
+ * Works automatically with:
+ * - A brand new blank Google Sheet (automatically creates tabs & headers), OR
+ * - An uploaded Master Excel Sheet ('Exium_Award_Choice_Master_Sep_2026.xlsx')
+ *
+ * Separate Tabs Maintained Automatically:
+ * 1. 'Exium_Achievers_Sep_2026'    (Exium MUPS Award)
+ * 2. 'Coralcal_Achievers_Sep_2026' (Coralcal-D/DX/Vita Award)
  * ============================================================================
  */
 
-const SHEET_EXIUM = "Award_Exium_Sep_2026";
-const SHEET_CORALCAL = "Award_Coralcal_Sep_2026";
+const SHEET_EXIUM = "Exium_Achievers_Sep_2026";
+const SHEET_CORALCAL = "Coralcal_Achievers_Sep_2026";
+
+const HEADERS = [
+  "SL",
+  "Brand",
+  "Zone Name",
+  "SAP Zone Code",
+  "Zonal Head",
+  "Region Name",
+  "SAP Region Code",
+  "Regional Head",
+  "SAP Area Code",
+  "Territory Name",
+  "SAP MIO Code",
+  "Sr. / MIO Name",
+  "Designation",
+  "Mobile Number",
+  "Seen Rx (Sep'26)",
+  "Territory Sales Positive?",
+  "Required Growth (Box Qty)",
+  "Actual Growth (Box Qty)",
+  "Award Tier",
+  "Calculated Award",
+  "Active Payable Award",
+  "Selected Gift Voucher",
+  "Status",
+  "RH/ZH Recommendation",
+  "Cancelled By",
+  "Cancellation Reason",
+  "Timestamp (BDT)"
+];
 
 function getBDTimestampServer() {
   return Utilities.formatDate(new Date(), "Asia/Dhaka", "dd-MMM-yyyy hh:mm:ss a");
@@ -36,55 +67,64 @@ function normalizeToBDTimestamp(val) {
   return str;
 }
 
-/**
- * Locate column indices dynamically (or fall back to default 29-column layout:
- * Col 5 = Region Name, Col 8 = SAP Area Code, Col 10 = SAP MIO Code,
- * Col 23 = RH Recommendation, Col 24 = RH Cancel Reason,
- * Col 25 = ZH Recommendation, Col 26 = ZH Cancel Reason,
- * Col 27 = Selected Gift Voucher, Col 28 = Status, Col 29 = Timestamp (BDT))
- */
-function getSheetColMap(sheet) {
-  const lastCol = Math.max(sheet.getLastColumn(), 29);
-  const headers = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+function getOrCreateBrandSheet(ss, isExium) {
+  const primaryName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
+  const fallbackName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+  let sheet = ss.getSheetByName(primaryName) || ss.getSheetByName(fallbackName);
 
-  let colRegion = 5;
-  let colArea = 8;
-  let colMio = 10;
-  let colRhRec = 23;
-  let colRhReason = 24;
-  let colZhRec = 25;
-  let colZhReason = 26;
-  let colVoucher = 27;
-  let colStatus = 28;
-  let colTimestamp = 29;
-
-  for (let i = 0; i < headers.length; i++) {
-    const h = String(headers[i] || "").trim().toLowerCase();
-    const colNum = i + 1;
-    if (h === "region name" || h === "current region") colRegion = colNum;
-    else if (h === "sap area code" || h === "sap area code (tty)" || h.includes("area code")) colArea = colNum;
-    else if (h === "sap mio code" || h.includes("mio code")) colMio = colNum;
-    else if (h.includes("rh recommendation") || h.includes("regional head recommendation")) colRhRec = colNum;
-    else if (h.includes("rh cancel reason") || h.includes("regional head cancel reason")) colRhReason = colNum;
-    else if (h.includes("zh recommendation") || h.includes("zonal head recommendation")) colZhRec = colNum;
-    else if (h.includes("zh cancel reason") || h.includes("zonal head cancel reason")) colZhReason = colNum;
-    else if (h.includes("voucher") || h.includes("choice")) colVoucher = colNum;
-    else if (h === "status" || h === "submission status") colStatus = colNum;
-    else if (h.includes("timestamp")) colTimestamp = colNum;
+  if (!sheet) {
+    sheet = ss.insertSheet(primaryName);
+    sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+    const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
+    headerRange.setFontWeight("bold");
+    headerRange.setBackground(isExium ? "#1E40AF" : "#6D28D9");
+    headerRange.setFontColor("#FFFFFF");
+    sheet.setFrozenRows(1);
+  } else if (sheet.getLastRow() === 0) {
+    sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+    const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
+    headerRange.setFontWeight("bold");
+    headerRange.setBackground(isExium ? "#1E40AF" : "#6D28D9");
+    headerRange.setFontColor("#FFFFFF");
+    sheet.setFrozenRows(1);
   }
+  return sheet;
+}
 
-  return {
-    colRegion,
-    colArea,
-    colMio,
-    colRhRec,
-    colRhReason,
-    colZhRec,
-    colZhReason,
-    colVoucher,
-    colStatus,
-    colTimestamp
+function getSheetColMap(sheet) {
+  const lastCol = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const headerRow = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+
+  const map = {
+    colRegion: 6,
+    colArea: 9,
+    colMio: 11,
+    colAward: 20,
+    colActiveAward: 21,
+    colVoucher: 22,
+    colStatus: 23,
+    colRec: 24,
+    colCancBy: 25,
+    colReason: 26,
+    colTimestamp: 27
   };
+
+  for (let i = 0; i < headerRow.length; i++) {
+    const h = String(headerRow[i] || "").trim().toLowerCase();
+    const c = i + 1;
+    if (h === "region name" || h === "region") map.colRegion = c;
+    else if (h.includes("area code")) map.colArea = c;
+    else if (h.includes("mio code") || h === "mio sap id") map.colMio = c;
+    else if (h === "calculated award" || h === "award amount") map.colAward = c;
+    else if (h === "active payable award") map.colActiveAward = c;
+    else if (h.includes("voucher")) map.colVoucher = c;
+    else if (h === "status" || h === "submission status") map.colStatus = c;
+    else if (h.includes("recommendation")) map.colRec = c;
+    else if (h === "cancelled by") map.colCancBy = c;
+    else if (h.includes("cancel reason") || h.includes("cancellation reason")) map.colReason = c;
+    else if (h.includes("timestamp")) map.colTimestamp = c;
+  }
+  return map;
 }
 
 function doGet(e) {
@@ -93,62 +133,64 @@ function doGet(e) {
     const props = PropertiesService.getScriptProperties();
     const isLocked = props.getProperty("SUBMISSIONS_LOCKED") === "true";
 
-    const result = {
-      Exium_Sep_2026: {},
-      Coralcal_Sep_2026: {}
-    };
+    const exiumMap = {};
+    const coralMap = {};
 
-    const readBrandSheet = (sheetName, targetObj) => {
-      const sheet = ss.getSheetByName(sheetName);
-      if (!sheet) return;
+    const readSheetIntoMap = (isExium, targetObj) => {
+      const primaryName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
+      const fallbackName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+      const sheet = ss.getSheetByName(primaryName) || ss.getSheetByName(fallbackName);
+      if (!sheet || sheet.getLastRow() < 2) return;
+
       const data = sheet.getDataRange().getValues();
-      if (data.length < 2) return;
       const cols = getSheetColMap(sheet);
 
       for (let i = 1; i < data.length; i++) {
         const row = data[i];
         const areaCode = String(row[cols.colArea - 1] || "").trim();
         const mioCode = String(row[cols.colMio - 1] || "").trim();
-        const rhRec = String(row[cols.colRhRec - 1] || "Recommended").trim();
-        const rhReason = String(row[cols.colRhReason - 1] || "").trim();
-        const zhRec = String(row[cols.colZhRec - 1] || "Recommended").trim();
-        const zhReason = String(row[cols.colZhReason - 1] || "").trim();
+        if (!areaCode) continue;
+
         const voucher = String(row[cols.colVoucher - 1] || "").trim();
         const status = String(row[cols.colStatus - 1] || "").trim();
-        const rawTs = row[cols.colTimestamp - 1];
-        const timestamp = normalizeToBDTimestamp(rawTs);
+        const rec = String(row[cols.colRec - 1] || "Recommended").trim();
+        const cancBy = String(row[cols.colCancBy - 1] || "").trim();
+        const reason = String(row[cols.colReason - 1] || "").trim();
+        const timestamp = normalizeToBDTimestamp(row[cols.colTimestamp - 1]);
 
-        const isCancelled = (status === "Cancelled" || rhRec === "Not Recommended" || zhRec === "Not Recommended");
+        const isCancelled = (
+          status === "Cancelled" ||
+          voucher === "CANCELLED" ||
+          rec.toLowerCase().includes("not recommended")
+        );
+
         if (voucher || isCancelled || timestamp || status === "Pending") {
           const key = areaCode + "_" + mioCode;
-          let cancelledBy = "";
-          if (zhRec === "Not Recommended" && rhRec === "Not Recommended") cancelledBy = "Regional Head & Zonal Head";
-          else if (zhRec === "Not Recommended") cancelledBy = "Zonal Head";
-          else if (rhRec === "Not Recommended") cancelledBy = "Regional Head";
-
           targetObj[key] = {
-            voucher: isCancelled ? "" : voucher,
+            voucher: isCancelled ? "" : (voucher === "Not Selected" ? "" : voucher),
             timestamp: timestamp,
-            status: isCancelled ? "Cancelled" : (voucher ? "Complete" : "Pending"),
-            rh_rec: rhRec || "Recommended",
-            rh_reason: rhReason,
-            zh_rec: zhRec || "Recommended",
-            zh_reason: zhReason,
-            cancelled_by: cancelledBy,
-            cancel_reason: zhReason || rhReason || ""
+            status: isCancelled ? "Cancelled" : (voucher && voucher !== "Not Selected" ? "Complete" : "Pending"),
+            cancelled: isCancelled,
+            cancelled_by: cancBy || (isCancelled ? "Regional Head" : ""),
+            cancel_reason: reason
           };
         }
       }
     };
 
-    readBrandSheet(SHEET_EXIUM, result.Exium_Sep_2026);
-    readBrandSheet(SHEET_CORALCAL, result.Coralcal_Sep_2026);
+    readSheetIntoMap(true, exiumMap);
+    readSheetIntoMap(false, coralMap);
 
     return ContentService.createTextOutput(
       JSON.stringify({
         status: "success",
         submissions_locked: isLocked,
-        data: result
+        data: {
+          Exium_2026: exiumMap,
+          Coralcal_2026: coralMap,
+          Exium_Sep_2026: exiumMap,
+          Coralcal_Sep_2026: coralMap
+        }
       })
     ).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
@@ -159,6 +201,8 @@ function doGet(e) {
 }
 
 function doPost(e) {
+  const lock = LockService.getScriptLock();
+  lock.tryLock(10000);
   try {
     const payload = JSON.parse(e.postData.contents);
     const ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -168,24 +212,22 @@ function doPost(e) {
       const lockState = payload.locked ? "true" : "false";
       props.setProperty("SUBMISSIONS_LOCKED", lockState);
       return ContentService.createTextOutput(
-        JSON.stringify({ status: "success", submissions_locked: payload.locked })
+        JSON.stringify({ status: "success", submissions_locked: Boolean(payload.locked) })
       ).setMimeType(ContentService.MimeType.JSON);
     }
 
     if (payload.action === "delete_all_data") {
-      [SHEET_EXIUM, SHEET_CORALCAL].forEach(sName => {
-        const sheet = ss.getSheetByName(sName);
-        if (!sheet) return;
+      [true, false].forEach(isExium => {
+        const sheet = getOrCreateBrandSheet(ss, isExium);
         const lastRow = sheet.getLastRow();
         if (lastRow < 2) return;
         const cols = getSheetColMap(sheet);
         const numRows = lastRow - 1;
-        sheet.getRange(2, cols.colRhRec, numRows, 1).setValue("Recommended");
-        sheet.getRange(2, cols.colRhReason, numRows, 1).clearContent();
-        sheet.getRange(2, cols.colZhRec, numRows, 1).setValue("Recommended");
-        sheet.getRange(2, cols.colZhReason, numRows, 1).clearContent();
         sheet.getRange(2, cols.colVoucher, numRows, 1).clearContent();
         sheet.getRange(2, cols.colStatus, numRows, 1).setValue("Pending");
+        sheet.getRange(2, cols.colRec, numRows, 1).setValue("Recommended");
+        sheet.getRange(2, cols.colCancBy, numRows, 1).clearContent();
+        sheet.getRange(2, cols.colReason, numRows, 1).clearContent();
         sheet.getRange(2, cols.colTimestamp, numRows, 1).clearContent();
       });
       return ContentService.createTextOutput(
@@ -193,51 +235,123 @@ function doPost(e) {
       ).setMimeType(ContentService.MimeType.JSON);
     }
 
+    if (payload.action === "delete_region_data" && payload.region) {
+      const targetReg = String(payload.region).trim().toLowerCase();
+      [true, false].forEach(isExium => {
+        const sheet = getOrCreateBrandSheet(ss, isExium);
+        const lastRow = sheet.getLastRow();
+        if (lastRow < 2) return;
+        const data = sheet.getDataRange().getValues();
+        const cols = getSheetColMap(sheet);
+        for (let i = 1; i < data.length; i++) {
+          const rowReg = String(data[i][cols.colRegion - 1] || "").trim().toLowerCase();
+          if (rowReg === targetReg) {
+            const rIdx = i + 1;
+            sheet.getRange(rIdx, cols.colVoucher).clearContent();
+            sheet.getRange(rIdx, cols.colStatus).setValue("Pending");
+            sheet.getRange(rIdx, cols.colRec).setValue("Recommended");
+            sheet.getRange(rIdx, cols.colCancBy).clearContent();
+            sheet.getRange(rIdx, cols.colReason).clearContent();
+            sheet.getRange(rIdx, cols.colTimestamp).clearContent();
+          }
+        }
+      });
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "success", message: "Region data reset" })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
     if (payload.action === "save_choices" && Array.isArray(payload.choices)) {
       let updatedCount = 0;
 
       payload.choices.forEach(item => {
-        const brandKey = item.brand || item.month || "";
-        const isExium = (brandKey === "Exium_Sep_2026" || String(item.id || "").startsWith("EX_"));
-        const sheetName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
-        const sheet = ss.getSheetByName(sheetName);
-        if (!sheet) return;
-
-        const data = sheet.getDataRange().getValues();
+        const brandKey = String(item.brand || item.month || "");
+        const isExium = (
+          brandKey.toLowerCase().includes("exium") ||
+          String(item.id || "").startsWith("EXIUM_")
+        );
+        const sheet = getOrCreateBrandSheet(ss, isExium);
+        const lastRow = sheet.getLastRow();
+        const data = lastRow >= 1 ? sheet.getDataRange().getValues() : [];
         const cols = getSheetColMap(sheet);
+
         const targetArea = String(item.area_code || "").trim();
         const targetMio = String(item.mio_code || "").trim();
+        const bdTime = normalizeToBDTimestamp(item.timestamp) || getBDTimestampServer();
 
+        const isCancelled = Boolean(
+          item.cancelled ||
+          item.action === "cancel" ||
+          item.status === "Cancelled"
+        );
+        const cleanVoucher = isCancelled
+          ? "CANCELLED"
+          : (item.action === "remove" || item.action === "restore" ? "" : String(item.voucher || "").trim());
+        const statusVal = isCancelled ? "Cancelled" : (cleanVoucher ? "Complete" : "Pending");
+        const recVal = isCancelled ? "Not Recommended" : "Recommended";
+        const cancByVal = isCancelled ? String(item.cancelled_by || "Regional Head") : "";
+        const reasonVal = isCancelled ? String(item.cancel_reason || "") : "";
+        const awardAmt = Number(item.award || 0);
+        const activeAwardAmt = isCancelled ? 0 : awardAmt;
+
+        let foundRowIndex = -1;
         for (let i = 1; i < data.length; i++) {
           const rowArea = String(data[i][cols.colArea - 1] || "").trim();
           const rowMio = String(data[i][cols.colMio - 1] || "").trim();
-
           if (rowArea === targetArea && (!targetMio || rowMio === targetMio)) {
-            const rowIndex = i + 1;
-            const bdTime = normalizeToBDTimestamp(item.timestamp) || getBDTimestampServer();
-
-            const rhRec = item.rh_rec || "Recommended";
-            const rhReason = item.rh_reason || "";
-            const zhRec = item.zh_rec || "Recommended";
-            const zhReason = item.zh_reason || "";
-            const isCancelled = (item.status === "Cancelled" || item.action === "cancel" || rhRec === "Not Recommended" || zhRec === "Not Recommended");
-            const voucherVal = isCancelled ? "CANCELLED" : String(item.voucher || "").trim();
-            const statusVal = isCancelled ? "Cancelled" : (voucherVal ? "Complete" : "Pending");
-
-            sheet.getRange(rowIndex, cols.colRhRec).setValue(rhRec);
-            sheet.getRange(rowIndex, cols.colRhReason).setValue(rhReason);
-            sheet.getRange(rowIndex, cols.colZhRec).setValue(zhRec);
-            sheet.getRange(rowIndex, cols.colZhReason).setValue(zhReason);
-            sheet.getRange(rowIndex, cols.colVoucher).setValue(isCancelled ? "" : voucherVal);
-            sheet.getRange(rowIndex, cols.colStatus).setValue(statusVal);
-
-            const tsCell = sheet.getRange(rowIndex, cols.colTimestamp);
-            tsCell.setNumberFormat("@");
-            tsCell.setValue(bdTime);
-
-            updatedCount++;
+            foundRowIndex = i + 1;
             break;
           }
+        }
+
+        if (foundRowIndex > 0) {
+          sheet.getRange(foundRowIndex, cols.colActiveAward).setValue(activeAwardAmt);
+          sheet.getRange(foundRowIndex, cols.colVoucher).setValue(cleanVoucher);
+          sheet.getRange(foundRowIndex, cols.colStatus).setValue(statusVal);
+          sheet.getRange(foundRowIndex, cols.colRec).setValue(recVal);
+          sheet.getRange(foundRowIndex, cols.colCancBy).setValue(cancByVal);
+          sheet.getRange(foundRowIndex, cols.colReason).setValue(reasonVal);
+          const tsCell = sheet.getRange(foundRowIndex, cols.colTimestamp);
+          tsCell.setNumberFormat("@");
+          tsCell.setValue(bdTime);
+          updatedCount++;
+        } else {
+          const newSl = Math.max(1, sheet.getLastRow());
+          const newRow = [
+            newSl,
+            isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita",
+            item.zone || "",
+            item.sap_zone_code || "",
+            item.zonal_head || "",
+            item.region || "",
+            item.sap_region_code || "",
+            item.regional_head || "",
+            targetArea,
+            item.area_name || "",
+            targetMio,
+            item.mio_name || "",
+            item.desig || "",
+            item.mobile || "",
+            item.rx || 0,
+            item.terr_pos ? "Yes" : "No",
+            item.brand_req_box || 30,
+            item.brand_growth_box !== undefined ? item.brand_growth_box : "",
+            item.tier || "",
+            awardAmt,
+            activeAwardAmt,
+            cleanVoucher,
+            statusVal,
+            recVal,
+            cancByVal,
+            reasonVal,
+            bdTime
+          ];
+          sheet.appendRow(newRow);
+          const appendedRow = sheet.getLastRow();
+          const tsCell = sheet.getRange(appendedRow, 27);
+          tsCell.setNumberFormat("@");
+          tsCell.setValue(bdTime);
+          updatedCount++;
         }
       });
 
@@ -253,5 +367,7 @@ function doPost(e) {
     return ContentService.createTextOutput(
       JSON.stringify({ status: "error", message: err.toString() })
     ).setMimeType(ContentService.MimeType.JSON);
+  } finally {
+    lock.releaseLock();
   }
 }
