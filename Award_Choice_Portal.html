@@ -706,7 +706,8 @@
                         <option value="Territory Sales Calculation Discrepancy (Sales was positive)">2. Territory Sales Calculation Discrepancy (Sales was Positive in Sep'26)</option>
                         <option value="Brand Sales Value / Box Growth Discrepancy">3. Brand Sales Value / Box Growth Discrepancy (Met &ge; +30 Boxes)</option>
                         <option value="Transfer / Joining / Territory Reassignment in Sep'26">4. Transfer / Joining / Territory Reassignment in Sep'26</option>
-                        <option value="Other Data Error / Verification Needed">5. Other Data Error / Verification Needed</option>
+                        <option value="Tier / Award Amount Discrepancy (e.g. Claimed 3,000 instead of 1,000)">5. Tier / Award Amount Discrepancy (e.g. Claimed 3,000 instead of 1,000)</option>
+                        <option value="Other Data Error / Verification Needed">6. Other Data Error / Verification Needed</option>
                     </select>
                 </div>
 
@@ -2101,45 +2102,53 @@
                 </div>
             `;
 
-            if (Number(ach.award) === 0) {
-                const rev = ach.review_info || savedReviews[`REV_${ach.id}`];
-                const isPending = rev && rev.status === 'pending';
-                const isRejected = rev && rev.status === 'rejected';
+            const rev = ach.review_info || savedReviews[`REV_${ach.id}`];
+            const isPending = rev && rev.status === 'pending';
+            const isRejected = rev && rev.status === 'rejected';
+            const isApproved = rev && rev.status === 'approved';
 
-                let revActionHtml = '';
-                if (isPending) {
-                    revActionHtml = `
-                        <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs flex items-center gap-1">
-                                <span>🔍</span>
-                                <span>Review Requested (${formatToBDTime(rev.timestamp || '')})</span>
-                            </span>
-                            <button onclick="openReviewModal('${ach.id}')" class="text-[11px] font-bold text-amber-800 hover:text-white bg-white hover:bg-amber-600 border border-amber-300 px-2.5 py-1 rounded-lg transition shadow-2xs">
-                                View / Update Dispute
-                            </button>
-                        </div>
-                    `;
-                } else if (isRejected) {
-                    revActionHtml = `
-                        <div class="flex items-center gap-1.5 flex-wrap">
-                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-black bg-rose-100 text-rose-900 border border-rose-300 shadow-2xs flex items-center gap-1">
-                                <span>❌</span>
-                                <span>Review Rejected by Admin</span>
-                            </span>
-                            <button onclick="openReviewModal('${ach.id}')" class="text-[11px] font-bold text-slate-700 hover:text-white bg-white hover:bg-slate-700 border border-slate-300 px-2.5 py-1 rounded-lg transition shadow-2xs">
-                                Re-Submit Review
-                            </button>
-                        </div>
-                    `;
-                } else {
-                    revActionHtml = `
-                        <button onclick="openReviewModal('${ach.id}')" title="If there is a data discrepancy in Seen Rx or Sales, submit a review request for Admin verification" class="px-3 py-1.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-xs transition flex items-center gap-1.5">
-                            <span>📝</span>
-                            <span>Request Data Review</span>
+            let revActionHtml = '';
+            if (isPending) {
+                revActionHtml = `
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="px-2 sm:px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                            <span>🔍</span>
+                            <span>Review Requested (${formatToBDTime(rev.timestamp || '')})</span>
+                        </span>
+                        <button onclick="openReviewModal('${ach.id}')" class="text-[10px] sm:text-[11px] font-bold text-amber-800 hover:text-white bg-white hover:bg-amber-600 border border-amber-300 px-2 sm:px-2.5 py-1 rounded-lg transition shadow-2xs whitespace-nowrap">
+                            View / Update Dispute
                         </button>
-                    `;
-                }
+                    </div>
+                `;
+            } else if (isRejected) {
+                revActionHtml = `
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="px-2 sm:px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-black bg-rose-100 text-rose-900 border border-rose-300 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                            <span>❌</span>
+                            <span>Review Rejected</span>
+                        </span>
+                        <button onclick="openReviewModal('${ach.id}')" class="text-[10px] sm:text-[11px] font-bold text-slate-700 hover:text-white bg-white hover:bg-slate-700 border border-slate-300 px-2 sm:px-2.5 py-1 rounded-lg transition shadow-2xs whitespace-nowrap">
+                            Re-Submit Review (RH/ZH)
+                        </button>
+                    </div>
+                `;
+            } else if (isApproved) {
+                revActionHtml = `
+                    <span class="px-2 sm:px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-black bg-emerald-100 text-emerald-900 border border-emerald-300 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                        <span>✅</span>
+                        <span>Review Approved (${rev.granted_award || 3000})</span>
+                    </span>
+                `;
+            } else {
+                revActionHtml = `
+                    <button onclick="openReviewModal('${ach.id}')" title="If there is a data discrepancy in Seen Rx, sales, or award tier, submit a review request for Admin verification" class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl text-[11px] sm:text-xs font-black bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs transition flex items-center gap-1 whitespace-nowrap">
+                        <span>📝</span>
+                        <span>Request Data Review</span>
+                    </button>
+                `;
+            }
 
+            if (Number(ach.award) === 0) {
                 return `
                     <div class="rounded-xl border-2 border-slate-200 bg-slate-50/60 p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200/80 pb-2">
@@ -2170,12 +2179,12 @@
                                     <span class="text-rose-700 font-bold">${ach.reason || 'Criteria not fulfilled'}</span>
                                 </div>
                                 <div class="text-[11px] text-slate-500">
-                                    If this MIO's prescriptions or territory sales were recorded incorrectly (e.g. offline prescriptions, transfer, joining), contact Admin or click <strong>Request Data Review</strong>.
+                                    If this MIO's prescriptions or territory sales were recorded incorrectly (e.g. offline prescriptions, transfer, joining), Regional Head or Zonal Head can click <strong>Request Data Review</strong> to submit for Admin verification.
                                 </div>
                             </div>
                             ${isPending ? `
                                 <div class="bg-amber-50 text-amber-900 border border-amber-200 px-2.5 py-1 rounded-lg text-[11px] font-bold self-start sm:self-center whitespace-nowrap">
-                                    Dispute logged: "${rev.dispute_category}"
+                                    Dispute logged by ${rev.submitter_role || 'RH'}: "${rev.dispute_category}"
                                 </div>
                             ` : ''}
                         </div>
@@ -2187,7 +2196,7 @@
                 return `
                     <div class="rounded-xl border-2 ${themeBorder} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-rose-200/80 pb-2">
-                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
                                 <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${badgeBrand} opacity-75 whitespace-nowrap">
                                     ${brandIcon} ${brandTitle}
                                 </span>
@@ -2196,7 +2205,10 @@
                                 </span>
                                 <span class="text-[10px] sm:text-[11px] font-black text-rose-700 uppercase bg-rose-100 px-2 py-0.5 rounded border border-rose-200 whitespace-nowrap">AWARD CANCELLED</span>
                             </div>
-                            ${selectionStatusHtml}
+                            <div class="flex items-center gap-2 flex-wrap self-start sm:self-center">
+                                ${revActionHtml}
+                                ${selectionStatusHtml}
+                            </div>
                         </div>
                         ${metricsHtml}
                         <div class="bg-rose-100/80 border border-rose-300 rounded-xl p-2.5 text-xs text-rose-950 flex items-start gap-2">
@@ -2264,7 +2276,10 @@
                                 (${ach.tier})
                             </span>
                         </div>
-                        ${selectionStatusHtml}
+                        <div class="flex items-center gap-2 flex-wrap self-start sm:self-center">
+                            ${revActionHtml}
+                            ${selectionStatusHtml}
+                        </div>
                     </div>
 
                     ${metricsHtml}
@@ -2879,8 +2894,8 @@
                         <strong class="${ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}">${ach.brand_growth_box || 0} Boxes</strong> (Req: +${ach.brand_req_box || 30})
                     </div>
                 </div>
-                <div class="mt-1 text-[11px] text-amber-900 font-semibold">
-                    Current Award: <strong class="text-rose-700">${ach.award} Taka (${ach.reason || 'Criteria Not Met'})</strong>
+                <div class="mt-1 text-[11px] text-amber-950 font-semibold">
+                    Current Award: <strong class="${Number(ach.award || 0) > 0 ? 'text-emerald-700' : 'text-rose-700'}">${Number(ach.award || 0).toLocaleString()} Taka (${ach.reason || (Number(ach.award || 0) > 0 ? 'Eligible' : 'Criteria Not Met')})</strong>
                 </div>
             `;
 
@@ -3429,34 +3444,40 @@
                         </div>
                     `;
 
-                    if (award === 0) {
-                        let revActionHtml = '';
-                        if (revObj && revObj.status === 'pending') {
-                            revActionHtml = `
-                                <div class="mt-2 pt-2 border-t border-amber-200 flex items-center justify-between gap-1 flex-wrap">
-                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-amber-100 text-amber-900 border border-amber-300">🔍 Review Requested by ${revObj.submitter_role || 'RH'}</span>
-                                    <button onclick="openReviewModal('${achId}')" class="text-[10px] font-bold text-amber-800 hover:underline">View Details</button>
-                                </div>
-                            `;
-                        } else if (revObj && revObj.status === 'rejected') {
-                            revActionHtml = `
-                                <div class="mt-2 pt-2 border-t border-rose-200 flex items-center justify-between gap-1 flex-wrap">
-                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-rose-100 text-rose-800 border border-rose-300">❌ Review Rejected</span>
-                                    <button onclick="openReviewModal('${achId}')" class="text-[10px] font-bold text-slate-700 hover:underline">Re-submit Review (RH/ZH)</button>
-                                </div>
-                            `;
-                        } else {
-                            revActionHtml = `
-                                <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between gap-2 flex-wrap">
-                                    <span class="text-[10px] text-slate-500 font-medium">Data dispute? Regional/Zonal Head can request review:</span>
-                                    <button onclick="openReviewModal('${achId}')" class="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-black transition shadow-2xs flex items-center gap-1">
-                                        <span>📝</span>
-                                        <span>Request Data Review (RH/ZH)</span>
-                                    </button>
-                                </div>
-                            `;
-                        }
+                    let revActionHtml = '';
+                    if (revObj && revObj.status === 'pending') {
+                        revActionHtml = `
+                            <div class="mt-2 pt-2 border-t border-amber-200 flex items-center justify-between gap-1 flex-wrap">
+                                <span class="px-2 py-0.5 rounded font-black text-[10px] bg-amber-100 text-amber-900 border border-amber-300">🔍 Review Requested by ${revObj.submitter_role || 'RH'}</span>
+                                <button onclick="openReviewModal('${achId}')" class="text-[10px] font-bold text-amber-800 hover:underline">View Details</button>
+                            </div>
+                        `;
+                    } else if (revObj && revObj.status === 'rejected') {
+                        revActionHtml = `
+                            <div class="mt-2 pt-2 border-t border-rose-200 flex items-center justify-between gap-1 flex-wrap">
+                                <span class="px-2 py-0.5 rounded font-black text-[10px] bg-rose-100 text-rose-800 border border-rose-300">❌ Review Rejected</span>
+                                <button onclick="openReviewModal('${achId}')" class="text-[10px] font-bold text-slate-700 hover:underline">Re-submit Review (RH/ZH)</button>
+                            </div>
+                        `;
+                    } else if (revObj && revObj.status === 'approved') {
+                        revActionHtml = `
+                            <div class="mt-2 pt-2 border-t border-emerald-200 flex items-center justify-between gap-1 flex-wrap">
+                                <span class="px-2 py-0.5 rounded font-black text-[10px] bg-emerald-100 text-emerald-900 border border-emerald-300">✅ Review Approved (${revObj.granted_award || 3000})</span>
+                            </div>
+                        `;
+                    } else {
+                        revActionHtml = `
+                            <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between gap-2 flex-wrap">
+                                <span class="text-[10px] text-slate-500 font-medium">Data dispute? Regional/Zonal Head can request review:</span>
+                                <button onclick="openReviewModal('${achId}')" class="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-black transition shadow-2xs flex items-center gap-1">
+                                    <span>📝</span>
+                                    <span>Request Data Review (RH/ZH)</span>
+                                </button>
+                            </div>
+                        `;
+                    }
 
+                    if (award === 0) {
                         return `
                             <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 space-y-1.5">
                                 <div class="flex justify-between items-center">
@@ -3479,6 +3500,7 @@
                                 </div>
                                 ${metricsLine}
                                 <div class="text-[10px] text-rose-800 font-semibold">Reason: "${ch.cancel_reason || '-'}"</div>
+                                ${revActionHtml}
                             </div>
                         `;
                     }
@@ -3501,6 +3523,7 @@
                             <div class="pt-0.5 text-[11px] font-bold ${ch.voucher ? 'text-emerald-700' : 'text-amber-700'}">
                                 ${ch.voucher ? `✓ Voucher: ${ch.voucher}` : '⏳ Pending Selection by Regional Head'}
                             </div>
+                            ${revActionHtml}
                         </div>
                     `;
                 };
