@@ -472,7 +472,7 @@ def build_portal():
                             Search
                         </button>
                     </div>
-                    <div id="mio-search-results-box" class="space-y-3 max-h-96 overflow-y-auto pt-1"></div>
+                    <div id="mio-search-results-box" class="space-y-6 max-h-[32rem] overflow-y-auto pt-1"></div>
                 </div>
 
             </div>
@@ -594,8 +594,8 @@ def build_portal():
                 <span class="px-2.5 py-1 rounded-lg text-[10px] font-black uppercase bg-rose-200 text-rose-900 border border-rose-300 flex-shrink-0">Locked</span>
             </div>
 
-            <!-- Achievers List Container -->
-            <div id="regview-achievers-container" class="space-y-3.5"></div>
+            <!-- Achievers List Container (Distinct Gap Between MIOs) -->
+            <div id="regview-achievers-container" class="space-y-8 sm:space-y-10"></div>
 
         </section>
 
@@ -2293,73 +2293,96 @@ def build_portal():
             const brandDisplayTitle = isExium ? 'Exium MUPS' : 'Coralcal-D/DX/Vita';
 
             const metricsHtml = `
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-2.5 bg-white p-2 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3 bg-white p-2.5 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
                     <!-- 1. Seen Rx -->
-                    <div class="min-w-0 overflow-hidden rounded-lg border ${{rxOk ? 'border-emerald-200 bg-emerald-50/50' : 'border-rose-200 bg-rose-50/50'}} p-2 sm:p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1">
-                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap">1. Seen Rx (Sep'26)</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{rxOk ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
-                                ${{rxOk ? '✓ &ge;200 Rx' : '✗ &lt;200 Rx (No Award)'}}
+                    <div class="rounded-xl border ${{rxOk ? 'border-emerald-300 bg-emerald-50/40' : 'border-rose-300 bg-rose-50/40'}} p-2.5 sm:p-3 flex flex-col justify-between shadow-2xs space-y-2">
+                        <div class="flex items-center justify-between gap-1 border-b ${{rxOk ? 'border-emerald-200/80' : 'border-rose-200/80'}} pb-1.5">
+                            <span class="text-slate-900 font-black text-xs uppercase tracking-tight flex items-center gap-1">
+                                <span>1.</span>
+                                <span>Seen Rx (Sep'26)</span>
+                            </span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase ${{rxOk ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                                Req: &ge; 200 Rx
                             </span>
                         </div>
-                        <div class="mt-1 sm:mt-1.5 flex items-baseline gap-1.5 flex-wrap">
-                            <span class="text-sm sm:text-base font-black ${{rxOk ? 'text-emerald-700' : 'text-rose-600'}}">
-                                ${{rxOk ? '✓' : '✗'}} ${{rxVal.toLocaleString()}} Seen Rx
+                        <div class="flex items-baseline justify-between gap-2">
+                            <div>
+                                <span class="text-xl sm:text-2xl font-black ${{rxOk ? 'text-emerald-700' : 'text-rose-600'}} font-mono">
+                                    ${{rxVal.toLocaleString()}}
+                                </span>
+                                <span class="text-xs font-bold text-slate-600 ml-1">Seen Rx</span>
+                            </div>
+                            <span class="text-xs font-black px-2 py-0.5 rounded-md shadow-2xs ${{rxOk ? 'text-emerald-800 bg-white border border-emerald-300' : 'text-rose-800 bg-white border border-rose-300'}}">
+                                ${{rxOk ? '✓ Eligible' : '✗ Failed (<200)'}}
                             </span>
-                            <span class="text-[11px] font-bold ${{rxOk ? 'text-slate-600' : 'text-rose-700'}}">(Req: &ge;200 Rx)</span>
                         </div>
-                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border ${{rxOk ? 'border-emerald-200/80' : 'border-rose-200/80'}} flex items-center justify-between gap-1 flex-wrap">
-                            <span>Sep'26 Full Month Rx: <strong class="${{rxOk ? 'text-slate-900' : 'text-rose-700 font-mono'}}">${{rxVal.toLocaleString()}}</strong></span>
-                            ${{!rxOk ? '<span class="text-[10px] font-extrabold text-rose-600 uppercase">✗ Criteria Failed</span>' : ''}}
+                        <div class="text-[11px] font-bold text-slate-700 bg-white/95 px-2.5 py-1 rounded-lg border ${{rxOk ? 'border-emerald-200' : 'border-rose-200'}} flex items-center justify-between">
+                            <span class="text-slate-600">Prescription Status:</span>
+                            <strong class="${{rxOk ? 'text-emerald-700' : 'text-rose-600'}}">${{rxOk ? '✓ Criteria Satisfied' : '✗ Below Threshold'}}</strong>
                         </div>
                     </div>
 
                     <!-- 2. Territory Sales Growth -->
-                    <div class="min-w-0 overflow-hidden rounded-lg border ${{ach.terr_pos ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2 sm:p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1">
-                            <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap truncate">2. Territory Sales Growth</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{ach.terr_pos ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                    <div class="rounded-xl border ${{ach.terr_pos ? 'border-emerald-300 bg-emerald-50/40' : 'border-rose-300 bg-rose-50/40'}} p-2.5 sm:p-3 flex flex-col justify-between shadow-2xs space-y-2">
+                        <div class="flex items-center justify-between gap-1 border-b ${{ach.terr_pos ? 'border-emerald-200/80' : 'border-rose-200/80'}} pb-1.5">
+                            <span class="text-slate-900 font-black text-xs uppercase tracking-tight flex items-center gap-1">
+                                <span>2.</span>
+                                <span>Territory Sales Growth</span>
+                            </span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase ${{ach.terr_pos ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                                Req: Positive (&gt; 0)
+                            </span>
+                        </div>
+                        <div class="flex items-baseline justify-between gap-2">
+                            <div>
+                                <span class="text-xl sm:text-2xl font-black ${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}} font-mono">
+                                    ${{terrSign}}${{terrGrowthVal.toLocaleString()}}
+                                </span>
+                                <span class="text-xs font-bold text-slate-600 ml-1">Taka Growth</span>
+                            </div>
+                            <span class="text-xs font-black px-2 py-0.5 rounded-md shadow-2xs ${{ach.terr_pos ? 'text-emerald-800 bg-white border border-emerald-300' : 'text-rose-800 bg-white border border-rose-300'}}">
                                 ${{ach.terr_pos ? '✓ Positive' : '✗ Negative'}}
                             </span>
                         </div>
-                        <div class="mt-1 sm:mt-1.5">
-                            <span class="text-sm sm:text-base font-black ${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">
-                                ${{ach.terr_pos ? '✓' : '✗'}} Growth: ${{terrSign}}${{terrGrowthVal.toLocaleString()}} <span class="text-[11px] font-bold text-slate-600">(Val)</span>
-                            </span>
-                        </div>
-                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border border-slate-200 flex items-center justify-between gap-1 flex-wrap">
-                            <span>Aug'26: <strong class="text-slate-900 font-mono">${{terrAugVal.toLocaleString()}}</strong></span>
+                        <div class="text-[11px] font-bold text-slate-700 bg-white/95 px-2.5 py-1 rounded-lg border border-slate-200 flex items-center justify-between">
+                            <span>Aug: <strong class="text-slate-900 font-mono">${{terrAugVal.toLocaleString()}}</strong></span>
                             <span class="text-slate-400">➔</span>
-                            <span>Sep'26: <strong class="text-slate-900 font-mono">${{terrSepVal.toLocaleString()}}</strong></span>
+                            <span>Sep: <strong class="text-slate-900 font-mono">${{terrSepVal.toLocaleString()}}</strong></span>
                         </div>
                     </div>
 
-                    <!-- 3. Brand Growth (Exium MUPS / Coralcal-D/DX/Vita) -->
-                    <div class="min-w-0 overflow-hidden rounded-lg border ${{isExium ? 'border-blue-200 bg-blue-50/50' : 'border-purple-200 bg-purple-50/50'}} p-2 sm:p-2.5 flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-1">
-                            <span class="${{isExium ? 'text-blue-950' : 'text-purple-950'}} font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap truncate">3. ${{brandDisplayTitle}} Growth</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{ach.brand_growth_ok ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}}">
+                    <!-- 3. Brand Box Growth -->
+                    <div class="rounded-xl border ${{isExium ? 'border-blue-300 bg-blue-50/40' : 'border-purple-300 bg-purple-50/40'}} p-2.5 sm:p-3 flex flex-col justify-between shadow-2xs space-y-2">
+                        <div class="flex items-center justify-between gap-1 border-b ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}} pb-1.5">
+                            <span class="${{isExium ? 'text-blue-950' : 'text-purple-950'}} font-black text-xs uppercase tracking-tight flex items-center gap-1">
+                                <span>3.</span>
+                                <span>${{brandDisplayTitle}} Growth</span>
+                            </span>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-black uppercase ${{ach.brand_growth_ok ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-amber-100 text-amber-800 border border-amber-300'}}">
                                 Req: +${{reqBox}} Boxes
                             </span>
                         </div>
-                        <div class="mt-1 sm:mt-1.5 flex items-baseline justify-between gap-1 flex-wrap">
-                            <span class="text-sm sm:text-base font-black ${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">
-                                ${{ach.brand_growth_ok ? '✓' : '✗'}} ${{boxSign}}${{boxGrowth.toLocaleString()}} Boxes
-                            </span>
-                            <span class="text-[11px] font-extrabold text-slate-700 font-mono">
-                                (Val: ${{valSign}}${{brandValGrowth.toLocaleString()}})
+                        <div class="flex items-baseline justify-between gap-2">
+                            <div>
+                                <span class="text-xl sm:text-2xl font-black ${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}} font-mono">
+                                    ${{boxSign}}${{boxGrowth.toLocaleString()}}
+                                </span>
+                                <span class="text-xs font-bold text-slate-600 ml-1">Boxes</span>
+                            </div>
+                            <span class="text-xs font-black px-2 py-0.5 rounded-md shadow-2xs ${{ach.brand_growth_ok ? 'text-emerald-800 bg-white border border-emerald-300' : 'text-amber-800 bg-white border border-amber-300'}}">
+                                ${{ach.brand_growth_ok ? '✓ Met Target' : '✗ Short: ' + Math.max(0, reqBox - boxGrowth) + ' Bx'}}
                             </span>
                         </div>
-                        <div class="mt-1 space-y-0.5 text-[11px] font-bold text-slate-700 bg-white/95 px-2 py-1 rounded border ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}}">
-                            <div class="flex items-center justify-between gap-1 flex-wrap">
-                                <span>Qty: Aug <strong class="text-slate-900 font-mono">${{brandAugBox.toLocaleString()}}</strong> Box</span>
+                        <div class="space-y-0.5 text-[11px] font-bold text-slate-700 bg-white/95 px-2.5 py-1 rounded-lg border ${{isExium ? 'border-blue-200' : 'border-purple-200'}}">
+                            <div class="flex items-center justify-between">
+                                <span>Box Qty: Aug <strong>${{brandAugBox.toLocaleString()}}</strong></span>
                                 <span class="text-slate-400">➔</span>
-                                <span>Sep <strong class="text-slate-900 font-mono">${{brandSepBox.toLocaleString()}}</strong> Box</span>
+                                <span>Sep <strong>${{brandSepBox.toLocaleString()}}</strong> Box</span>
                             </div>
-                            <div class="flex items-center justify-between gap-1 flex-wrap text-[10px] text-slate-600 border-t border-slate-100 pt-0.5">
-                                <span>Val: Aug <strong class="text-slate-800 font-mono">${{brandAugVal.toLocaleString()}}</strong></span>
+                            <div class="flex items-center justify-between text-[10px] text-slate-600 border-t border-slate-100 pt-0.5">
+                                <span>Sales Val: Aug <strong>${{brandAugVal.toLocaleString()}}</strong></span>
                                 <span class="text-slate-400">➔</span>
-                                <span>Sep <strong class="text-slate-800 font-mono">${{brandSepVal.toLocaleString()}}</strong></span>
+                                <span>Sep <strong>${{brandSepVal.toLocaleString()}}</strong> (${{valSign}}${{brandValGrowth.toLocaleString()}})</span>
                             </div>
                         </div>
                     </div>
@@ -2414,16 +2437,16 @@ def build_portal():
 
             if (Number(ach.award) === 0) {{
                 return `
-                    <div class="rounded-xl border-2 border-slate-200 bg-slate-50/60 p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200/80 pb-2">
-                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
-                                <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} opacity-85 whitespace-nowrap">
+                    <div class="rounded-xl border-2 border-slate-300 bg-slate-50/70 p-3 sm:p-4 space-y-3 overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-200 pb-2.5">
+                            <div class="flex items-center gap-2 flex-wrap min-w-0">
+                                <span class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-extrabold ${{badgeBrand}} opacity-85 whitespace-nowrap shadow-xs">
                                     ${{brandIcon}} ${{brandTitle}}
                                 </span>
-                                <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black bg-slate-200 text-slate-700 border border-slate-300 whitespace-nowrap">
+                                <span class="px-2.5 py-1 rounded-xl text-xs sm:text-sm font-black bg-slate-200 text-slate-700 border border-slate-300 whitespace-nowrap">
                                     ⚪ No Award (0 Taka)
                                 </span>
-                                <span class="text-[11px] text-slate-500 font-semibold truncate">
+                                <span class="text-xs text-slate-500 font-bold truncate">
                                     (${{ach.tier || 'Criteria Not Met'}})
                                 </span>
                             </div>
@@ -2432,13 +2455,20 @@ def build_portal():
                             </div>
                         </div>
 
-                        ${{metricsHtml}}
+                        <!-- 1. Calculation & Criteria Evaluation Section -->
+                        <div class="space-y-1.5">
+                            <div class="text-[11px] font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 px-0.5">
+                                <span>📊</span>
+                                <span>Award Qualification Criteria & Performance:</span>
+                            </div>
+                            ${{metricsHtml}}
+                        </div>
 
                         <!-- Discrepancy / Review Guidance Banner -->
-                        <div class="bg-white border border-slate-200 rounded-xl p-2.5 text-xs text-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <div class="space-y-0.5 min-w-0">
-                                <div class="font-black text-slate-900 flex items-center gap-1">
-                                    <span>⚠️</span>
+                        <div class="bg-white border border-slate-200 rounded-xl p-3 text-xs text-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-2xs">
+                            <div class="space-y-1 min-w-0">
+                                <div class="font-black text-slate-900 flex items-center gap-1.5">
+                                    <span class="text-base">⚠️</span>
                                     <span>Award Calculation Criteria Status:</span>
                                     <span class="text-rose-700 font-bold">${{ach.reason || 'Criteria not fulfilled'}}</span>
                                 </div>
@@ -2447,7 +2477,7 @@ def build_portal():
                                 </div>
                             </div>
                             ${{isPending ? `
-                                <div class="bg-amber-50 text-amber-900 border border-amber-200 px-2.5 py-1 rounded-lg text-[11px] font-bold self-start sm:self-center whitespace-nowrap">
+                                <div class="bg-amber-50 text-amber-900 border border-amber-200 px-3 py-1 rounded-lg text-xs font-bold self-start sm:self-center whitespace-nowrap">
                                     Dispute logged by ${{rev.submitter_role || 'RH'}}: "${{rev.dispute_category}}"
                                 </div>
                             ` : ''}}
@@ -2458,25 +2488,34 @@ def build_portal():
 
             if (isCancelled) {{
                 return `
-                    <div class="rounded-xl border-2 ${{themeBorder}} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-rose-200/80 pb-2">
-                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
-                                <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} opacity-75 whitespace-nowrap">
+                    <div class="rounded-xl border-2 ${{themeBorder}} p-3 sm:p-4 space-y-3 overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-rose-200 pb-2.5">
+                            <div class="flex items-center gap-2 flex-wrap min-w-0">
+                                <span class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-extrabold ${{badgeBrand}} opacity-75 whitespace-nowrap shadow-xs">
                                     ${{brandIcon}} ${{brandTitle}}
                                 </span>
-                                <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black border bg-rose-100 text-rose-900 border-rose-300 line-through whitespace-nowrap">
+                                <span class="px-2.5 py-1 rounded-xl text-xs sm:text-sm font-black border bg-rose-100 text-rose-900 border-rose-300 line-through whitespace-nowrap">
                                     🏆 Award: ${{Number(ach.award).toLocaleString()}}
                                 </span>
-                                <span class="text-[10px] sm:text-[11px] font-black text-rose-700 uppercase bg-rose-100 px-2 py-0.5 rounded border border-rose-200 whitespace-nowrap">AWARD CANCELLED</span>
+                                <span class="text-xs font-black text-rose-700 uppercase bg-rose-100 px-2.5 py-1 rounded-md border border-rose-200 whitespace-nowrap">AWARD CANCELLED</span>
                             </div>
                             <div class="flex items-center gap-2 flex-wrap self-start sm:self-center">
                                 ${{revActionHtml}}
                                 ${{selectionStatusHtml}}
                             </div>
                         </div>
-                        ${{metricsHtml}}
-                        <div class="bg-rose-100/80 border border-rose-300 rounded-xl p-2.5 text-xs text-rose-950 flex items-start gap-2">
-                            <span class="text-sm">📝</span>
+
+                        <!-- 1. Calculation & Criteria Evaluation Section -->
+                        <div class="space-y-1.5">
+                            <div class="text-[11px] font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 px-0.5">
+                                <span>📊</span>
+                                <span>Award Qualification Criteria & Performance:</span>
+                            </div>
+                            ${{metricsHtml}}
+                        </div>
+
+                        <div class="bg-rose-100/80 border border-rose-300 rounded-xl p-3 text-xs text-rose-950 flex items-start gap-2 shadow-2xs">
+                            <span class="text-base">📝</span>
                             <div class="min-w-0">
                                 <div class="font-black">Cancellation Reason (${{choiceObj.cancelled_by || 'Regional/Zonal Head'}}):</div>
                                 <div class="text-rose-900 font-semibold mt-0.5 break-words">"${{choiceObj.cancel_reason || 'Not Recommended'}}"</div>
@@ -2493,25 +2532,25 @@ def build_portal():
                 return `
                     <div onclick="selectVoucher('${{ach.id}}', '${{b.name}}')" 
                          title="${{clickTooltip}}"
-                         class="brand-card min-w-0 overflow-hidden ${{isSubmissionsLocked ? 'cursor-not-allowed opacity-90' : 'cursor-pointer'}} rounded-xl border-2 p-2 sm:p-2.5 flex flex-col justify-between relative transition-all ${{
-                             isSelected ? 'selected ring-2 ring-emerald-500 ring-offset-1 bg-white shadow-xs' : 'border-slate-200 hover:border-slate-300 bg-white'
+                         class="brand-card min-w-0 overflow-hidden ${{isSubmissionsLocked ? 'cursor-not-allowed opacity-90' : 'cursor-pointer'}} rounded-xl border-2 p-2.5 sm:p-3 flex flex-col justify-between relative transition-all ${{
+                             isSelected ? 'selected ring-2 ring-emerald-500 border-emerald-500 bg-emerald-50/40 shadow-sm' : 'border-slate-200 hover:border-slate-300 hover:shadow-2xs bg-white'
                          }}">
-                        <div class="flex items-center justify-between mb-1.5 gap-1">
-                            <div class="h-7 sm:h-8 w-20 sm:w-24 flex items-center min-w-0">
-                                <img src="${{b.logo}}" alt="${{b.name}}" class="max-h-7 sm:max-h-8 max-w-full object-contain">
+                        <div class="flex items-center justify-between mb-2 gap-1">
+                            <div class="h-8 sm:h-9 w-20 sm:w-24 flex items-center min-w-0">
+                                <img src="${{b.logo}}" alt="${{b.name}}" class="max-h-8 sm:max-h-9 max-w-full object-contain">
                             </div>
-                            <div class="w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${{
+                            <div class="w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${{
                                 isSelected ? 'border-emerald-600 bg-emerald-600 text-white shadow-2xs' : 'border-slate-300 bg-slate-50'
                             }}">
-                                ${{isSelected ? '<svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>' : ''}}
+                                ${{isSelected ? '<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>' : ''}}
                             </div>
                         </div>
                         <div class="min-w-0">
-                            <div class="text-xs font-extrabold text-slate-900 tracking-tight leading-tight truncate">${{b.name.replace(' Gift Voucher', '')}}</div>
+                            <div class="text-xs sm:text-sm font-extrabold text-slate-900 tracking-tight leading-tight truncate">${{b.name.replace(' Gift Voucher', '')}}</div>
                             <div class="text-[10px] text-slate-500 font-medium truncate mt-0.5">${{b.subtitle}}</div>
                         </div>
                         ${{isSelected ? `
-                            <div class="mt-1.5 pt-1 border-t border-emerald-100 flex items-center justify-between text-[10px] text-emerald-800 font-black">
+                            <div class="mt-2 pt-1 border-t border-emerald-200 flex items-center justify-between text-[11px] text-emerald-800 font-black">
                                 <span>✓ Selected</span>
                                 ${{isSubmissionsLocked ? '<span class="text-slate-400">🔒 Locked</span>' : '<span class="text-rose-600 hover:underline">✕ Deselect</span>'}}
                             </div>
@@ -2521,22 +2560,22 @@ def build_portal():
             }}).join('');
 
             return `
-                <div class="rounded-xl border-2 ${{themeBorder}} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
+                <div class="rounded-xl border-2 ${{themeBorder}} p-3 sm:p-4 space-y-3.5 overflow-hidden">
                     <!-- Brand Heading on 1st Line, Selection/Cancel Options Below on Mobile -->
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}} pb-2">
-                        <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
-                            <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} whitespace-nowrap">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}} pb-2.5">
+                        <div class="flex items-center gap-2 flex-wrap min-w-0">
+                            <span class="px-3 py-1.5 rounded-xl text-xs sm:text-sm font-extrabold ${{badgeBrand}} whitespace-nowrap shadow-xs">
                                 ${{brandIcon}} ${{brandTitle}}
                             </span>
-                            <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black ${{badgeValue}} whitespace-nowrap">
+                            <span class="px-2.5 py-1 rounded-xl text-xs sm:text-sm font-black ${{badgeValue}} whitespace-nowrap shadow-2xs">
                                 🏆 Award: ${{Number(ach.award).toLocaleString()}}
                             </span>
                             ${{ach.is_manual_override ? `
-                                <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300 whitespace-nowrap shadow-2xs">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-black bg-purple-100 text-purple-900 border border-purple-300 whitespace-nowrap shadow-2xs">
                                     ✨ Admin Manual Grant (${{ach.override_info && ach.override_info.reason ? ach.override_info.reason : 'Verified'}})
                                 </span>
                             ` : ''}}
-                            <span class="text-[11px] text-slate-600 font-semibold truncate">
+                            <span class="text-xs text-slate-600 font-bold truncate">
                                 (${{ach.tier}})
                             </span>
                         </div>
@@ -2546,11 +2585,47 @@ def build_portal():
                         </div>
                     </div>
 
-                    ${{metricsHtml}}
+                    <!-- 1. Calculation & Criteria Evaluation Section -->
+                    <div class="space-y-1.5">
+                        <div class="text-[11px] font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5 px-0.5">
+                            <span>📊</span>
+                            <span>Award Qualification Criteria & Performance:</span>
+                        </div>
+                        ${{metricsHtml}}
+                    </div>
 
-                    <!-- 6 Brand Options Grid -->
-                    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-                        ${{brandsGrid}}
+                    <!-- 2. Gift Voucher Selection Section -->
+                    <div class="pt-2 border-t ${{isExium ? 'border-blue-200/80' : 'border-purple-200/80'}} space-y-2">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5">
+                            <div class="flex items-center gap-2">
+                                <span class="text-lg">🎁</span>
+                                <div>
+                                    <div class="text-xs sm:text-sm font-black text-slate-900 tracking-tight">
+                                        Select Gift Voucher (Award Value: <span class="text-emerald-700">${{Number(ach.award).toLocaleString()}} Taka</span>)
+                                    </div>
+                                    <div class="text-[11px] text-slate-500 font-medium">
+                                        Click 1 preferred brand voucher out of 6 options below:
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                ${{isCompleted ? `
+                                    <span class="px-3 py-1 rounded-full text-xs font-black bg-emerald-100 text-emerald-800 border border-emerald-300 flex items-center gap-1 shadow-2xs">
+                                        <span>✓ Choice:</span>
+                                        <strong class="underline">${{chosenVoucher}}</strong>
+                                    </span>
+                                ` : `
+                                    <span class="px-3 py-1 rounded-full text-xs font-black bg-amber-100 text-amber-800 border border-amber-300 flex items-center gap-1 shadow-2xs">
+                                        <span>👉 Select a Voucher Brand</span>
+                                    </span>
+                                `}}
+                            </div>
+                        </div>
+
+                        <!-- 6 Brand Options Grid -->
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5 pt-1">
+                            ${{brandsGrid}}
+                        </div>
                     </div>
                 </div>
             `;
@@ -2631,12 +2706,12 @@ def build_portal():
 
                 const card = document.createElement('div');
                 card.id = `mio-card-${{mio.key}}`;
-                card.className = `bg-white rounded-2xl shadow-xs border transition-all p-2.5 sm:p-4 space-y-3 overflow-hidden ${{
+                card.className = `bg-white rounded-2xl shadow-md hover:shadow-lg border-2 transition-all p-3.5 sm:p-5 space-y-4 overflow-hidden ${{
                     status.isComplete 
-                        ? 'border-emerald-400 ring-1 ring-emerald-400/20 bg-emerald-50/5' 
+                        ? 'border-emerald-400 ring-2 ring-emerald-400/20 bg-emerald-50/5' 
                         : (status.completedBrands > 0 
-                            ? 'border-amber-300 ring-1 ring-amber-300/20' 
-                            : (status.hasPendingReview ? 'border-amber-400 ring-1 ring-amber-400/30 bg-amber-50/10' : (status.isAchiever ? 'border-blue-200' : 'border-slate-200')))
+                            ? 'border-amber-400 ring-2 ring-amber-400/20' 
+                            : (status.hasPendingReview ? 'border-amber-400 ring-2 ring-amber-400/30 bg-amber-50/10' : (status.isAchiever ? 'border-blue-300 shadow-sm' : 'border-slate-300')))
                 }}`;
 
                 let statusBadgeHtml = '';
@@ -2723,34 +2798,36 @@ def build_portal():
                 }}
 
                 let headerHtml = `
-                    <div class="rounded-xl border p-2.5 sm:p-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 ${{theme.bg}} ${{theme.border}}">
-                        <div class="space-y-1 min-w-0">
-                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                                <span class="bg-orange-500 text-white text-[11px] sm:text-xs font-extrabold px-2 sm:px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-2xs whitespace-nowrap">
+                    <div class="rounded-xl border-2 p-3 sm:p-4 flex flex-col md:flex-row md:items-center justify-between gap-3 ${{theme.bg}} ${{theme.border}}">
+                        <div class="space-y-1.5 min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap">
+                                <span class="bg-orange-600 text-white text-xs sm:text-sm font-black px-3.5 py-1 rounded-lg flex items-center gap-1.5 shadow-sm whitespace-nowrap">
                                     <span>📍</span>
                                     <span>${{mio.area_name}} (${{mio.area_code}})</span>
                                 </span>
-                                <h3 class="text-sm sm:text-base font-extrabold text-slate-900 tracking-tight truncate max-w-full">
-                                    ${{mio.mio_name}}
-                                </h3>
-                                <span class="bg-white text-blue-700 font-mono text-[11px] font-extrabold px-2 py-0.5 rounded border border-blue-200 shadow-2xs whitespace-nowrap">
-                                    MIO: ${{mio.mio_code}}
+                                <span class="bg-slate-900 text-white font-mono text-xs sm:text-[13px] font-black px-2.5 py-1 rounded-md shadow-2xs whitespace-nowrap">
+                                    MIO ID: ${{mio.mio_code}}
                                 </span>
                             </div>
-                            <div class="flex items-center gap-2 text-[11px] text-slate-700 font-medium flex-wrap">
-                                <span class="font-bold ${{theme.desigBg}} px-2 py-0.5 rounded text-[11px] border shadow-2xs">${{mio.desig || 'MIO'}}</span>
-                                ${{mio.mobile ? `<span class="text-slate-400">•</span><span class="text-slate-600 font-mono text-[11px]">📞 ${{mio.mobile}}</span>` : ''}}
+                            <div class="flex items-baseline gap-2.5 flex-wrap pt-0.5">
+                                <h3 class="text-lg sm:text-2xl font-black text-slate-900 tracking-tight truncate max-w-full">
+                                    ${{mio.mio_name}}
+                                </h3>
+                                <span class="font-extrabold text-xs sm:text-[13px] ${{theme.desigBg}} px-2.5 py-0.5 rounded-md border shadow-2xs">
+                                    ${{mio.desig || 'MIO'}}
+                                </span>
+                                ${{mio.mobile ? `<span class="text-xs sm:text-[13px] font-mono font-bold text-slate-700 bg-white/90 border border-slate-300 px-2.5 py-0.5 rounded-md shadow-2xs">📞 ${{mio.mobile}}</span>` : ''}}
                             </div>
                         </div>
 
-                        <div class="flex items-center gap-1.5 flex-shrink-0 self-start sm:self-center flex-wrap w-full sm:w-auto pt-1 sm:pt-0 border-t border-slate-200/50 sm:border-t-0">
+                        <div class="flex items-center gap-2 flex-shrink-0 self-start md:self-center flex-wrap w-full md:w-auto pt-2 md:pt-0 border-t border-slate-200/60 md:border-t-0">
                             ${{brandBadgesHtml}}
                             ${{statusBadgeHtml}}
                         </div>
                     </div>
                 `;
 
-                let awardBoxesHtml = '<div class="space-y-3">';
+                let awardBoxesHtml = '<div class="space-y-4 sm:space-y-5">';
                 if (showExium) {{
                     awardBoxesHtml += renderBrandAwardBox(mio.exium_award, 'Exium_2026');
                 }}
@@ -3685,25 +3762,38 @@ def build_portal():
                 const renderBrandStatus = (label, brandShort, badgeClass, award, reason, rx, terrAug, terrSep, terrGrowth, terrPos, brandAugVal, brandSepVal, brandValGrowth, brandAugBox, brandSepBox, growthBox, reqBox, ch, achId, isOverridden, revObj) => {{
                     const boxText = `${{growthBox >= 0 ? '+' : ''}}${{growthBox}} Boxes (Req: +${{reqBox || 30}} Boxes)`;
                     const terrText = `${{terrGrowth > 0 ? '+' : ''}}${{Math.round(terrGrowth).toLocaleString()}}`;
+                    const rxOk = rx >= 200;
                     const metricsLine = `
-                        <div class="grid grid-cols-1 gap-1 pt-1 text-[11px] bg-slate-50/90 p-2 rounded-lg border border-slate-200">
-                            <div class="flex items-center justify-between">
-                                <span class="font-black text-slate-900">1. Seen Rx (Sep'26):</span>
-                                <span class="font-extrabold ${{rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{rx >= 200 ? '✓ ' + rx + ' Rx (Req: &ge;200)' : '✗ ' + rx + ' Rx (No Award: <200)'}}</span>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-slate-200/70 pt-1 flex-wrap gap-1">
-                                <span class="font-black text-slate-900">2. Territory Sales Growth:</span>
-                                <span class="font-bold text-slate-700">Aug: <strong>${{Math.round(terrAug).toLocaleString()}}</strong> ➔ Sep: <strong>${{Math.round(terrSep).toLocaleString()}}</strong> (<strong class="${{terrPos ? 'text-emerald-700' : 'text-rose-600'}}">${{terrText}}</strong>)</span>
-                            </div>
-                            <div class="border-t border-slate-200/70 pt-1 space-y-0.5">
-                                <div class="flex items-center justify-between flex-wrap gap-1">
-                                    <span class="font-black text-slate-900">3. ${{brandShort}} Growth:</span>
-                                    <span class="font-extrabold ${{growthBox >= (reqBox || 30) ? 'text-emerald-700' : 'text-amber-700'}}">${{boxText}}</span>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-1 text-xs">
+                            <div class="rounded-lg border ${{rxOk ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2 flex flex-col justify-between">
+                                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                                    <span>1. Seen Rx</span>
+                                    <span>Req: &ge;200</span>
                                 </div>
-                                <div class="text-[10px] font-bold text-slate-600 flex items-center justify-between flex-wrap gap-1">
-                                    <span>Qty: Aug <strong>${{brandAugBox}}</strong> Box ➔ Sep <strong>${{brandSepBox}}</strong> Box</span>
-                                    <span>Val: Aug <strong>${{Math.round(brandAugVal).toLocaleString()}}</strong> ➔ Sep <strong>${{Math.round(brandSepVal).toLocaleString()}}</strong> (${{brandValGrowth >= 0 ? '+' : ''}}${{Math.round(brandValGrowth).toLocaleString()}})</span>
+                                <div class="text-sm font-black ${{rxOk ? 'text-emerald-700' : 'text-rose-600'}} my-0.5">
+                                    ${{rxOk ? '✓ ' + rx : '✗ ' + rx}} Rx
                                 </div>
+                                <div class="text-[10px] font-bold ${{rxOk ? 'text-emerald-800' : 'text-rose-700'}}">${{rxOk ? '✓ Passed' : '✗ Failed (<200)'}}</div>
+                            </div>
+                            <div class="rounded-lg border ${{terrPos ? 'border-emerald-200 bg-emerald-50/40' : 'border-rose-200 bg-rose-50/40'}} p-2 flex flex-col justify-between">
+                                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                                    <span>2. Territory Sales</span>
+                                    <span>Req: Positive</span>
+                                </div>
+                                <div class="text-sm font-black ${{terrPos ? 'text-emerald-700' : 'text-rose-600'}} my-0.5">
+                                    ${{terrText}} Taka
+                                </div>
+                                <div class="text-[10px] font-bold text-slate-600 truncate">Aug: ${{Math.round(terrAug).toLocaleString()}} ➔ Sep: ${{Math.round(terrSep).toLocaleString()}}</div>
+                            </div>
+                            <div class="rounded-lg border ${{growthBox >= (reqBox || 30) ? 'border-emerald-200 bg-emerald-50/40' : 'border-amber-200 bg-amber-50/40'}} p-2 flex flex-col justify-between">
+                                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                                    <span>3. ${{brandShort}}</span>
+                                    <span>Req: +${{reqBox || 30}} Box</span>
+                                </div>
+                                <div class="text-sm font-black ${{growthBox >= (reqBox || 30) ? 'text-emerald-700' : 'text-amber-700'}} my-0.5">
+                                    ${{boxText}}
+                                </div>
+                                <div class="text-[10px] font-bold text-slate-600 truncate">Aug ${{brandAugBox}} ➔ Sep ${{brandSepBox}} Box</div>
                             </div>
                         </div>
                     `;
@@ -3793,19 +3883,19 @@ def build_portal():
                 }};
 
                 const card = document.createElement('div');
-                card.className = 'p-4 bg-white border border-slate-200 rounded-2xl shadow-sm text-xs space-y-3';
+                card.className = 'p-4 sm:p-5 bg-white border-2 border-slate-300 rounded-2xl shadow-md text-xs space-y-3.5';
                 card.innerHTML = `
-                    <div class="p-3 rounded-xl border flex items-start justify-between gap-2 ${{theme.bg}} ${{theme.border}}">
+                    <div class="p-3 sm:p-3.5 rounded-xl border-2 flex items-start justify-between gap-2.5 ${{theme.bg}} ${{theme.border}}">
                         <div>
-                            <div class="flex items-center gap-1.5 flex-wrap mb-1">
-                                <span class="bg-orange-500 text-white text-[11px] font-black px-2 py-0.5 rounded-md">📍 ${{r.area_name}} (${{r.area_code}})</span>
-                                <span class="px-2 py-0.5 rounded-md font-black text-[10px] bg-slate-900 text-white">MIO: ${{r.mio_id}}</span>
+                            <div class="flex items-center gap-2 flex-wrap mb-1.5">
+                                <span class="bg-orange-600 text-white text-xs sm:text-sm font-black px-3 py-1 rounded-lg">📍 ${{r.area_name}} (${{r.area_code}})</span>
+                                <span class="px-2.5 py-1 rounded-md font-black text-xs bg-slate-900 text-white font-mono">MIO ID: ${{r.mio_id}}</span>
                             </div>
-                            <h4 class="text-sm font-black text-slate-900">${{r.mio_name}}</h4>
-                            <div class="text-[11px] text-slate-600">${{r.region_name}} • ${{r.zone_name}}</div>
+                            <h4 class="text-base sm:text-xl font-black text-slate-900">${{r.mio_name}}</h4>
+                            <div class="text-xs text-slate-600 font-bold mt-0.5">${{r.region_name}} • ${{r.zone_name}}</div>
                         </div>
                     </div>
-                    <div class="space-y-2">
+                    <div class="space-y-3">
                         ${{renderBrandStatus('🟦 Exium MUPS', 'Exium MUPS', 'bg-blue-600 text-white', exAward, exReason, r.exium_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.exium_aug_val, r.exium_sep_val, r.exium_actual_growth, r.exium_aug_box, r.exium_sep_box, r.exium_growth_box, r.exium_req_box, exCh, exId, Boolean(exOv), exRev)}}
                         ${{renderBrandStatus('🟪 Coralcal-D/DX/Vita', 'Coralcal-D/DX/Vita', 'bg-purple-700 text-white', coAward, coReason, r.coral_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.coral_aug_val, r.coral_sep_val, r.coral_actual_growth, r.coral_aug_box, r.coral_sep_box, r.coral_growth_box, r.coral_req_box, coCh, coId, Boolean(coOv), coRev)}}
                     </div>
