@@ -942,8 +942,8 @@ def build_portal():
                         📝
                     </div>
                     <div>
-                        <h3 class="text-sm sm:text-base font-black">Data Review Request & Verification</h3>
-                        <p class="text-[11px] text-amber-100 font-semibold">Report data discrepancy for Admin verification & manual award approval</p>
+                        <h3 class="text-sm sm:text-base font-black">Data Review Request (RH / ZH Only)</h3>
+                        <p class="text-[11px] text-amber-100 font-semibold">Official dispute submission by Regional Head / Zonal Head for Admin verification</p>
                     </div>
                 </div>
                 <button onclick="closeReviewModal()" class="text-white/80 hover:text-white p-1">
@@ -977,11 +977,10 @@ def build_portal():
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                         <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                            2. Submitter Role <span class="text-rose-600">*</span>
+                            2. Submitter Role (RH / ZH Only) <span class="text-rose-600">*</span>
                         </label>
-                        <select id="rev-role-select" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
+                        <select id="rev-role-select" required onchange="onRevRoleChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
                             <option value="Regional Head">Regional Head</option>
-                            <option value="Sr. / MIO">Sr. / MIO</option>
                             <option value="Zonal Head">Zonal Head</option>
                         </select>
                     </div>
@@ -995,16 +994,9 @@ def build_portal():
 
                 <div>
                     <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                        4. Submitter Name
+                        4. Submitter Name (Regional Head / Zonal Head) <span class="text-rose-600">*</span>
                     </label>
-                    <input type="text" id="rev-name-input" placeholder="Name of person submitting this review" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
-                        5. Detailed Explanation & Justification <span class="text-rose-600">*</span>
-                    </label>
-                    <textarea id="rev-remarks-input" required rows="3" placeholder="Explain the specific data discrepancy in detail (e.g. offline prescriptions synced late, transfer date, specific invoice numbers, etc.). Admin will review and can manually approve the award..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none"></textarea>
+                    <input type="text" id="rev-name-input" required placeholder="Regional Head / Zonal Head Name" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
                 </div>
 
                 <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
@@ -2295,22 +2287,29 @@ def build_portal():
             const brandSepBox = Number(ach.brand_sep_box ?? (brandAugBox + boxGrowth));
             const reqBox = Number(ach.brand_req_box || 30);
             const boxSign = boxGrowth >= 0 ? '+' : '';
+            const rxVal = Number(ach.rx || 0);
+            const rxOk = rxVal >= 200;
             const brandDisplayTitle = isExium ? 'Exium MUPS' : 'Coralcal-D/DX/Vita';
 
             const metricsHtml = `
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-2.5 bg-white p-2 sm:p-3 rounded-xl border-2 ${{isExium ? 'border-blue-200' : 'border-purple-200'}} shadow-2xs">
                     <!-- 1. Seen Rx -->
-                    <div class="min-w-0 overflow-hidden rounded-lg border border-emerald-200 bg-emerald-50/50 p-2 sm:p-2.5 flex flex-col justify-between">
+                    <div class="min-w-0 overflow-hidden rounded-lg border ${{rxOk ? 'border-emerald-200 bg-emerald-50/50' : 'border-rose-200 bg-rose-50/50'}} p-2 sm:p-2.5 flex flex-col justify-between">
                         <div class="flex items-center justify-between gap-1">
                             <span class="text-slate-900 font-black uppercase text-[11px] sm:text-xs tracking-tight whitespace-nowrap">1. Seen Rx (Sep'26)</span>
-                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-emerald-100 text-emerald-800 border border-emerald-300 whitespace-nowrap">✓ &ge;200 Rx</span>
+                            <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold whitespace-nowrap ${{rxOk ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' : 'bg-rose-100 text-rose-800 border border-rose-300'}}">
+                                ${{rxOk ? '✓ &ge;200 Rx' : '✗ &lt;200 Rx (No Award)'}}
+                            </span>
                         </div>
                         <div class="mt-1 sm:mt-1.5 flex items-baseline gap-1.5 flex-wrap">
-                            <span class="text-sm sm:text-base font-black text-emerald-700">${{Number(ach.rx || 0).toLocaleString()}} Seen Rx</span>
-                            <span class="text-[11px] font-bold text-slate-600">(Req: 200 Rx)</span>
+                            <span class="text-sm sm:text-base font-black ${{rxOk ? 'text-emerald-700' : 'text-rose-600'}}">
+                                ${{rxOk ? '✓' : '✗'}} ${{rxVal.toLocaleString()}} Seen Rx
+                            </span>
+                            <span class="text-[11px] font-bold ${{rxOk ? 'text-slate-600' : 'text-rose-700'}}">(Req: &ge;200 Rx)</span>
                         </div>
-                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border border-emerald-200/80">
-                            Sep'26 Full Month Rx: <strong class="text-slate-900">${{Number(ach.rx || 0).toLocaleString()}}</strong>
+                        <div class="mt-1 text-[11px] font-bold text-slate-700 bg-white/90 px-2 py-0.5 rounded border ${{rxOk ? 'border-emerald-200/80' : 'border-rose-200/80'}} flex items-center justify-between gap-1 flex-wrap">
+                            <span>Sep'26 Full Month Rx: <strong class="${{rxOk ? 'text-slate-900' : 'text-rose-700 font-mono'}}">${{rxVal.toLocaleString()}}</strong></span>
+                            ${{!rxOk ? '<span class="text-[10px] font-extrabold text-rose-600 uppercase">✗ Criteria Failed</span>' : ''}}
                         </div>
                     </div>
 
@@ -3126,19 +3125,20 @@ def build_portal():
                 </div>
             `;
 
+            const rxOk = Number(ach.rx || 0) >= 200;
             const metricsEl = document.getElementById('rev-metrics-summary');
             metricsEl.innerHTML = `
                 <div class="font-bold text-[11px] text-amber-950 mb-1">Current Automated System Calculation:</div>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-[11px]">
-                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                    <div class="${{rxOk ? 'bg-white/90 border-amber-200' : 'bg-rose-50 border-rose-300'}} p-1.5 rounded border">
                         <span class="text-slate-500 block text-[10px]">1. Seen Rx:</span>
-                        <strong class="${{ach.rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{ach.rx}} Rx</strong> (Req: &ge;200)
+                        <strong class="${{rxOk ? 'text-emerald-700' : 'text-rose-600'}}">${{rxOk ? '✓ ' + ach.rx : '✗ ' + ach.rx}} Rx</strong> (${{rxOk ? 'Req: &ge;200' : 'No Award (<200)'}})
                     </div>
-                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                    <div class="${{ach.terr_pos ? 'bg-white/90 border-amber-200' : 'bg-rose-50 border-rose-300'}} p-1.5 rounded border">
                         <span class="text-slate-500 block text-[10px]">2. Territory Sales:</span>
                         <strong class="${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">${{ach.terr_pos ? 'Positive' : 'Negative'}}</strong> (${{Math.round(ach.terr_growth || 0).toLocaleString()}})
                     </div>
-                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                    <div class="${{ach.brand_growth_ok ? 'bg-white/90 border-amber-200' : 'bg-amber-50 border-amber-300'}} p-1.5 rounded border">
                         <span class="text-slate-500 block text-[10px]">3. Brand Box Growth:</span>
                         <strong class="${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">${{ach.brand_growth_box || 0}} Boxes</strong> (Req: +${{ach.brand_req_box || 30}})
                     </div>
@@ -3151,14 +3151,25 @@ def build_portal():
             if (existingRev.dispute_category) {{
                 document.getElementById('rev-category-select').value = existingRev.dispute_category;
             }}
-            if (existingRev.submitter_role) {{
-                document.getElementById('rev-role-select').value = existingRev.submitter_role;
-            }}
+            const defaultRole = currentActiveZoneCode ? 'Zonal Head' : 'Regional Head';
+            document.getElementById('rev-role-select').value = existingRev.submitter_role || defaultRole;
             document.getElementById('rev-mobile-input').value = existingRev.contact_mobile || ach.mobile || '';
-            document.getElementById('rev-name-input').value = existingRev.submitter_name || '';
-            document.getElementById('rev-remarks-input').value = existingRev.remarks || '';
+            const defaultName = (defaultRole === 'Zonal Head') ? (ach.zonal_head || '') : (ach.regional_head || '');
+            document.getElementById('rev-name-input').value = existingRev.submitter_name || defaultName;
 
             document.getElementById('review-modal').classList.remove('hidden');
+        }}
+
+        function onRevRoleChange() {{
+            const achId = document.getElementById('rev-ach-id').value;
+            const ach = findAchieverById(achId);
+            if (!ach) return;
+            const role = document.getElementById('rev-role-select').value;
+            if (role === 'Zonal Head') {{
+                document.getElementById('rev-name-input').value = ach.zonal_head || '';
+            }} else {{
+                document.getElementById('rev-name-input').value = ach.regional_head || '';
+            }}
         }}
 
         function closeReviewModal() {{
@@ -3175,10 +3186,9 @@ def build_portal():
             const role = document.getElementById('rev-role-select').value;
             const mobile = document.getElementById('rev-mobile-input').value.trim();
             const name = document.getElementById('rev-name-input').value.trim();
-            const remarks = document.getElementById('rev-remarks-input').value.trim();
 
-            if (!remarks) {{
-                alert('Please provide detailed remarks / justification for Admin verification!');
+            if (role !== 'Regional Head' && role !== 'Zonal Head') {{
+                alert('Data review request can only be submitted by Regional Head or Zonal Head.');
                 return;
             }}
 
@@ -3197,9 +3207,9 @@ def build_portal():
                 brand: ach.brand,
                 brand_label: ach.brand_label,
                 dispute_category: category,
-                remarks: remarks,
+                remarks: category,
                 submitter_role: role,
-                submitter_name: name,
+                submitter_name: name || role,
                 contact_mobile: mobile,
                 timestamp: new Date().toISOString(),
                 status: 'pending'
@@ -3213,7 +3223,7 @@ def build_portal():
             closeReviewModal();
             renderAchievers();
             if (isAdminUnlocked) refreshAdminStats();
-            showToast('Review request submitted! Logged for Admin verification. 📤', '✅');
+            showToast('Review request submitted by ' + role + '! Logged for Admin verification. 📤', '✅');
         }}
 
         function openManualOverrideModal(achId, prefillAward = 3000, prefillReason = '') {{
@@ -3664,7 +3674,7 @@ def build_portal():
                         <div class="grid grid-cols-1 gap-1 pt-1 text-[11px] bg-slate-50/90 p-2 rounded-lg border border-slate-200">
                             <div class="flex items-center justify-between">
                                 <span class="font-black text-slate-900">1. Seen Rx (Sep'26):</span>
-                                <span class="font-extrabold ${{rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{rx}} Rx (Req: &ge;200)</span>
+                                <span class="font-extrabold ${{rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{rx >= 200 ? '✓ ' + rx + ' Rx (Req: &ge;200)' : '✗ ' + rx + ' Rx (No Award: <200)'}}</span>
                             </div>
                             <div class="flex items-center justify-between border-t border-slate-200/70 pt-1 flex-wrap gap-1">
                                 <span class="font-black text-slate-900">2. Territory Sales Growth:</span>
@@ -3688,7 +3698,7 @@ def build_portal():
                         if (revObj && revObj.status === 'pending') {{
                             revActionHtml = `
                                 <div class="mt-2 pt-2 border-t border-amber-200 flex items-center justify-between gap-1 flex-wrap">
-                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-amber-100 text-amber-900 border border-amber-300">🔍 Review Requested (Pending Admin)</span>
+                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-amber-100 text-amber-900 border border-amber-300">🔍 Review Requested by ${{revObj.submitter_role || 'RH'}}</span>
                                     <button onclick="openReviewModal('${{achId}}')" class="text-[10px] font-bold text-amber-800 hover:underline">View Details</button>
                                 </div>
                             `;
@@ -3696,16 +3706,16 @@ def build_portal():
                             revActionHtml = `
                                 <div class="mt-2 pt-2 border-t border-rose-200 flex items-center justify-between gap-1 flex-wrap">
                                     <span class="px-2 py-0.5 rounded font-black text-[10px] bg-rose-100 text-rose-800 border border-rose-300">❌ Review Rejected</span>
-                                    <button onclick="openReviewModal('${{achId}}')" class="text-[10px] font-bold text-slate-700 hover:underline">Re-submit Review</button>
+                                    <button onclick="openReviewModal('${{achId}}')" class="text-[10px] font-bold text-slate-700 hover:underline">Re-submit Review (RH/ZH)</button>
                                 </div>
                             `;
                         }} else {{
                             revActionHtml = `
                                 <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between gap-2 flex-wrap">
-                                    <span class="text-[10px] text-slate-500 font-medium">Data dispute or mismatch?</span>
+                                    <span class="text-[10px] text-slate-500 font-medium">Data dispute? Regional/Zonal Head can request review:</span>
                                     <button onclick="openReviewModal('${{achId}}')" class="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-black transition shadow-2xs flex items-center gap-1">
                                         <span>📝</span>
-                                        <span>Request Data Review</span>
+                                        <span>Request Data Review (RH/ZH)</span>
                                     </button>
                                 </div>
                             `;
