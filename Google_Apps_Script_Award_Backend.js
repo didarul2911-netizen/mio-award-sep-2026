@@ -1,9 +1,8 @@
-const SHEET_EXIUM = "Exium_Achievers_Sep_2026";
-const SHEET_CORALCAL = "Coralcal_Achievers_Sep_2026";
+const SHEET_EXIUM = "Award_Exium_Sep_2026";
+const SHEET_CORALCAL = "Award_Coralcal_Sep_2026";
 
 const HEADERS = [
   "SL",
-  "Brand",
   "Zone Name",
   "SAP Zone Code",
   "Zonal Head",
@@ -11,23 +10,26 @@ const HEADERS = [
   "SAP Region Code",
   "Regional Head",
   "SAP Area Code",
-  "Territory Name",
+  "Area Name",
   "SAP MIO Code",
-  "Sr. / MIO Name",
+  "MIO Name",
   "Designation",
-  "Mobile Number",
-  "Seen Rx (Sep 26)",
-  "Territory Sales Positive?",
-  "Required Growth (Box Qty)",
-  "Actual Growth (Box Qty)",
+  "Seen Rx (Sep'26)",
+  "Aug'26 Total Sales",
+  "Sep'26 Total Sales",
+  "Total Sales Positive?",
+  "Aug'26 Brand Sales",
+  "Sep'26 Brand Required",
+  "Sep'26 Brand Actual",
+  "Brand Growth Met?",
   "Award Tier",
-  "Calculated Award",
-  "Active Payable Award",
+  "Award Amount",
+  "RH Recommendation",
+  "RH Cancel Reason",
+  "ZH Recommendation",
+  "ZH Cancel Reason",
   "Selected Gift Voucher",
   "Status",
-  "RH/ZH Recommendation",
-  "Cancelled By",
-  "Cancellation Reason",
   "Timestamp (BDT)"
 ];
 
@@ -55,8 +57,8 @@ function normalizeToBDTimestamp(val) {
 }
 
 function getOrCreateBrandSheet(ss, isExium) {
-  const primaryName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
-  const fallbackName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+  const primaryName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+  const fallbackName = isExium ? "Exium_Achievers_Sep_2026" : "Coralcal_Achievers_Sep_2026";
   let sheet = ss.getSheetByName(primaryName) || ss.getSheetByName(fallbackName);
 
   if (!sheet) {
@@ -79,38 +81,94 @@ function getOrCreateBrandSheet(ss, isExium) {
 }
 
 function getSheetColMap(sheet) {
-  const lastCol = Math.max(sheet.getLastColumn(), HEADERS.length);
+  const lastCol = Math.max(sheet.getLastColumn(), 30);
   const headerRow = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
 
   const map = {
-    colRegion: 6,
-    colArea: 9,
-    colMio: 11,
-    colAward: 20,
-    colActiveAward: 21,
-    colVoucher: 22,
-    colStatus: 23,
-    colRec: 24,
-    colCancBy: 25,
-    colReason: 26,
-    colTimestamp: 27
+    colRegion: 0,
+    colArea: 0,
+    colMio: 0,
+    colAward: 0,
+    colActiveAward: 0,
+    colVoucher: 0,
+    colStatus: 0,
+    colRhRec: 0,
+    colRhReason: 0,
+    colZhRec: 0,
+    colZhReason: 0,
+    colRec: 0,
+    colCancBy: 0,
+    colReason: 0,
+    colTimestamp: 0
   };
 
   for (let i = 0; i < headerRow.length; i++) {
-    const h = String(headerRow[i] || "").trim().toLowerCase();
+    const rawH = String(headerRow[i] || "").trim();
+    if (!rawH) continue;
+    const h = rawH.toLowerCase();
     const c = i + 1;
-    if (h === "region name" || h === "region") map.colRegion = c;
-    else if (h.indexOf("area code") !== -1) map.colArea = c;
-    else if (h.indexOf("mio code") !== -1 || h === "mio sap id") map.colMio = c;
-    else if (h === "calculated award" || h === "award amount") map.colAward = c;
-    else if (h === "active payable award") map.colActiveAward = c;
-    else if (h.indexOf("voucher") !== -1) map.colVoucher = c;
-    else if (h === "status" || h === "submission status") map.colStatus = c;
-    else if (h.indexOf("recommendation") !== -1) map.colRec = c;
-    else if (h === "cancelled by") map.colCancBy = c;
-    else if (h.indexOf("cancel reason") !== -1 || h.indexOf("cancellation reason") !== -1) map.colReason = c;
-    else if (h.indexOf("timestamp") !== -1) map.colTimestamp = c;
+
+    // Specific RH and ZH columns first
+    if (h.indexOf("rh rec") !== -1 || h.indexOf("regional head rec") !== -1 || h.indexOf("rm rec") !== -1) {
+      map.colRhRec = c;
+    } else if (h.indexOf("zh rec") !== -1 || h.indexOf("zonal head rec") !== -1 || h.indexOf("zm rec") !== -1) {
+      map.colZhRec = c;
+    } else if (h.indexOf("rh cancel") !== -1 || h.indexOf("regional head cancel") !== -1 || h.indexOf("rm cancel") !== -1) {
+      map.colRhReason = c;
+    } else if (h.indexOf("zh cancel") !== -1 || h.indexOf("zonal head cancel") !== -1 || h.indexOf("zm cancel") !== -1) {
+      map.colZhReason = c;
+    }
+    // Generic / unified recommendation columns
+    else if (h === "rh/zh recommendation" || h === "recommendation" || h === "award recommendation") {
+      map.colRec = c;
+    } else if (h === "cancelled by" || h.indexOf("cancelled by") !== -1) {
+      map.colCancBy = c;
+    } else if (h.indexOf("cancel reason") !== -1 || h.indexOf("cancellation reason") !== -1) {
+      map.colReason = c;
+    }
+    // Standard data columns
+    else if (h === "region name" || h === "region") {
+      map.colRegion = c;
+    } else if (h.indexOf("area code") !== -1) {
+      map.colArea = c;
+    } else if (h.indexOf("mio code") !== -1 || h === "mio sap id" || h === "mio id") {
+      map.colMio = c;
+    } else if (h === "calculated award" || h === "award amount" || h === "award") {
+      map.colAward = c;
+    } else if (h === "active payable award" || h === "active award") {
+      map.colActiveAward = c;
+    } else if (h.indexOf("voucher") !== -1) {
+      map.colVoucher = c;
+    } else if (h === "status" || h === "submission status") {
+      map.colStatus = c;
+    } else if (h.indexOf("timestamp") !== -1) {
+      map.colTimestamp = c;
+    }
   }
+
+  // Fallbacks based on 29-column Award_Exium_Sep_2026 / Award_Coralcal_Sep_2026 sheet
+  if (!map.colRegion) map.colRegion = 5;
+  if (!map.colArea) map.colArea = 8;
+  if (!map.colMio) map.colMio = 10;
+  if (!map.colAward) map.colAward = 22;
+  if (!map.colVoucher) map.colVoucher = 27;
+  if (!map.colStatus) map.colStatus = 28;
+  if (!map.colTimestamp) map.colTimestamp = 29;
+
+  // Fallback for recommendation columns
+  if (!map.colRhRec && !map.colRec) {
+    if (headerRow.length >= 26) {
+      map.colRhRec = 23;
+      map.colRhReason = 24;
+      map.colZhRec = 25;
+      map.colZhReason = 26;
+    } else {
+      map.colRec = 24;
+      map.colCancBy = 25;
+      map.colReason = 26;
+    }
+  }
+
   return map;
 }
 
@@ -124,8 +182,8 @@ function doGet(e) {
     const coralMap = {};
 
     const readSheetIntoMap = function(isExium, targetObj) {
-      const primaryName = isExium ? SHEET_EXIUM : SHEET_CORALCAL;
-      const fallbackName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+      const primaryName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
+      const fallbackName = isExium ? "Exium_Achievers_Sep_2026" : "Coralcal_Achievers_Sep_2026";
       const sheet = ss.getSheetByName(primaryName) || ss.getSheetByName(fallbackName);
       if (!sheet || sheet.getLastRow() < 2) return;
 
@@ -138,18 +196,46 @@ function doGet(e) {
         const mioCode = String(row[cols.colMio - 1] || "").trim();
         if (!areaCode) continue;
 
-        const voucher = String(row[cols.colVoucher - 1] || "").trim();
-        const status = String(row[cols.colStatus - 1] || "").trim();
-        const rec = String(row[cols.colRec - 1] || "Recommended").trim();
-        const cancBy = String(row[cols.colCancBy - 1] || "").trim();
-        const reason = String(row[cols.colReason - 1] || "").trim();
-        const timestamp = normalizeToBDTimestamp(row[cols.colTimestamp - 1]);
+        const voucher = cols.colVoucher ? String(row[cols.colVoucher - 1] || "").trim() : "";
+        const status = cols.colStatus ? String(row[cols.colStatus - 1] || "").trim() : "";
 
+        const rhRec = cols.colRhRec ? String(row[cols.colRhRec - 1] || "").trim() : "";
+        const zhRec = cols.colZhRec ? String(row[cols.colZhRec - 1] || "").trim() : "";
+        const rhReason = cols.colRhReason ? String(row[cols.colRhReason - 1] || "").trim() : "";
+        const zhReason = cols.colZhReason ? String(row[cols.colZhReason - 1] || "").trim() : "";
+        const genRec = cols.colRec ? String(row[cols.colRec - 1] || "").trim() : "";
+        const genCancBy = cols.colCancBy ? String(row[cols.colCancBy - 1] || "").trim() : "";
+        const genReason = cols.colReason ? String(row[cols.colReason - 1] || "").trim() : "";
+        const timestamp = cols.colTimestamp ? normalizeToBDTimestamp(row[cols.colTimestamp - 1]) : "";
+
+        const isRhCancelled = rhRec.toLowerCase().indexOf("not recommended") !== -1;
+        const isZhCancelled = zhRec.toLowerCase().indexOf("not recommended") !== -1;
+        const isGenCancelled = genRec.toLowerCase().indexOf("not recommended") !== -1;
         const isCancelled = (
           status === "Cancelled" ||
           voucher === "CANCELLED" ||
-          rec.toLowerCase().indexOf("not recommended") !== -1
+          isRhCancelled ||
+          isZhCancelled ||
+          isGenCancelled
         );
+
+        let cancBy = "";
+        let cancReason = "";
+        if (isCancelled) {
+          if (isZhCancelled) {
+            cancBy = "Zonal Head";
+            cancReason = zhReason || genReason;
+          } else if (isRhCancelled) {
+            cancBy = "Regional Head";
+            cancReason = rhReason || genReason;
+          } else if (genCancBy) {
+            cancBy = genCancBy;
+            cancReason = genReason;
+          } else {
+            cancBy = "Regional Head";
+            cancReason = rhReason || zhReason || genReason;
+          }
+        }
 
         if (voucher || isCancelled || timestamp || status === "Pending") {
           const key = areaCode + "_" + mioCode;
@@ -158,8 +244,8 @@ function doGet(e) {
             timestamp: timestamp,
             status: isCancelled ? "Cancelled" : (voucher && voucher !== "Not Selected" ? "Complete" : "Pending"),
             cancelled: isCancelled,
-            cancelled_by: cancBy || (isCancelled ? "Regional Head" : ""),
-            cancel_reason: reason
+            cancelled_by: cancBy,
+            cancel_reason: cancReason
           };
         }
       }
@@ -219,12 +305,26 @@ function doPost(e) {
         if (lastRow < 2) return;
         const cols = getSheetColMap(sheet);
         const numRows = lastRow - 1;
-        sheet.getRange(2, cols.colVoucher, numRows, 1).clearContent();
-        sheet.getRange(2, cols.colStatus, numRows, 1).setValue("Pending");
-        sheet.getRange(2, cols.colRec, numRows, 1).setValue("Recommended");
-        sheet.getRange(2, cols.colCancBy, numRows, 1).clearContent();
-        sheet.getRange(2, cols.colReason, numRows, 1).clearContent();
-        sheet.getRange(2, cols.colTimestamp, numRows, 1).clearContent();
+
+        if (cols.colVoucher) sheet.getRange(2, cols.colVoucher, numRows, 1).clearContent();
+        if (cols.colStatus) sheet.getRange(2, cols.colStatus, numRows, 1).setValue("Pending");
+        if (cols.colTimestamp) sheet.getRange(2, cols.colTimestamp, numRows, 1).clearContent();
+
+        // Recommendations must ALWAYS be reset to "Recommended", never cleared or wiped out!
+        if (cols.colRhRec) sheet.getRange(2, cols.colRhRec, numRows, 1).setValue("Recommended");
+        if (cols.colRhReason) sheet.getRange(2, cols.colRhReason, numRows, 1).clearContent();
+        if (cols.colZhRec) sheet.getRange(2, cols.colZhRec, numRows, 1).setValue("Recommended");
+        if (cols.colZhReason) sheet.getRange(2, cols.colZhReason, numRows, 1).clearContent();
+
+        if (cols.colRec && cols.colRec !== cols.colRhRec && cols.colRec !== cols.colZhRec) {
+          sheet.getRange(2, cols.colRec, numRows, 1).setValue("Recommended");
+        }
+        if (cols.colCancBy && cols.colCancBy !== cols.colZhRec && cols.colCancBy !== cols.colRhRec) {
+          sheet.getRange(2, cols.colCancBy, numRows, 1).clearContent();
+        }
+        if (cols.colReason && cols.colReason !== cols.colZhReason && cols.colReason !== cols.colRhReason) {
+          sheet.getRange(2, cols.colReason, numRows, 1).clearContent();
+        }
       });
       return ContentService.createTextOutput(
         JSON.stringify({ status: "success", message: "All national data reset" })
@@ -243,12 +343,24 @@ function doPost(e) {
           const rowReg = String(data[i][cols.colRegion - 1] || "").trim().toLowerCase();
           if (rowReg === targetReg) {
             const rIdx = i + 1;
-            sheet.getRange(rIdx, cols.colVoucher).clearContent();
-            sheet.getRange(rIdx, cols.colStatus).setValue("Pending");
-            sheet.getRange(rIdx, cols.colRec).setValue("Recommended");
-            sheet.getRange(rIdx, cols.colCancBy).clearContent();
-            sheet.getRange(rIdx, cols.colReason).clearContent();
-            sheet.getRange(rIdx, cols.colTimestamp).clearContent();
+            if (cols.colVoucher) sheet.getRange(rIdx, cols.colVoucher).clearContent();
+            if (cols.colStatus) sheet.getRange(rIdx, cols.colStatus).setValue("Pending");
+            if (cols.colTimestamp) sheet.getRange(rIdx, cols.colTimestamp).clearContent();
+
+            if (cols.colRhRec) sheet.getRange(rIdx, cols.colRhRec).setValue("Recommended");
+            if (cols.colRhReason) sheet.getRange(rIdx, cols.colRhReason).clearContent();
+            if (cols.colZhRec) sheet.getRange(rIdx, cols.colZhRec).setValue("Recommended");
+            if (cols.colZhReason) sheet.getRange(rIdx, cols.colZhReason).clearContent();
+
+            if (cols.colRec && cols.colRec !== cols.colRhRec && cols.colRec !== cols.colZhRec) {
+              sheet.getRange(rIdx, cols.colRec).setValue("Recommended");
+            }
+            if (cols.colCancBy && cols.colCancBy !== cols.colZhRec && cols.colCancBy !== cols.colRhRec) {
+              sheet.getRange(rIdx, cols.colCancBy).clearContent();
+            }
+            if (cols.colReason && cols.colReason !== cols.colZhReason && cols.colReason !== cols.colRhReason) {
+              sheet.getRange(rIdx, cols.colReason).clearContent();
+            }
           }
         }
       });
@@ -280,12 +392,15 @@ function doPost(e) {
           item.action === "cancel" ||
           item.status === "Cancelled"
         );
+        const cancByRaw = String(item.cancelled_by || "").toLowerCase();
+        const isZH = (
+          cancByRaw.indexOf("zonal") !== -1 ||
+          cancByRaw.indexOf("zm") !== -1
+        );
         const cleanVoucher = isCancelled
           ? "CANCELLED"
           : (item.action === "remove" || item.action === "restore" ? "" : String(item.voucher || "").trim());
         const statusVal = isCancelled ? "Cancelled" : (cleanVoucher ? "Complete" : "Pending");
-        const recVal = isCancelled ? "Not Recommended" : "Recommended";
-        const cancByVal = isCancelled ? String(item.cancelled_by || "Regional Head") : "";
         const reasonVal = isCancelled ? String(item.cancel_reason || "") : "";
         const awardAmt = Number(item.award || 0);
         const activeAwardAmt = isCancelled ? 0 : awardAmt;
@@ -301,52 +416,151 @@ function doPost(e) {
         }
 
         if (foundRowIndex > 0) {
-          sheet.getRange(foundRowIndex, cols.colActiveAward).setValue(activeAwardAmt);
-          sheet.getRange(foundRowIndex, cols.colVoucher).setValue(cleanVoucher);
-          sheet.getRange(foundRowIndex, cols.colStatus).setValue(statusVal);
-          sheet.getRange(foundRowIndex, cols.colRec).setValue(recVal);
-          sheet.getRange(foundRowIndex, cols.colCancBy).setValue(cancByVal);
-          sheet.getRange(foundRowIndex, cols.colReason).setValue(reasonVal);
-          const tsCell = sheet.getRange(foundRowIndex, cols.colTimestamp);
-          tsCell.setNumberFormat("@");
-          tsCell.setValue(bdTime);
+          if (cols.colActiveAward) {
+            sheet.getRange(foundRowIndex, cols.colActiveAward).setValue(activeAwardAmt);
+          }
+          if (cols.colVoucher) {
+            sheet.getRange(foundRowIndex, cols.colVoucher).setValue(cleanVoucher);
+          }
+          if (cols.colStatus) {
+            sheet.getRange(foundRowIndex, cols.colStatus).setValue(statusVal);
+          }
+
+          if (isCancelled) {
+            if (isZH) {
+              if (cols.colZhRec) sheet.getRange(foundRowIndex, cols.colZhRec).setValue("Not Recommended");
+              if (cols.colZhReason) sheet.getRange(foundRowIndex, cols.colZhReason).setValue(reasonVal);
+              if (cols.colRhRec) {
+                const curRh = String(data[foundRowIndex - 1][cols.colRhRec - 1] || "").trim();
+                if (!curRh) sheet.getRange(foundRowIndex, cols.colRhRec).setValue("Recommended");
+              }
+            } else {
+              if (cols.colRhRec) sheet.getRange(foundRowIndex, cols.colRhRec).setValue("Not Recommended");
+              if (cols.colRhReason) sheet.getRange(foundRowIndex, cols.colRhReason).setValue(reasonVal);
+              if (cols.colZhRec) {
+                const curZh = String(data[foundRowIndex - 1][cols.colZhRec - 1] || "").trim();
+                if (!curZh) sheet.getRange(foundRowIndex, cols.colZhRec).setValue("Recommended");
+              }
+            }
+            if (cols.colRec && cols.colRec !== cols.colZhRec && cols.colRec !== cols.colRhRec) {
+              sheet.getRange(foundRowIndex, cols.colRec).setValue("Not Recommended");
+            }
+            if (cols.colCancBy && cols.colCancBy !== cols.colZhRec && cols.colCancBy !== cols.colRhRec) {
+              sheet.getRange(foundRowIndex, cols.colCancBy).setValue(isZH ? "Zonal Head" : "Regional Head");
+            }
+            if (cols.colReason && cols.colReason !== cols.colZhReason && cols.colReason !== cols.colRhReason) {
+              sheet.getRange(foundRowIndex, cols.colReason).setValue(reasonVal);
+            }
+          } else {
+            // NOT cancelled - voucher selected, restored, or selection removed
+            // Regional Head recommendation is Recommended:
+            if (cols.colRhRec) sheet.getRange(foundRowIndex, cols.colRhRec).setValue("Recommended");
+            if (cols.colRhReason) sheet.getRange(foundRowIndex, cols.colRhReason).clearContent();
+
+            // Zonal Head recommendation: KEEP / SET AS "Recommended", NEVER CLEAR OR BLANK!
+            if (cols.colZhRec) {
+              const curZh = String(data[foundRowIndex - 1][cols.colZhRec - 1] || "").trim();
+              if (!curZh || item.action === "restore") {
+                sheet.getRange(foundRowIndex, cols.colZhRec).setValue("Recommended");
+                if (cols.colZhReason) sheet.getRange(foundRowIndex, cols.colZhReason).clearContent();
+              }
+            }
+
+            if (cols.colRec && cols.colRec !== cols.colZhRec && cols.colRec !== cols.colRhRec) {
+              sheet.getRange(foundRowIndex, cols.colRec).setValue("Recommended");
+            }
+            if (cols.colCancBy && cols.colCancBy !== cols.colZhRec && cols.colCancBy !== cols.colRhRec) {
+              sheet.getRange(foundRowIndex, cols.colCancBy).clearContent();
+            }
+            if (cols.colReason && cols.colReason !== cols.colZhReason && cols.colReason !== cols.colRhReason) {
+              sheet.getRange(foundRowIndex, cols.colReason).clearContent();
+            }
+          }
+
+          if (cols.colTimestamp) {
+            const tsCell = sheet.getRange(foundRowIndex, cols.colTimestamp);
+            tsCell.setNumberFormat("@");
+            tsCell.setValue(bdTime);
+          }
           updatedCount++;
         } else {
-          const newSl = Math.max(1, sheet.getLastRow());
-          const newRow = [
-            newSl,
-            isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita",
-            item.zone || "",
-            item.sap_zone_code || "",
-            item.zonal_head || "",
-            item.region || "",
-            item.sap_region_code || "",
-            item.regional_head || "",
-            targetArea,
-            item.area_name || "",
-            targetMio,
-            item.mio_name || "",
-            item.desig || "",
-            item.mobile || "",
-            item.rx || 0,
-            item.terr_pos ? "Yes" : "No",
-            item.brand_req_box || 30,
-            item.brand_growth_box !== undefined ? item.brand_growth_box : "",
-            item.tier || "",
-            awardAmt,
-            activeAwardAmt,
-            cleanVoucher,
-            statusVal,
-            recVal,
-            cancByVal,
-            reasonVal,
-            bdTime
-          ];
+          // Dynamic append for new row
+          const headerValues = lastRow >= 1 ? data[0] : HEADERS;
+          const newRow = new Array(headerValues.length).fill("");
+          const newSl = Math.max(1, lastRow);
+
+          for (let cIdx = 0; cIdx < headerValues.length; cIdx++) {
+            const h = String(headerValues[cIdx] || "").trim().toLowerCase();
+            const colNum = cIdx + 1;
+
+            if (colNum === 1 || h === "sl") {
+              newRow[cIdx] = newSl;
+            } else if (h === "brand") {
+              newRow[cIdx] = isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita";
+            } else if (h === "zone name" || h === "zone") {
+              newRow[cIdx] = item.zone || "";
+            } else if (h.indexOf("zone code") !== -1) {
+              newRow[cIdx] = item.sap_zone_code || "";
+            } else if (h.indexOf("zonal head") !== -1) {
+              newRow[cIdx] = item.zonal_head || "";
+            } else if (h === "region name" || h === "region") {
+              newRow[cIdx] = item.region || "";
+            } else if (h.indexOf("region code") !== -1) {
+              newRow[cIdx] = item.sap_region_code || "";
+            } else if (h.indexOf("regional head") !== -1) {
+              newRow[cIdx] = item.regional_head || "";
+            } else if (h.indexOf("area code") !== -1) {
+              newRow[cIdx] = targetArea;
+            } else if (h === "area name" || h === "territory name") {
+              newRow[cIdx] = item.area_name || "";
+            } else if (h.indexOf("mio code") !== -1 || h === "mio sap id") {
+              newRow[cIdx] = targetMio;
+            } else if (h.indexOf("mio name") !== -1 || h.indexOf("sr. / mio") !== -1) {
+              newRow[cIdx] = item.mio_name || "";
+            } else if (h === "designation") {
+              newRow[cIdx] = item.desig || "";
+            } else if (h.indexOf("mobile") !== -1) {
+              newRow[cIdx] = item.mobile || "";
+            } else if (h.indexOf("rx") !== -1) {
+              newRow[cIdx] = item.rx || 0;
+            } else if (h.indexOf("total sales positive") !== -1 || h.indexOf("territory sales positive") !== -1) {
+              newRow[cIdx] = item.terr_pos ? "Yes" : "No";
+            } else if (h.indexOf("award tier") !== -1 || h === "tier") {
+              newRow[cIdx] = item.tier || "";
+            } else if (h === "calculated award" || h === "award amount" || h === "award") {
+              newRow[cIdx] = awardAmt;
+            } else if (h === "active payable award" || h === "active award") {
+              newRow[cIdx] = activeAwardAmt;
+            } else if (h.indexOf("voucher") !== -1) {
+              newRow[cIdx] = cleanVoucher;
+            } else if (h === "status" || h === "submission status") {
+              newRow[cIdx] = statusVal;
+            } else if (colNum === cols.colRhRec) {
+              newRow[cIdx] = (isCancelled && !isZH) ? "Not Recommended" : "Recommended";
+            } else if (colNum === cols.colRhReason) {
+              newRow[cIdx] = (isCancelled && !isZH) ? reasonVal : "";
+            } else if (colNum === cols.colZhRec) {
+              newRow[cIdx] = (isCancelled && isZH) ? "Not Recommended" : "Recommended";
+            } else if (colNum === cols.colZhReason) {
+              newRow[cIdx] = (isCancelled && isZH) ? reasonVal : "";
+            } else if (colNum === cols.colRec) {
+              newRow[cIdx] = isCancelled ? "Not Recommended" : "Recommended";
+            } else if (colNum === cols.colCancBy) {
+              newRow[cIdx] = isCancelled ? (isZH ? "Zonal Head" : "Regional Head") : "";
+            } else if (colNum === cols.colReason) {
+              newRow[cIdx] = isCancelled ? reasonVal : "";
+            } else if (colNum === cols.colTimestamp) {
+              newRow[cIdx] = bdTime;
+            }
+          }
+
           sheet.appendRow(newRow);
           const appendedRow = sheet.getLastRow();
-          const tsCell = sheet.getRange(appendedRow, 27);
-          tsCell.setNumberFormat("@");
-          tsCell.setValue(bdTime);
+          if (cols.colTimestamp) {
+            const tsCell = sheet.getRange(appendedRow, cols.colTimestamp);
+            tsCell.setNumberFormat("@");
+            tsCell.setValue(bdTime);
+          }
           updatedCount++;
         }
       });
@@ -444,40 +658,40 @@ function doPost(e) {
           }
         }
         if (foundRow > 0) {
-          sheet.getRange(foundRow, cols.colAward).setValue(awardVal);
-          sheet.getRange(foundRow, cols.colActiveAward).setValue(awardVal);
-          sheet.getRange(foundRow, cols.colReason).setValue(ov.reason || "Admin Manual Grant");
+          if (cols.colAward) sheet.getRange(foundRow, cols.colAward).setValue(awardVal);
+          if (cols.colActiveAward) sheet.getRange(foundRow, cols.colActiveAward).setValue(awardVal);
+          if (cols.colRhRec) sheet.getRange(foundRow, cols.colRhRec).setValue("Recommended");
+          if (cols.colZhRec) sheet.getRange(foundRow, cols.colZhRec).setValue("Recommended");
+          if (cols.colRec && cols.colRec !== cols.colZhRec) sheet.getRange(foundRow, cols.colRec).setValue("Recommended");
+          if (cols.colReason) sheet.getRange(foundRow, cols.colReason).setValue(ov.reason || "Admin Manual Grant");
         } else if (awardVal > 0) {
           const newSl = Math.max(1, sheet.getLastRow());
-          sheet.appendRow([
-            newSl,
-            isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita",
-            ov.zone || "",
-            "",
-            "",
-            ov.region || "",
-            "",
-            "",
-            targetArea,
-            ov.area_name || "",
-            targetMio,
-            ov.mio_name || "",
-            ov.desig || "",
-            ov.mobile || "",
-            ov.rx || 0,
-            "Yes (Manual)",
-            30,
-            "",
-            ov.tier || "Manual Grant",
-            awardVal,
-            awardVal,
-            "",
-            "Pending",
-            "Recommended",
-            "",
-            ov.reason || "Admin Manual Grant",
-            getBDTimestampServer()
-          ]);
+          const headerValues = lastRow >= 1 ? data[0] : HEADERS;
+          const newRow = new Array(headerValues.length).fill("");
+          for (let cIdx = 0; cIdx < headerValues.length; cIdx++) {
+            const h = String(headerValues[cIdx] || "").trim().toLowerCase();
+            const colNum = cIdx + 1;
+            if (colNum === 1 || h === "sl") newRow[cIdx] = newSl;
+            else if (h === "brand") newRow[cIdx] = isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita";
+            else if (h === "zone name" || h === "zone") newRow[cIdx] = ov.zone || "";
+            else if (h === "region name" || h === "region") newRow[cIdx] = ov.region || "";
+            else if (h.indexOf("area code") !== -1) newRow[cIdx] = targetArea;
+            else if (h === "area name" || h === "territory name") newRow[cIdx] = ov.area_name || "";
+            else if (h.indexOf("mio code") !== -1 || h === "mio sap id") newRow[cIdx] = targetMio;
+            else if (h.indexOf("mio name") !== -1 || h.indexOf("sr. / mio") !== -1) newRow[cIdx] = ov.mio_name || "";
+            else if (h === "designation") newRow[cIdx] = ov.desig || "";
+            else if (h.indexOf("mobile") !== -1) newRow[cIdx] = ov.mobile || "";
+            else if (h.indexOf("rx") !== -1) newRow[cIdx] = ov.rx || 0;
+            else if (h.indexOf("total sales positive") !== -1) newRow[cIdx] = "Yes (Manual)";
+            else if (h.indexOf("award tier") !== -1 || h === "tier") newRow[cIdx] = ov.tier || "Manual Grant";
+            else if (h === "calculated award" || h === "award amount" || h === "award") newRow[cIdx] = awardVal;
+            else if (h === "active payable award" || h === "active award") newRow[cIdx] = awardVal;
+            else if (h === "status" || h === "submission status") newRow[cIdx] = "Pending";
+            else if (colNum === cols.colRhRec || colNum === cols.colZhRec || colNum === cols.colRec) newRow[cIdx] = "Recommended";
+            else if (colNum === cols.colReason || colNum === cols.colRhReason) newRow[cIdx] = ov.reason || "Admin Manual Grant";
+            else if (colNum === cols.colTimestamp) newRow[cIdx] = getBDTimestampServer();
+          }
+          sheet.appendRow(newRow);
         }
       } catch (eOvSheet) {}
 

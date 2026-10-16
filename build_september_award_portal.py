@@ -4756,7 +4756,7 @@ def build_portal():
                 timestamp,
                 action,
                 cancelled,
-                cancelled_by: cancelled ? `Not Recommended (${{cancelled_by || 'Regional Head'}})` : 'Recommended',
+                cancelled_by: cancelled ? (cancelled_by || 'Regional Head') : '',
                 cancel_reason,
                 clientTime: Date.now()
             }};
