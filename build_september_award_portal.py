@@ -309,6 +309,9 @@ def build_portal():
         button, select, input {{
             touch-action: manipulation;
         }}
+        .hidden {{
+            display: none !important;
+        }}
         ::-webkit-scrollbar {{
             width: 8px;
             height: 8px;
@@ -4759,7 +4762,7 @@ def build_portal():
                     body: JSON.stringify({{ action: 'restore_recommendations' }})
                 }});
                 showToast('Restore request sent to Google Sheet!', '✅');
-                alert('✅ ZM & RM Recommendations restore command sent to Google Sheet!\n\nPlease check your Google Sheet (Columns 23 & 25).');
+                alert('✅ ZM & RM Recommendations restore command sent to Google Sheet!\\n\\nPlease check your Google Sheet (Columns 23 & 25).');
             }} catch (e) {{
                 alert('Could not connect to Google Apps Script. Please select "restoreAllRecommendationsInSheet" from the Apps Script editor toolbar and click Run.');
             }}
