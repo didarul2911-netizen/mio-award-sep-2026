@@ -527,16 +527,18 @@ def build_portal():
                 <!-- Separate Brand Filter Tabs + Search + Separate Brand Excel Exports -->
                 <div class="pt-3 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5">
                     <!-- Brand Filter Buttons (Separate Exium MUPS / Coralcal View in Region) -->
-                    <div class="flex items-center gap-1.5 flex-wrap w-full md:w-auto">
-                        <button type="button" id="reg-brand-tab-all" onclick="setRegionalBrandFilter('all')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition">
-                            All Brands
-                        </button>
-                        <button type="button" id="reg-brand-tab-exium" onclick="setRegionalBrandFilter('exium')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition">
-                            🟦 Exium MUPS Award
-                        </button>
-                        <button type="button" id="reg-brand-tab-coral" onclick="setRegionalBrandFilter('coral')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition">
-                            🟪 Coralcal-D/DX/Vita Award
-                        </button>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 w-full md:w-auto">
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <button type="button" id="reg-brand-tab-all" onclick="setRegionalBrandFilter('all')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-slate-900 text-white shadow-2xs transition">
+                                All Brands
+                            </button>
+                            <button type="button" id="reg-brand-tab-exium" onclick="setRegionalBrandFilter('exium')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-blue-50 text-blue-800 hover:bg-blue-100 border border-blue-200 transition">
+                                🟦 Exium MUPS Award
+                            </button>
+                            <button type="button" id="reg-brand-tab-coral" onclick="setRegionalBrandFilter('coral')" class="px-2.5 sm:px-3 py-1.5 rounded-xl text-[11px] sm:text-xs font-extrabold bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200 transition">
+                                🟪 Coralcal-D/DX/Vita Award
+                            </button>
+                        </div>
                     </div>
 
                     <!-- Search & Separate Brand Exports -->
@@ -553,6 +555,27 @@ def build_portal():
                                 <span>📥 Coralcal (.xlsx)</span>
                             </button>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Status Filter Pills Row (All MIOs / Achievers / Non-Achievers / In Review) -->
+                <div class="pt-2.5 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
+                    <div class="flex items-center gap-1.5 flex-wrap" id="reg-status-pills">
+                        <button type="button" id="reg-status-pill-all" onclick="setRegionalStatusFilter('all')" class="px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-black bg-slate-900 text-white shadow-2xs transition">
+                            All MIOs (<span id="reg-count-all">0</span>)
+                        </button>
+                        <button type="button" id="reg-status-pill-achievers" onclick="setRegionalStatusFilter('achievers')" class="px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-emerald-800 hover:bg-emerald-50 border border-emerald-300 transition">
+                            🏆 Achievers (<span id="reg-count-achievers">0</span>)
+                        </button>
+                        <button type="button" id="reg-status-pill-non_achievers" onclick="setRegionalStatusFilter('non_achievers')" class="px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-300 transition">
+                            ⚪ Non-Achievers (<span id="reg-count-nonachievers">0</span>)
+                        </button>
+                        <button type="button" id="reg-status-pill-in_review" onclick="setRegionalStatusFilter('in_review')" class="px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-amber-800 hover:bg-amber-50 border border-amber-300 transition">
+                            🔍 In Review (<span id="reg-count-inreview">0</span>)
+                        </button>
+                    </div>
+                    <div class="text-[11px] text-slate-500 font-medium">
+                        Showing all MIO territories in region. Non-achievers can submit review requests.
                     </div>
                 </div>
             </div>
@@ -909,6 +932,167 @@ def build_portal():
     </div>
 
     <!-- ============================================== -->
+    <!-- MODAL: DATA REVIEW REQUEST (DISCREPANCY FORM)  -->
+    <!-- ============================================== -->
+    <div id="review-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full flex flex-col shadow-2xl overflow-hidden border border-amber-300 max-h-[90vh]">
+            <div class="bg-gradient-to-r from-amber-500 to-orange-600 p-4 sm:p-5 text-white flex justify-between items-center flex-shrink-0">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center font-bold text-lg shadow-xs">
+                        📝
+                    </div>
+                    <div>
+                        <h3 class="text-sm sm:text-base font-black">Data Review Request & Verification</h3>
+                        <p class="text-[11px] text-amber-100 font-semibold">Report data discrepancy for Admin verification & manual award approval</p>
+                    </div>
+                </div>
+                <button onclick="closeReviewModal()" class="text-white/80 hover:text-white p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <form onsubmit="submitReviewRequest(event)" class="p-4 sm:p-6 space-y-3.5 text-xs overflow-y-auto">
+                <input type="hidden" id="rev-ach-id" value="">
+                
+                <!-- Target MIO & Territory Card -->
+                <div id="rev-mio-summary" class="bg-slate-50 border border-slate-200 rounded-xl p-3 space-y-1 text-slate-700"></div>
+
+                <!-- Current System Metrics Breakdown -->
+                <div id="rev-metrics-summary" class="bg-amber-50/60 border border-amber-200 rounded-xl p-3 space-y-1 text-slate-800"></div>
+
+                <!-- Dispute Category Dropdown -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                        1. Reason for Review / Data Discrepancy <span class="text-rose-600">*</span>
+                    </label>
+                    <select id="rev-category-select" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
+                        <option value="Prescription (Seen Rx) Mismatch (Claimed >= 200 Rx)">1. Prescription (Seen Rx) Mismatch (Claimed &ge; 200 Rx in Sep'26)</option>
+                        <option value="Territory Sales Calculation Discrepancy (Sales was positive)">2. Territory Sales Calculation Discrepancy (Sales was Positive in Sep'26)</option>
+                        <option value="Brand Sales Value / Box Growth Discrepancy">3. Brand Sales Value / Box Growth Discrepancy (Met &ge; +30 Boxes)</option>
+                        <option value="Transfer / Joining / Territory Reassignment in Sep'26">4. Transfer / Joining / Territory Reassignment in Sep'26</option>
+                        <option value="Other Data Error / Verification Needed">5. Other Data Error / Verification Needed</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                            2. Submitter Role <span class="text-rose-600">*</span>
+                        </label>
+                        <select id="rev-role-select" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
+                            <option value="Regional Head">Regional Head</option>
+                            <option value="Sr. / MIO">Sr. / MIO</option>
+                            <option value="Zonal Head">Zonal Head</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                            3. Contact Mobile Number <span class="text-rose-600">*</span>
+                        </label>
+                        <input type="text" id="rev-mobile-input" required placeholder="01XXXXXXXXX" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-bold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none font-mono">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                        4. Submitter Name
+                    </label>
+                    <input type="text" id="rev-name-input" placeholder="Name of person submitting this review" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                        5. Detailed Explanation & Justification <span class="text-rose-600">*</span>
+                    </label>
+                    <textarea id="rev-remarks-input" required rows="3" placeholder="Explain the specific data discrepancy in detail (e.g. offline prescriptions synced late, transfer date, specific invoice numbers, etc.). Admin will review and can manually approve the award..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-amber-500 outline-none"></textarea>
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+                    <button type="button" onclick="closeReviewModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-bold text-xs transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white font-black text-xs shadow-md transition flex items-center gap-1.5">
+                        <span>📤 Submit Review to Admin</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL: ADMIN MANUAL AWARD OVERRIDE             -->
+    <!-- ============================================== -->
+    <div id="manual-override-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full flex flex-col shadow-2xl overflow-hidden border border-blue-300 max-h-[90vh]">
+            <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-4 sm:p-5 text-white flex justify-between items-center flex-shrink-0">
+                <div class="flex items-center space-x-2.5">
+                    <div class="w-9 h-9 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center font-bold text-lg shadow-xs">
+                        🏆
+                    </div>
+                    <div>
+                        <h3 class="text-sm sm:text-base font-black">Admin Manual Award Input & Override</h3>
+                        <p class="text-[11px] text-blue-100 font-semibold">Manually grant or adjust award for any MIO / Territory</p>
+                    </div>
+                </div>
+                <button onclick="closeManualOverrideModal()" class="text-white/80 hover:text-white p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+
+            <form onsubmit="confirmManualAwardOverride(event)" class="p-4 sm:p-6 space-y-4 text-xs overflow-y-auto">
+                <input type="hidden" id="override-ach-id" value="">
+                
+                <div id="override-mio-summary" class="bg-slate-50 border border-slate-200 rounded-xl p-3 space-y-1 text-slate-700"></div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        1. Select Award Amount to Grant <span class="text-rose-600">*</span>
+                    </label>
+                    <div class="space-y-2">
+                        <label class="flex items-center gap-2.5 p-2.5 rounded-xl border border-emerald-300 bg-emerald-50/50 cursor-pointer hover:bg-emerald-50">
+                            <input type="radio" name="override_award_radio" value="3000" id="ov-radio-3000" class="text-emerald-600 focus:ring-emerald-500">
+                            <div class="min-w-0">
+                                <span class="font-black text-xs text-emerald-900">🏆 3,000 Taka Award (Full 3-Criteria Achiever Tier)</span>
+                                <div class="text-[10px] text-emerald-700">Rx &ge; 200 + Positive Territory Sales + Required Brand Growth Met</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-2.5 p-2.5 rounded-xl border border-blue-300 bg-blue-50/50 cursor-pointer hover:bg-blue-50">
+                            <input type="radio" name="override_award_radio" value="1000" id="ov-radio-1000" class="text-blue-600 focus:ring-blue-500">
+                            <div class="min-w-0">
+                                <span class="font-black text-xs text-blue-900">🎖️ 1,000 Taka Award (Prescription / Seen Rx Tier)</span>
+                                <div class="text-[10px] text-blue-700">Rx &ge; 200 achieved, sales criteria partial / pending</div>
+                            </div>
+                        </label>
+                        <label class="flex items-center gap-2.5 p-2.5 rounded-xl border border-slate-300 bg-slate-50 cursor-pointer hover:bg-slate-100">
+                            <input type="radio" name="override_award_radio" value="0" id="ov-radio-0" class="text-slate-600 focus:ring-slate-500">
+                            <div class="min-w-0">
+                                <span class="font-black text-xs text-slate-700">⚪ 0 Taka (Revoke Override / Reset to Normal Calculation)</span>
+                                <div class="text-[10px] text-slate-500">Reverts to automated system calculation</div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
+                        2. Admin Approval Reason / Justification <span class="text-rose-600">*</span>
+                    </label>
+                    <textarea id="override-reason-input" required rows="2.5" placeholder="Specify approval basis (e.g. Rx discrepancy verified with PMD, transfer adjustment approved by Admin, etc.)..." class="w-full bg-slate-50 border border-slate-300 rounded-xl p-2.5 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
+                </div>
+
+                <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+                    <button type="button" onclick="closeManualOverrideModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 hover:bg-slate-100 font-bold text-xs transition">
+                        Cancel
+                    </button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-xs shadow-md transition flex items-center gap-1.5">
+                        <span>✅ Confirm & Grant Award</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
     <!-- MODAL: ZONAL HEAD AUTHENTICATION              -->
     <!-- ============================================== -->
     <div id="zonal-modal" class="hidden fixed inset-0 bg-slate-900/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -1240,6 +1424,85 @@ def build_portal():
                             </table>
                         </div>
                     </div>
+                    <!-- ==================================================== -->
+                    <!-- DATA REVIEW REQUESTS & MANUAL AWARD OVERRIDE CENTER  -->
+                    <!-- ==================================================== -->
+                    <div class="bg-white border-2 border-amber-300 rounded-2xl overflow-hidden shadow-sm space-y-0">
+                        <div class="p-3.5 sm:p-4 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-xl">🔍</span>
+                                <div>
+                                    <h4 class="font-black text-xs sm:text-sm uppercase tracking-wider">
+                                        Data Review Requests & Manual Award Override Center
+                                    </h4>
+                                    <p class="text-[11px] text-amber-100 font-medium">
+                                        Review territory discrepancies reported by MIOs / RHs and manually grant or adjust awards.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span id="admin-pending-review-badge" class="px-2.5 py-1 rounded-full text-xs font-black bg-white text-orange-800 shadow-2xs">
+                                    0 Pending Reviews
+                                </span>
+                                <span id="admin-total-overrides-badge" class="px-2.5 py-1 rounded-full text-xs font-black bg-amber-900/40 text-white border border-amber-300/40">
+                                    0 Manual Grants
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Direct Manual Award Grant Quick Form -->
+                        <div class="p-3.5 bg-amber-50/50 border-b border-amber-200 space-y-2">
+                            <div class="font-black text-xs text-amber-950 flex items-center gap-1.5">
+                                <span>⚡ Direct Manual Award Grant Tool (Any MIO / Territory):</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 items-end">
+                                <div class="lg:col-span-2">
+                                    <label class="block text-[10px] font-bold text-slate-600 uppercase mb-0.5">Search & Select MIO / Territory</label>
+                                    <input type="text" id="admin-direct-mio-input" list="admin-all-mios-datalist" placeholder="Type MIO Name, SAP ID, or Area..." class="w-full bg-white border border-slate-300 rounded-lg px-2.5 py-1.5 text-xs text-slate-800 outline-none focus:ring-2 focus:ring-amber-500 font-medium">
+                                    <datalist id="admin-all-mios-datalist"></datalist>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-600 uppercase mb-0.5">Brand</label>
+                                    <select id="admin-direct-brand-select" class="w-full bg-white border border-slate-300 rounded-lg px-2 py-1.5 text-xs font-bold text-slate-800 outline-none focus:ring-2 focus:ring-amber-500">
+                                        <option value="exium">🟦 Exium MUPS</option>
+                                        <option value="coral">🟪 Coralcal-D/DX/Vita</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold text-slate-600 uppercase mb-0.5">Award to Grant</label>
+                                    <select id="admin-direct-award-select" class="w-full bg-white border border-slate-300 rounded-lg px-2 py-1.5 text-xs font-black text-slate-800 outline-none focus:ring-2 focus:ring-amber-500">
+                                        <option value="3000">🏆 3,000 Taka</option>
+                                        <option value="1000">🎖️ 1,000 Taka</option>
+                                        <option value="0">⚪ 0 (Revoke)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button type="button" onclick="adminExecuteDirectGrant()" class="w-full py-1.5 px-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-xs font-black transition shadow-xs flex items-center justify-center gap-1">
+                                        <span>⚡ Grant Award</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submitted Review Requests Table -->
+                        <div class="max-h-72 overflow-y-auto overflow-x-auto">
+                            <table class="w-full text-left text-xs border-collapse">
+                                <thead class="bg-slate-100 text-slate-700 font-bold border-b border-slate-200 sticky top-0 z-10 shadow-2xs">
+                                    <tr>
+                                        <th class="py-2 px-3 w-28">Submitted</th>
+                                        <th class="py-2 px-3 min-w-[120px]">Brand</th>
+                                        <th class="py-2 px-3 min-w-[180px]">MIO & Territory</th>
+                                        <th class="py-2 px-3 min-w-[120px]">Region & Zone</th>
+                                        <th class="py-2 px-3 min-w-[160px]">Dispute Category</th>
+                                        <th class="py-2 px-3 min-w-[200px]">Remarks & Contact</th>
+                                        <th class="py-2 px-3 text-center min-w-[90px]">Status</th>
+                                        <th class="py-2 px-3 text-center min-w-[150px]">Admin Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="admin-reviews-tbody" class="divide-y divide-slate-100 font-medium bg-white"></tbody>
+                            </table>
+                        </div>
+                    </div>
 
                     <!-- Cancelled Awards Log (RH / ZH Recommendations) -->
                     <div class="bg-white border border-rose-200 rounded-xl overflow-hidden shadow-sm">
@@ -1454,14 +1717,19 @@ def build_portal():
         const STORAGE_KEY_SESSION = 'SEP26_AWARD_SESSION';
         const STORAGE_KEY_ENDPOINT = 'SEP26_AWARD_ENDPOINT';
         const STORAGE_KEY_LOCKED = 'SEP26_SUBMISSIONS_LOCKED';
+        const STORAGE_KEY_REVIEWS = 'SEP26_AWARD_REVIEWS';
+        const STORAGE_KEY_OVERRIDES = 'SEP26_MANUAL_OVERRIDES';
 
         let currentRegionName = '';
         let currentActiveZoneCode = '';
         let currentRegionalBrandFilter = 'all'; // 'all' | 'exium' | 'coral'
+        let currentRegionalStatusFilter = 'all'; // 'all' | 'achievers' | 'non_achievers' | 'in_review'
         let currentAdminBrandMode = 'exium';    // 'exium' | 'coral' | 'both'
         let currentAdminRegionFilter = 'all';
 
         let savedChoices = JSON.parse(localStorage.getItem(STORAGE_KEY_CHOICES) || '{{}}');
+        let savedReviews = JSON.parse(localStorage.getItem(STORAGE_KEY_REVIEWS) || '{{}}');
+        let savedOverrides = JSON.parse(localStorage.getItem(STORAGE_KEY_OVERRIDES) || '{{}}');
 
         const DEFAULT_CLOUD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwZnaiyLSlMSGEjgQa4hVWQ_GsR1hYKM1O95s_dYltG7yVeO1j7h4zFY8x11E7V9eu_/exec';
 
@@ -1713,6 +1981,32 @@ def build_portal():
             renderAchievers();
         }}
 
+        function setRegionalStatusFilter(status) {{
+            currentRegionalStatusFilter = status;
+            const pAll = document.getElementById('reg-status-pill-all');
+            const pAch = document.getElementById('reg-status-pill-achievers');
+            const pNon = document.getElementById('reg-status-pill-non_achievers');
+            const pRev = document.getElementById('reg-status-pill-in_review');
+
+            if (pAll) pAll.className = status === 'all'
+                ? 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-black bg-slate-900 text-white shadow-2xs transition'
+                : 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-300 transition';
+
+            if (pAch) pAch.className = status === 'achievers'
+                ? 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-black bg-emerald-600 text-white shadow-sm ring-2 ring-emerald-200 transition'
+                : 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-emerald-800 hover:bg-emerald-50 border border-emerald-300 transition';
+
+            if (pNon) pNon.className = status === 'non_achievers'
+                ? 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-black bg-slate-600 text-white shadow-sm ring-2 ring-slate-200 transition'
+                : 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-300 transition';
+
+            if (pRev) pRev.className = status === 'in_review'
+                ? 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-black bg-amber-600 text-white shadow-sm ring-2 ring-amber-200 transition'
+                : 'px-2.5 sm:px-3 py-1 rounded-lg text-[11px] sm:text-xs font-bold bg-white text-amber-800 hover:bg-amber-50 border border-amber-300 transition';
+
+            renderAchievers();
+        }}
+
         function openRegionalView(regName) {{
             currentRegionName = regName;
             const r = DB.regions_map[regName];
@@ -1749,71 +2043,167 @@ def build_portal():
             currentActiveZoneCode = '';
         }}
 
-        // GROUP ACHIEVERS IN REGION BY MIO TERRITORY
+        // ALL TERRITORIES & MIOS IN REGION (ACHIEVERS + NON-ACHIEVERS)
         function getRegionMios(regName) {{
-            const miosMap = new Map();
+            const rawTerritories = DB.all_territories.filter(t => t.region_name === regName);
 
-            const exiumList = DB.achievers_exium.filter(a => a.region === regName);
-            const coralList = DB.achievers_coral.filter(a => a.region === regName);
+            const miosList = rawTerritories.map(t => {{
+                const key = t.area_code + '_' + t.mio_id;
+                const exId = `EXIUM_${{t.area_code}}_${{t.mio_id}}`;
+                const coId = `CORAL_${{t.area_code}}_${{t.mio_id}}`;
 
-            exiumList.forEach(a => {{
-                const key = a.area_code + '_' + a.mio_code;
-                if (!miosMap.has(key)) {{
-                    miosMap.set(key, {{
-                        key: key,
-                        mio_name: a.mio_name,
-                        mio_code: a.mio_code,
-                        area_code: a.area_code,
-                        area_name: a.area_name,
-                        desig: a.desig,
-                        mobile: a.mobile,
-                        exium_award: a,
-                        coral_award: null
-                    }});
-                }} else {{
-                    miosMap.get(key).exium_award = a;
-                }}
+                // Check manual overrides
+                const exOverride = savedOverrides[exId];
+                const coOverride = savedOverrides[coId];
+
+                // Check review requests
+                const exReview = savedReviews[`REV_${{exId}}`] || null;
+                const coReview = savedReviews[`REV_${{coId}}`] || null;
+
+                const exAwardVal = exOverride ? Number(exOverride.award) : Number(t.exium_award || 0);
+                const exTierVal = exOverride ? exOverride.tier : (t.exium_tier || 'No Award');
+                const exReasonVal = exOverride ? exOverride.reason : (t.exium_reason || '');
+
+                const coAwardVal = coOverride ? Number(coOverride.award) : Number(t.coral_award || 0);
+                const coTierVal = coOverride ? coOverride.tier : (t.coral_tier || 'No Award');
+                const coReasonVal = coOverride ? coOverride.reason : (t.coral_reason || '');
+
+                const exium_award = {{
+                    id: exId,
+                    brand: 'Exium_2026',
+                    brand_short: 'Exium MUPS',
+                    brand_label: 'Exium MUPS',
+                    brand_tp: 659.67,
+                    zone: t.zone_name,
+                    sap_zone_code: t.sap_zone_code,
+                    zonal_head: t.zonal_head,
+                    region: t.region_name,
+                    sap_region_code: t.sap_region_code,
+                    regional_head: t.regional_head,
+                    area_code: t.area_code,
+                    area_name: t.area_name,
+                    mio_code: t.mio_id,
+                    mio_name: t.mio_name,
+                    desig: t.desig,
+                    mobile: t.mobile,
+                    rx: t.exium_rx,
+                    rx_ok: t.exium_rx_ok,
+                    terr_aug: t.terr_aug_val,
+                    terr_sep: t.terr_sep_val,
+                    terr_growth: t.terr_growth_val,
+                    terr_pos: t.terr_pos,
+                    brand_aug: t.exium_aug_val,
+                    brand_req_growth: t.exium_req_growth,
+                    brand_req_target: t.exium_req_target,
+                    brand_sep: t.exium_sep_val,
+                    brand_actual_growth: t.exium_actual_growth,
+                    brand_aug_box: t.exium_aug_box,
+                    brand_sep_box: t.exium_sep_box,
+                    brand_req_box: t.exium_req_box,
+                    brand_growth_box: t.exium_growth_box,
+                    brand_growth_ok: t.exium_growth_ok,
+                    award: exAwardVal,
+                    tier: exTierVal,
+                    reason: exReasonVal,
+                    is_manual_override: Boolean(exOverride),
+                    override_info: exOverride,
+                    review_info: exReview
+                }};
+
+                const coral_award = {{
+                    id: coId,
+                    brand: 'Coralcal_2026',
+                    brand_short: 'Coralcal-D/DX/Vita',
+                    brand_label: 'Coralcal-D/DX/Vita',
+                    brand_tp: 637.18,
+                    zone: t.zone_name,
+                    sap_zone_code: t.sap_zone_code,
+                    zonal_head: t.zonal_head,
+                    region: t.region_name,
+                    sap_region_code: t.sap_region_code,
+                    regional_head: t.regional_head,
+                    area_code: t.area_code,
+                    area_name: t.area_name,
+                    mio_code: t.mio_id,
+                    mio_name: t.mio_name,
+                    desig: t.desig,
+                    mobile: t.mobile,
+                    rx: t.coral_rx,
+                    rx_ok: t.coral_rx_ok,
+                    terr_aug: t.terr_aug_val,
+                    terr_sep: t.terr_sep_val,
+                    terr_growth: t.terr_growth_val,
+                    terr_pos: t.terr_pos,
+                    brand_aug: t.coral_aug_val,
+                    brand_req_growth: t.coral_req_growth,
+                    brand_req_target: t.coral_req_target,
+                    brand_sep: t.coral_sep_val,
+                    brand_actual_growth: t.coral_actual_growth,
+                    brand_aug_box: t.coral_aug_box,
+                    brand_sep_box: t.coral_sep_box,
+                    brand_req_box: t.coral_req_box,
+                    brand_growth_box: t.coral_growth_box,
+                    brand_growth_ok: t.coral_growth_ok,
+                    award: coAwardVal,
+                    tier: coTierVal,
+                    reason: coReasonVal,
+                    is_manual_override: Boolean(coOverride),
+                    override_info: coOverride,
+                    review_info: coReview
+                }};
+
+                return {{
+                    key: key,
+                    mio_name: t.mio_name,
+                    mio_code: t.mio_id,
+                    area_code: t.area_code,
+                    area_name: t.area_name,
+                    desig: t.desig,
+                    mobile: t.mobile,
+                    region: t.region_name,
+                    zone: t.zone_name,
+                    exium_award: exium_award,
+                    coral_award: coral_award
+                }};
             }});
 
-            coralList.forEach(a => {{
-                const key = a.area_code + '_' + a.mio_code;
-                if (!miosMap.has(key)) {{
-                    miosMap.set(key, {{
-                        key: key,
-                        mio_name: a.mio_name,
-                        mio_code: a.mio_code,
-                        area_code: a.area_code,
-                        area_name: a.area_name,
-                        desig: a.desig,
-                        mobile: a.mobile,
-                        exium_award: null,
-                        coral_award: a
-                    }});
-                }} else {{
-                    miosMap.get(key).coral_award = a;
-                }}
-            }});
-
-            return Array.from(miosMap.values()).sort((a, b) => String(a.area_code || '').localeCompare(String(b.area_code || '')));
+            return miosList.sort((a, b) => String(a.area_code || '').localeCompare(String(b.area_code || '')));
         }}
 
         function getMioStatus(mio) {{
             let eligibleBrands = 0;
             let completedBrands = 0;
+            let isAchiever = false;
+            let hasPendingReview = false;
 
             if (mio.exium_award && (currentRegionalBrandFilter === 'all' || currentRegionalBrandFilter === 'exium')) {{
-                eligibleBrands++;
-                if (isAwardResolved(mio.exium_award.id)) completedBrands++;
+                if (mio.exium_award.award > 0) {{
+                    eligibleBrands++;
+                    isAchiever = true;
+                    if (isAwardResolved(mio.exium_award.id)) completedBrands++;
+                }}
+                if (mio.exium_award.review_info && mio.exium_award.review_info.status === 'pending') {{
+                    hasPendingReview = true;
+                }}
             }}
             if (mio.coral_award && (currentRegionalBrandFilter === 'all' || currentRegionalBrandFilter === 'coral')) {{
-                eligibleBrands++;
-                if (isAwardResolved(mio.coral_award.id)) completedBrands++;
+                if (mio.coral_award.award > 0) {{
+                    eligibleBrands++;
+                    isAchiever = true;
+                    if (isAwardResolved(mio.coral_award.id)) completedBrands++;
+                }}
+                if (mio.coral_award.review_info && mio.coral_award.review_info.status === 'pending') {{
+                    hasPendingReview = true;
+                }}
             }}
 
             const isComplete = (eligibleBrands > 0 && completedBrands === eligibleBrands);
             return {{
                 eligibleBrands,
                 completedBrands,
+                isAchiever,
+                isNonAchiever: !isAchiever,
+                hasPendingReview,
                 isComplete
             }};
         }}
@@ -1976,6 +2366,88 @@ def build_portal():
                 </div>
             `;
 
+            if (Number(ach.award) === 0) {{
+                const rev = ach.review_info || savedReviews[`REV_${{ach.id}}`];
+                const isPending = rev && rev.status === 'pending';
+                const isRejected = rev && rev.status === 'rejected';
+
+                let revActionHtml = '';
+                if (isPending) {{
+                    revActionHtml = `
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300 shadow-2xs flex items-center gap-1">
+                                <span>🔍</span>
+                                <span>Review Requested (${{formatToBDTime(rev.timestamp || '')}})</span>
+                            </span>
+                            <button onclick="openReviewModal('${{ach.id}}')" class="text-[11px] font-bold text-amber-800 hover:text-white bg-white hover:bg-amber-600 border border-amber-300 px-2.5 py-1 rounded-lg transition shadow-2xs">
+                                View / Update Dispute
+                            </button>
+                        </div>
+                    `;
+                }} else if (isRejected) {{
+                    revActionHtml = `
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                            <span class="px-2.5 py-1 rounded-lg text-[11px] font-black bg-rose-100 text-rose-900 border border-rose-300 shadow-2xs flex items-center gap-1">
+                                <span>❌</span>
+                                <span>Review Rejected by Admin</span>
+                            </span>
+                            <button onclick="openReviewModal('${{ach.id}}')" class="text-[11px] font-bold text-slate-700 hover:text-white bg-white hover:bg-slate-700 border border-slate-300 px-2.5 py-1 rounded-lg transition shadow-2xs">
+                                Re-Submit Review
+                            </button>
+                        </div>
+                    `;
+                }} else {{
+                    revActionHtml = `
+                        <button onclick="openReviewModal('${{ach.id}}')" title="If there is a data discrepancy in Seen Rx or Sales, submit a review request for Admin verification" class="px-3 py-1.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white shadow-xs transition flex items-center gap-1.5">
+                            <span>📝</span>
+                            <span>Request Data Review</span>
+                        </button>
+                    `;
+                }}
+
+                return `
+                    <div class="rounded-xl border-2 border-slate-200 bg-slate-50/60 p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200/80 pb-2">
+                            <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap min-w-0">
+                                <span class="px-2.5 sm:px-3 py-1 rounded-lg text-xs sm:text-[13px] font-extrabold ${{badgeBrand}} opacity-85 whitespace-nowrap">
+                                    ${{brandIcon}} ${{brandTitle}}
+                                </span>
+                                <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black bg-slate-200 text-slate-700 border border-slate-300 whitespace-nowrap">
+                                    ⚪ No Award (0 Taka)
+                                </span>
+                                <span class="text-[11px] text-slate-500 font-semibold truncate">
+                                    (${{ach.tier || 'Criteria Not Met'}})
+                                </span>
+                            </div>
+                            <div class="w-full sm:w-auto flex items-center justify-end">
+                                ${{revActionHtml}}
+                            </div>
+                        </div>
+
+                        ${{metricsHtml}}
+
+                        <!-- Discrepancy / Review Guidance Banner -->
+                        <div class="bg-white border border-slate-200 rounded-xl p-2.5 text-xs text-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <div class="space-y-0.5 min-w-0">
+                                <div class="font-black text-slate-900 flex items-center gap-1">
+                                    <span>⚠️</span>
+                                    <span>Award Calculation Criteria Status:</span>
+                                    <span class="text-rose-700 font-bold">${{ach.reason || 'Criteria not fulfilled'}}</span>
+                                </div>
+                                <div class="text-[11px] text-slate-500">
+                                    If this MIO's prescriptions or territory sales were recorded incorrectly (e.g. offline prescriptions, transfer, joining), contact Admin or click <strong>Request Data Review</strong>.
+                                </div>
+                            </div>
+                            ${{isPending ? `
+                                <div class="bg-amber-50 text-amber-900 border border-amber-200 px-2.5 py-1 rounded-lg text-[11px] font-bold self-start sm:self-center whitespace-nowrap">
+                                    Dispute logged: "${{rev.dispute_category}}"
+                                </div>
+                            ` : ''}}
+                        </div>
+                    </div>
+                `;
+            }}
+
             if (isCancelled) {{
                 return `
                     <div class="rounded-xl border-2 ${{themeBorder}} p-2.5 sm:p-3.5 space-y-2.5 overflow-hidden">
@@ -2048,6 +2520,11 @@ def build_portal():
                             <span class="px-2 sm:px-2.5 py-1 rounded-lg text-xs sm:text-[13px] font-black ${{badgeValue}} whitespace-nowrap">
                                 🏆 Award: ${{Number(ach.award).toLocaleString()}}
                             </span>
+                            ${{ach.is_manual_override ? `
+                                <span class="px-2 py-0.5 rounded text-[10px] sm:text-[11px] font-black bg-amber-100 text-amber-900 border border-amber-300 whitespace-nowrap shadow-2xs">
+                                    ✨ Admin Manual Grant (${{ach.override_info && ach.override_info.reason ? ach.override_info.reason : 'Verified'}})
+                                </span>
+                            ` : ''}}
                             <span class="text-[11px] text-slate-600 font-semibold truncate">
                                 (${{ach.tier}})
                             </span>
@@ -2071,6 +2548,35 @@ def build_portal():
             container.innerHTML = '';
 
             let mios = getRegionMios(currentRegionName);
+
+            // Update status counts on the filter pills
+            const totalCount = mios.length;
+            let achCount = 0;
+            let inRevCount = 0;
+            mios.forEach(m => {{
+                const st = getMioStatus(m);
+                if (st.isAchiever) achCount++;
+                if (st.hasPendingReview) inRevCount++;
+            }});
+            const nonAchCount = totalCount - achCount;
+
+            const elAll = document.getElementById('reg-count-all');
+            const elAch = document.getElementById('reg-count-achievers');
+            const elNon = document.getElementById('reg-count-nonachievers');
+            const elRev = document.getElementById('reg-count-inreview');
+            if (elAll) elAll.textContent = totalCount;
+            if (elAch) elAch.textContent = achCount;
+            if (elNon) elNon.textContent = nonAchCount;
+            if (elRev) elRev.textContent = inRevCount;
+
+            // Apply Status Filter ('all' | 'achievers' | 'non_achievers' | 'in_review')
+            if (currentRegionalStatusFilter === 'achievers') {{
+                mios = mios.filter(m => getMioStatus(m).isAchiever);
+            }} else if (currentRegionalStatusFilter === 'non_achievers') {{
+                mios = mios.filter(m => getMioStatus(m).isNonAchiever);
+            }} else if (currentRegionalStatusFilter === 'in_review') {{
+                mios = mios.filter(m => getMioStatus(m).hasPendingReview);
+            }}
 
             // Apply Brand Filter ('all' | 'exium' | 'coral')
             if (currentRegionalBrandFilter === 'exium') {{
@@ -2096,7 +2602,7 @@ def build_portal():
                     <div class="bg-white rounded-2xl p-10 text-center border border-slate-200 text-slate-400">
                         <span class="text-3xl">📭</span>
                         <h4 class="font-bold text-sm text-slate-700 mt-2">No matching Territory or MIO found</h4>
-                        <p class="text-xs text-slate-500 mt-1">Try switching the Brand Filter tab or clearing the search box.</p>
+                        <p class="text-xs text-slate-500 mt-1">Try switching the Brand / Status Filter tab or clearing the search box.</p>
                     </div>
                 `;
                 return;
@@ -2114,7 +2620,9 @@ def build_portal():
                 card.className = `bg-white rounded-2xl shadow-xs border transition-all p-2.5 sm:p-4 space-y-3 overflow-hidden ${{
                     status.isComplete 
                         ? 'border-emerald-400 ring-1 ring-emerald-400/20 bg-emerald-50/5' 
-                        : (status.completedBrands > 0 ? 'border-amber-300 ring-1 ring-amber-300/20' : 'border-slate-200')
+                        : (status.completedBrands > 0 
+                            ? 'border-amber-300 ring-1 ring-amber-300/20' 
+                            : (status.hasPendingReview ? 'border-amber-400 ring-1 ring-amber-400/30 bg-amber-50/10' : (status.isAchiever ? 'border-blue-200' : 'border-slate-200')))
                 }}`;
 
                 let statusBadgeHtml = '';
@@ -2132,34 +2640,72 @@ def build_portal():
                             <span>${{status.completedBrands}}/${{status.eligibleBrands}} Complete</span>
                         </span>
                     `;
-                }} else {{
+                }} else if (status.isAchiever) {{
                     statusBadgeHtml = `
                         <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-bold bg-white/95 text-slate-700 border border-slate-300 flex items-center gap-1 shadow-2xs whitespace-nowrap">
                             <span>⚪</span>
                             <span>Pending (0/${{status.eligibleBrands}})</span>
                         </span>
                     `;
+                }} else if (status.hasPendingReview) {{
+                    statusBadgeHtml = `
+                        <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-black bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1 shadow-2xs whitespace-nowrap">
+                            <span>🔍</span>
+                            <span>Review Requested</span>
+                        </span>
+                    `;
+                }} else {{
+                    statusBadgeHtml = `
+                        <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200 flex items-center gap-1 whitespace-nowrap">
+                            <span>⚪</span>
+                            <span>Non-Achiever</span>
+                        </span>
+                    `;
                 }}
 
-                // Separate Brand Value Badges in Card Header (Exium MUPS & Coralcal shown distinctly)
+                // Separate Brand Value Badges in Card Header
                 let brandBadgesHtml = '';
                 if (showExium) {{
                     const exCancelled = isAwardCancelled(mio.exium_award.id);
-                    brandBadgesHtml += `
-                        <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-blue-600 text-white border border-blue-500 shadow-2xs flex items-center gap-1 whitespace-nowrap">
-                            <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
-                            <span class="text-[11px] sm:text-xs font-black ${{exCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.exium_award.award).toLocaleString()}}</span>
-                        </div>
-                    `;
+                    const exAward = Number(mio.exium_award.award || 0);
+                    const exInReview = mio.exium_award.review_info && mio.exium_award.review_info.status === 'pending';
+
+                    if (exAward > 0) {{
+                        brandBadgesHtml += `
+                            <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-blue-600 text-white border border-blue-500 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
+                                <span class="text-[11px] sm:text-xs font-black ${{exCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{exAward.toLocaleString()}}</span>
+                            </div>
+                        `;
+                    }} else {{
+                        brandBadgesHtml += `
+                            <div class="px-2 sm:px-2.5 py-1 rounded-lg ${{exInReview ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-slate-100 text-slate-700 border border-slate-300'}} shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟦 Exium MUPS:</span>
+                                <span class="text-[11px] sm:text-xs font-bold font-mono">${{exInReview ? '🔍 In Review' : '0 (No Award)'}}</span>
+                            </div>
+                        `;
+                    }}
                 }}
                 if (showCoral) {{
                     const coCancelled = isAwardCancelled(mio.coral_award.id);
-                    brandBadgesHtml += `
-                        <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-purple-700 text-white border border-purple-600 shadow-2xs flex items-center gap-1 whitespace-nowrap">
-                            <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟪 Coralcal:</span>
-                            <span class="text-[11px] sm:text-xs font-black ${{coCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{Number(mio.coral_award.award).toLocaleString()}}</span>
-                        </div>
-                    `;
+                    const coAward = Number(mio.coral_award.award || 0);
+                    const coInReview = mio.coral_award.review_info && mio.coral_award.review_info.status === 'pending';
+
+                    if (coAward > 0) {{
+                        brandBadgesHtml += `
+                            <div class="px-2 sm:px-2.5 py-1 rounded-lg bg-purple-700 text-white border border-purple-600 shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟪 Coralcal:</span>
+                                <span class="text-[11px] sm:text-xs font-black ${{coCancelled ? 'line-through text-rose-200' : 'text-yellow-200'}} font-mono">${{coAward.toLocaleString()}}</span>
+                            </div>
+                        `;
+                    }} else {{
+                        brandBadgesHtml += `
+                            <div class="px-2 sm:px-2.5 py-1 rounded-lg ${{coInReview ? 'bg-amber-100 text-amber-900 border border-amber-300' : 'bg-slate-100 text-slate-700 border border-slate-300'}} shadow-2xs flex items-center gap-1 whitespace-nowrap">
+                                <span class="text-[10px] sm:text-[11px] font-extrabold uppercase">🟪 Coralcal:</span>
+                                <span class="text-[11px] sm:text-xs font-bold font-mono">${{coInReview ? '🔍 In Review' : '0 (No Award)'}}</span>
+                            </div>
+                        `;
+                    }}
                 }}
 
                 let headerHtml = `
@@ -2208,7 +2754,113 @@ def build_portal():
         // VOUCHER SELECTION & RH/ZH CANCELLATION LOGIC
         // ==============================================
         function findAchieverById(achId) {{
-            return DB.achievers_exium.find(x => x.id === achId) || DB.achievers_coral.find(x => x.id === achId);
+            let found = DB.achievers_exium.find(x => x.id === achId) || DB.achievers_coral.find(x => x.id === achId);
+            if (found) {{
+                const ov = savedOverrides[achId];
+                if (ov) {{
+                    return Object.assign({{}}, found, {{
+                        award: Number(ov.award),
+                        tier: ov.tier || found.tier,
+                        reason: ov.reason || found.reason,
+                        is_manual_override: true,
+                        override_info: ov
+                    }});
+                }}
+                return found;
+            }}
+
+            // Fallback: search in DB.all_territories
+            const isExium = String(achId).startsWith('EXIUM_');
+            const parts = String(achId).split('_');
+            const areaCode = parts[1];
+            const mioId = parts.slice(2).join('_');
+            const terr = DB.all_territories.find(t => String(t.area_code) === String(areaCode) && String(t.mio_id) === String(mioId));
+            if (!terr) return null;
+
+            const ov = savedOverrides[achId];
+            if (isExium) {{
+                return {{
+                    id: achId,
+                    brand: 'Exium_2026',
+                    brand_short: 'Exium MUPS',
+                    brand_label: 'Exium MUPS',
+                    brand_tp: 659.67,
+                    zone: terr.zone_name,
+                    sap_zone_code: terr.sap_zone_code,
+                    zonal_head: terr.zonal_head,
+                    region: terr.region_name,
+                    sap_region_code: terr.sap_region_code,
+                    regional_head: terr.regional_head,
+                    area_code: terr.area_code,
+                    area_name: terr.area_name,
+                    mio_code: terr.mio_id,
+                    mio_name: terr.mio_name,
+                    desig: terr.desig,
+                    mobile: terr.mobile,
+                    rx: terr.exium_rx,
+                    rx_ok: terr.exium_rx_ok,
+                    terr_aug: terr.terr_aug_val,
+                    terr_sep: terr.terr_sep_val,
+                    terr_growth: terr.terr_growth_val,
+                    terr_pos: terr.terr_pos,
+                    brand_aug: terr.exium_aug_val,
+                    brand_req_growth: terr.exium_req_growth,
+                    brand_req_target: terr.exium_req_target,
+                    brand_sep: terr.exium_sep_val,
+                    brand_actual_growth: terr.exium_actual_growth,
+                    brand_aug_box: terr.exium_aug_box,
+                    brand_sep_box: terr.exium_sep_box,
+                    brand_req_box: terr.exium_req_box,
+                    brand_growth_box: terr.exium_growth_box,
+                    brand_growth_ok: terr.exium_growth_ok,
+                    award: ov ? Number(ov.award) : Number(terr.exium_award || 0),
+                    tier: ov ? ov.tier : terr.exium_tier,
+                    reason: ov ? ov.reason : terr.exium_reason,
+                    is_manual_override: Boolean(ov),
+                    override_info: ov
+                }};
+            }} else {{
+                return {{
+                    id: achId,
+                    brand: 'Coralcal_2026',
+                    brand_short: 'Coralcal-D/DX/Vita',
+                    brand_label: 'Coralcal-D/DX/Vita',
+                    brand_tp: 637.18,
+                    zone: terr.zone_name,
+                    sap_zone_code: terr.sap_zone_code,
+                    zonal_head: terr.zonal_head,
+                    region: terr.region_name,
+                    sap_region_code: terr.sap_region_code,
+                    regional_head: terr.regional_head,
+                    area_code: terr.area_code,
+                    area_name: terr.area_name,
+                    mio_code: terr.mio_id,
+                    mio_name: terr.mio_name,
+                    desig: terr.desig,
+                    mobile: terr.mobile,
+                    rx: terr.coral_rx,
+                    rx_ok: terr.coral_rx_ok,
+                    terr_aug: terr.terr_aug_val,
+                    terr_sep: terr.terr_sep_val,
+                    terr_growth: terr.terr_growth_val,
+                    terr_pos: terr.terr_pos,
+                    brand_aug: terr.coral_aug_val,
+                    brand_req_growth: terr.coral_req_growth,
+                    brand_req_target: terr.coral_req_target,
+                    brand_sep: terr.coral_sep_val,
+                    brand_actual_growth: terr.coral_actual_growth,
+                    brand_aug_box: terr.coral_aug_box,
+                    brand_sep_box: terr.coral_sep_box,
+                    brand_req_box: terr.coral_req_box,
+                    brand_growth_box: terr.coral_growth_box,
+                    brand_growth_ok: terr.coral_growth_ok,
+                    award: ov ? Number(ov.award) : Number(terr.coral_award || 0),
+                    tier: ov ? ov.tier : terr.coral_tier,
+                    reason: ov ? ov.reason : terr.coral_reason,
+                    is_manual_override: Boolean(ov),
+                    override_info: ov
+                }};
+            }}
         }}
 
         function selectVoucher(achId, voucherName) {{
@@ -2369,27 +3021,435 @@ def build_portal():
         }}
 
         function updateRegionProgress() {{
-            const regExium = DB.achievers_exium.filter(a => a.region === currentRegionName);
-            const regCoral = DB.achievers_coral.filter(a => a.region === currentRegionName);
+            const mios = getRegionMios(currentRegionName);
+            let exTotal = 0, exDone = 0;
+            let coTotal = 0, coDone = 0;
+            let achCount = 0;
+            let inRevCount = 0;
 
-            let exDone = 0;
-            regExium.forEach(a => {{ if (isAwardResolved(a.id)) exDone++; }});
-            let coDone = 0;
-            regCoral.forEach(a => {{ if (isAwardResolved(a.id)) coDone++; }});
+            mios.forEach(m => {{
+                const st = getMioStatus(m);
+                if (st.isAchiever) achCount++;
+                if (st.hasPendingReview) inRevCount++;
+
+                if (m.exium_award && m.exium_award.award > 0) {{
+                    exTotal++;
+                    if (isAwardResolved(m.exium_award.id)) exDone++;
+                }}
+                if (m.coral_award && m.coral_award.award > 0) {{
+                    coTotal++;
+                    if (isAwardResolved(m.coral_award.id)) coDone++;
+                }}
+            }});
 
             const elEx = document.getElementById('regview-exium-stat');
             const elCo = document.getElementById('regview-coral-stat');
-            if (elEx) elEx.textContent = `${{exDone}} / ${{regExium.length}} Done`;
-            if (elCo) elCo.textContent = `${{coDone}} / ${{regCoral.length}} Done`;
+            if (elEx) elEx.textContent = `${{exDone}} / ${{exTotal}} Done`;
+            if (elCo) elCo.textContent = `${{coDone}} / ${{coTotal}} Done`;
 
-            const totalAwards = regExium.length + regCoral.length;
+            const totalAwards = exTotal + coTotal;
             const completedAwards = exDone + coDone;
             const pct = totalAwards > 0 ? Math.round((completedAwards / totalAwards) * 100) : 0;
 
             document.getElementById('regview-progress-pct').textContent = `${{pct}}%`;
             document.getElementById('regview-progress-bar').style.width = `${{pct}}%`;
-            document.getElementById('regview-progress-count').textContent = `Exium MUPS: ${{exDone}}/${{regExium.length}} • Coralcal: ${{coDone}}/${{regCoral.length}}`;
-            document.getElementById('sticky-completed-text').textContent = `Exium MUPS: ${{exDone}}/${{regExium.length}} | Coralcal: ${{coDone}}/${{regCoral.length}} (${{pct}}%)`;
+            document.getElementById('regview-progress-count').textContent = `Exium MUPS: ${{exDone}}/${{exTotal}} • Coralcal: ${{coDone}}/${{coTotal}}`;
+            document.getElementById('sticky-completed-text').textContent = `Exium MUPS: ${{exDone}}/${{exTotal}} | Coralcal: ${{coDone}}/${{coTotal}} (${{pct}}%)`;
+
+            // Update pill counters
+            const elAll = document.getElementById('reg-count-all');
+            const elAch = document.getElementById('reg-count-achievers');
+            const elNon = document.getElementById('reg-count-nonachievers');
+            const elRev = document.getElementById('reg-count-inreview');
+            if (elAll) elAll.textContent = mios.length;
+            if (elAch) elAch.textContent = achCount;
+            if (elNon) elNon.textContent = mios.length - achCount;
+            if (elRev) elRev.textContent = inRevCount;
+        }}
+
+        // ==============================================
+        // DATA REVIEW & MANUAL AWARD OVERRIDE LOGIC
+        // ==============================================
+        async function sendCloudReview(review) {{
+            if (!cloudEndpoint) return;
+            try {{
+                await fetch(cloudEndpoint, {{
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                    body: JSON.stringify({{ action: 'save_review', review: review }})
+                }});
+            }} catch (e) {{
+                console.warn('Failed to send review to cloud', e);
+            }}
+        }}
+
+        async function sendCloudOverride(override) {{
+            if (!cloudEndpoint) return;
+            try {{
+                await fetch(cloudEndpoint, {{
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                    body: JSON.stringify({{ action: 'save_manual_override', override: override }})
+                }});
+            }} catch (e) {{
+                console.warn('Failed to send override to cloud', e);
+            }}
+        }}
+
+        function openReviewModal(achId) {{
+            const ach = findAchieverById(achId);
+            if (!ach) {{
+                alert('Territory details not found!');
+                return;
+            }}
+            document.getElementById('rev-ach-id').value = achId;
+            const revKey = 'REV_' + achId;
+            const existingRev = savedReviews[revKey] || {{}};
+
+            const isExium = ach.brand_short === 'Exium MUPS';
+            const brandDisplay = isExium ? '🟦 Exium MUPS' : '🟪 Coralcal-D/DX/Vita';
+
+            const summaryEl = document.getElementById('rev-mio-summary');
+            summaryEl.innerHTML = `
+                <div class="flex items-center justify-between gap-1 flex-wrap">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-black ${{isExium ? 'bg-blue-600 text-white' : 'bg-purple-700 text-white'}}">${{brandDisplay}}</span>
+                    <span class="font-mono text-[11px] text-slate-500">${{ach.region}} • ${{ach.zone}}</span>
+                </div>
+                <div class="mt-1">
+                    <span class="font-black text-slate-900 text-xs sm:text-sm">${{ach.mio_name}}</span>
+                    <span class="text-slate-500 ml-1">(SAP: <strong>${{ach.mio_code}}</strong> • Area: <strong>${{ach.area_name}} [${{ach.area_code}}]</strong>)</span>
+                </div>
+                <div class="text-[11px] text-slate-600">
+                    Designation: <strong>${{ach.desig || 'MIO'}}</strong> ${{ach.mobile ? `• Mobile: <strong class="font-mono">${{ach.mobile}}</strong>` : ''}}
+                </div>
+            `;
+
+            const metricsEl = document.getElementById('rev-metrics-summary');
+            metricsEl.innerHTML = `
+                <div class="font-bold text-[11px] text-amber-950 mb-1">Current Automated System Calculation:</div>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 text-[11px]">
+                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                        <span class="text-slate-500 block text-[10px]">1. Seen Rx:</span>
+                        <strong class="${{ach.rx >= 200 ? 'text-emerald-700' : 'text-rose-600'}}">${{ach.rx}} Rx</strong> (Req: &ge;200)
+                    </div>
+                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                        <span class="text-slate-500 block text-[10px]">2. Territory Sales:</span>
+                        <strong class="${{ach.terr_pos ? 'text-emerald-700' : 'text-rose-600'}}">${{ach.terr_pos ? 'Positive' : 'Negative'}}</strong> (${{Math.round(ach.terr_growth || 0).toLocaleString()}})
+                    </div>
+                    <div class="bg-white/90 p-1.5 rounded border border-amber-200">
+                        <span class="text-slate-500 block text-[10px]">3. Brand Box Growth:</span>
+                        <strong class="${{ach.brand_growth_ok ? 'text-emerald-700' : 'text-amber-700'}}">${{ach.brand_growth_box || 0}} Boxes</strong> (Req: +${{ach.brand_req_box || 30}})
+                    </div>
+                </div>
+                <div class="mt-1 text-[11px] text-amber-900 font-semibold">
+                    Current Award: <strong class="text-rose-700">${{ach.award}} Taka (${{ach.reason || 'Criteria Not Met'}})</strong>
+                </div>
+            `;
+
+            if (existingRev.dispute_category) {{
+                document.getElementById('rev-category-select').value = existingRev.dispute_category;
+            }}
+            if (existingRev.submitter_role) {{
+                document.getElementById('rev-role-select').value = existingRev.submitter_role;
+            }}
+            document.getElementById('rev-mobile-input').value = existingRev.contact_mobile || ach.mobile || '';
+            document.getElementById('rev-name-input').value = existingRev.submitter_name || '';
+            document.getElementById('rev-remarks-input').value = existingRev.remarks || '';
+
+            document.getElementById('review-modal').classList.remove('hidden');
+        }}
+
+        function closeReviewModal() {{
+            document.getElementById('review-modal').classList.add('hidden');
+        }}
+
+        function submitReviewRequest(e) {{
+            e.preventDefault();
+            const achId = document.getElementById('rev-ach-id').value;
+            const ach = findAchieverById(achId);
+            if (!ach) return;
+
+            const category = document.getElementById('rev-category-select').value;
+            const role = document.getElementById('rev-role-select').value;
+            const mobile = document.getElementById('rev-mobile-input').value.trim();
+            const name = document.getElementById('rev-name-input').value.trim();
+            const remarks = document.getElementById('rev-remarks-input').value.trim();
+
+            if (!remarks) {{
+                alert('Please provide detailed remarks / justification for Admin verification!');
+                return;
+            }}
+
+            const revKey = 'REV_' + achId;
+            const reviewObj = {{
+                id: revKey,
+                ach_id: achId,
+                area_code: ach.area_code,
+                area_name: ach.area_name,
+                mio_code: ach.mio_code,
+                mio_name: ach.mio_name,
+                desig: ach.desig,
+                mobile: ach.mobile || mobile,
+                region: ach.region,
+                zone: ach.zone,
+                brand: ach.brand,
+                brand_label: ach.brand_label,
+                dispute_category: category,
+                remarks: remarks,
+                submitter_role: role,
+                submitter_name: name,
+                contact_mobile: mobile,
+                timestamp: new Date().toISOString(),
+                status: 'pending'
+            }};
+
+            savedReviews[revKey] = reviewObj;
+            localStorage.setItem(STORAGE_KEY_REVIEWS, JSON.stringify(savedReviews));
+
+            sendCloudReview(reviewObj);
+
+            closeReviewModal();
+            renderAchievers();
+            if (isAdminUnlocked) refreshAdminStats();
+            showToast('Review request submitted! Logged for Admin verification. 📤', '✅');
+        }}
+
+        function openManualOverrideModal(achId, prefillAward = 3000, prefillReason = '') {{
+            const ach = findAchieverById(achId);
+            if (!ach) {{
+                alert('Territory not found!');
+                return;
+            }}
+            document.getElementById('override-ach-id').value = achId;
+            const existingOv = savedOverrides[achId] || {{}};
+
+            const isExium = ach.brand_short === 'Exium MUPS';
+            const brandDisplay = isExium ? '🟦 Exium MUPS' : '🟪 Coralcal-D/DX/Vita';
+
+            const summaryEl = document.getElementById('override-mio-summary');
+            summaryEl.innerHTML = `
+                <div class="flex items-center justify-between gap-1 flex-wrap">
+                    <span class="px-2 py-0.5 rounded text-[11px] font-black ${{isExium ? 'bg-blue-600 text-white' : 'bg-purple-700 text-white'}}">${{brandDisplay}}</span>
+                    <span class="font-mono text-[11px] text-slate-500">${{ach.region}} • ${{ach.zone}}</span>
+                </div>
+                <div class="mt-1">
+                    <span class="font-black text-slate-900 text-xs sm:text-sm">${{ach.mio_name}}</span>
+                    <span class="text-slate-500 ml-1">(SAP: <strong>${{ach.mio_code}}</strong> • Area: <strong>${{ach.area_name}} [${{ach.area_code}}]</strong>)</span>
+                </div>
+                <div class="mt-1 text-[11px] text-slate-700 bg-white p-2 rounded border border-slate-200">
+                    Rx: <strong>${{ach.rx}}</strong> • Terr Sales: <strong>${{ach.terr_pos ? 'Positive' : 'Negative'}}</strong> • Brand Box Growth: <strong>${{ach.brand_growth_box || 0}} Boxes</strong>
+                </div>
+            `;
+
+            const currentVal = existingOv.award !== undefined ? existingOv.award : prefillAward;
+            if (currentVal === 3000) {{
+                document.getElementById('ov-radio-3000').checked = true;
+            }} else if (currentVal === 1000) {{
+                document.getElementById('ov-radio-1000').checked = true;
+            }} else {{
+                document.getElementById('ov-radio-0').checked = true;
+            }}
+
+            document.getElementById('override-reason-input').value = existingOv.reason || prefillReason || 'Approved by Admin';
+            document.getElementById('manual-override-modal').classList.remove('hidden');
+        }}
+
+        function closeManualOverrideModal() {{
+            document.getElementById('manual-override-modal').classList.add('hidden');
+        }}
+
+        function confirmManualAwardOverride(e) {{
+            e.preventDefault();
+            const achId = document.getElementById('override-ach-id').value;
+            const ach = findAchieverById(achId);
+            if (!ach) return;
+
+            const selectedRadio = document.querySelector('input[name="override_award_radio"]:checked');
+            const awardVal = selectedRadio ? Number(selectedRadio.value) : 0;
+            const reason = document.getElementById('override-reason-input').value.trim();
+
+            if (awardVal > 0) {{
+                const overrideObj = {{
+                    id: achId,
+                    area_code: ach.area_code,
+                    area_name: ach.area_name,
+                    mio_code: ach.mio_code,
+                    mio_name: ach.mio_name,
+                    desig: ach.desig,
+                    mobile: ach.mobile,
+                    region: ach.region,
+                    zone: ach.zone,
+                    brand: ach.brand,
+                    brand_label: ach.brand_label,
+                    rx: ach.rx,
+                    award: awardVal,
+                    tier: awardVal === 3000 ? '3,000 Award Tier (Manual Admin Grant)' : '1,000 Award Tier (Manual Admin Grant)',
+                    reason: reason || 'Manually Granted by Admin',
+                    admin_by: 'Admin',
+                    timestamp: new Date().toISOString()
+                }};
+                savedOverrides[achId] = overrideObj;
+
+                // If there was a pending review, mark it approved
+                const revKey = 'REV_' + achId;
+                if (savedReviews[revKey]) {{
+                    savedReviews[revKey].status = 'approved';
+                    savedReviews[revKey].admin_note = reason;
+                    savedReviews[revKey].granted_award = awardVal;
+                    savedReviews[revKey].resolved_at = new Date().toISOString();
+                    sendCloudReview(savedReviews[revKey]);
+                }}
+                sendCloudOverride(overrideObj);
+            }} else {{
+                delete savedOverrides[achId];
+                sendCloudOverride({{ id: achId, area_code: ach.area_code, mio_code: ach.mio_code, brand: ach.brand, award: 0 }});
+            }}
+
+            localStorage.setItem(STORAGE_KEY_OVERRIDES, JSON.stringify(savedOverrides));
+            localStorage.setItem(STORAGE_KEY_REVIEWS, JSON.stringify(savedReviews));
+
+            closeManualOverrideModal();
+            renderAchievers();
+            updateRegionProgress();
+            if (isAdminUnlocked) refreshAdminStats();
+            showToast(awardVal > 0 ? `Manual award of ${{awardVal.toLocaleString()}} Taka granted! 🏆` : 'Override revoked! Reverted to automated calculation.', '✅');
+        }}
+
+        function adminExecuteDirectGrant() {{
+            const inputVal = (document.getElementById('admin-direct-mio-input')?.value || '').trim();
+            if (!inputVal) {{
+                alert('Please type or select an MIO / Territory first!');
+                return;
+            }}
+
+            const matched = DB.all_territories.find(t => 
+                inputVal.includes(t.mio_id) ||
+                inputVal.includes(t.area_code) ||
+                inputVal.toLowerCase().includes(t.mio_name.toLowerCase()) ||
+                inputVal.toLowerCase().includes(t.area_name.toLowerCase())
+            );
+
+            if (!matched) {{
+                alert('No matching territory found for: ' + inputVal);
+                return;
+            }}
+
+            const brandType = document.getElementById('admin-direct-brand-select').value;
+            const awardVal = Number(document.getElementById('admin-direct-award-select').value);
+            const achId = brandType === 'exium' ? `EXIUM_${{matched.area_code}}_${{matched.mio_id}}` : `CORAL_${{matched.area_code}}_${{matched.mio_id}}`;
+
+            openManualOverrideModal(achId, awardVal, 'Direct Admin Grant');
+        }}
+
+        function renderAdminReviewsTable() {{
+            const tbody = document.getElementById('admin-reviews-tbody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            const revList = Object.values(savedReviews);
+            const pendingCount = revList.filter(r => r.status === 'pending').length;
+            const overridesCount = Object.keys(savedOverrides).length;
+
+            const bPending = document.getElementById('admin-pending-review-badge');
+            const bOverrides = document.getElementById('admin-total-overrides-badge');
+            if (bPending) bPending.textContent = `${{pendingCount}} Pending Reviews`;
+            if (bOverrides) bOverrides.textContent = `${{overridesCount}} Manual Grants`;
+
+            // Populate datalist for quick manual grant tool
+            const datalist = document.getElementById('admin-all-mios-datalist');
+            if (datalist && datalist.children.length === 0) {{
+                DB.all_territories.forEach(t => {{
+                    const opt = document.createElement('option');
+                    opt.value = `[${{t.mio_id}}] ${{t.mio_name}} (${{t.area_code}} - ${{t.area_name}}) - ${{t.region_name}}`;
+                    datalist.appendChild(opt);
+                }});
+            }}
+
+            if (revList.length === 0) {{
+                tbody.innerHTML = `<tr><td colspan="8" class="py-6 text-center text-slate-400 font-medium">No review requests submitted yet.</td></tr>`;
+                return;
+            }}
+
+            revList.sort((a, b) => {{
+                if (a.status === 'pending' && b.status !== 'pending') return -1;
+                if (a.status !== 'pending' && b.status === 'pending') return 1;
+                return String(b.timestamp || '').localeCompare(String(a.timestamp || ''));
+            }});
+
+            revList.forEach(r => {{
+                const isExium = (r.brand || '').toLowerCase().includes('exium') || r.ach_id.startsWith('EXIUM_');
+                const isPending = r.status === 'pending';
+                const isApproved = r.status === 'approved';
+
+                const tr = document.createElement('tr');
+                tr.className = isPending ? 'bg-amber-50/30 hover:bg-amber-50/50' : 'hover:bg-slate-50';
+                tr.innerHTML = `
+                    <td class="py-2.5 px-3 font-mono text-[10px] text-slate-500 whitespace-nowrap">
+                        ${{formatToBDTime(r.timestamp || '')}}
+                    </td>
+                    <td class="py-2.5 px-3 whitespace-nowrap">
+                        <span class="px-2 py-0.5 rounded text-[10px] font-black ${{isExium ? 'bg-blue-600 text-white' : 'bg-purple-700 text-white'}}">
+                            ${{isExium ? '🟦 Exium MUPS' : '🟪 Coralcal'}}
+                        </span>
+                    </td>
+                    <td class="py-2.5 px-3">
+                        <div class="font-black text-slate-900">${{r.mio_name}}</div>
+                        <div class="text-[10px] text-slate-500 font-mono">SAP: ${{r.mio_code}} • ${{r.area_name}} (${{r.area_code}})</div>
+                    </td>
+                    <td class="py-2.5 px-3 whitespace-nowrap">
+                        <div class="font-bold text-slate-800">${{r.region}}</div>
+                        <div class="text-[10px] text-slate-500">${{r.zone}}</div>
+                    </td>
+                    <td class="py-2.5 px-3">
+                        <span class="font-extrabold text-amber-950 bg-amber-100/80 px-2 py-0.5 rounded border border-amber-200 text-[10px] block">
+                            ${{r.dispute_category}}
+                        </span>
+                    </td>
+                    <td class="py-2.5 px-3 text-[11px]">
+                        <div class="text-slate-800 font-medium">"${{r.remarks}}"</div>
+                        <div class="text-[10px] text-slate-500 mt-0.5">By: <strong>${{r.submitter_name || r.submitter_role}}</strong> (${{r.contact_mobile}})</div>
+                    </td>
+                    <td class="py-2.5 px-3 text-center whitespace-nowrap">
+                        <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${{
+                            isPending ? 'bg-amber-100 text-amber-900 border border-amber-300' :
+                            (isApproved ? 'bg-emerald-100 text-emerald-900 border border-emerald-300' : 'bg-rose-100 text-rose-900 border border-rose-300')
+                        }}">
+                            ${{isPending ? '⏳ Pending' : (isApproved ? '✅ Approved (' + (r.granted_award || 3000) + ')' : '❌ Rejected')}}
+                        </span>
+                    </td>
+                    <td class="py-2.5 px-3 text-center whitespace-nowrap">
+                        <div class="flex items-center justify-center gap-1">
+                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 3000, 'Approved review: ${{r.dispute_category}}')" class="px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-[10px] font-black transition shadow-2xs">
+                                🏆 Grant 3,000
+                            </button>
+                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 1000, 'Approved review: ${{r.dispute_category}}')" class="px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-[10px] font-black transition shadow-2xs">
+                                🎖️ Grant 1,000
+                            </button>
+                            ${{isPending ? `
+                                <button onclick="adminRejectReview('${{r.id}}')" title="Reject / Dismiss this dispute" class="px-1.5 py-1 bg-rose-50 hover:bg-rose-600 text-rose-700 hover:text-white border border-rose-300 rounded text-[10px] font-bold transition">
+                                    ✕
+                                </button>
+                            ` : ''}}
+                        </div>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            }});
+        }}
+
+        function adminRejectReview(reviewId) {{
+            if (!confirm('Are you sure you want to dismiss / reject this review request?')) return;
+            if (savedReviews[reviewId]) {{
+                savedReviews[reviewId].status = 'rejected';
+                savedReviews[reviewId].resolved_at = new Date().toISOString();
+                localStorage.setItem(STORAGE_KEY_REVIEWS, JSON.stringify(savedReviews));
+                sendCloudReview(savedReviews[reviewId]);
+                renderAdminReviewsTable();
+                renderAchievers();
+                showToast('Review request marked as rejected.', 'ℹ️');
+            }}
         }}
 
         // ==============================================
@@ -2585,7 +3645,19 @@ def build_portal():
                 const exCh = savedChoices[exId] || {{}};
                 const coCh = savedChoices[coId] || {{}};
 
-                const renderBrandStatus = (label, brandShort, badgeClass, award, reason, rx, terrAug, terrSep, terrGrowth, terrPos, brandAugVal, brandSepVal, brandValGrowth, brandAugBox, brandSepBox, growthBox, reqBox, ch) => {{
+                const exOv = savedOverrides[exId];
+                const coOv = savedOverrides[coId];
+
+                const exAward = exOv !== undefined ? Number(exOv.award) : Number(r.exium_award || 0);
+                const exReason = exOv ? (exOv.reason || 'Admin Manual Override') : r.exium_reason;
+
+                const coAward = coOv !== undefined ? Number(coOv.award) : Number(r.coral_award || 0);
+                const coReason = coOv ? (coOv.reason || 'Admin Manual Override') : r.coral_reason;
+
+                const exRev = savedReviews['REV_' + exId];
+                const coRev = savedReviews['REV_' + coId];
+
+                const renderBrandStatus = (label, brandShort, badgeClass, award, reason, rx, terrAug, terrSep, terrGrowth, terrPos, brandAugVal, brandSepVal, brandValGrowth, brandAugBox, brandSepBox, growthBox, reqBox, ch, achId, isOverridden, revObj) => {{
                     const boxText = `${{growthBox >= 0 ? '+' : ''}}${{growthBox}} Boxes (Req: +${{reqBox || 30}} Boxes)`;
                     const terrText = `${{terrGrowth > 0 ? '+' : ''}}${{Math.round(terrGrowth).toLocaleString()}}`;
                     const metricsLine = `
@@ -2610,7 +3682,35 @@ def build_portal():
                             </div>
                         </div>
                     `;
+
                     if (award === 0) {{
+                        let revActionHtml = '';
+                        if (revObj && revObj.status === 'pending') {{
+                            revActionHtml = `
+                                <div class="mt-2 pt-2 border-t border-amber-200 flex items-center justify-between gap-1 flex-wrap">
+                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-amber-100 text-amber-900 border border-amber-300">🔍 Review Requested (Pending Admin)</span>
+                                    <button onclick="openReviewModal('${{achId}}')" class="text-[10px] font-bold text-amber-800 hover:underline">View Details</button>
+                                </div>
+                            `;
+                        }} else if (revObj && revObj.status === 'rejected') {{
+                            revActionHtml = `
+                                <div class="mt-2 pt-2 border-t border-rose-200 flex items-center justify-between gap-1 flex-wrap">
+                                    <span class="px-2 py-0.5 rounded font-black text-[10px] bg-rose-100 text-rose-800 border border-rose-300">❌ Review Rejected</span>
+                                    <button onclick="openReviewModal('${{achId}}')" class="text-[10px] font-bold text-slate-700 hover:underline">Re-submit Review</button>
+                                </div>
+                            `;
+                        }} else {{
+                            revActionHtml = `
+                                <div class="mt-2 pt-2 border-t border-slate-200 flex items-center justify-between gap-2 flex-wrap">
+                                    <span class="text-[10px] text-slate-500 font-medium">Data dispute or mismatch?</span>
+                                    <button onclick="openReviewModal('${{achId}}')" class="px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-[10px] font-black transition shadow-2xs flex items-center gap-1">
+                                        <span>📝</span>
+                                        <span>Request Data Review</span>
+                                    </button>
+                                </div>
+                            `;
+                        }}
+
                         return `
                             <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 space-y-1.5">
                                 <div class="flex justify-between items-center">
@@ -2619,9 +3719,11 @@ def build_portal():
                                 </div>
                                 ${{metricsLine}}
                                 <div class="text-[10px] text-slate-500">${{reason}}</div>
+                                ${{revActionHtml}}
                             </div>
                         `;
                     }}
+
                     if (ch.cancelled) {{
                         return `
                             <div class="bg-rose-50 border border-rose-200 rounded-xl p-2.5 space-y-1.5">
@@ -2634,11 +3736,19 @@ def build_portal():
                             </div>
                         `;
                     }}
+
+                    let badgeRight = '';
+                    if (isOverridden) {{
+                        badgeRight = `<span class="px-2 py-0.5 rounded font-black text-[10px] bg-purple-100 text-purple-900 border border-purple-300 shadow-2xs">✨ Admin Manual Grant: ${{award.toLocaleString()}}</span>`;
+                    }} else {{
+                        badgeRight = `<span class="px-2 py-0.5 rounded font-black text-[11px] bg-emerald-50 text-emerald-800 border border-emerald-200">Award: ${{award.toLocaleString()}}</span>`;
+                    }}
+
                     return `
                         <div class="bg-white border border-slate-200 rounded-xl p-2.5 space-y-1.5">
                             <div class="flex justify-between items-center">
                                 <span class="px-2 py-0.5 rounded text-[11px] font-black ${{badgeClass}}">${{label}}</span>
-                                <span class="px-2 py-0.5 rounded font-black text-[11px] bg-emerald-50 text-emerald-800 border border-emerald-200">Award: ${{award.toLocaleString()}}</span>
+                                ${{badgeRight}}
                             </div>
                             ${{metricsLine}}
                             <div class="text-[10px] text-slate-500">${{reason}}</div>
@@ -2663,8 +3773,8 @@ def build_portal():
                         </div>
                     </div>
                     <div class="space-y-2">
-                        ${{renderBrandStatus('🟦 Exium MUPS', 'Exium MUPS', 'bg-blue-600 text-white', r.exium_award, r.exium_reason, r.exium_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.exium_aug_val, r.exium_sep_val, r.exium_actual_growth, r.exium_aug_box, r.exium_sep_box, r.exium_growth_box, r.exium_req_box, exCh)}}
-                        ${{renderBrandStatus('🟪 Coralcal-D/DX/Vita', 'Coralcal-D/DX/Vita', 'bg-purple-700 text-white', r.coral_award, r.coral_reason, r.coral_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.coral_aug_val, r.coral_sep_val, r.coral_actual_growth, r.coral_aug_box, r.coral_sep_box, r.coral_growth_box, r.coral_req_box, coCh)}}
+                        ${{renderBrandStatus('🟦 Exium MUPS', 'Exium MUPS', 'bg-blue-600 text-white', exAward, exReason, r.exium_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.exium_aug_val, r.exium_sep_val, r.exium_actual_growth, r.exium_aug_box, r.exium_sep_box, r.exium_growth_box, r.exium_req_box, exCh, exId, Boolean(exOv), exRev)}}
+                        ${{renderBrandStatus('🟪 Coralcal-D/DX/Vita', 'Coralcal-D/DX/Vita', 'bg-purple-700 text-white', coAward, coReason, r.coral_rx, r.terr_aug_val, r.terr_sep_val, r.terr_growth_val, r.terr_pos, r.coral_aug_val, r.coral_sep_val, r.coral_actual_growth, r.coral_aug_box, r.coral_sep_box, r.coral_growth_box, r.coral_req_box, coCh, coId, Boolean(coOv), coRev)}}
                     </div>
                 `;
                 resBox.appendChild(card);
@@ -2779,16 +3889,70 @@ def build_portal():
         }}
 
         function getActiveAdminAchieversList() {{
-            if (currentAdminBrandMode === 'exium') return DB.achievers_exium;
-            if (currentAdminBrandMode === 'coral') return DB.achievers_coral;
-            return DB.achievers_exium.concat(DB.achievers_coral);
+            const getBrandAchievers = (isExium) => {{
+                const baseList = isExium ? DB.achievers_exium : DB.achievers_coral;
+                const map = {{}};
+                baseList.forEach(a => {{
+                    const ov = savedOverrides[a.id];
+                    if (ov) {{
+                        if (Number(ov.award) > 0) {{
+                            map[a.id] = Object.assign({{}}, a, {{ award: Number(ov.award), tier: ov.tier || a.tier, is_manual_override: true, reason: ov.reason || a.reason }});
+                        }}
+                    }} else {{
+                        map[a.id] = a;
+                    }}
+                }});
+                Object.values(savedOverrides).forEach(ov => {{
+                    const ovBrand = ov.brand || '';
+                    const matchBrand = isExium ? 
+                        (ovBrand.toLowerCase().includes('exium') || ov.id.startsWith('EXIUM_')) : 
+                        (ovBrand.toLowerCase().includes('coral') || ov.id.startsWith('CORAL_'));
+                    if (matchBrand && Number(ov.award) > 0 && !map[ov.id]) {{
+                        const found = findAchieverById(ov.id);
+                        if (found) map[ov.id] = found;
+                    }}
+                }});
+                return Object.values(map);
+            }};
+
+            if (currentAdminBrandMode === 'exium') return getBrandAchievers(true);
+            if (currentAdminBrandMode === 'coral') return getBrandAchievers(false);
+            return getBrandAchievers(true).concat(getBrandAchievers(false));
         }}
 
         function refreshAdminStats() {{
             // 1. Always update top standalone Exium MUPS & Coralcal summary cards
-            const computeBrandSummary = (list) => {{
+            const computeBrandSummary = (isExium) => {{
+                const baseList = isExium ? DB.achievers_exium : DB.achievers_coral;
+                const map = {{}};
+                baseList.forEach(a => {{
+                    const ov = savedOverrides[a.id];
+                    if (ov) {{
+                        if (Number(ov.award) > 0) {{
+                            map[a.id] = {{ id: a.id, award: Number(ov.award) }};
+                        }}
+                    }} else {{
+                        map[a.id] = {{ id: a.id, award: Number(a.award || 0) }};
+                    }}
+                }});
+                Object.values(savedOverrides).forEach(ov => {{
+                    const ovBrand = ov.brand || '';
+                    const matchBrand = isExium ? 
+                        (ovBrand.toLowerCase().includes('exium') || ov.id.startsWith('EXIUM_')) : 
+                        (ovBrand.toLowerCase().includes('coral') || ov.id.startsWith('CORAL_'));
+                    if (matchBrand) {{
+                        const ovAward = Number(ov.award || 0);
+                        if (ovAward > 0) {{
+                            map[ov.id] = {{ id: ov.id, award: ovAward }};
+                        }} else {{
+                            delete map[ov.id];
+                        }}
+                    }}
+                }});
+
+                const activeAchievers = Object.values(map);
                 let done = 0, canc = 0, activeVal = 0;
-                list.forEach(a => {{
+                activeAchievers.forEach(a => {{
                     const ch = savedChoices[a.id];
                     if (ch && ch.cancelled) canc++;
                     else {{
@@ -2796,14 +3960,14 @@ def build_portal():
                         if (ch && ch.voucher) done++;
                     }}
                 }});
-                const pend = list.length - done - canc;
+                const pend = activeAchievers.length - done - canc;
                 const resolved = done + canc;
-                const pct = list.length > 0 ? ((resolved / list.length) * 100).toFixed(1) : '0.0';
-                return {{ total: list.length, done, canc, pend, activeVal, pct }};
+                const pct = activeAchievers.length > 0 ? ((resolved / activeAchievers.length) * 100).toFixed(1) : '0.0';
+                return {{ total: activeAchievers.length, done, canc, pend, activeVal, pct }};
             }};
 
-            const exSum = computeBrandSummary(DB.achievers_exium);
-            const coSum = computeBrandSummary(DB.achievers_coral);
+            const exSum = computeBrandSummary(true);
+            const coSum = computeBrandSummary(false);
 
             document.getElementById('admin-exium-total').textContent = exSum.total.toLocaleString();
             document.getElementById('admin-exium-done').textContent = exSum.done.toLocaleString();
@@ -2893,6 +4057,7 @@ def build_portal():
                 }}
             }}
 
+            renderAdminReviewsTable();
             renderAdminRegionTable();
         }}
 
@@ -2915,39 +4080,54 @@ def build_portal():
             const statsMap = {{}};
 
             Object.values(DB.regions_map).forEach(r => {{
-                let total = 0;
-                if (currentAdminBrandMode === 'exium') total = r.exium_count || 0;
-                else if (currentAdminBrandMode === 'coral') total = r.coral_count || 0;
-                else total = (r.exium_count || 0) + (r.coral_count || 0);
-
-                if (total > 0) {{
-                    statsMap[r.region_name] = {{
-                        region_name: r.region_name,
-                        sap_region_code: r.sap_region_code,
-                        regional_head: r.regional_head || 'Not Assigned',
-                        zone_name: r.zone_name || '-',
-                        sap_zone_code: r.sap_zone_code || '',
-                        zonal_head: r.zonal_head || '-',
-                        total_exium: r.exium_count || 0,
-                        total_coral: r.coral_count || 0,
-                        total_awards: total,
-                        completed_awards: 0,
-                        pending_awards: total,
-                        pct: 0,
-                        status: 'not_started'
-                    }};
-                }}
+                statsMap[r.region_name] = {{
+                    region_name: r.region_name,
+                    sap_region_code: r.sap_region_code,
+                    regional_head: r.regional_head || 'Not Assigned',
+                    zone_name: r.zone_name || '-',
+                    sap_zone_code: r.sap_zone_code || '',
+                    zonal_head: r.zonal_head || '-',
+                    total_exium: 0,
+                    total_coral: 0,
+                    total_awards: 0,
+                    completed_awards: 0,
+                    pending_awards: 0,
+                    pct: 0,
+                    status: 'not_started'
+                }};
             }});
 
             const activeList = getActiveAdminAchieversList();
             activeList.forEach(a => {{
                 const reg = a.region;
-                if (statsMap[reg] && isAwardResolved(a.id)) {{
+                if (!statsMap[reg]) {{
+                    statsMap[reg] = {{
+                        region_name: reg,
+                        sap_region_code: a.sap_region_code || '',
+                        regional_head: a.regional_head || 'Not Assigned',
+                        zone_name: a.zone || '-',
+                        sap_zone_code: a.sap_zone_code || '',
+                        zonal_head: a.zonal_head || '-',
+                        total_exium: 0,
+                        total_coral: 0,
+                        total_awards: 0,
+                        completed_awards: 0,
+                        pending_awards: 0,
+                        pct: 0,
+                        status: 'not_started'
+                    }};
+                }}
+                const isExium = (a.brand || '').toLowerCase().includes('exium') || a.id.startsWith('EXIUM_');
+                if (isExium) statsMap[reg].total_exium++;
+                else statsMap[reg].total_coral++;
+                statsMap[reg].total_awards++;
+
+                if (isAwardResolved(a.id)) {{
                     statsMap[reg].completed_awards++;
                 }}
             }});
 
-            return Object.values(statsMap).map(item => {{
+            return Object.values(statsMap).filter(item => item.total_awards > 0).map(item => {{
                 item.pending_awards = item.total_awards - item.completed_awards;
                 item.pct = item.total_awards > 0 ? (item.completed_awards / item.total_awards) * 100 : 0;
                 if (item.completed_awards === 0) item.status = 'not_started';
@@ -3503,6 +4683,14 @@ def build_portal():
                             isSubmissionsLocked = json.submissions_locked;
                             localStorage.setItem(STORAGE_KEY_LOCKED, isSubmissionsLocked ? 'true' : 'false');
                             updateSubmissionLockUI();
+                        }}
+                        if (json.reviews && typeof json.reviews === 'object') {{
+                            Object.assign(savedReviews, json.reviews);
+                            localStorage.setItem(STORAGE_KEY_REVIEWS, JSON.stringify(savedReviews));
+                        }}
+                        if (json.overrides && typeof json.overrides === 'object') {{
+                            Object.assign(savedOverrides, json.overrides);
+                            localStorage.setItem(STORAGE_KEY_OVERRIDES, JSON.stringify(savedOverrides));
                         }}
                         if (json.data) {{
                             const mergeBrand = (list, dict) => {{

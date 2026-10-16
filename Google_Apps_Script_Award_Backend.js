@@ -168,6 +168,13 @@ function doGet(e) {
     readSheetIntoMap(true, exiumMap);
     readSheetIntoMap(false, coralMap);
 
+    const reviewsJson = props.getProperty("REVIEWS_DATA") || "{}";
+    const overridesJson = props.getProperty("OVERRIDES_DATA") || "{}";
+    let parsedReviews = {};
+    let parsedOverrides = {};
+    try { parsedReviews = JSON.parse(reviewsJson); } catch (e) {}
+    try { parsedOverrides = JSON.parse(overridesJson); } catch (e) {}
+
     return ContentService.createTextOutput(
       JSON.stringify({
         status: "success",
@@ -177,7 +184,9 @@ function doGet(e) {
           Coralcal_2026: coralMap,
           Exium_Sep_2026: exiumMap,
           Coralcal_Sep_2026: coralMap
-        }
+        },
+        reviews: parsedReviews,
+        overrides: parsedOverrides
       })
     ).setMimeType(ContentService.MimeType.JSON);
   } catch (err) {
@@ -344,6 +353,136 @@ function doPost(e) {
 
       return ContentService.createTextOutput(
         JSON.stringify({ status: "success", updated: updatedCount })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    if (payload.action === "save_review" && payload.review) {
+      const rev = payload.review;
+      const reviewsJson = props.getProperty("REVIEWS_DATA") || "{}";
+      let reviewsObj = {};
+      try { reviewsObj = JSON.parse(reviewsJson); } catch (e) {}
+      reviewsObj[rev.id] = rev;
+      props.setProperty("REVIEWS_DATA", JSON.stringify(reviewsObj));
+
+      try {
+        const revHeaders = ["Timestamp (BDT)", "Status", "Brand", "Area Code", "Territory Name", "MIO SAP ID", "MIO Name", "Designation", "Mobile", "Region", "Zone", "Dispute Category", "Remarks", "Submitter Role", "Submitter Name", "Contact Mobile"];
+        let revSheet = ss.getSheetByName("Data_Reviews");
+        if (!revSheet) {
+          revSheet = ss.insertSheet("Data_Reviews");
+          revSheet.getRange(1, 1, 1, revHeaders.length).setValues([revHeaders]);
+          const hRange = revSheet.getRange(1, 1, 1, revHeaders.length);
+          hRange.setFontWeight("bold");
+          hRange.setBackground("#D97706");
+          hRange.setFontColor("#FFFFFF");
+          revSheet.setFrozenRows(1);
+        }
+        revSheet.appendRow([
+          normalizeToBDTimestamp(rev.timestamp) || getBDTimestampServer(),
+          rev.status || "pending",
+          rev.brand_label || rev.brand || "",
+          rev.area_code || "",
+          rev.area_name || "",
+          rev.mio_code || "",
+          rev.mio_name || "",
+          rev.desig || "",
+          rev.mobile || "",
+          rev.region || "",
+          rev.zone || "",
+          rev.dispute_category || "",
+          rev.remarks || "",
+          rev.submitter_role || "",
+          rev.submitter_name || "",
+          rev.contact_mobile || ""
+        ]);
+      } catch (eRevSheet) {}
+
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "success", message: "Review request recorded" })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    if (payload.action === "delete_review" && payload.review_id) {
+      const reviewsJson = props.getProperty("REVIEWS_DATA") || "{}";
+      let reviewsObj = {};
+      try { reviewsObj = JSON.parse(reviewsJson); } catch (e) {}
+      delete reviewsObj[payload.review_id];
+      props.setProperty("REVIEWS_DATA", JSON.stringify(reviewsObj));
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "success", message: "Review deleted" })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    if (payload.action === "save_manual_override" && payload.override) {
+      const ov = payload.override;
+      const overridesJson = props.getProperty("OVERRIDES_DATA") || "{}";
+      let overridesObj = {};
+      try { overridesObj = JSON.parse(overridesJson); } catch (e) {}
+      if (Number(ov.award) > 0) {
+        overridesObj[ov.id] = ov;
+      } else {
+        delete overridesObj[ov.id];
+      }
+      props.setProperty("OVERRIDES_DATA", JSON.stringify(overridesObj));
+
+      try {
+        const isExium = (ov.brand && ov.brand.toLowerCase().indexOf("exium") !== -1) || String(ov.id).indexOf("EXIUM_") === 0;
+        const sheet = getOrCreateBrandSheet(ss, isExium);
+        const lastRow = sheet.getLastRow();
+        const data = lastRow >= 1 ? sheet.getDataRange().getValues() : [];
+        const cols = getSheetColMap(sheet);
+        const targetArea = String(ov.area_code || "").trim();
+        const targetMio = String(ov.mio_code || "").trim();
+        const awardVal = Number(ov.award || 0);
+
+        let foundRow = -1;
+        for (let i = 1; i < data.length; i++) {
+          const rowArea = String(data[i][cols.colArea - 1] || "").trim();
+          const rowMio = String(data[i][cols.colMio - 1] || "").trim();
+          if (rowArea === targetArea && (!targetMio || rowMio === targetMio)) {
+            foundRow = i + 1;
+            break;
+          }
+        }
+        if (foundRow > 0) {
+          sheet.getRange(foundRow, cols.colAward).setValue(awardVal);
+          sheet.getRange(foundRow, cols.colActiveAward).setValue(awardVal);
+          sheet.getRange(foundRow, cols.colReason).setValue(ov.reason || "Admin Manual Grant");
+        } else if (awardVal > 0) {
+          const newSl = Math.max(1, sheet.getLastRow());
+          sheet.appendRow([
+            newSl,
+            isExium ? "Exium MUPS" : "Coralcal-D/DX/Vita",
+            ov.zone || "",
+            "",
+            "",
+            ov.region || "",
+            "",
+            "",
+            targetArea,
+            ov.area_name || "",
+            targetMio,
+            ov.mio_name || "",
+            ov.desig || "",
+            ov.mobile || "",
+            ov.rx || 0,
+            "Yes (Manual)",
+            30,
+            "",
+            ov.tier || "Manual Grant",
+            awardVal,
+            awardVal,
+            "",
+            "Pending",
+            "Recommended",
+            "",
+            ov.reason || "Admin Manual Grant",
+            getBDTimestampServer()
+          ]);
+        }
+      } catch (eOvSheet) {}
+
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "success", message: "Manual override recorded" })
       ).setMimeType(ContentService.MimeType.JSON);
     }
 
