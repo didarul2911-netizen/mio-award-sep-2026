@@ -56,6 +56,62 @@ function normalizeToBDTimestamp(val) {
   return str;
 }
 
+/**
+ * ONE-CLICK RESTORE FUNCTION
+ * Select "restoreAllRecommendationsInSheet" from the Apps Script toolbar dropdown and click "Run" (▶️).
+ * This immediately fills "Recommended" in RH Recommendation (Col 23) and ZH Recommendation (Col 25)
+ * for all rows in both Award_Exium_Sep_2026 and Award_Coralcal_Sep_2026 without deleting any data.
+ */
+function restoreAllRecommendationsInSheet() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const summary = [];
+
+  [true, false].forEach(function(isExium) {
+    const sheet = getOrCreateBrandSheet(ss, isExium);
+    const lastRow = sheet.getLastRow();
+    if (lastRow < 2) return;
+    const cols = getSheetColMap(sheet);
+    const numRows = lastRow - 1;
+
+    // Read current statuses to preserve any explicit cancellations
+    const statusCol = cols.colStatus ? sheet.getRange(2, cols.colStatus, numRows, 1).getValues() : null;
+    const rhRange = cols.colRhRec ? sheet.getRange(2, cols.colRhRec, numRows, 1) : null;
+    const zhRange = cols.colZhRec ? sheet.getRange(2, cols.colZhRec, numRows, 1) : null;
+
+    const rhVals = rhRange ? rhRange.getValues() : [];
+    const zhVals = zhRange ? zhRange.getValues() : [];
+
+    let updatedCount = 0;
+    for (let i = 0; i < numRows; i++) {
+      const st = statusCol ? String(statusCol[i][0] || "").trim() : "";
+      if (st !== "Cancelled") {
+        if (rhRange) {
+          const curRh = String(rhVals[i][0] || "").trim();
+          if (!curRh || curRh.toLowerCase().indexOf("not") === -1) {
+            rhVals[i][0] = "Recommended";
+          }
+        }
+        if (zhRange) {
+          const curZh = String(zhVals[i][0] || "").trim();
+          if (!curZh || curZh.toLowerCase().indexOf("not") === -1) {
+            zhVals[i][0] = "Recommended";
+          }
+        }
+        updatedCount++;
+      }
+    }
+
+    if (rhRange) rhRange.setValues(rhVals);
+    if (zhRange) zhRange.setValues(zhVals);
+
+    summary.push(sheet.getName() + ": " + updatedCount + " rows restored");
+  });
+
+  SpreadsheetApp.getActiveSpreadsheet().toast(summary.join(", "), "Restore Complete", 6);
+  Logger.log("DONE:\n" + summary.join("\n"));
+  return summary.join("\n");
+}
+
 function getOrCreateBrandSheet(ss, isExium) {
   const primaryName = isExium ? "Award_Exium_Sep_2026" : "Award_Coralcal_Sep_2026";
   const fallbackName = isExium ? "Exium_Achievers_Sep_2026" : "Coralcal_Achievers_Sep_2026";
@@ -295,6 +351,13 @@ function doPost(e) {
       props.setProperty("SUBMISSIONS_LOCKED", lockState);
       return ContentService.createTextOutput(
         JSON.stringify({ status: "success", submissions_locked: Boolean(payload.locked) })
+      ).setMimeType(ContentService.MimeType.JSON);
+    }
+
+    if (payload.action === "restore_recommendations") {
+      const res = restoreAllRecommendationsInSheet();
+      return ContentService.createTextOutput(
+        JSON.stringify({ status: "success", message: res })
       ).setMimeType(ContentService.MimeType.JSON);
     }
 

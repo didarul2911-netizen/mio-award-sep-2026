@@ -1568,6 +1568,10 @@ def build_portal():
                                     <span>⚠️</span>
                                     <span>Delete All Data</span>
                                 </button>
+                                <button onclick="adminRestoreAllRecommendations()" title="Restore 'Recommended' in all ZM & RM columns in Google Sheet" class="col-span-2 py-2 px-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-black rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-xs">
+                                    <span>🔄</span>
+                                    <span>Restore ZM & RM Recommendations in Sheet</span>
+                                </button>
                             </div>
                         </div>
 
@@ -4717,6 +4721,29 @@ def build_portal():
             }}
             refreshAdminStats();
             showToast('All National Choices Reset!', '🗑️');
+        }}
+
+        async function adminRestoreAllRecommendations() {{
+            if (!cloudEndpoint) {{
+                alert('Google Apps Script URL is not configured.');
+                return;
+            }}
+            if (!confirm('Do you want to restore "Recommended" in all ZM & RM recommendation columns in Google Sheet? This will NOT affect any selected vouchers.')) {{
+                return;
+            }}
+            showToast('Restoring ZM & RM recommendations...', '⏳');
+            try {{
+                await fetch(cloudEndpoint, {{
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {{ 'Content-Type': 'text/plain;charset=utf-8' }},
+                    body: JSON.stringify({{ action: 'restore_recommendations' }})
+                }});
+                showToast('Restore request sent to Google Sheet!', '✅');
+                alert('✅ ZM & RM Recommendations restore command sent to Google Sheet!\n\nPlease check your Google Sheet (Columns 23 & 25).');
+            }} catch (e) {{
+                alert('Could not connect to Google Apps Script. Please select "restoreAllRecommendationsInSheet" from the Apps Script editor toolbar and click Run.');
+            }}
         }}
 
         function getPendingQueue() {{
