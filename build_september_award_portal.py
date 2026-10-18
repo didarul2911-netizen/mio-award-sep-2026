@@ -1036,7 +1036,7 @@ def build_portal():
     <!-- ============================================== -->
     <!-- MODAL: ADMIN MANUAL AWARD OVERRIDE             -->
     <!-- ============================================== -->
-    <div id="manual-override-modal" class="hidden fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div id="manual-override-modal" class="hidden fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-[70] flex items-center justify-center p-4">
         <div class="bg-white rounded-3xl max-w-lg w-full flex flex-col shadow-2xl overflow-hidden border border-blue-300 max-h-[90vh]">
             <div class="bg-gradient-to-r from-blue-700 to-indigo-800 p-4 sm:p-5 text-white flex justify-between items-center flex-shrink-0">
                 <div class="flex items-center space-x-2.5">
@@ -1664,7 +1664,7 @@ def build_portal():
     </div>
 
     <!-- Toast Notification -->
-    <div id="toast-box" class="fixed top-16 right-4 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center space-x-2 text-xs font-bold transform translate-x-32 opacity-0 pointer-events-none transition-all duration-300 z-50">
+    <div id="toast-box" class="fixed top-16 right-4 bg-slate-900 text-white px-4 py-2.5 rounded-2xl shadow-xl flex items-center space-x-2 text-xs font-bold transform translate-x-32 opacity-0 pointer-events-none transition-all duration-300 z-[90]">
         <span id="toast-icon">✅</span>
         <span id="toast-text">Notification</span>
     </div>
@@ -3380,7 +3380,9 @@ def build_portal():
                 document.getElementById('ov-radio-0').checked = true;
             }}
 
-            document.getElementById('override-reason-input').value = existingOv.reason || prefillReason || 'Approved by Admin';
+            const revObj = savedReviews['REV_' + achId];
+            const defaultReviewReason = (revObj && revObj.dispute_category) ? `Approved review: ${{revObj.dispute_category}}` : 'Approved by Admin';
+            document.getElementById('override-reason-input').value = existingOv.reason || prefillReason || defaultReviewReason;
             document.getElementById('manual-override-modal').classList.remove('hidden');
         }}
 
@@ -3549,10 +3551,10 @@ def build_portal():
                     </td>
                     <td class="py-2.5 px-3 text-center whitespace-nowrap">
                         <div class="flex items-center justify-center gap-1">
-                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 3000, 'Approved review: ${{r.dispute_category}}')" class="px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-[10px] font-black transition shadow-2xs">
+                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 3000)" class="px-2 py-1 bg-emerald-600 hover:bg-emerald-700 text-white rounded text-[10px] font-black transition shadow-2xs">
                                 🏆 Grant 3,000
                             </button>
-                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 1000, 'Approved review: ${{r.dispute_category}}')" class="px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-[10px] font-black transition shadow-2xs">
+                            <button onclick="openManualOverrideModal('${{r.ach_id}}', 1000)" class="px-2 py-1 bg-blue-600 hover:bg-blue-700 text-white rounded text-[10px] font-black transition shadow-2xs">
                                 🎖️ Grant 1,000
                             </button>
                             ${{isPending ? `
