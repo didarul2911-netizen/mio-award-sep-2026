@@ -4478,8 +4478,30 @@ def build_portal():
         // SEPARATE BRAND EXCEL EXPORTS (EXIUM MUPS / CORALCAL / BOTH)
         // ==============================================
         function exportBrandExcel(scope = 'admin', brandMode = 'exium') {{
-            let exList = DB.achievers_exium;
-            let coList = DB.achievers_coral;
+            const getExportAchieversList = (isExium) => {{
+                const baseList = isExium ? DB.achievers_exium : DB.achievers_coral;
+                const map = {{}};
+                baseList.forEach(rawA => {{
+                    const a = findAchieverById(rawA.id) || rawA;
+                    if (Number(a.award) > 0) {{
+                        map[a.id] = a;
+                    }}
+                }});
+                Object.values(savedOverrides).forEach(ov => {{
+                    const ovBrand = ov.brand || '';
+                    const matchBrand = isExium ? 
+                        (ovBrand.toLowerCase().includes('exium') || ov.id.startsWith('EXIUM_')) : 
+                        (ovBrand.toLowerCase().includes('coral') || ov.id.startsWith('CORAL_'));
+                    if (matchBrand && Number(ov.award) > 0 && !map[ov.id]) {{
+                        const found = findAchieverById(ov.id);
+                        if (found) map[ov.id] = found;
+                    }}
+                }});
+                return Object.values(map);
+            }};
+
+            let exList = getExportAchieversList(true);
+            let coList = getExportAchieversList(false);
             let calcList = DB.all_territories;
             let scopeTag = 'National';
 
@@ -4509,7 +4531,8 @@ def build_portal():
                 const isCanc = Boolean(ch.cancelled);
                 const voucher = isCanc ? 'CANCELLED' : (ch.voucher || 'Not Selected');
                 const status = isCanc ? 'Cancelled' : (ch.voucher ? 'Complete' : 'Pending');
-                const activeAward = isCanc ? 0 : (a.award || 0);
+                const currentAward = Number(a.award || 0);
+                const activeAward = isCanc ? 0 : currentAward;
 
                 return {{
                     'Brand': a.brand_label,
@@ -4540,9 +4563,10 @@ def build_portal():
                     'Brand Required Growth (Box Qty)': a.brand_req_box || 30,
                     'Brand Actual Growth (Box Qty)': a.brand_growth_box,
                     'Brand Growth Met?': a.brand_growth_ok ? 'Yes' : 'No',
-                    'Calculated Award': a.award,
+                    'Calculated Award': currentAward,
                     'Active Payable Award': activeAward,
                     'Award Tier': a.tier,
+                    'Admin Manual Grant / Review Status': a.is_manual_override ? `Approved (${{a.reason || 'Admin Override'}})` : 'Automated Calculation',
                     'Selected Gift Voucher': voucher,
                     'Status': status,
                     'RH/ZH Recommendation': isCanc ? `Not Recommended (${{ch.cancelled_by}})` : 'Recommended',
@@ -4559,40 +4583,58 @@ def build_portal():
                 const wsEx = XLSX.utils.json_to_sheet(exRows);
                 XLSX.utils.book_append_sheet(wb, wsEx, 'Exium_MUPS_Achievers_Choices');
 
-                const exCalcRows = calcList.map((r, i) => ({{
-                    'SL': i + 1,
-                    'Zone': r.zone_name,
-                    'SAP Zone': r.sap_zone_code,
-                    'Zonal Head': r.zonal_head,
-                    'Region': r.region_name,
-                    'SAP Region': r.sap_region_code,
-                    'Regional Head': r.regional_head,
-                    'Area Code': r.area_code,
-                    'Territory Name': r.area_name,
-                    'MIO ID': r.mio_id,
-                    'MIO Name': r.mio_name,
-                    'Designation': r.desig,
-                    'Exium MUPS Seen Rx': r.exium_rx,
-                    'Rx >= 200?': r.exium_rx_ok ? 'Yes' : 'No',
-                    'Territory Aug Sales': Math.round(r.terr_aug_val),
-                    'Territory Sep Sales': Math.round(r.terr_sep_val),
-                    'Territory Growth': Math.round(r.terr_growth_val),
-                    'Territory Positive?': r.terr_pos ? 'Yes' : 'No',
-                    'Exium MUPS Aug Sales': Math.round(r.exium_aug_val),
-                    'Exium MUPS Req Growth (Value)': Math.round(r.exium_req_growth),
-                    'Exium MUPS Req Target': Math.round(r.exium_req_target),
-                    'Exium MUPS Sep Sales': Math.round(r.exium_sep_val),
-                    'Exium MUPS Actual Growth (Value)': Math.round(r.exium_actual_growth),
-                    'Exium MUPS TP Price': 659.67,
-                    'Exium MUPS Aug Qty (Boxes)': r.exium_aug_box,
-                    'Exium MUPS Sep Qty (Boxes)': r.exium_sep_box,
-                    'Exium MUPS Req Growth (Box Qty)': r.exium_req_box || 30,
-                    'Exium MUPS Actual Growth (Box Qty)': r.exium_growth_box,
-                    'Exium MUPS Growth Met?': r.exium_growth_ok ? 'Yes' : 'No',
-                    'Exium MUPS Award': r.exium_award,
-                    'Exium MUPS Award Tier': r.exium_tier,
-                    'Qualification Remarks': r.exium_reason
-                }}));
+                const exCalcRows = calcList.map((r, i) => {{
+                    const achId = `EXIUM_${{r.area_code}}_${{r.mio_id}}`;
+                    const ov = savedOverrides[achId];
+                    const ch = savedChoices[achId] || {{}};
+                    const isCanc = Boolean(ch.cancelled);
+                    const baseAward = Number(r.exium_award || 0);
+                    const finalAward = ov ? Number(ov.award) : baseAward;
+                    const finalTier = ov ? (ov.tier || (finalAward === 3000 ? '3,000 Award Tier (Manual Admin Grant)' : (finalAward === 1000 ? '1,000 Award Tier (Manual Admin Grant)' : r.exium_tier))) : r.exium_tier;
+                    const remarks = ov ? (ov.reason || 'Admin Manual Grant') : r.exium_reason;
+                    const voucher = isCanc ? 'CANCELLED' : (ch.voucher || (finalAward > 0 ? 'Not Selected' : 'N/A'));
+                    const status = isCanc ? 'Cancelled' : (ch.voucher ? 'Complete' : (finalAward > 0 ? 'Pending' : 'Non-Achiever'));
+                    const activeAward = isCanc ? 0 : finalAward;
+
+                    return {{
+                        'SL': i + 1,
+                        'Zone': r.zone_name,
+                        'SAP Zone': r.sap_zone_code,
+                        'Zonal Head': r.zonal_head,
+                        'Region': r.region_name,
+                        'SAP Region': r.sap_region_code,
+                        'Regional Head': r.regional_head,
+                        'Area Code': r.area_code,
+                        'Territory Name': r.area_name,
+                        'MIO ID': r.mio_id,
+                        'MIO Name': r.mio_name,
+                        'Designation': r.desig,
+                        'Exium MUPS Seen Rx': r.exium_rx,
+                        'Rx >= 200?': r.exium_rx_ok ? 'Yes' : 'No',
+                        'Territory Aug Sales': Math.round(r.terr_aug_val),
+                        'Territory Sep Sales': Math.round(r.terr_sep_val),
+                        'Territory Growth': Math.round(r.terr_growth_val),
+                        'Territory Positive?': r.terr_pos ? 'Yes' : 'No',
+                        'Exium MUPS Aug Sales': Math.round(r.exium_aug_val),
+                        'Exium MUPS Req Growth (Value)': Math.round(r.exium_req_growth),
+                        'Exium MUPS Req Target': Math.round(r.exium_req_target),
+                        'Exium MUPS Sep Sales': Math.round(r.exium_sep_val),
+                        'Exium MUPS Actual Growth (Value)': Math.round(r.exium_actual_growth),
+                        'Exium MUPS TP Price': 659.67,
+                        'Exium MUPS Aug Qty (Boxes)': r.exium_aug_box,
+                        'Exium MUPS Sep Qty (Boxes)': r.exium_sep_box,
+                        'Exium MUPS Req Growth (Box Qty)': r.exium_req_box || 30,
+                        'Exium MUPS Actual Growth (Box Qty)': r.exium_growth_box,
+                        'Exium MUPS Growth Met?': r.exium_growth_ok ? 'Yes' : 'No',
+                        'Exium MUPS Award': finalAward,
+                        'Active Payable Award': activeAward,
+                        'Exium MUPS Award Tier': finalTier,
+                        'Admin Manual Grant / Review': ov ? `Approved (${{remarks}})` : 'Automated Calculation',
+                        'Selected Gift Voucher': voucher,
+                        'Status': status,
+                        'Qualification Remarks': remarks
+                    }};
+                }});
                 const wsExCalc = XLSX.utils.json_to_sheet(exCalcRows);
                 XLSX.utils.book_append_sheet(wb, wsExCalc, 'Exium_MUPS_Full_Calc');
             }}
@@ -4602,40 +4644,58 @@ def build_portal():
                 const wsCo = XLSX.utils.json_to_sheet(coRows);
                 XLSX.utils.book_append_sheet(wb, wsCo, 'Coralcal_Achievers_Choices');
 
-                const coCalcRows = calcList.map((r, i) => ({{
-                    'SL': i + 1,
-                    'Zone': r.zone_name,
-                    'SAP Zone': r.sap_zone_code,
-                    'Zonal Head': r.zonal_head,
-                    'Region': r.region_name,
-                    'SAP Region': r.sap_region_code,
-                    'Regional Head': r.regional_head,
-                    'Area Code': r.area_code,
-                    'Territory Name': r.area_name,
-                    'MIO ID': r.mio_id,
-                    'MIO Name': r.mio_name,
-                    'Designation': r.desig,
-                    'Coralcal Seen Rx': r.coral_rx,
-                    'Rx >= 200?': r.coral_rx_ok ? 'Yes' : 'No',
-                    'Territory Aug Sales': Math.round(r.terr_aug_val),
-                    'Territory Sep Sales': Math.round(r.terr_sep_val),
-                    'Territory Growth': Math.round(r.terr_growth_val),
-                    'Territory Positive?': r.terr_pos ? 'Yes' : 'No',
-                    'Coralcal Aug Sales': Math.round(r.coral_aug_val),
-                    'Coralcal Req Growth (Value)': Math.round(r.coral_req_growth),
-                    'Coralcal Req Target': Math.round(r.coral_req_target),
-                    'Coralcal Sep Sales': Math.round(r.coral_sep_val),
-                    'Coralcal Actual Growth (Value)': Math.round(r.coral_actual_growth),
-                    'Coralcal TP Price': 637.18,
-                    'Coralcal Aug Qty (Boxes)': r.coral_aug_box,
-                    'Coralcal Sep Qty (Boxes)': r.coral_sep_box,
-                    'Coralcal Req Growth (Box Qty)': r.coral_req_box || 30,
-                    'Coralcal Actual Growth (Box Qty)': r.coral_growth_box,
-                    'Coralcal Growth Met?': r.coral_growth_ok ? 'Yes' : 'No',
-                    'Coralcal Award': r.coral_award,
-                    'Coralcal Award Tier': r.coral_tier,
-                    'Qualification Remarks': r.coral_reason
-                }}));
+                const coCalcRows = calcList.map((r, i) => {{
+                    const achId = `CORAL_${{r.area_code}}_${{r.mio_id}}`;
+                    const ov = savedOverrides[achId];
+                    const ch = savedChoices[achId] || {{}};
+                    const isCanc = Boolean(ch.cancelled);
+                    const baseAward = Number(r.coral_award || 0);
+                    const finalAward = ov ? Number(ov.award) : baseAward;
+                    const finalTier = ov ? (ov.tier || (finalAward === 3000 ? '3,000 Award Tier (Manual Admin Grant)' : (finalAward === 1000 ? '1,000 Award Tier (Manual Admin Grant)' : r.coral_tier))) : r.coral_tier;
+                    const remarks = ov ? (ov.reason || 'Admin Manual Grant') : r.coral_reason;
+                    const voucher = isCanc ? 'CANCELLED' : (ch.voucher || (finalAward > 0 ? 'Not Selected' : 'N/A'));
+                    const status = isCanc ? 'Cancelled' : (ch.voucher ? 'Complete' : (finalAward > 0 ? 'Pending' : 'Non-Achiever'));
+                    const activeAward = isCanc ? 0 : finalAward;
+
+                    return {{
+                        'SL': i + 1,
+                        'Zone': r.zone_name,
+                        'SAP Zone': r.sap_zone_code,
+                        'Zonal Head': r.zonal_head,
+                        'Region': r.region_name,
+                        'SAP Region': r.sap_region_code,
+                        'Regional Head': r.regional_head,
+                        'Area Code': r.area_code,
+                        'Territory Name': r.area_name,
+                        'MIO ID': r.mio_id,
+                        'MIO Name': r.mio_name,
+                        'Designation': r.desig,
+                        'Coralcal Seen Rx': r.coral_rx,
+                        'Rx >= 200?': r.coral_rx_ok ? 'Yes' : 'No',
+                        'Territory Aug Sales': Math.round(r.terr_aug_val),
+                        'Territory Sep Sales': Math.round(r.terr_sep_val),
+                        'Territory Growth': Math.round(r.terr_growth_val),
+                        'Territory Positive?': r.terr_pos ? 'Yes' : 'No',
+                        'Coralcal Aug Sales': Math.round(r.coral_aug_val),
+                        'Coralcal Req Growth (Value)': Math.round(r.coral_req_growth),
+                        'Coralcal Req Target': Math.round(r.coral_req_target),
+                        'Coralcal Sep Sales': Math.round(r.coral_sep_val),
+                        'Coralcal Actual Growth (Value)': Math.round(r.coral_actual_growth),
+                        'Coralcal TP Price': 637.18,
+                        'Coralcal Aug Qty (Boxes)': r.coral_aug_box,
+                        'Coralcal Sep Qty (Boxes)': r.coral_sep_box,
+                        'Coralcal Req Growth (Box Qty)': r.coral_req_box || 30,
+                        'Coralcal Actual Growth (Box Qty)': r.coral_growth_box,
+                        'Coralcal Growth Met?': r.coral_growth_ok ? 'Yes' : 'No',
+                        'Coralcal Award': finalAward,
+                        'Active Payable Award': activeAward,
+                        'Coralcal Award Tier': finalTier,
+                        'Admin Manual Grant / Review': ov ? `Approved (${{remarks}})` : 'Automated Calculation',
+                        'Selected Gift Voucher': voucher,
+                        'Status': status,
+                        'Qualification Remarks': remarks
+                    }};
+                }});
                 const wsCoCalc = XLSX.utils.json_to_sheet(coCalcRows);
                 XLSX.utils.book_append_sheet(wb, wsCoCalc, 'Coralcal_Full_Calculation');
             }}

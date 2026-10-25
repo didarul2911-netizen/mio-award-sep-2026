@@ -144,6 +144,7 @@ function getSheetColMap(sheet) {
     colRegion: 0,
     colArea: 0,
     colMio: 0,
+    colTier: 0,
     colAward: 0,
     colActiveAward: 0,
     colVoucher: 0,
@@ -189,6 +190,8 @@ function getSheetColMap(sheet) {
       map.colArea = c;
     } else if (h.indexOf("mio code") !== -1 || h === "mio sap id" || h === "mio id") {
       map.colMio = c;
+    } else if (h.indexOf("award tier") !== -1 || h === "tier") {
+      map.colTier = c;
     } else if (h === "calculated award" || h === "award amount" || h === "award") {
       map.colAward = c;
     } else if (h === "active payable award" || h === "active award") {
@@ -481,6 +484,12 @@ function doPost(e) {
         if (foundRowIndex > 0) {
           if (cols.colActiveAward) {
             sheet.getRange(foundRowIndex, cols.colActiveAward).setValue(activeAwardAmt);
+          }
+          if (cols.colAward && awardAmt > 0) {
+            sheet.getRange(foundRowIndex, cols.colAward).setValue(awardAmt);
+          }
+          if (cols.colTier && item.tier) {
+            sheet.getRange(foundRowIndex, cols.colTier).setValue(item.tier);
           }
           if (cols.colVoucher) {
             sheet.getRange(foundRowIndex, cols.colVoucher).setValue(cleanVoucher);
